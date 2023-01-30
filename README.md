@@ -119,9 +119,9 @@ Class | Method | HTTP request | Description
 *ClusterApi* | [**cluster_id_members_get**](docs/ClusterApi.md#cluster_id_members_get) | **GET** /cluster/{id}/members | Cluster Id Members Get
 *ClusterApi* | [**cluster_post**](docs/ClusterApi.md#cluster_post) | **POST** /cluster | Cluster Post
 *DefaultApi* | [**ping_get**](docs/DefaultApi.md#ping_get) | **GET** /ping | Ping Get
+*EnrichmentApi* | [**enrichments_meta_delete**](docs/EnrichmentApi.md#enrichments_meta_delete) | **DELETE** /enrichments/meta | Enrichments Meta Delete
+*EnrichmentApi* | [**enrichments_meta_get**](docs/EnrichmentApi.md#enrichments_meta_get) | **GET** /enrichments/meta | Enrichments Meta Get
 *EnrichmentApi* | [**enrichments_meta_post**](docs/EnrichmentApi.md#enrichments_meta_post) | **POST** /enrichments/meta | Enrichments Meta Post
-*EnrichmentApi* | [**generic_enrichments_meta_delete**](docs/EnrichmentApi.md#generic_enrichments_meta_delete) | **DELETE** /enrichments/meta | Generic Enrichments Meta Delete
-*EnrichmentApi* | [**generic_enrichments_meta_get**](docs/EnrichmentApi.md#generic_enrichments_meta_get) | **GET** /enrichments/meta | Generic Enrichments Meta Get
 *GraphApi* | [**graph_get**](docs/GraphApi.md#graph_get) | **GET** /graph | Graph Get
 *GraphApi* | [**graph_id_delete**](docs/GraphApi.md#graph_id_delete) | **DELETE** /graph/{id} | Graph Id Delete
 *GraphApi* | [**graph_id_delete_edges_post**](docs/GraphApi.md#graph_id_delete_edges_post) | **POST** /graph/{id}/delete_edges | Graph Id Delete Edges Post

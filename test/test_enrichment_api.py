@@ -28,24 +28,24 @@ class TestEnrichmentApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_enrichments_meta_delete(self):
+        """Test case for enrichments_meta_delete
+
+        Enrichments Meta Delete  # noqa: E501
+        """
+        pass
+
+    def test_enrichments_meta_get(self):
+        """Test case for enrichments_meta_get
+
+        Enrichments Meta Get  # noqa: E501
+        """
+        pass
+
     def test_enrichments_meta_post(self):
         """Test case for enrichments_meta_post
 
         Enrichments Meta Post  # noqa: E501
-        """
-        pass
-
-    def test_generic_enrichments_meta_delete(self):
-        """Test case for generic_enrichments_meta_delete
-
-        Generic Enrichments Meta Delete  # noqa: E501
-        """
-        pass
-
-    def test_generic_enrichments_meta_get(self):
-        """Test case for generic_enrichments_meta_get
-
-        Generic Enrichments Meta Get  # noqa: E501
         """
         pass
 
