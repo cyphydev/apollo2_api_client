@@ -1,15 +1,11 @@
-# Edge
+# Entities
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**graph_id** | **int** |  | 
-**src_id** | **int** |  | 
-**dst_id** | **int** |  | 
-**type** | **str** |  | 
-**timestamp** | **int** |  | [optional] 
-**data** | **object** |  | [optional] 
+**annotations** | [**list[Annotation]**](Annotation.md) |  | [optional] 
+**hashtags** | [**list[Hashtag]**](Hashtag.md) |  | [optional] 
+**mentions** | [**list[Mention]**](Mention.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,15 +1,10 @@
-# Edge
+# ContextAnnotation
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**graph_id** | **int** |  | 
-**src_id** | **int** |  | 
-**dst_id** | **int** |  | 
-**type** | **str** |  | 
-**timestamp** | **int** |  | [optional] 
-**data** | **object** |  | [optional] 
+**domain** | [**Domain**](Domain.md) |  | [optional] 
+**entity** | [**Entity**](Entity.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

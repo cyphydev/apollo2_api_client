@@ -57,7 +57,8 @@ class Edge(object):
         self._timestamp = None
         self._data = None
         self.discriminator = None
-        self.id = id
+        if id is not None:
+            self.id = id
         self.graph_id = graph_id
         self.src_id = src_id
         self.dst_id = dst_id
@@ -85,8 +86,6 @@ class Edge(object):
         :param id: The id of this Edge.  # noqa: E501
         :type: int
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 

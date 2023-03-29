@@ -33,7 +33,9 @@ class Source(object):
         'platform': 'MediaType',
         'sid': 'int',
         'enrichments': 'list[Enrichment]',
-        'clusters': 'list[ClusterMember]'
+        'clusters': 'list[ClusterMember]',
+        'name': 'str',
+        'data': 'AnyOfSourceData'
     }
 
     attribute_map = {
@@ -42,10 +44,12 @@ class Source(object):
         'platform': 'platform',
         'sid': 'sid',
         'enrichments': 'enrichments',
-        'clusters': 'clusters'
+        'clusters': 'clusters',
+        'name': 'name',
+        'data': 'data'
     }
 
-    def __init__(self, id=None, type=None, platform=None, sid=None, enrichments=None, clusters=None):  # noqa: E501
+    def __init__(self, id=None, type=None, platform=None, sid=None, enrichments=None, clusters=None, name=None, data=None):  # noqa: E501
         """Source - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._type = None
@@ -53,6 +57,8 @@ class Source(object):
         self._sid = None
         self._enrichments = None
         self._clusters = None
+        self._name = None
+        self._data = None
         self.discriminator = None
         self.id = id
         self.type = type
@@ -63,6 +69,10 @@ class Source(object):
             self.enrichments = enrichments
         if clusters is not None:
             self.clusters = clusters
+        if name is not None:
+            self.name = name
+        if data is not None:
+            self.data = data
 
     @property
     def id(self):
@@ -195,6 +205,48 @@ class Source(object):
         """
 
         self._clusters = clusters
+
+    @property
+    def name(self):
+        """Gets the name of this Source.  # noqa: E501
+
+
+        :return: The name of this Source.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this Source.
+
+
+        :param name: The name of this Source.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
+
+    @property
+    def data(self):
+        """Gets the data of this Source.  # noqa: E501
+
+
+        :return: The data of this Source.  # noqa: E501
+        :rtype: AnyOfSourceData
+        """
+        return self._data
+
+    @data.setter
+    def data(self, data):
+        """Sets the data of this Source.
+
+
+        :param data: The data of this Source.  # noqa: E501
+        :type: AnyOfSourceData
+        """
+
+        self._data = data
 
     def to_dict(self):
         """Returns the model properties as a dict"""

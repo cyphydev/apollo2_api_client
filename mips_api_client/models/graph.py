@@ -60,7 +60,8 @@ class Graph(object):
         self._edges = None
         self._data = None
         self.discriminator = None
-        self.id = id
+        if id is not None:
+            self.id = id
         self.name = name
         self.provider = provider
         self.tag = tag
@@ -89,8 +90,6 @@ class Graph(object):
         :param id: The id of this Graph.  # noqa: E501
         :type: int
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 

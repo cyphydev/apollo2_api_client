@@ -36,7 +36,9 @@ class Item(object):
         'source_id': 'int',
         'enrichments': 'list[Enrichment]',
         'clusters': 'list[ClusterMember]',
-        'media_items': 'list[MediaItem]'
+        'media_items': 'list[MediaItem]',
+        'text': 'str',
+        'data': 'AnyOfItemData'
     }
 
     attribute_map = {
@@ -48,10 +50,12 @@ class Item(object):
         'source_id': 'source_id',
         'enrichments': 'enrichments',
         'clusters': 'clusters',
-        'media_items': 'media_items'
+        'media_items': 'media_items',
+        'text': 'text',
+        'data': 'data'
     }
 
-    def __init__(self, id=None, author=None, platform=None, time_published=None, sid=None, source_id=None, enrichments=None, clusters=None, media_items=None):  # noqa: E501
+    def __init__(self, id=None, author=None, platform=None, time_published=None, sid=None, source_id=None, enrichments=None, clusters=None, media_items=None, text=None, data=None):  # noqa: E501
         """Item - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._author = None
@@ -62,6 +66,8 @@ class Item(object):
         self._enrichments = None
         self._clusters = None
         self._media_items = None
+        self._text = None
+        self._data = None
         self.discriminator = None
         self.id = id
         self.author = author
@@ -77,6 +83,10 @@ class Item(object):
             self.clusters = clusters
         if media_items is not None:
             self.media_items = media_items
+        if text is not None:
+            self.text = text
+        if data is not None:
+            self.data = data
 
     @property
     def id(self):
@@ -274,6 +284,48 @@ class Item(object):
         """
 
         self._media_items = media_items
+
+    @property
+    def text(self):
+        """Gets the text of this Item.  # noqa: E501
+
+
+        :return: The text of this Item.  # noqa: E501
+        :rtype: str
+        """
+        return self._text
+
+    @text.setter
+    def text(self, text):
+        """Sets the text of this Item.
+
+
+        :param text: The text of this Item.  # noqa: E501
+        :type: str
+        """
+
+        self._text = text
+
+    @property
+    def data(self):
+        """Gets the data of this Item.  # noqa: E501
+
+
+        :return: The data of this Item.  # noqa: E501
+        :rtype: AnyOfItemData
+        """
+        return self._data
+
+    @data.setter
+    def data(self, data):
+        """Sets the data of this Item.
+
+
+        :param data: The data of this Item.  # noqa: E501
+        :type: AnyOfItemData
+        """
+
+        self._data = data
 
     def to_dict(self):
         """Returns the model properties as a dict"""
