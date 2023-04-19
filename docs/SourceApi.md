@@ -20,6 +20,10 @@ Method | HTTP request | Description
 [**source_id_reverse_batch_translate**](SourceApi.md#source_id_reverse_batch_translate) | **POST** /source/id/reverse | Source Id Reverse Batch Translate
 [**source_id_reverse_translate**](SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
 [**source_max_id_get**](SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
+[**source_tag_delete**](SourceApi.md#source_tag_delete) | **POST** /source/tag/delete | Source Tag Delete
+[**source_tag_name_delete**](SourceApi.md#source_tag_name_delete) | **DELETE** /source/tag_name/delete | Source Tag Name Delete
+[**source_tag_node_id_get**](SourceApi.md#source_tag_node_id_get) | **GET** /source/id/tag | Source Tag Node Id Get
+[**source_tag_post**](SourceApi.md#source_tag_post) | **POST** /source/tag/post | Source Tag Post
 
 # **source_batch_get**
 > list[Source] source_batch_get(body)
@@ -74,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **source_count_get**
-> int source_count_get(last=last, end=end, platform=platform)
+> int source_count_get(last=last, end=end, platform=platform, tag_name=tag_name)
 
 Source Count Get
 
@@ -97,10 +101,11 @@ api_instance = mips_api_client.SourceApi(mips_api_client.ApiClient(configuration
 last = 56 # int |  (optional)
 end = 56 # int |  (optional)
 platform = mips_api_client.MediaType() # MediaType |  (optional)
+tag_name = 'tag_name_example' # str |  (optional)
 
 try:
     # Source Count Get
-    api_response = api_instance.source_count_get(last=last, end=end, platform=platform)
+    api_response = api_instance.source_count_get(last=last, end=end, platform=platform, tag_name=tag_name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourceApi->source_count_get: %s\n" % e)
@@ -113,6 +118,7 @@ Name | Type | Description  | Notes
  **last** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **platform** | [**MediaType**](.md)|  | [optional] 
+ **tag_name** | **str**|  | [optional] 
 
 ### Return type
 
@@ -286,7 +292,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **source_get**
-> list[Source] source_get(limit, last=last, end=end, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform)
+> list[Source] source_get(limit, last=last, end=end, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, tag_name=tag_name)
 
 Source Get
 
@@ -320,10 +326,11 @@ cluster_provider = 'cluster_provider_example' # str |  (optional)
 cluster_tag = 'cluster_tag_example' # str |  (optional)
 cluster_version = 'cluster_version_example' # str |  (optional)
 platform = mips_api_client.MediaType() # MediaType |  (optional)
+tag_name = 'tag_name_example' # str |  (optional)
 
 try:
     # Source Get
-    api_response = api_instance.source_get(limit, last=last, end=end, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform)
+    api_response = api_instance.source_get(limit, last=last, end=end, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, tag_name=tag_name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourceApi->source_get: %s\n" % e)
@@ -347,6 +354,7 @@ Name | Type | Description  | Notes
  **cluster_tag** | **str**|  | [optional] 
  **cluster_version** | **str**|  | [optional] 
  **platform** | [**MediaType**](.md)|  | [optional] 
+ **tag_name** | **str**|  | [optional] 
 
 ### Return type
 
@@ -874,7 +882,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **source_max_id_get**
-> int source_max_id_get(platform=platform)
+> int source_max_id_get(platform=platform, tag_name=tag_name)
 
 Source Max Id Get
 
@@ -895,10 +903,11 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = mips_api_client.SourceApi(mips_api_client.ApiClient(configuration))
 platform = mips_api_client.MediaType() # MediaType |  (optional)
+tag_name = 'tag_name_example' # str |  (optional)
 
 try:
     # Source Max Id Get
-    api_response = api_instance.source_max_id_get(platform=platform)
+    api_response = api_instance.source_max_id_get(platform=platform, tag_name=tag_name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourceApi->source_max_id_get: %s\n" % e)
@@ -909,6 +918,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **platform** | [**MediaType**](.md)|  | [optional] 
+ **tag_name** | **str**|  | [optional] 
 
 ### Return type
 
@@ -921,6 +931,218 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **source_tag_delete**
+> str source_tag_delete(body, tag_name)
+
+Source Tag Delete
+
+### Example
+```python
+from __future__ import print_function
+import time
+import mips_api_client
+from mips_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: APIKeyHeader
+configuration = mips_api_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = mips_api_client.SourceApi(mips_api_client.ApiClient(configuration))
+body = [56] # list[int] | 
+tag_name = 'tag_name_example' # str | 
+
+try:
+    # Source Tag Delete
+    api_response = api_instance.source_tag_delete(body, tag_name)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SourceApi->source_tag_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**list[int]**](int.md)|  | 
+ **tag_name** | **str**|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **source_tag_name_delete**
+> str source_tag_name_delete(tag_name)
+
+Source Tag Name Delete
+
+### Example
+```python
+from __future__ import print_function
+import time
+import mips_api_client
+from mips_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: APIKeyHeader
+configuration = mips_api_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = mips_api_client.SourceApi(mips_api_client.ApiClient(configuration))
+tag_name = 'tag_name_example' # str | 
+
+try:
+    # Source Tag Name Delete
+    api_response = api_instance.source_tag_name_delete(tag_name)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SourceApi->source_tag_name_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tag_name** | **str**|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **source_tag_node_id_get**
+> list[str] source_tag_node_id_get(id)
+
+Source Tag Node Id Get
+
+### Example
+```python
+from __future__ import print_function
+import time
+import mips_api_client
+from mips_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: APIKeyHeader
+configuration = mips_api_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = mips_api_client.SourceApi(mips_api_client.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # Source Tag Node Id Get
+    api_response = api_instance.source_tag_node_id_get(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SourceApi->source_tag_node_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+**list[str]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **source_tag_post**
+> str source_tag_post(body, tag_name)
+
+Source Tag Post
+
+### Example
+```python
+from __future__ import print_function
+import time
+import mips_api_client
+from mips_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: APIKeyHeader
+configuration = mips_api_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = mips_api_client.SourceApi(mips_api_client.ApiClient(configuration))
+body = [56] # list[int] | 
+tag_name = 'tag_name_example' # str | 
+
+try:
+    # Source Tag Post
+    api_response = api_instance.source_tag_post(body, tag_name)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SourceApi->source_tag_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**list[int]**](int.md)|  | 
+ **tag_name** | **str**|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

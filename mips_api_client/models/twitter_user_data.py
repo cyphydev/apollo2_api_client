@@ -33,7 +33,7 @@ class TwitterUserData(object):
         'pinned_tweet_id': 'str',
         'profile_image_url': 'str',
         'protected': 'bool',
-        'public_metrics': 'PublicMetrics',
+        'public_metrics': 'TwitterPublicMetrics',
         'username': 'str',
         'verified': 'bool'
     }
@@ -188,7 +188,7 @@ class TwitterUserData(object):
 
 
         :return: The public_metrics of this TwitterUserData.  # noqa: E501
-        :rtype: PublicMetrics
+        :rtype: TwitterPublicMetrics
         """
         return self._public_metrics
 
@@ -198,7 +198,7 @@ class TwitterUserData(object):
 
 
         :param public_metrics: The public_metrics of this TwitterUserData.  # noqa: E501
-        :type: PublicMetrics
+        :type: TwitterPublicMetrics
         """
 
         self._public_metrics = public_metrics

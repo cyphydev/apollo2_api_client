@@ -28,19 +28,19 @@ class TwitterData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'attachments': 'Attachment',
-        'context_annotations': 'list[ContextAnnotation]',
+        'attachments': 'TwitterAttachment',
+        'context_annotations': 'list[TwitterContextAnnotation]',
         'author_id': 'str',
         'conversation_id': 'str',
         'created_at': 'str',
-        'edit_controls': 'EditControls',
+        'edit_controls': 'TwitterEditControls',
         'edit_history_tweet_ids': 'list[str]',
-        'entities': 'Entities',
+        'entities': 'TwitterEntities',
         'id': 'str',
         'lang': 'str',
         'possibly_sensitive': 'bool',
-        'public_metrics': 'PublicMetrics',
-        'reference_tweets': 'list[ReferencedTweet]',
+        'public_metrics': 'TwitterPublicMetrics',
+        'reference_tweets': 'list[TwitterReferencedTweet]',
         'reply_settings': 'str',
         'tweet_id': 'str',
         'twitter_author_screenname': 'str',
@@ -128,7 +128,7 @@ class TwitterData(object):
 
 
         :return: The attachments of this TwitterData.  # noqa: E501
-        :rtype: Attachment
+        :rtype: TwitterAttachment
         """
         return self._attachments
 
@@ -138,7 +138,7 @@ class TwitterData(object):
 
 
         :param attachments: The attachments of this TwitterData.  # noqa: E501
-        :type: Attachment
+        :type: TwitterAttachment
         """
 
         self._attachments = attachments
@@ -149,7 +149,7 @@ class TwitterData(object):
 
 
         :return: The context_annotations of this TwitterData.  # noqa: E501
-        :rtype: list[ContextAnnotation]
+        :rtype: list[TwitterContextAnnotation]
         """
         return self._context_annotations
 
@@ -159,7 +159,7 @@ class TwitterData(object):
 
 
         :param context_annotations: The context_annotations of this TwitterData.  # noqa: E501
-        :type: list[ContextAnnotation]
+        :type: list[TwitterContextAnnotation]
         """
 
         self._context_annotations = context_annotations
@@ -233,7 +233,7 @@ class TwitterData(object):
 
 
         :return: The edit_controls of this TwitterData.  # noqa: E501
-        :rtype: EditControls
+        :rtype: TwitterEditControls
         """
         return self._edit_controls
 
@@ -243,7 +243,7 @@ class TwitterData(object):
 
 
         :param edit_controls: The edit_controls of this TwitterData.  # noqa: E501
-        :type: EditControls
+        :type: TwitterEditControls
         """
 
         self._edit_controls = edit_controls
@@ -275,7 +275,7 @@ class TwitterData(object):
 
 
         :return: The entities of this TwitterData.  # noqa: E501
-        :rtype: Entities
+        :rtype: TwitterEntities
         """
         return self._entities
 
@@ -285,7 +285,7 @@ class TwitterData(object):
 
 
         :param entities: The entities of this TwitterData.  # noqa: E501
-        :type: Entities
+        :type: TwitterEntities
         """
 
         self._entities = entities
@@ -359,7 +359,7 @@ class TwitterData(object):
 
 
         :return: The public_metrics of this TwitterData.  # noqa: E501
-        :rtype: PublicMetrics
+        :rtype: TwitterPublicMetrics
         """
         return self._public_metrics
 
@@ -369,7 +369,7 @@ class TwitterData(object):
 
 
         :param public_metrics: The public_metrics of this TwitterData.  # noqa: E501
-        :type: PublicMetrics
+        :type: TwitterPublicMetrics
         """
 
         self._public_metrics = public_metrics
@@ -380,7 +380,7 @@ class TwitterData(object):
 
 
         :return: The reference_tweets of this TwitterData.  # noqa: E501
-        :rtype: list[ReferencedTweet]
+        :rtype: list[TwitterReferencedTweet]
         """
         return self._reference_tweets
 
@@ -390,7 +390,7 @@ class TwitterData(object):
 
 
         :param reference_tweets: The reference_tweets of this TwitterData.  # noqa: E501
-        :type: list[ReferencedTweet]
+        :type: list[TwitterReferencedTweet]
         """
 
         self._reference_tweets = reference_tweets

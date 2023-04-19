@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **pinned_tweet_id** | **str** |  | [optional] 
 **profile_image_url** | **str** |  | [optional] 
 **protected** | **bool** |  | [optional] 
-**public_metrics** | [**PublicMetrics**](PublicMetrics.md) |  | [optional] 
+**public_metrics** | [**TwitterPublicMetrics**](TwitterPublicMetrics.md) |  | [optional] 
 **username** | **str** |  | [optional] 
 **verified** | **bool** |  | [optional] 
 

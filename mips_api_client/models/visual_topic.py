@@ -33,6 +33,7 @@ class VisualTopic(object):
         'provider': 'str',
         'tag': 'str',
         'version': 'str',
+        'description': 'str',
         'type': 'ClusterType'
     }
 
@@ -42,16 +43,18 @@ class VisualTopic(object):
         'provider': 'provider',
         'tag': 'tag',
         'version': 'version',
+        'description': 'description',
         'type': 'type'
     }
 
-    def __init__(self, id=None, name=None, provider=None, tag=None, version=None, type=None):  # noqa: E501
+    def __init__(self, id=None, name=None, provider=None, tag=None, version=None, description=None, type=None):  # noqa: E501
         """VisualTopic - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._provider = None
         self._tag = None
         self._version = None
+        self._description = None
         self._type = None
         self.discriminator = None
         if id is not None:
@@ -60,6 +63,8 @@ class VisualTopic(object):
         self.provider = provider
         self.tag = tag
         self.version = version
+        if description is not None:
+            self.description = description
         if type is not None:
             self.type = type
 
@@ -183,6 +188,27 @@ class VisualTopic(object):
             raise ValueError("Invalid value for `version`, must not be `None`")  # noqa: E501
 
         self._version = version
+
+    @property
+    def description(self):
+        """Gets the description of this VisualTopic.  # noqa: E501
+
+
+        :return: The description of this VisualTopic.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this VisualTopic.
+
+
+        :param description: The description of this VisualTopic.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def type(self):

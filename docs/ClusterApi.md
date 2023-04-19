@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_id_delete_members_post**
-> str cluster_id_delete_members_post(body, id)
+> str cluster_id_delete_members_post(body, tag_name, id)
 
 Cluster Id Delete Members Post
 
@@ -203,11 +203,12 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
 body = [56] # list[int] | 
+tag_name = 'tag_name_example' # str | 
 id = 56 # int | 
 
 try:
     # Cluster Id Delete Members Post
-    api_response = api_instance.cluster_id_delete_members_post(body, id)
+    api_response = api_instance.cluster_id_delete_members_post(body, tag_name, id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ClusterApi->cluster_id_delete_members_post: %s\n" % e)
@@ -218,6 +219,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**list[int]**](int.md)|  | 
+ **tag_name** | **str**|  | 
  **id** | **int**|  | 
 
 ### Return type
@@ -236,7 +238,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_id_edit_members_post**
-> str cluster_id_edit_members_post(body, id)
+> str cluster_id_edit_members_post(body, tag_name, id)
 
 Cluster Id Edit Members Post
 
@@ -257,11 +259,12 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
 body = NULL # dict(str, object) | 
+tag_name = 'tag_name_example' # str | 
 id = 56 # int | 
 
 try:
     # Cluster Id Edit Members Post
-    api_response = api_instance.cluster_id_edit_members_post(body, id)
+    api_response = api_instance.cluster_id_edit_members_post(body, tag_name, id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ClusterApi->cluster_id_edit_members_post: %s\n" % e)
@@ -272,6 +275,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**dict(str, object)**](dict.md)|  | 
+ **tag_name** | **str**|  | 
  **id** | **int**|  | 
 
 ### Return type
@@ -342,7 +346,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_id_members_get**
-> list[ClusterMember] cluster_id_members_get(id, limit, last=last, end=end)
+> list[ClusterMember] cluster_id_members_get(id, limit, tag_name=tag_name, last=last, end=end)
 
 Cluster Id Members Get
 
@@ -364,12 +368,13 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
 id = 56 # int | 
 limit = 56 # int | 
+tag_name = 'tag_name_example' # str |  (optional)
 last = -1 # int |  (optional) (default to -1)
 end = 56 # int |  (optional)
 
 try:
     # Cluster Id Members Get
-    api_response = api_instance.cluster_id_members_get(id, limit, last=last, end=end)
+    api_response = api_instance.cluster_id_members_get(id, limit, tag_name=tag_name, last=last, end=end)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ClusterApi->cluster_id_members_get: %s\n" % e)
@@ -381,6 +386,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **limit** | **int**|  | 
+ **tag_name** | **str**|  | [optional] 
  **last** | **int**|  | [optional] [default to -1]
  **end** | **int**|  | [optional] 
 

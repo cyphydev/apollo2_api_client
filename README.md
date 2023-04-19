@@ -122,6 +122,10 @@ Class | Method | HTTP request | Description
 *EnrichmentApi* | [**enrichments_meta_delete**](docs/EnrichmentApi.md#enrichments_meta_delete) | **DELETE** /enrichments/meta | Enrichments Meta Delete
 *EnrichmentApi* | [**enrichments_meta_get**](docs/EnrichmentApi.md#enrichments_meta_get) | **GET** /enrichments/meta | Enrichments Meta Get
 *EnrichmentApi* | [**enrichments_meta_post**](docs/EnrichmentApi.md#enrichments_meta_post) | **POST** /enrichments/meta | Enrichments Meta Post
+*GraphApi* | [**edge_tag_delete**](docs/GraphApi.md#edge_tag_delete) | **DELETE** /graph/edge_tag_delete | Edge Tag Delete
+*GraphApi* | [**edge_tag_graph_id_get**](docs/GraphApi.md#edge_tag_graph_id_get) | **GET** /graph/graph_id/tag | Edge Tag Graph Id Get
+*GraphApi* | [**edge_tag_name_delete**](docs/GraphApi.md#edge_tag_name_delete) | **DELETE** /graph/tag/delete | Edge Tag Name Delete
+*GraphApi* | [**edge_tag_post**](docs/GraphApi.md#edge_tag_post) | **POST** /graph/edge_tag_post | Edge Tag Post
 *GraphApi* | [**graph_get**](docs/GraphApi.md#graph_get) | **GET** /graph | Graph Get
 *GraphApi* | [**graph_id_delete**](docs/GraphApi.md#graph_id_delete) | **DELETE** /graph/{id} | Graph Id Delete
 *GraphApi* | [**graph_id_delete_edges_post**](docs/GraphApi.md#graph_id_delete_edges_post) | **POST** /graph/{id}/delete_edges | Graph Id Delete Edges Post
@@ -147,12 +151,20 @@ Class | Method | HTTP request | Description
 *ItemApi* | [**item_id_reverse_batch_translate**](docs/ItemApi.md#item_id_reverse_batch_translate) | **POST** /item/id/reverse | Item Id Reverse Batch Translate
 *ItemApi* | [**item_id_reverse_translate**](docs/ItemApi.md#item_id_reverse_translate) | **GET** /item/id/reverse/{id} | Item Id Reverse Translate
 *ItemApi* | [**item_max_id_get**](docs/ItemApi.md#item_max_id_get) | **GET** /item/max_id | Item Max Id Get
+*ItemApi* | [**item_tag_delete**](docs/ItemApi.md#item_tag_delete) | **POST** /item/tag/delete | Item Tag Delete
+*ItemApi* | [**item_tag_name_delete**](docs/ItemApi.md#item_tag_name_delete) | **DELETE** /item/tag_name/delete | Item Tag Name Delete
+*ItemApi* | [**item_tag_node_id_get**](docs/ItemApi.md#item_tag_node_id_get) | **GET** /item/id/tag | Item Tag Node Id Get
+*ItemApi* | [**item_tag_post**](docs/ItemApi.md#item_tag_post) | **POST** /item/tag/post | Item Tag Post
 *MediaItemApi* | [**media_item_batch_get**](docs/MediaItemApi.md#media_item_batch_get) | **POST** /media_item/get | Media Item Batch Get
 *MediaItemApi* | [**media_item_count_get**](docs/MediaItemApi.md#media_item_count_get) | **GET** /media_item/count | Media Item Count Get
 *MediaItemApi* | [**media_item_get**](docs/MediaItemApi.md#media_item_get) | **GET** /media_item | Media Item Get
 *MediaItemApi* | [**media_item_id_delete**](docs/MediaItemApi.md#media_item_id_delete) | **DELETE** /media_item/{id} | Media Item Id Delete
 *MediaItemApi* | [**media_item_id_get**](docs/MediaItemApi.md#media_item_id_get) | **GET** /media_item/{id} | Media Item Id Get
 *MediaItemApi* | [**media_item_max_id_get**](docs/MediaItemApi.md#media_item_max_id_get) | **GET** /media_item/max_id | Media Item Max Id Get
+*MediaItemApi* | [**media_item_tag_delete**](docs/MediaItemApi.md#media_item_tag_delete) | **POST** /media_item/tag/delete | Media Item Tag Delete
+*MediaItemApi* | [**media_item_tag_name_delete**](docs/MediaItemApi.md#media_item_tag_name_delete) | **DELETE** /media_item/tag_name/delete | Media Item Tag Name Delete
+*MediaItemApi* | [**media_item_tag_node_id_get**](docs/MediaItemApi.md#media_item_tag_node_id_get) | **GET** /media_item/id/tag | Media Item Tag Node Id Get
+*MediaItemApi* | [**media_item_tag_post**](docs/MediaItemApi.md#media_item_tag_post) | **POST** /media_item/tag/post | Media Item Tag Post
 *SourceApi* | [**source_batch_get**](docs/SourceApi.md#source_batch_get) | **POST** /source/get | Source Batch Get
 *SourceApi* | [**source_count_get**](docs/SourceApi.md#source_count_get) | **GET** /source/count | Source Count Get
 *SourceApi* | [**source_enrichments_batch_delete**](docs/SourceApi.md#source_enrichments_batch_delete) | **POST** /source/enrichments/delete | Source Enrichments Batch Delete
@@ -169,10 +181,14 @@ Class | Method | HTTP request | Description
 *SourceApi* | [**source_id_reverse_batch_translate**](docs/SourceApi.md#source_id_reverse_batch_translate) | **POST** /source/id/reverse | Source Id Reverse Batch Translate
 *SourceApi* | [**source_id_reverse_translate**](docs/SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
 *SourceApi* | [**source_max_id_get**](docs/SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
+*SourceApi* | [**source_tag_delete**](docs/SourceApi.md#source_tag_delete) | **POST** /source/tag/delete | Source Tag Delete
+*SourceApi* | [**source_tag_name_delete**](docs/SourceApi.md#source_tag_name_delete) | **DELETE** /source/tag_name/delete | Source Tag Name Delete
+*SourceApi* | [**source_tag_node_id_get**](docs/SourceApi.md#source_tag_node_id_get) | **GET** /source/id/tag | Source Tag Node Id Get
+*SourceApi* | [**source_tag_post**](docs/SourceApi.md#source_tag_post) | **POST** /source/tag/post | Source Tag Post
 
 ## Documentation For Models
 
- - [Annotation](docs/Annotation.md)
+ - [AccountType](docs/AccountType.md)
  - [AnyOfCluster](docs/AnyOfCluster.md)
  - [AnyOfEnrichment](docs/AnyOfEnrichment.md)
  - [AnyOfEnrichmentMeta](docs/AnyOfEnrichmentMeta.md)
@@ -182,7 +198,6 @@ Class | Method | HTTP request | Description
  - [AnyOfValidationErrorLocItems](docs/AnyOfValidationErrorLocItems.md)
  - [ArrayEnrichment](docs/ArrayEnrichment.md)
  - [ArrayEnrichmentMeta](docs/ArrayEnrichmentMeta.md)
- - [Attachment](docs/Attachment.md)
  - [BatchGetRequest](docs/BatchGetRequest.md)
  - [BatchMediaGetRequest](docs/BatchMediaGetRequest.md)
  - [CategoryEnrichment](docs/CategoryEnrichment.md)
@@ -191,42 +206,58 @@ Class | Method | HTTP request | Description
  - [Cluster](docs/Cluster.md)
  - [ClusterMember](docs/ClusterMember.md)
  - [ClusterType](docs/ClusterType.md)
- - [ContextAnnotation](docs/ContextAnnotation.md)
- - [Domain](docs/Domain.md)
  - [Edge](docs/Edge.md)
- - [EditControls](docs/EditControls.md)
+ - [EngagementType](docs/EngagementType.md)
  - [Enrichment](docs/Enrichment.md)
  - [EnrichmentMeta](docs/EnrichmentMeta.md)
  - [EnrichmentType](docs/EnrichmentType.md)
  - [EnrichmentsBatchRequest](docs/EnrichmentsBatchRequest.md)
- - [Entities](docs/Entities.md)
- - [Entity](docs/Entity.md)
+ - [EntityType](docs/EntityType.md)
+ - [GeoLocation](docs/GeoLocation.md)
  - [Graph](docs/Graph.md)
  - [GraphType](docs/GraphType.md)
  - [HTTPValidationError](docs/HTTPValidationError.md)
- - [Hashtag](docs/Hashtag.md)
+ - [IncasActor](docs/IncasActor.md)
+ - [IncasAnnotation](docs/IncasAnnotation.md)
+ - [IncasExtraAttribute](docs/IncasExtraAttribute.md)
+ - [IncasLinks](docs/IncasLinks.md)
+ - [IncasMediaResource](docs/IncasMediaResource.md)
+ - [IncasMessage](docs/IncasMessage.md)
+ - [IncasOffset](docs/IncasOffset.md)
+ - [IncasOneOfMediaTypeAttributes](docs/IncasOneOfMediaTypeAttributes.md)
+ - [IncasRedditData](docs/IncasRedditData.md)
+ - [IncasSegment](docs/IncasSegment.md)
+ - [IncasTwitterData](docs/IncasTwitterData.md)
  - [Item](docs/Item.md)
  - [ListEnrichment](docs/ListEnrichment.md)
  - [ListEnrichmentMeta](docs/ListEnrichmentMeta.md)
  - [MediaItem](docs/MediaItem.md)
  - [MediaItemType](docs/MediaItemType.md)
  - [MediaType](docs/MediaType.md)
- - [Mention](docs/Mention.md)
  - [ModifyMediaAttachmentRequest](docs/ModifyMediaAttachmentRequest.md)
  - [NumericalEnrichment](docs/NumericalEnrichment.md)
  - [NumericalEnrichmentMeta](docs/NumericalEnrichmentMeta.md)
- - [PublicMetrics](docs/PublicMetrics.md)
  - [RawDataPostEntry](docs/RawDataPostEntry.md)
  - [RawDataPostRequest](docs/RawDataPostRequest.md)
  - [RawDataPostResponse](docs/RawDataPostResponse.md)
  - [RedditData](docs/RedditData.md)
  - [RedditUserData](docs/RedditUserData.md)
- - [ReferencedTweet](docs/ReferencedTweet.md)
  - [Segment](docs/Segment.md)
  - [Source](docs/Source.md)
  - [TextEnrichment](docs/TextEnrichment.md)
  - [TextEnrichmentMeta](docs/TextEnrichmentMeta.md)
+ - [TwitterAnnotation](docs/TwitterAnnotation.md)
+ - [TwitterAttachment](docs/TwitterAttachment.md)
+ - [TwitterContextAnnotation](docs/TwitterContextAnnotation.md)
  - [TwitterData](docs/TwitterData.md)
+ - [TwitterDomain](docs/TwitterDomain.md)
+ - [TwitterEditControls](docs/TwitterEditControls.md)
+ - [TwitterEntities](docs/TwitterEntities.md)
+ - [TwitterEntity](docs/TwitterEntity.md)
+ - [TwitterHashtag](docs/TwitterHashtag.md)
+ - [TwitterMention](docs/TwitterMention.md)
+ - [TwitterPublicMetrics](docs/TwitterPublicMetrics.md)
+ - [TwitterReferencedTweet](docs/TwitterReferencedTweet.md)
  - [TwitterUserData](docs/TwitterUserData.md)
  - [ValidationError](docs/ValidationError.md)
  - [VisualTopic](docs/VisualTopic.md)

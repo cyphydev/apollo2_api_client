@@ -28,6 +28,34 @@ class TestGraphApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_edge_tag_delete(self):
+        """Test case for edge_tag_delete
+
+        Edge Tag Delete  # noqa: E501
+        """
+        pass
+
+    def test_edge_tag_graph_id_get(self):
+        """Test case for edge_tag_graph_id_get
+
+        Edge Tag Graph Id Get  # noqa: E501
+        """
+        pass
+
+    def test_edge_tag_name_delete(self):
+        """Test case for edge_tag_name_delete
+
+        Edge Tag Name Delete  # noqa: E501
+        """
+        pass
+
+    def test_edge_tag_post(self):
+        """Test case for edge_tag_post
+
+        Edge Tag Post  # noqa: E501
+        """
+        pass
+
     def test_graph_get(self):
         """Test case for graph_get
 

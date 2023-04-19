@@ -154,6 +154,34 @@ class TestItemApi(unittest.TestCase):
         """
         pass
 
+    def test_item_tag_delete(self):
+        """Test case for item_tag_delete
+
+        Item Tag Delete  # noqa: E501
+        """
+        pass
+
+    def test_item_tag_name_delete(self):
+        """Test case for item_tag_name_delete
+
+        Item Tag Name Delete  # noqa: E501
+        """
+        pass
+
+    def test_item_tag_node_id_get(self):
+        """Test case for item_tag_node_id_get
+
+        Item Tag Node Id Get  # noqa: E501
+        """
+        pass
+
+    def test_item_tag_post(self):
+        """Test case for item_tag_post
+
+        Item Tag Post  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

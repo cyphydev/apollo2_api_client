@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **provider** | **str** | The team (e.g., UIUC-DMG) who provides the enrichment. | 
 **tag** | **str** | The tag within the same (provider, name). | 
 **version** | **str** | The version within the same (provider, name). | 
+**description** | **str** |  | [optional] 
 **type** | **ClusterType** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

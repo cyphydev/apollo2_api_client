@@ -141,6 +141,7 @@ class SourceApi(object):
         :param int last:
         :param int end:
         :param MediaType platform:
+        :param str tag_name:
         :return: int
                  If the method is called asynchronously,
                  returns the request thread.
@@ -164,12 +165,13 @@ class SourceApi(object):
         :param int last:
         :param int end:
         :param MediaType platform:
+        :param str tag_name:
         :return: int
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['last', 'end', 'platform']  # noqa: E501
+        all_params = ['last', 'end', 'platform', 'tag_name']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -196,6 +198,8 @@ class SourceApi(object):
             query_params.append(('end', params['end']))  # noqa: E501
         if 'platform' in params:
             query_params.append(('platform', params['platform']))  # noqa: E501
+        if 'tag_name' in params:
+            query_params.append(('tag_name', params['tag_name']))  # noqa: E501
 
         header_params = {}
 
@@ -540,6 +544,7 @@ class SourceApi(object):
         :param str cluster_tag:
         :param str cluster_version:
         :param MediaType platform:
+        :param str tag_name:
         :return: list[Source]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -574,12 +579,13 @@ class SourceApi(object):
         :param str cluster_tag:
         :param str cluster_version:
         :param MediaType platform:
+        :param str tag_name:
         :return: list[Source]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['limit', 'last', 'end', 'with_enrichment', 'with_cluster', 'enrichment_name', 'enrichment_provider', 'enrichment_tag', 'enrichment_version', 'cluster_name', 'cluster_provider', 'cluster_tag', 'cluster_version', 'platform']  # noqa: E501
+        all_params = ['limit', 'last', 'end', 'with_enrichment', 'with_cluster', 'enrichment_name', 'enrichment_provider', 'enrichment_tag', 'enrichment_version', 'cluster_name', 'cluster_provider', 'cluster_tag', 'cluster_version', 'platform', 'tag_name']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -632,6 +638,8 @@ class SourceApi(object):
             query_params.append(('cluster_version', params['cluster_version']))  # noqa: E501
         if 'platform' in params:
             query_params.append(('platform', params['platform']))  # noqa: E501
+        if 'tag_name' in params:
+            query_params.append(('tag_name', params['tag_name']))  # noqa: E501
 
         header_params = {}
 
@@ -1617,6 +1625,7 @@ class SourceApi(object):
 
         :param async_req bool
         :param MediaType platform:
+        :param str tag_name:
         :return: int
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1638,12 +1647,13 @@ class SourceApi(object):
 
         :param async_req bool
         :param MediaType platform:
+        :param str tag_name:
         :return: int
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['platform']  # noqa: E501
+        all_params = ['platform', 'tag_name']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1666,6 +1676,8 @@ class SourceApi(object):
         query_params = []
         if 'platform' in params:
             query_params.append(('platform', params['platform']))  # noqa: E501
+        if 'tag_name' in params:
+            query_params.append(('tag_name', params['tag_name']))  # noqa: E501
 
         header_params = {}
 
@@ -1689,6 +1701,402 @@ class SourceApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='int',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def source_tag_delete(self, body, tag_name, **kwargs):  # noqa: E501
+        """Source Tag Delete  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.source_tag_delete(body, tag_name, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param list[int] body: (required)
+        :param str tag_name: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.source_tag_delete_with_http_info(body, tag_name, **kwargs)  # noqa: E501
+        else:
+            (data) = self.source_tag_delete_with_http_info(body, tag_name, **kwargs)  # noqa: E501
+            return data
+
+    def source_tag_delete_with_http_info(self, body, tag_name, **kwargs):  # noqa: E501
+        """Source Tag Delete  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.source_tag_delete_with_http_info(body, tag_name, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param list[int] body: (required)
+        :param str tag_name: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'tag_name']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_tag_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `source_tag_delete`")  # noqa: E501
+        # verify the required parameter 'tag_name' is set
+        if ('tag_name' not in params or
+                params['tag_name'] is None):
+            raise ValueError("Missing the required parameter `tag_name` when calling `source_tag_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'tag_name' in params:
+            query_params.append(('tag_name', params['tag_name']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/source/tag/delete', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='str',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def source_tag_name_delete(self, tag_name, **kwargs):  # noqa: E501
+        """Source Tag Name Delete  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.source_tag_name_delete(tag_name, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str tag_name: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.source_tag_name_delete_with_http_info(tag_name, **kwargs)  # noqa: E501
+        else:
+            (data) = self.source_tag_name_delete_with_http_info(tag_name, **kwargs)  # noqa: E501
+            return data
+
+    def source_tag_name_delete_with_http_info(self, tag_name, **kwargs):  # noqa: E501
+        """Source Tag Name Delete  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.source_tag_name_delete_with_http_info(tag_name, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str tag_name: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['tag_name']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_tag_name_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'tag_name' is set
+        if ('tag_name' not in params or
+                params['tag_name'] is None):
+            raise ValueError("Missing the required parameter `tag_name` when calling `source_tag_name_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'tag_name' in params:
+            query_params.append(('tag_name', params['tag_name']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/source/tag_name/delete', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='str',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def source_tag_node_id_get(self, id, **kwargs):  # noqa: E501
+        """Source Tag Node Id Get  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.source_tag_node_id_get(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :return: list[str]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.source_tag_node_id_get_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.source_tag_node_id_get_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def source_tag_node_id_get_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Source Tag Node Id Get  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.source_tag_node_id_get_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :return: list[str]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_tag_node_id_get" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `source_tag_node_id_get`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'id' in params:
+            query_params.append(('id', params['id']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/source/id/tag', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[str]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def source_tag_post(self, body, tag_name, **kwargs):  # noqa: E501
+        """Source Tag Post  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.source_tag_post(body, tag_name, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param list[int] body: (required)
+        :param str tag_name: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.source_tag_post_with_http_info(body, tag_name, **kwargs)  # noqa: E501
+        else:
+            (data) = self.source_tag_post_with_http_info(body, tag_name, **kwargs)  # noqa: E501
+            return data
+
+    def source_tag_post_with_http_info(self, body, tag_name, **kwargs):  # noqa: E501
+        """Source Tag Post  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.source_tag_post_with_http_info(body, tag_name, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param list[int] body: (required)
+        :param str tag_name: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'tag_name']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_tag_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `source_tag_post`")  # noqa: E501
+        # verify the required parameter 'tag_name' is set
+        if ('tag_name' not in params or
+                params['tag_name'] is None):
+            raise ValueError("Missing the required parameter `tag_name` when calling `source_tag_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'tag_name' in params:
+            query_params.append(('tag_name', params['tag_name']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/source/tag/post', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='str',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
