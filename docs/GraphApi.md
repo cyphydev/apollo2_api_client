@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**edge_tag_delete**](GraphApi.md#edge_tag_delete) | **DELETE** /graph/edge_tag_delete | Edge Tag Delete
 [**edge_tag_graph_id_get**](GraphApi.md#edge_tag_graph_id_get) | **GET** /graph/graph_id/tag | Edge Tag Graph Id Get
-[**edge_tag_name_delete**](GraphApi.md#edge_tag_name_delete) | **DELETE** /graph/tag/delete | Edge Tag Name Delete
 [**edge_tag_post**](GraphApi.md#edge_tag_post) | **POST** /graph/edge_tag_post | Edge Tag Post
 [**graph_get**](GraphApi.md#graph_get) | **GET** /graph | Graph Get
 [**graph_id_delete**](GraphApi.md#graph_id_delete) | **DELETE** /graph/{id} | Graph Id Delete
@@ -110,58 +109,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **list[str]**
-
-### Authorization
-
-[APIKeyHeader](../README.md#APIKeyHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **edge_tag_name_delete**
-> str edge_tag_name_delete(tag_name)
-
-Edge Tag Name Delete
-
-### Example
-```python
-from __future__ import print_function
-import time
-import mips_api_client
-from mips_api_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
-tag_name = 'tag_name_example' # str | 
-
-try:
-    # Edge Tag Name Delete
-    api_response = api_instance.edge_tag_name_delete(tag_name)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling GraphApi->edge_tag_name_delete: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tag_name** | **str**|  | 
-
-### Return type
-
-**str**
 
 ### Authorization
 

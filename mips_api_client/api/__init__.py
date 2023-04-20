@@ -11,3 +11,4 @@ from mips_api_client.api.graph_api import GraphApi
 from mips_api_client.api.item_api import ItemApi
 from mips_api_client.api.media_item_api import MediaItemApi
 from mips_api_client.api.source_api import SourceApi
+from mips_api_client.api.tag_api import TagApi

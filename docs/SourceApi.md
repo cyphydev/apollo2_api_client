@@ -21,7 +21,6 @@ Method | HTTP request | Description
 [**source_id_reverse_translate**](SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
 [**source_max_id_get**](SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
 [**source_tag_delete**](SourceApi.md#source_tag_delete) | **POST** /source/tag/delete | Source Tag Delete
-[**source_tag_name_delete**](SourceApi.md#source_tag_name_delete) | **DELETE** /source/tag_name/delete | Source Tag Name Delete
 [**source_tag_node_id_get**](SourceApi.md#source_tag_node_id_get) | **GET** /source/id/tag | Source Tag Node Id Get
 [**source_tag_post**](SourceApi.md#source_tag_post) | **POST** /source/tag/post | Source Tag Post
 
@@ -985,58 +984,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **source_tag_name_delete**
-> str source_tag_name_delete(tag_name)
-
-Source Tag Name Delete
-
-### Example
-```python
-from __future__ import print_function
-import time
-import mips_api_client
-from mips_api_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = mips_api_client.SourceApi(mips_api_client.ApiClient(configuration))
-tag_name = 'tag_name_example' # str | 
-
-try:
-    # Source Tag Name Delete
-    api_response = api_instance.source_tag_name_delete(tag_name)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling SourceApi->source_tag_name_delete: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tag_name** | **str**|  | 
-
-### Return type
-
-**str**
-
-### Authorization
-
-[APIKeyHeader](../README.md#APIKeyHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

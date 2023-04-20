@@ -161,13 +161,6 @@ class TestItemApi(unittest.TestCase):
         """
         pass
 
-    def test_item_tag_name_delete(self):
-        """Test case for item_tag_name_delete
-
-        Item Tag Name Delete  # noqa: E501
-        """
-        pass
-
     def test_item_tag_node_id_get(self):
         """Test case for item_tag_node_id_get
 

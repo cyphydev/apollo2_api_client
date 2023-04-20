@@ -77,13 +77,6 @@ class TestMediaItemApi(unittest.TestCase):
         """
         pass
 
-    def test_media_item_tag_name_delete(self):
-        """Test case for media_item_tag_name_delete
-
-        Media Item Tag Name Delete  # noqa: E501
-        """
-        pass
-
     def test_media_item_tag_node_id_get(self):
         """Test case for media_item_tag_node_id_get
 

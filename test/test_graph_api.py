@@ -42,13 +42,6 @@ class TestGraphApi(unittest.TestCase):
         """
         pass
 
-    def test_edge_tag_name_delete(self):
-        """Test case for edge_tag_name_delete
-
-        Edge Tag Name Delete  # noqa: E501
-        """
-        pass
-
     def test_edge_tag_post(self):
         """Test case for edge_tag_post
 

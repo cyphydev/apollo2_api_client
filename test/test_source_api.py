@@ -147,13 +147,6 @@ class TestSourceApi(unittest.TestCase):
         """
         pass
 
-    def test_source_tag_name_delete(self):
-        """Test case for source_tag_name_delete
-
-        Source Tag Name Delete  # noqa: E501
-        """
-        pass
-
     def test_source_tag_node_id_get(self):
         """Test case for source_tag_node_id_get
 

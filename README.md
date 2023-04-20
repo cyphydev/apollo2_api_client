@@ -124,7 +124,6 @@ Class | Method | HTTP request | Description
 *EnrichmentApi* | [**enrichments_meta_post**](docs/EnrichmentApi.md#enrichments_meta_post) | **POST** /enrichments/meta | Enrichments Meta Post
 *GraphApi* | [**edge_tag_delete**](docs/GraphApi.md#edge_tag_delete) | **DELETE** /graph/edge_tag_delete | Edge Tag Delete
 *GraphApi* | [**edge_tag_graph_id_get**](docs/GraphApi.md#edge_tag_graph_id_get) | **GET** /graph/graph_id/tag | Edge Tag Graph Id Get
-*GraphApi* | [**edge_tag_name_delete**](docs/GraphApi.md#edge_tag_name_delete) | **DELETE** /graph/tag/delete | Edge Tag Name Delete
 *GraphApi* | [**edge_tag_post**](docs/GraphApi.md#edge_tag_post) | **POST** /graph/edge_tag_post | Edge Tag Post
 *GraphApi* | [**graph_get**](docs/GraphApi.md#graph_get) | **GET** /graph | Graph Get
 *GraphApi* | [**graph_id_delete**](docs/GraphApi.md#graph_id_delete) | **DELETE** /graph/{id} | Graph Id Delete
@@ -152,7 +151,6 @@ Class | Method | HTTP request | Description
 *ItemApi* | [**item_id_reverse_translate**](docs/ItemApi.md#item_id_reverse_translate) | **GET** /item/id/reverse/{id} | Item Id Reverse Translate
 *ItemApi* | [**item_max_id_get**](docs/ItemApi.md#item_max_id_get) | **GET** /item/max_id | Item Max Id Get
 *ItemApi* | [**item_tag_delete**](docs/ItemApi.md#item_tag_delete) | **POST** /item/tag/delete | Item Tag Delete
-*ItemApi* | [**item_tag_name_delete**](docs/ItemApi.md#item_tag_name_delete) | **DELETE** /item/tag_name/delete | Item Tag Name Delete
 *ItemApi* | [**item_tag_node_id_get**](docs/ItemApi.md#item_tag_node_id_get) | **GET** /item/id/tag | Item Tag Node Id Get
 *ItemApi* | [**item_tag_post**](docs/ItemApi.md#item_tag_post) | **POST** /item/tag/post | Item Tag Post
 *MediaItemApi* | [**media_item_batch_get**](docs/MediaItemApi.md#media_item_batch_get) | **POST** /media_item/get | Media Item Batch Get
@@ -162,7 +160,6 @@ Class | Method | HTTP request | Description
 *MediaItemApi* | [**media_item_id_get**](docs/MediaItemApi.md#media_item_id_get) | **GET** /media_item/{id} | Media Item Id Get
 *MediaItemApi* | [**media_item_max_id_get**](docs/MediaItemApi.md#media_item_max_id_get) | **GET** /media_item/max_id | Media Item Max Id Get
 *MediaItemApi* | [**media_item_tag_delete**](docs/MediaItemApi.md#media_item_tag_delete) | **POST** /media_item/tag/delete | Media Item Tag Delete
-*MediaItemApi* | [**media_item_tag_name_delete**](docs/MediaItemApi.md#media_item_tag_name_delete) | **DELETE** /media_item/tag_name/delete | Media Item Tag Name Delete
 *MediaItemApi* | [**media_item_tag_node_id_get**](docs/MediaItemApi.md#media_item_tag_node_id_get) | **GET** /media_item/id/tag | Media Item Tag Node Id Get
 *MediaItemApi* | [**media_item_tag_post**](docs/MediaItemApi.md#media_item_tag_post) | **POST** /media_item/tag/post | Media Item Tag Post
 *SourceApi* | [**source_batch_get**](docs/SourceApi.md#source_batch_get) | **POST** /source/get | Source Batch Get
@@ -182,9 +179,9 @@ Class | Method | HTTP request | Description
 *SourceApi* | [**source_id_reverse_translate**](docs/SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
 *SourceApi* | [**source_max_id_get**](docs/SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
 *SourceApi* | [**source_tag_delete**](docs/SourceApi.md#source_tag_delete) | **POST** /source/tag/delete | Source Tag Delete
-*SourceApi* | [**source_tag_name_delete**](docs/SourceApi.md#source_tag_name_delete) | **DELETE** /source/tag_name/delete | Source Tag Name Delete
 *SourceApi* | [**source_tag_node_id_get**](docs/SourceApi.md#source_tag_node_id_get) | **GET** /source/id/tag | Source Tag Node Id Get
 *SourceApi* | [**source_tag_post**](docs/SourceApi.md#source_tag_post) | **POST** /source/tag/post | Source Tag Post
+*TagApi* | [**tag_name_delete**](docs/TagApi.md#tag_name_delete) | **GET** /tag/delete | Tag Name Delete
 
 ## Documentation For Models
 
