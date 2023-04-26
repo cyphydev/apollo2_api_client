@@ -35,6 +35,27 @@ class TestClusterApi(unittest.TestCase):
         """
         pass
 
+    def test_cluster_enrichments_batch_delete(self):
+        """Test case for cluster_enrichments_batch_delete
+
+        Cluster Enrichments Batch Delete  # noqa: E501
+        """
+        pass
+
+    def test_cluster_enrichments_batch_get(self):
+        """Test case for cluster_enrichments_batch_get
+
+        Cluster Enrichments Batch Get  # noqa: E501
+        """
+        pass
+
+    def test_cluster_enrichments_batch_post(self):
+        """Test case for cluster_enrichments_batch_post
+
+        Cluster Enrichments Batch Post  # noqa: E501
+        """
+        pass
+
     def test_cluster_get(self):
         """Test case for cluster_get
 
@@ -56,10 +77,38 @@ class TestClusterApi(unittest.TestCase):
         """
         pass
 
+    def test_cluster_id_enrichments_delete(self):
+        """Test case for cluster_id_enrichments_delete
+
+        Cluster Id Enrichments Delete  # noqa: E501
+        """
+        pass
+
+    def test_cluster_id_enrichments_get(self):
+        """Test case for cluster_id_enrichments_get
+
+        Cluster Id Enrichments Get  # noqa: E501
+        """
+        pass
+
+    def test_cluster_id_enrichments_post(self):
+        """Test case for cluster_id_enrichments_post
+
+        Cluster Id Enrichments Post  # noqa: E501
+        """
+        pass
+
     def test_cluster_id_get(self):
         """Test case for cluster_id_get
 
         Cluster Id Get  # noqa: E501
+        """
+        pass
+
+    def test_cluster_id_identifer_get(self):
+        """Test case for cluster_id_identifer_get
+
+        Cluster Id Identifer Get  # noqa: E501
         """
         pass
 
@@ -70,31 +119,24 @@ class TestClusterApi(unittest.TestCase):
         """
         pass
 
+    def test_cluster_identifer_delete(self):
+        """Test case for cluster_identifer_delete
+
+        Cluster Identifer Delete  # noqa: E501
+        """
+        pass
+
+    def test_cluster_identifer_post(self):
+        """Test case for cluster_identifer_post
+
+        Cluster Identifer Post  # noqa: E501
+        """
+        pass
+
     def test_cluster_post(self):
         """Test case for cluster_post
 
         Cluster Post  # noqa: E501
-        """
-        pass
-
-    def test_cluster_tag_delete(self):
-        """Test case for cluster_tag_delete
-
-        Cluster Tag Delete  # noqa: E501
-        """
-        pass
-
-    def test_cluster_tag_id_get(self):
-        """Test case for cluster_tag_id_get
-
-        Cluster Tag Id Get  # noqa: E501
-        """
-        pass
-
-    def test_cluster_tag_post(self):
-        """Test case for cluster_tag_post
-
-        Cluster Tag Post  # noqa: E501
         """
         pass
 

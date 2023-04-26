@@ -119,6 +119,13 @@ class TestSourceApi(unittest.TestCase):
         """
         pass
 
+    def test_source_id_identifer_get(self):
+        """Test case for source_id_identifer_get
+
+        Source Id Identifer Get  # noqa: E501
+        """
+        pass
+
     def test_source_id_reverse_batch_translate(self):
         """Test case for source_id_reverse_batch_translate
 
@@ -133,31 +140,24 @@ class TestSourceApi(unittest.TestCase):
         """
         pass
 
+    def test_source_identifer_delete(self):
+        """Test case for source_identifer_delete
+
+        Source Identifer Delete  # noqa: E501
+        """
+        pass
+
+    def test_source_identifer_post(self):
+        """Test case for source_identifer_post
+
+        Source Identifer Post  # noqa: E501
+        """
+        pass
+
     def test_source_max_id_get(self):
         """Test case for source_max_id_get
 
         Source Max Id Get  # noqa: E501
-        """
-        pass
-
-    def test_source_tag_delete(self):
-        """Test case for source_tag_delete
-
-        Source Tag Delete  # noqa: E501
-        """
-        pass
-
-    def test_source_tag_id_get(self):
-        """Test case for source_tag_id_get
-
-        Source Tag Id Get  # noqa: E501
-        """
-        pass
-
-    def test_source_tag_post(self):
-        """Test case for source_tag_post
-
-        Source Tag Post  # noqa: E501
         """
         pass
 

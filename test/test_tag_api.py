@@ -28,10 +28,10 @@ class TestTagApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_tag_name_delete(self):
-        """Test case for tag_name_delete
+    def test_identifer_delete(self):
+        """Test case for identifer_delete
 
-        Tag Name Delete  # noqa: E501
+        Identifer Delete  # noqa: E501
         """
         pass
 

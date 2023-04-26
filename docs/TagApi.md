@@ -4,12 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**tag_name_delete**](TagApi.md#tag_name_delete) | **GET** /tag/delete | Tag Name Delete
+[**identifer_delete**](TagApi.md#identifer_delete) | **GET** /identifer/delete | Identifer Delete
 
-# **tag_name_delete**
-> str tag_name_delete(tag_name)
+# **identifer_delete**
+> str identifer_delete(identifier)
 
-Tag Name Delete
+Identifer Delete
 
 ### Example
 ```python
@@ -27,21 +27,21 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = mips_api_client.TagApi(mips_api_client.ApiClient(configuration))
-tag_name = 'tag_name_example' # str | 
+identifier = 'identifier_example' # str | 
 
 try:
-    # Tag Name Delete
-    api_response = api_instance.tag_name_delete(tag_name)
+    # Identifer Delete
+    api_response = api_instance.identifer_delete(identifier)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling TagApi->tag_name_delete: %s\n" % e)
+    print("Exception when calling TagApi->identifer_delete: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tag_name** | **str**|  | 
+ **identifier** | **str**|  | 
 
 ### Return type
 

@@ -133,6 +133,13 @@ class TestItemApi(unittest.TestCase):
         """
         pass
 
+    def test_item_id_identifer_get(self):
+        """Test case for item_id_identifer_get
+
+        Item Id Identifer Get  # noqa: E501
+        """
+        pass
+
     def test_item_id_reverse_batch_translate(self):
         """Test case for item_id_reverse_batch_translate
 
@@ -147,31 +154,24 @@ class TestItemApi(unittest.TestCase):
         """
         pass
 
+    def test_item_identifer_delete(self):
+        """Test case for item_identifer_delete
+
+        Item Identifer Delete  # noqa: E501
+        """
+        pass
+
+    def test_item_identifer_post(self):
+        """Test case for item_identifer_post
+
+        Item Identifer Post  # noqa: E501
+        """
+        pass
+
     def test_item_max_id_get(self):
         """Test case for item_max_id_get
 
         Item Max Id Get  # noqa: E501
-        """
-        pass
-
-    def test_item_tag_delete(self):
-        """Test case for item_tag_delete
-
-        Item Tag Delete  # noqa: E501
-        """
-        pass
-
-    def test_item_tag_id_get(self):
-        """Test case for item_tag_id_get
-
-        Item Tag Id Get  # noqa: E501
-        """
-        pass
-
-    def test_item_tag_post(self):
-        """Test case for item_tag_post
-
-        Item Tag Post  # noqa: E501
         """
         pass
 

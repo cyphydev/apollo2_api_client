@@ -63,31 +63,31 @@ class TestMediaItemApi(unittest.TestCase):
         """
         pass
 
+    def test_media_item_id_identifer_get(self):
+        """Test case for media_item_id_identifer_get
+
+        Media Item Id Identifer Get  # noqa: E501
+        """
+        pass
+
+    def test_media_item_identifer_delete(self):
+        """Test case for media_item_identifer_delete
+
+        Media Item Identifer Delete  # noqa: E501
+        """
+        pass
+
+    def test_media_item_identifer_post(self):
+        """Test case for media_item_identifer_post
+
+        Media Item Identifer Post  # noqa: E501
+        """
+        pass
+
     def test_media_item_max_id_get(self):
         """Test case for media_item_max_id_get
 
         Media Item Max Id Get  # noqa: E501
-        """
-        pass
-
-    def test_media_item_tag_delete(self):
-        """Test case for media_item_tag_delete
-
-        Media Item Tag Delete  # noqa: E501
-        """
-        pass
-
-    def test_media_item_tag_id_get(self):
-        """Test case for media_item_tag_id_get
-
-        Media Item Tag Id Get  # noqa: E501
-        """
-        pass
-
-    def test_media_item_tag_post(self):
-        """Test case for media_item_tag_post
-
-        Media Item Tag Post  # noqa: E501
         """
         pass
 

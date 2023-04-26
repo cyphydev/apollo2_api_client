@@ -32,43 +32,43 @@ class TagApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def tag_name_delete(self, tag_name, **kwargs):  # noqa: E501
-        """Tag Name Delete  # noqa: E501
+    def identifer_delete(self, identifier, **kwargs):  # noqa: E501
+        """Identifer Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.tag_name_delete(tag_name, async_req=True)
+        >>> thread = api.identifer_delete(identifier, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str tag_name: (required)
+        :param str identifier: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.tag_name_delete_with_http_info(tag_name, **kwargs)  # noqa: E501
+            return self.identifer_delete_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
-            (data) = self.tag_name_delete_with_http_info(tag_name, **kwargs)  # noqa: E501
+            (data) = self.identifer_delete_with_http_info(identifier, **kwargs)  # noqa: E501
             return data
 
-    def tag_name_delete_with_http_info(self, tag_name, **kwargs):  # noqa: E501
-        """Tag Name Delete  # noqa: E501
+    def identifer_delete_with_http_info(self, identifier, **kwargs):  # noqa: E501
+        """Identifer Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.tag_name_delete_with_http_info(tag_name, async_req=True)
+        >>> thread = api.identifer_delete_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str tag_name: (required)
+        :param str identifier: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['tag_name']  # noqa: E501
+        all_params = ['identifier']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -79,22 +79,22 @@ class TagApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method tag_name_delete" % key
+                    " to method identifer_delete" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'tag_name' is set
-        if ('tag_name' not in params or
-                params['tag_name'] is None):
-            raise ValueError("Missing the required parameter `tag_name` when calling `tag_name_delete`")  # noqa: E501
+        # verify the required parameter 'identifier' is set
+        if ('identifier' not in params or
+                params['identifier'] is None):
+            raise ValueError("Missing the required parameter `identifier` when calling `identifer_delete`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
-        if 'tag_name' in params:
-            query_params.append(('tag_name', params['tag_name']))  # noqa: E501
+        if 'identifier' in params:
+            query_params.append(('identifier', params['identifier']))  # noqa: E501
 
         header_params = {}
 
@@ -110,7 +110,7 @@ class TagApi(object):
         auth_settings = ['APIKeyHeader']  # noqa: E501
 
         return self.api_client.call_api(
-            '/tag/delete', 'GET',
+            '/identifer/delete', 'GET',
             path_params,
             query_params,
             header_params,
