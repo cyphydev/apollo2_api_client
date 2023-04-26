@@ -1300,39 +1300,39 @@ class ItemApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def item_id_forward_batch_translate(self, body, platform, **kwargs):  # noqa: E501
+    def item_id_forward_batch_translate(self, body, **kwargs):  # noqa: E501
         """Item Id Forward Batch Translate  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.item_id_forward_batch_translate(body, platform, async_req=True)
+        >>> thread = api.item_id_forward_batch_translate(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param list[str] body: (required)
-        :param MediaType platform: (required)
+        :param MediaType platform:
         :return: list[int]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.item_id_forward_batch_translate_with_http_info(body, platform, **kwargs)  # noqa: E501
+            return self.item_id_forward_batch_translate_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.item_id_forward_batch_translate_with_http_info(body, platform, **kwargs)  # noqa: E501
+            (data) = self.item_id_forward_batch_translate_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def item_id_forward_batch_translate_with_http_info(self, body, platform, **kwargs):  # noqa: E501
+    def item_id_forward_batch_translate_with_http_info(self, body, **kwargs):  # noqa: E501
         """Item Id Forward Batch Translate  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.item_id_forward_batch_translate_with_http_info(body, platform, async_req=True)
+        >>> thread = api.item_id_forward_batch_translate_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param list[str] body: (required)
-        :param MediaType platform: (required)
+        :param MediaType platform:
         :return: list[int]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1357,10 +1357,6 @@ class ItemApi(object):
         if ('body' not in params or
                 params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `item_id_forward_batch_translate`")  # noqa: E501
-        # verify the required parameter 'platform' is set
-        if ('platform' not in params or
-                params['platform'] is None):
-            raise ValueError("Missing the required parameter `platform` when calling `item_id_forward_batch_translate`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1405,39 +1401,39 @@ class ItemApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def item_id_forward_translate(self, id, platform, **kwargs):  # noqa: E501
+    def item_id_forward_translate(self, id, **kwargs):  # noqa: E501
         """Item Id Forward Translate  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.item_id_forward_translate(id, platform, async_req=True)
+        >>> thread = api.item_id_forward_translate(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: (required)
-        :param MediaType platform: (required)
+        :param MediaType platform:
         :return: int
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.item_id_forward_translate_with_http_info(id, platform, **kwargs)  # noqa: E501
+            return self.item_id_forward_translate_with_http_info(id, **kwargs)  # noqa: E501
         else:
-            (data) = self.item_id_forward_translate_with_http_info(id, platform, **kwargs)  # noqa: E501
+            (data) = self.item_id_forward_translate_with_http_info(id, **kwargs)  # noqa: E501
             return data
 
-    def item_id_forward_translate_with_http_info(self, id, platform, **kwargs):  # noqa: E501
+    def item_id_forward_translate_with_http_info(self, id, **kwargs):  # noqa: E501
         """Item Id Forward Translate  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.item_id_forward_translate_with_http_info(id, platform, async_req=True)
+        >>> thread = api.item_id_forward_translate_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: (required)
-        :param MediaType platform: (required)
+        :param MediaType platform:
         :return: int
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1462,10 +1458,6 @@ class ItemApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `item_id_forward_translate`")  # noqa: E501
-        # verify the required parameter 'platform' is set
-        if ('platform' not in params or
-                params['platform'] is None):
-            raise ValueError("Missing the required parameter `platform` when calling `item_id_forward_translate`")  # noqa: E501
 
         collection_formats = {}
 

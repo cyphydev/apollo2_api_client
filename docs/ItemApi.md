@@ -713,7 +713,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_id_forward_batch_translate**
-> list[int] item_id_forward_batch_translate(body, platform)
+> list[int] item_id_forward_batch_translate(body, platform=platform)
 
 Item Id Forward Batch Translate
 
@@ -734,11 +734,11 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
 body = ['body_example'] # list[str] | 
-platform = mips_api_client.MediaType() # MediaType | 
+platform = mips_api_client.MediaType() # MediaType |  (optional)
 
 try:
     # Item Id Forward Batch Translate
-    api_response = api_instance.item_id_forward_batch_translate(body, platform)
+    api_response = api_instance.item_id_forward_batch_translate(body, platform=platform)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ItemApi->item_id_forward_batch_translate: %s\n" % e)
@@ -749,7 +749,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**list[str]**](str.md)|  | 
- **platform** | [**MediaType**](.md)|  | 
+ **platform** | [**MediaType**](.md)|  | [optional] 
 
 ### Return type
 
@@ -767,7 +767,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_id_forward_translate**
-> int item_id_forward_translate(id, platform)
+> int item_id_forward_translate(id, platform=platform)
 
 Item Id Forward Translate
 
@@ -788,11 +788,11 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-platform = mips_api_client.MediaType() # MediaType | 
+platform = mips_api_client.MediaType() # MediaType |  (optional)
 
 try:
     # Item Id Forward Translate
-    api_response = api_instance.item_id_forward_translate(id, platform)
+    api_response = api_instance.item_id_forward_translate(id, platform=platform)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ItemApi->item_id_forward_translate: %s\n" % e)
@@ -803,7 +803,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **platform** | [**MediaType**](.md)|  | 
+ **platform** | [**MediaType**](.md)|  | [optional] 
 
 ### Return type
 
