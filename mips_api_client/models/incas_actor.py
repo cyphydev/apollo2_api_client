@@ -28,294 +28,74 @@ class IncasActor(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'id': 'str',
-        'actor_name': 'str',
-        'links': 'IncasLinks',
-        'entity_type': 'EntityType',
-        'expose_actor_info': 'bool',
-        'media_resources': 'list[IncasMediaResource]',
-        'knowledge_base_url': 'str',
-        'description': 'str',
-        'segments': 'list[IncasSegment]',
         'annotations': 'list[IncasAnnotation]',
         'extra_attributes': 'list[IncasExtraAttribute]',
-        'time_active': 'int',
-        'is_member_of_filtered_set': 'bool'
+        'media_resources': 'list[IncasMediaResource]',
+        'segments': 'list[IncasSegment]',
+        'actor_name': 'str',
+        'description': 'str',
+        'entity_type': 'EntityType',
+        'expose_actor_info': 'bool',
+        'id': 'str',
+        'knowledge_base_url': 'str',
+        'links': 'IncasLinks',
+        'name': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
-        'id': 'id',
-        'actor_name': 'actor_name',
-        'links': 'links',
-        'entity_type': 'entity_type',
-        'expose_actor_info': 'expose_actor_info',
-        'media_resources': 'media_resources',
-        'knowledge_base_url': 'knowledge_base_url',
-        'description': 'description',
-        'segments': 'segments',
         'annotations': 'annotations',
         'extra_attributes': 'extra_attributes',
-        'time_active': 'time_active',
-        'is_member_of_filtered_set': 'is_member_of_filtered_set'
+        'media_resources': 'media_resources',
+        'segments': 'segments',
+        'actor_name': 'actor_name',
+        'description': 'description',
+        'entity_type': 'entity_type',
+        'expose_actor_info': 'expose_actor_info',
+        'id': 'id',
+        'knowledge_base_url': 'knowledge_base_url',
+        'links': 'links',
+        'name': 'name'
     }
 
-    def __init__(self, name=None, id=None, actor_name=None, links=None, entity_type=None, expose_actor_info=None, media_resources=None, knowledge_base_url=None, description=None, segments=None, annotations=None, extra_attributes=None, time_active=None, is_member_of_filtered_set=False):  # noqa: E501
+    def __init__(self, annotations=None, extra_attributes=None, media_resources=None, segments=None, actor_name=None, description=None, entity_type=None, expose_actor_info=None, id=None, knowledge_base_url=None, links=None, name=None):  # noqa: E501
         """IncasActor - a model defined in Swagger"""  # noqa: E501
-        self._name = None
-        self._id = None
-        self._actor_name = None
-        self._links = None
-        self._entity_type = None
-        self._expose_actor_info = None
-        self._media_resources = None
-        self._knowledge_base_url = None
-        self._description = None
-        self._segments = None
         self._annotations = None
         self._extra_attributes = None
-        self._time_active = None
-        self._is_member_of_filtered_set = None
+        self._media_resources = None
+        self._segments = None
+        self._actor_name = None
+        self._description = None
+        self._entity_type = None
+        self._expose_actor_info = None
+        self._id = None
+        self._knowledge_base_url = None
+        self._links = None
+        self._name = None
         self.discriminator = None
-        if name is not None:
-            self.name = name
-        if id is not None:
-            self.id = id
-        if actor_name is not None:
-            self.actor_name = actor_name
-        if links is not None:
-            self.links = links
-        if entity_type is not None:
-            self.entity_type = entity_type
-        if expose_actor_info is not None:
-            self.expose_actor_info = expose_actor_info
-        if media_resources is not None:
-            self.media_resources = media_resources
-        if knowledge_base_url is not None:
-            self.knowledge_base_url = knowledge_base_url
-        if description is not None:
-            self.description = description
-        if segments is not None:
-            self.segments = segments
         if annotations is not None:
             self.annotations = annotations
         if extra_attributes is not None:
             self.extra_attributes = extra_attributes
-        if time_active is not None:
-            self.time_active = time_active
-        if is_member_of_filtered_set is not None:
-            self.is_member_of_filtered_set = is_member_of_filtered_set
-
-    @property
-    def name(self):
-        """Gets the name of this IncasActor.  # noqa: E501
-
-
-        :return: The name of this IncasActor.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this IncasActor.
-
-
-        :param name: The name of this IncasActor.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
-
-    @property
-    def id(self):
-        """Gets the id of this IncasActor.  # noqa: E501
-
-
-        :return: The id of this IncasActor.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this IncasActor.
-
-
-        :param id: The id of this IncasActor.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
-    def actor_name(self):
-        """Gets the actor_name of this IncasActor.  # noqa: E501
-
-
-        :return: The actor_name of this IncasActor.  # noqa: E501
-        :rtype: str
-        """
-        return self._actor_name
-
-    @actor_name.setter
-    def actor_name(self, actor_name):
-        """Sets the actor_name of this IncasActor.
-
-
-        :param actor_name: The actor_name of this IncasActor.  # noqa: E501
-        :type: str
-        """
-
-        self._actor_name = actor_name
-
-    @property
-    def links(self):
-        """Gets the links of this IncasActor.  # noqa: E501
-
-
-        :return: The links of this IncasActor.  # noqa: E501
-        :rtype: IncasLinks
-        """
-        return self._links
-
-    @links.setter
-    def links(self, links):
-        """Sets the links of this IncasActor.
-
-
-        :param links: The links of this IncasActor.  # noqa: E501
-        :type: IncasLinks
-        """
-
-        self._links = links
-
-    @property
-    def entity_type(self):
-        """Gets the entity_type of this IncasActor.  # noqa: E501
-
-
-        :return: The entity_type of this IncasActor.  # noqa: E501
-        :rtype: EntityType
-        """
-        return self._entity_type
-
-    @entity_type.setter
-    def entity_type(self, entity_type):
-        """Sets the entity_type of this IncasActor.
-
-
-        :param entity_type: The entity_type of this IncasActor.  # noqa: E501
-        :type: EntityType
-        """
-
-        self._entity_type = entity_type
-
-    @property
-    def expose_actor_info(self):
-        """Gets the expose_actor_info of this IncasActor.  # noqa: E501
-
-
-        :return: The expose_actor_info of this IncasActor.  # noqa: E501
-        :rtype: bool
-        """
-        return self._expose_actor_info
-
-    @expose_actor_info.setter
-    def expose_actor_info(self, expose_actor_info):
-        """Sets the expose_actor_info of this IncasActor.
-
-
-        :param expose_actor_info: The expose_actor_info of this IncasActor.  # noqa: E501
-        :type: bool
-        """
-
-        self._expose_actor_info = expose_actor_info
-
-    @property
-    def media_resources(self):
-        """Gets the media_resources of this IncasActor.  # noqa: E501
-
-
-        :return: The media_resources of this IncasActor.  # noqa: E501
-        :rtype: list[IncasMediaResource]
-        """
-        return self._media_resources
-
-    @media_resources.setter
-    def media_resources(self, media_resources):
-        """Sets the media_resources of this IncasActor.
-
-
-        :param media_resources: The media_resources of this IncasActor.  # noqa: E501
-        :type: list[IncasMediaResource]
-        """
-
-        self._media_resources = media_resources
-
-    @property
-    def knowledge_base_url(self):
-        """Gets the knowledge_base_url of this IncasActor.  # noqa: E501
-
-
-        :return: The knowledge_base_url of this IncasActor.  # noqa: E501
-        :rtype: str
-        """
-        return self._knowledge_base_url
-
-    @knowledge_base_url.setter
-    def knowledge_base_url(self, knowledge_base_url):
-        """Sets the knowledge_base_url of this IncasActor.
-
-
-        :param knowledge_base_url: The knowledge_base_url of this IncasActor.  # noqa: E501
-        :type: str
-        """
-
-        self._knowledge_base_url = knowledge_base_url
-
-    @property
-    def description(self):
-        """Gets the description of this IncasActor.  # noqa: E501
-
-
-        :return: The description of this IncasActor.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this IncasActor.
-
-
-        :param description: The description of this IncasActor.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def segments(self):
-        """Gets the segments of this IncasActor.  # noqa: E501
-
-
-        :return: The segments of this IncasActor.  # noqa: E501
-        :rtype: list[IncasSegment]
-        """
-        return self._segments
-
-    @segments.setter
-    def segments(self, segments):
-        """Sets the segments of this IncasActor.
-
-
-        :param segments: The segments of this IncasActor.  # noqa: E501
-        :type: list[IncasSegment]
-        """
-
-        self._segments = segments
+        if media_resources is not None:
+            self.media_resources = media_resources
+        if segments is not None:
+            self.segments = segments
+        if actor_name is not None:
+            self.actor_name = actor_name
+        if description is not None:
+            self.description = description
+        if entity_type is not None:
+            self.entity_type = entity_type
+        if expose_actor_info is not None:
+            self.expose_actor_info = expose_actor_info
+        if id is not None:
+            self.id = id
+        if knowledge_base_url is not None:
+            self.knowledge_base_url = knowledge_base_url
+        if links is not None:
+            self.links = links
+        if name is not None:
+            self.name = name
 
     @property
     def annotations(self):
@@ -360,46 +140,214 @@ class IncasActor(object):
         self._extra_attributes = extra_attributes
 
     @property
-    def time_active(self):
-        """Gets the time_active of this IncasActor.  # noqa: E501
+    def media_resources(self):
+        """Gets the media_resources of this IncasActor.  # noqa: E501
 
 
-        :return: The time_active of this IncasActor.  # noqa: E501
-        :rtype: int
+        :return: The media_resources of this IncasActor.  # noqa: E501
+        :rtype: list[IncasMediaResource]
         """
-        return self._time_active
+        return self._media_resources
 
-    @time_active.setter
-    def time_active(self, time_active):
-        """Sets the time_active of this IncasActor.
+    @media_resources.setter
+    def media_resources(self, media_resources):
+        """Sets the media_resources of this IncasActor.
 
 
-        :param time_active: The time_active of this IncasActor.  # noqa: E501
-        :type: int
+        :param media_resources: The media_resources of this IncasActor.  # noqa: E501
+        :type: list[IncasMediaResource]
         """
 
-        self._time_active = time_active
+        self._media_resources = media_resources
 
     @property
-    def is_member_of_filtered_set(self):
-        """Gets the is_member_of_filtered_set of this IncasActor.  # noqa: E501
+    def segments(self):
+        """Gets the segments of this IncasActor.  # noqa: E501
 
 
-        :return: The is_member_of_filtered_set of this IncasActor.  # noqa: E501
+        :return: The segments of this IncasActor.  # noqa: E501
+        :rtype: list[IncasSegment]
+        """
+        return self._segments
+
+    @segments.setter
+    def segments(self, segments):
+        """Sets the segments of this IncasActor.
+
+
+        :param segments: The segments of this IncasActor.  # noqa: E501
+        :type: list[IncasSegment]
+        """
+
+        self._segments = segments
+
+    @property
+    def actor_name(self):
+        """Gets the actor_name of this IncasActor.  # noqa: E501
+
+
+        :return: The actor_name of this IncasActor.  # noqa: E501
+        :rtype: str
+        """
+        return self._actor_name
+
+    @actor_name.setter
+    def actor_name(self, actor_name):
+        """Sets the actor_name of this IncasActor.
+
+
+        :param actor_name: The actor_name of this IncasActor.  # noqa: E501
+        :type: str
+        """
+
+        self._actor_name = actor_name
+
+    @property
+    def description(self):
+        """Gets the description of this IncasActor.  # noqa: E501
+
+
+        :return: The description of this IncasActor.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this IncasActor.
+
+
+        :param description: The description of this IncasActor.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def entity_type(self):
+        """Gets the entity_type of this IncasActor.  # noqa: E501
+
+
+        :return: The entity_type of this IncasActor.  # noqa: E501
+        :rtype: EntityType
+        """
+        return self._entity_type
+
+    @entity_type.setter
+    def entity_type(self, entity_type):
+        """Sets the entity_type of this IncasActor.
+
+
+        :param entity_type: The entity_type of this IncasActor.  # noqa: E501
+        :type: EntityType
+        """
+
+        self._entity_type = entity_type
+
+    @property
+    def expose_actor_info(self):
+        """Gets the expose_actor_info of this IncasActor.  # noqa: E501
+
+
+        :return: The expose_actor_info of this IncasActor.  # noqa: E501
         :rtype: bool
         """
-        return self._is_member_of_filtered_set
+        return self._expose_actor_info
 
-    @is_member_of_filtered_set.setter
-    def is_member_of_filtered_set(self, is_member_of_filtered_set):
-        """Sets the is_member_of_filtered_set of this IncasActor.
+    @expose_actor_info.setter
+    def expose_actor_info(self, expose_actor_info):
+        """Sets the expose_actor_info of this IncasActor.
 
 
-        :param is_member_of_filtered_set: The is_member_of_filtered_set of this IncasActor.  # noqa: E501
+        :param expose_actor_info: The expose_actor_info of this IncasActor.  # noqa: E501
         :type: bool
         """
 
-        self._is_member_of_filtered_set = is_member_of_filtered_set
+        self._expose_actor_info = expose_actor_info
+
+    @property
+    def id(self):
+        """Gets the id of this IncasActor.  # noqa: E501
+
+
+        :return: The id of this IncasActor.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this IncasActor.
+
+
+        :param id: The id of this IncasActor.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
+
+    @property
+    def knowledge_base_url(self):
+        """Gets the knowledge_base_url of this IncasActor.  # noqa: E501
+
+
+        :return: The knowledge_base_url of this IncasActor.  # noqa: E501
+        :rtype: str
+        """
+        return self._knowledge_base_url
+
+    @knowledge_base_url.setter
+    def knowledge_base_url(self, knowledge_base_url):
+        """Sets the knowledge_base_url of this IncasActor.
+
+
+        :param knowledge_base_url: The knowledge_base_url of this IncasActor.  # noqa: E501
+        :type: str
+        """
+
+        self._knowledge_base_url = knowledge_base_url
+
+    @property
+    def links(self):
+        """Gets the links of this IncasActor.  # noqa: E501
+
+
+        :return: The links of this IncasActor.  # noqa: E501
+        :rtype: IncasLinks
+        """
+        return self._links
+
+    @links.setter
+    def links(self, links):
+        """Sets the links of this IncasActor.
+
+
+        :param links: The links of this IncasActor.  # noqa: E501
+        :type: IncasLinks
+        """
+
+        self._links = links
+
+    @property
+    def name(self):
+        """Gets the name of this IncasActor.  # noqa: E501
+
+
+        :return: The name of this IncasActor.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this IncasActor.
+
+
+        :param name: The name of this IncasActor.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

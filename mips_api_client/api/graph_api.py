@@ -122,7 +122,7 @@ class GraphApi(object):
         auth_settings = ['APIKeyHeader']  # noqa: E501
 
         return self.api_client.call_api(
-            '/graph/edge_tag_delete', 'DELETE',
+            '/graph/edge/tag/delete', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -137,43 +137,49 @@ class GraphApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def edge_tag_graph_id_get(self, graph_id, **kwargs):  # noqa: E501
-        """Edge Tag Graph Id Get  # noqa: E501
+    def edge_tag_edge_get(self, graph_id, src_id, dst_id, edge_type, **kwargs):  # noqa: E501
+        """Edge Tag Edge Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.edge_tag_graph_id_get(graph_id, async_req=True)
+        >>> thread = api.edge_tag_edge_get(graph_id, src_id, dst_id, edge_type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int graph_id: (required)
+        :param int src_id: (required)
+        :param int dst_id: (required)
+        :param str edge_type: (required)
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.edge_tag_graph_id_get_with_http_info(graph_id, **kwargs)  # noqa: E501
+            return self.edge_tag_edge_get_with_http_info(graph_id, src_id, dst_id, edge_type, **kwargs)  # noqa: E501
         else:
-            (data) = self.edge_tag_graph_id_get_with_http_info(graph_id, **kwargs)  # noqa: E501
+            (data) = self.edge_tag_edge_get_with_http_info(graph_id, src_id, dst_id, edge_type, **kwargs)  # noqa: E501
             return data
 
-    def edge_tag_graph_id_get_with_http_info(self, graph_id, **kwargs):  # noqa: E501
-        """Edge Tag Graph Id Get  # noqa: E501
+    def edge_tag_edge_get_with_http_info(self, graph_id, src_id, dst_id, edge_type, **kwargs):  # noqa: E501
+        """Edge Tag Edge Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.edge_tag_graph_id_get_with_http_info(graph_id, async_req=True)
+        >>> thread = api.edge_tag_edge_get_with_http_info(graph_id, src_id, dst_id, edge_type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int graph_id: (required)
+        :param int src_id: (required)
+        :param int dst_id: (required)
+        :param str edge_type: (required)
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['graph_id']  # noqa: E501
+        all_params = ['graph_id', 'src_id', 'dst_id', 'edge_type']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -184,14 +190,26 @@ class GraphApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method edge_tag_graph_id_get" % key
+                    " to method edge_tag_edge_get" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'graph_id' is set
         if ('graph_id' not in params or
                 params['graph_id'] is None):
-            raise ValueError("Missing the required parameter `graph_id` when calling `edge_tag_graph_id_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `graph_id` when calling `edge_tag_edge_get`")  # noqa: E501
+        # verify the required parameter 'src_id' is set
+        if ('src_id' not in params or
+                params['src_id'] is None):
+            raise ValueError("Missing the required parameter `src_id` when calling `edge_tag_edge_get`")  # noqa: E501
+        # verify the required parameter 'dst_id' is set
+        if ('dst_id' not in params or
+                params['dst_id'] is None):
+            raise ValueError("Missing the required parameter `dst_id` when calling `edge_tag_edge_get`")  # noqa: E501
+        # verify the required parameter 'edge_type' is set
+        if ('edge_type' not in params or
+                params['edge_type'] is None):
+            raise ValueError("Missing the required parameter `edge_type` when calling `edge_tag_edge_get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -200,6 +218,12 @@ class GraphApi(object):
         query_params = []
         if 'graph_id' in params:
             query_params.append(('graph_id', params['graph_id']))  # noqa: E501
+        if 'src_id' in params:
+            query_params.append(('src_id', params['src_id']))  # noqa: E501
+        if 'dst_id' in params:
+            query_params.append(('dst_id', params['dst_id']))  # noqa: E501
+        if 'edge_type' in params:
+            query_params.append(('edge_type', params['edge_type']))  # noqa: E501
 
         header_params = {}
 
@@ -215,7 +239,100 @@ class GraphApi(object):
         auth_settings = ['APIKeyHeader']  # noqa: E501
 
         return self.api_client.call_api(
-            '/graph/graph_id/tag', 'GET',
+            '/graph/tag/edge/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[str]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def edge_tag_graph_id_get(self, id, **kwargs):  # noqa: E501
+        """Edge Tag Graph Id Get  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.edge_tag_graph_id_get(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :return: list[str]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.edge_tag_graph_id_get_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.edge_tag_graph_id_get_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def edge_tag_graph_id_get_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Edge Tag Graph Id Get  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.edge_tag_graph_id_get_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :return: list[str]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method edge_tag_graph_id_get" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `edge_tag_graph_id_get`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/graph/tag/graph/{id}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -320,7 +437,7 @@ class GraphApi(object):
         auth_settings = ['APIKeyHeader']  # noqa: E501
 
         return self.api_client.call_api(
-            '/graph/edge_tag_post', 'POST',
+            '/graph/edge/tag/post', 'POST',
             path_params,
             query_params,
             header_params,

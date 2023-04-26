@@ -114,17 +114,20 @@ Class | Method | HTTP request | Description
 *ClusterApi* | [**cluster_get**](docs/ClusterApi.md#cluster_get) | **GET** /cluster | Cluster Get
 *ClusterApi* | [**cluster_id_delete**](docs/ClusterApi.md#cluster_id_delete) | **DELETE** /cluster/{id} | Cluster Id Delete
 *ClusterApi* | [**cluster_id_delete_members_post**](docs/ClusterApi.md#cluster_id_delete_members_post) | **POST** /cluster/{id}/delete_members | Cluster Id Delete Members Post
-*ClusterApi* | [**cluster_id_edit_members_post**](docs/ClusterApi.md#cluster_id_edit_members_post) | **POST** /cluster/{id}/edit_members | Cluster Id Edit Members Post
 *ClusterApi* | [**cluster_id_get**](docs/ClusterApi.md#cluster_id_get) | **GET** /cluster/{id} | Cluster Id Get
 *ClusterApi* | [**cluster_id_members_get**](docs/ClusterApi.md#cluster_id_members_get) | **GET** /cluster/{id}/members | Cluster Id Members Get
 *ClusterApi* | [**cluster_post**](docs/ClusterApi.md#cluster_post) | **POST** /cluster | Cluster Post
+*ClusterApi* | [**cluster_tag_delete**](docs/ClusterApi.md#cluster_tag_delete) | **POST** /cluster/tag/delete | Cluster Tag Delete
+*ClusterApi* | [**cluster_tag_id_get**](docs/ClusterApi.md#cluster_tag_id_get) | **GET** /cluster/tag/{id} | Cluster Tag Id Get
+*ClusterApi* | [**cluster_tag_post**](docs/ClusterApi.md#cluster_tag_post) | **POST** /cluster/tag/post | Cluster Tag Post
 *DefaultApi* | [**ping_get**](docs/DefaultApi.md#ping_get) | **GET** /ping | Ping Get
 *EnrichmentApi* | [**enrichments_meta_delete**](docs/EnrichmentApi.md#enrichments_meta_delete) | **DELETE** /enrichments/meta | Enrichments Meta Delete
 *EnrichmentApi* | [**enrichments_meta_get**](docs/EnrichmentApi.md#enrichments_meta_get) | **GET** /enrichments/meta | Enrichments Meta Get
 *EnrichmentApi* | [**enrichments_meta_post**](docs/EnrichmentApi.md#enrichments_meta_post) | **POST** /enrichments/meta | Enrichments Meta Post
-*GraphApi* | [**edge_tag_delete**](docs/GraphApi.md#edge_tag_delete) | **DELETE** /graph/edge_tag_delete | Edge Tag Delete
-*GraphApi* | [**edge_tag_graph_id_get**](docs/GraphApi.md#edge_tag_graph_id_get) | **GET** /graph/graph_id/tag | Edge Tag Graph Id Get
-*GraphApi* | [**edge_tag_post**](docs/GraphApi.md#edge_tag_post) | **POST** /graph/edge_tag_post | Edge Tag Post
+*GraphApi* | [**edge_tag_delete**](docs/GraphApi.md#edge_tag_delete) | **DELETE** /graph/edge/tag/delete | Edge Tag Delete
+*GraphApi* | [**edge_tag_edge_get**](docs/GraphApi.md#edge_tag_edge_get) | **GET** /graph/tag/edge/{id} | Edge Tag Edge Get
+*GraphApi* | [**edge_tag_graph_id_get**](docs/GraphApi.md#edge_tag_graph_id_get) | **GET** /graph/tag/graph/{id} | Edge Tag Graph Id Get
+*GraphApi* | [**edge_tag_post**](docs/GraphApi.md#edge_tag_post) | **POST** /graph/edge/tag/post | Edge Tag Post
 *GraphApi* | [**graph_get**](docs/GraphApi.md#graph_get) | **GET** /graph | Graph Get
 *GraphApi* | [**graph_id_delete**](docs/GraphApi.md#graph_id_delete) | **DELETE** /graph/{id} | Graph Id Delete
 *GraphApi* | [**graph_id_delete_edges_post**](docs/GraphApi.md#graph_id_delete_edges_post) | **POST** /graph/{id}/delete_edges | Graph Id Delete Edges Post
@@ -151,7 +154,7 @@ Class | Method | HTTP request | Description
 *ItemApi* | [**item_id_reverse_translate**](docs/ItemApi.md#item_id_reverse_translate) | **GET** /item/id/reverse/{id} | Item Id Reverse Translate
 *ItemApi* | [**item_max_id_get**](docs/ItemApi.md#item_max_id_get) | **GET** /item/max_id | Item Max Id Get
 *ItemApi* | [**item_tag_delete**](docs/ItemApi.md#item_tag_delete) | **POST** /item/tag/delete | Item Tag Delete
-*ItemApi* | [**item_tag_node_id_get**](docs/ItemApi.md#item_tag_node_id_get) | **GET** /item/id/tag | Item Tag Node Id Get
+*ItemApi* | [**item_tag_id_get**](docs/ItemApi.md#item_tag_id_get) | **GET** /item/tag/{id} | Item Tag Id Get
 *ItemApi* | [**item_tag_post**](docs/ItemApi.md#item_tag_post) | **POST** /item/tag/post | Item Tag Post
 *MediaItemApi* | [**media_item_batch_get**](docs/MediaItemApi.md#media_item_batch_get) | **POST** /media_item/get | Media Item Batch Get
 *MediaItemApi* | [**media_item_count_get**](docs/MediaItemApi.md#media_item_count_get) | **GET** /media_item/count | Media Item Count Get
@@ -160,7 +163,7 @@ Class | Method | HTTP request | Description
 *MediaItemApi* | [**media_item_id_get**](docs/MediaItemApi.md#media_item_id_get) | **GET** /media_item/{id} | Media Item Id Get
 *MediaItemApi* | [**media_item_max_id_get**](docs/MediaItemApi.md#media_item_max_id_get) | **GET** /media_item/max_id | Media Item Max Id Get
 *MediaItemApi* | [**media_item_tag_delete**](docs/MediaItemApi.md#media_item_tag_delete) | **POST** /media_item/tag/delete | Media Item Tag Delete
-*MediaItemApi* | [**media_item_tag_node_id_get**](docs/MediaItemApi.md#media_item_tag_node_id_get) | **GET** /media_item/id/tag | Media Item Tag Node Id Get
+*MediaItemApi* | [**media_item_tag_id_get**](docs/MediaItemApi.md#media_item_tag_id_get) | **GET** /media_item/tag/{id} | Media Item Tag Id Get
 *MediaItemApi* | [**media_item_tag_post**](docs/MediaItemApi.md#media_item_tag_post) | **POST** /media_item/tag/post | Media Item Tag Post
 *SourceApi* | [**source_batch_get**](docs/SourceApi.md#source_batch_get) | **POST** /source/get | Source Batch Get
 *SourceApi* | [**source_count_get**](docs/SourceApi.md#source_count_get) | **GET** /source/count | Source Count Get
@@ -179,7 +182,7 @@ Class | Method | HTTP request | Description
 *SourceApi* | [**source_id_reverse_translate**](docs/SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
 *SourceApi* | [**source_max_id_get**](docs/SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
 *SourceApi* | [**source_tag_delete**](docs/SourceApi.md#source_tag_delete) | **POST** /source/tag/delete | Source Tag Delete
-*SourceApi* | [**source_tag_node_id_get**](docs/SourceApi.md#source_tag_node_id_get) | **GET** /source/id/tag | Source Tag Node Id Get
+*SourceApi* | [**source_tag_id_get**](docs/SourceApi.md#source_tag_id_get) | **GET** /source/tag/{id} | Source Tag Id Get
 *SourceApi* | [**source_tag_post**](docs/SourceApi.md#source_tag_post) | **POST** /source/tag/post | Source Tag Post
 *TagApi* | [**tag_name_delete**](docs/TagApi.md#tag_name_delete) | **GET** /tag/delete | Tag Name Delete
 

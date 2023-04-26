@@ -77,10 +77,10 @@ class TestMediaItemApi(unittest.TestCase):
         """
         pass
 
-    def test_media_item_tag_node_id_get(self):
-        """Test case for media_item_tag_node_id_get
+    def test_media_item_tag_id_get(self):
+        """Test case for media_item_tag_id_get
 
-        Media Item Tag Node Id Get  # noqa: E501
+        Media Item Tag Id Get  # noqa: E501
         """
         pass
 

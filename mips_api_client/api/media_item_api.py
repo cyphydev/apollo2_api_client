@@ -42,6 +42,7 @@ class MediaItemApi(object):
 
         :param async_req bool
         :param BatchMediaGetRequest body: (required)
+        :param str tag_name:
         :return: list[MediaItem]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -63,12 +64,13 @@ class MediaItemApi(object):
 
         :param async_req bool
         :param BatchMediaGetRequest body: (required)
+        :param str tag_name:
         :return: list[MediaItem]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
+        all_params = ['body', 'tag_name']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -93,6 +95,8 @@ class MediaItemApi(object):
         path_params = {}
 
         query_params = []
+        if 'tag_name' in params:
+            query_params.append(('tag_name', params['tag_name']))  # noqa: E501
 
         header_params = {}
 
@@ -711,12 +715,12 @@ class MediaItemApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def media_item_tag_node_id_get(self, id, **kwargs):  # noqa: E501
-        """Media Item Tag Node Id Get  # noqa: E501
+    def media_item_tag_id_get(self, id, **kwargs):  # noqa: E501
+        """Media Item Tag Id Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.media_item_tag_node_id_get(id, async_req=True)
+        >>> thread = api.media_item_tag_id_get(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -727,17 +731,17 @@ class MediaItemApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.media_item_tag_node_id_get_with_http_info(id, **kwargs)  # noqa: E501
+            return self.media_item_tag_id_get_with_http_info(id, **kwargs)  # noqa: E501
         else:
-            (data) = self.media_item_tag_node_id_get_with_http_info(id, **kwargs)  # noqa: E501
+            (data) = self.media_item_tag_id_get_with_http_info(id, **kwargs)  # noqa: E501
             return data
 
-    def media_item_tag_node_id_get_with_http_info(self, id, **kwargs):  # noqa: E501
-        """Media Item Tag Node Id Get  # noqa: E501
+    def media_item_tag_id_get_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Media Item Tag Id Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.media_item_tag_node_id_get_with_http_info(id, async_req=True)
+        >>> thread = api.media_item_tag_id_get_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -758,22 +762,22 @@ class MediaItemApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method media_item_tag_node_id_get" % key
+                    " to method media_item_tag_id_get" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `media_item_tag_node_id_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `media_item_tag_id_get`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'id' in params:
-            query_params.append(('id', params['id']))  # noqa: E501
 
         header_params = {}
 
@@ -789,7 +793,7 @@ class MediaItemApi(object):
         auth_settings = ['APIKeyHeader']  # noqa: E501
 
         return self.api_client.call_api(
-            '/media_item/id/tag', 'GET',
+            '/media_item/tag/{id}', 'GET',
             path_params,
             query_params,
             header_params,

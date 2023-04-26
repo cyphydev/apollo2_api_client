@@ -23,7 +23,7 @@ Method | HTTP request | Description
 [**item_id_reverse_translate**](ItemApi.md#item_id_reverse_translate) | **GET** /item/id/reverse/{id} | Item Id Reverse Translate
 [**item_max_id_get**](ItemApi.md#item_max_id_get) | **GET** /item/max_id | Item Max Id Get
 [**item_tag_delete**](ItemApi.md#item_tag_delete) | **POST** /item/tag/delete | Item Tag Delete
-[**item_tag_node_id_get**](ItemApi.md#item_tag_node_id_get) | **GET** /item/id/tag | Item Tag Node Id Get
+[**item_tag_id_get**](ItemApi.md#item_tag_id_get) | **GET** /item/tag/{id} | Item Tag Id Get
 [**item_tag_post**](ItemApi.md#item_tag_post) | **POST** /item/tag/post | Item Tag Post
 
 # **item_attach_media_post**
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_batch_get**
-> list[Item] item_batch_get(body)
+> list[Item] item_batch_get(body, tag_name=tag_name)
 
 Item Batch Get
 
@@ -100,10 +100,11 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
 body = mips_api_client.BatchGetRequest() # BatchGetRequest | 
+tag_name = 'tag_name_example' # str |  (optional)
 
 try:
     # Item Batch Get
-    api_response = api_instance.item_batch_get(body)
+    api_response = api_instance.item_batch_get(body, tag_name=tag_name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ItemApi->item_batch_get: %s\n" % e)
@@ -114,6 +115,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**BatchGetRequest**](BatchGetRequest.md)|  | 
+ **tag_name** | **str**|  | [optional] 
 
 ### Return type
 
@@ -131,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_count_get**
-> int item_count_get(last=last, end=end, platform=platform, tag_name=tag_name)
+> int item_count_get(last=last, end=end, platform=platform, tag_name=tag_name, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
 
 Item Count Get
 
@@ -155,10 +157,12 @@ last = 56 # int |  (optional)
 end = 56 # int |  (optional)
 platform = mips_api_client.MediaType() # MediaType |  (optional)
 tag_name = 'tag_name_example' # str |  (optional)
+inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
+exclusive_end_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
 
 try:
     # Item Count Get
-    api_response = api_instance.item_count_get(last=last, end=end, platform=platform, tag_name=tag_name)
+    api_response = api_instance.item_count_get(last=last, end=end, platform=platform, tag_name=tag_name, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ItemApi->item_count_get: %s\n" % e)
@@ -172,6 +176,8 @@ Name | Type | Description  | Notes
  **end** | **int**|  | [optional] 
  **platform** | [**MediaType**](.md)|  | [optional] 
  **tag_name** | **str**|  | [optional] 
+ **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
+ **exclusive_end_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
 
 ### Return type
 
@@ -397,7 +403,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_get**
-> list[Item] item_get(limit, last=last, end=end, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, tag_name=tag_name)
+> list[Item] item_get(limit, last=last, end=end, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, tag_name=tag_name, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
 
 Item Get
 
@@ -432,10 +438,12 @@ cluster_tag = 'cluster_tag_example' # str |  (optional)
 cluster_version = 'cluster_version_example' # str |  (optional)
 platform = mips_api_client.MediaType() # MediaType |  (optional)
 tag_name = 'tag_name_example' # str |  (optional)
+inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
+exclusive_end_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
 
 try:
     # Item Get
-    api_response = api_instance.item_get(limit, last=last, end=end, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, tag_name=tag_name)
+    api_response = api_instance.item_get(limit, last=last, end=end, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, tag_name=tag_name, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ItemApi->item_get: %s\n" % e)
@@ -460,6 +468,8 @@ Name | Type | Description  | Notes
  **cluster_version** | **str**|  | [optional] 
  **platform** | [**MediaType**](.md)|  | [optional] 
  **tag_name** | **str**|  | [optional] 
+ **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
+ **exclusive_end_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
 
 ### Return type
 
@@ -987,7 +997,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_max_id_get**
-> int item_max_id_get(platform=platform, tag_name=tag_name)
+> int item_max_id_get(platform=platform, tag_name=tag_name, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
 
 Item Max Id Get
 
@@ -1009,10 +1019,12 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
 platform = mips_api_client.MediaType() # MediaType |  (optional)
 tag_name = 'tag_name_example' # str |  (optional)
+inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
+exclusive_end_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
 
 try:
     # Item Max Id Get
-    api_response = api_instance.item_max_id_get(platform=platform, tag_name=tag_name)
+    api_response = api_instance.item_max_id_get(platform=platform, tag_name=tag_name, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ItemApi->item_max_id_get: %s\n" % e)
@@ -1024,6 +1036,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **platform** | [**MediaType**](.md)|  | [optional] 
  **tag_name** | **str**|  | [optional] 
+ **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
+ **exclusive_end_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
 
 ### Return type
 
@@ -1094,10 +1108,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **item_tag_node_id_get**
-> list[str] item_tag_node_id_get(id)
+# **item_tag_id_get**
+> list[str] item_tag_id_get(id)
 
-Item Tag Node Id Get
+Item Tag Id Get
 
 ### Example
 ```python
@@ -1118,11 +1132,11 @@ api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # Item Tag Node Id Get
-    api_response = api_instance.item_tag_node_id_get(id)
+    # Item Tag Id Get
+    api_response = api_instance.item_tag_id_get(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ItemApi->item_tag_node_id_get: %s\n" % e)
+    print("Exception when calling ItemApi->item_tag_id_get: %s\n" % e)
 ```
 
 ### Parameters

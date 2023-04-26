@@ -161,10 +161,10 @@ class TestItemApi(unittest.TestCase):
         """
         pass
 
-    def test_item_tag_node_id_get(self):
-        """Test case for item_tag_node_id_get
+    def test_item_tag_id_get(self):
+        """Test case for item_tag_id_get
 
-        Item Tag Node Id Get  # noqa: E501
+        Item Tag Id Get  # noqa: E501
         """
         pass
 

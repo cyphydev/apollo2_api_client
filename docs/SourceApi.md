@@ -21,11 +21,11 @@ Method | HTTP request | Description
 [**source_id_reverse_translate**](SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
 [**source_max_id_get**](SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
 [**source_tag_delete**](SourceApi.md#source_tag_delete) | **POST** /source/tag/delete | Source Tag Delete
-[**source_tag_node_id_get**](SourceApi.md#source_tag_node_id_get) | **GET** /source/id/tag | Source Tag Node Id Get
+[**source_tag_id_get**](SourceApi.md#source_tag_id_get) | **GET** /source/tag/{id} | Source Tag Id Get
 [**source_tag_post**](SourceApi.md#source_tag_post) | **POST** /source/tag/post | Source Tag Post
 
 # **source_batch_get**
-> list[Source] source_batch_get(body)
+> list[Source] source_batch_get(body, tag_name=tag_name)
 
 Source Batch Get
 
@@ -46,10 +46,11 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = mips_api_client.SourceApi(mips_api_client.ApiClient(configuration))
 body = mips_api_client.BatchGetRequest() # BatchGetRequest | 
+tag_name = 'tag_name_example' # str |  (optional)
 
 try:
     # Source Batch Get
-    api_response = api_instance.source_batch_get(body)
+    api_response = api_instance.source_batch_get(body, tag_name=tag_name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourceApi->source_batch_get: %s\n" % e)
@@ -60,6 +61,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**BatchGetRequest**](BatchGetRequest.md)|  | 
+ **tag_name** | **str**|  | [optional] 
 
 ### Return type
 
@@ -988,10 +990,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **source_tag_node_id_get**
-> list[str] source_tag_node_id_get(id)
+# **source_tag_id_get**
+> list[str] source_tag_id_get(id)
 
-Source Tag Node Id Get
+Source Tag Id Get
 
 ### Example
 ```python
@@ -1012,11 +1014,11 @@ api_instance = mips_api_client.SourceApi(mips_api_client.ApiClient(configuration
 id = 56 # int | 
 
 try:
-    # Source Tag Node Id Get
-    api_response = api_instance.source_tag_node_id_get(id)
+    # Source Tag Id Get
+    api_response = api_instance.source_tag_id_get(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling SourceApi->source_tag_node_id_get: %s\n" % e)
+    print("Exception when calling SourceApi->source_tag_id_get: %s\n" % e)
 ```
 
 ### Parameters

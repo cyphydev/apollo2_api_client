@@ -56,13 +56,6 @@ class TestClusterApi(unittest.TestCase):
         """
         pass
 
-    def test_cluster_id_edit_members_post(self):
-        """Test case for cluster_id_edit_members_post
-
-        Cluster Id Edit Members Post  # noqa: E501
-        """
-        pass
-
     def test_cluster_id_get(self):
         """Test case for cluster_id_get
 
@@ -81,6 +74,27 @@ class TestClusterApi(unittest.TestCase):
         """Test case for cluster_post
 
         Cluster Post  # noqa: E501
+        """
+        pass
+
+    def test_cluster_tag_delete(self):
+        """Test case for cluster_tag_delete
+
+        Cluster Tag Delete  # noqa: E501
+        """
+        pass
+
+    def test_cluster_tag_id_get(self):
+        """Test case for cluster_tag_id_get
+
+        Cluster Tag Id Get  # noqa: E501
+        """
+        pass
+
+    def test_cluster_tag_post(self):
+        """Test case for cluster_tag_post
+
+        Cluster Tag Post  # noqa: E501
         """
         pass
 

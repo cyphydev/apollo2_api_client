@@ -35,6 +35,13 @@ class TestGraphApi(unittest.TestCase):
         """
         pass
 
+    def test_edge_tag_edge_get(self):
+        """Test case for edge_tag_edge_get
+
+        Edge Tag Edge Get  # noqa: E501
+        """
+        pass
+
     def test_edge_tag_graph_id_get(self):
         """Test case for edge_tag_graph_id_get
 

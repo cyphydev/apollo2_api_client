@@ -29,108 +29,113 @@ class IncasMessage(object):
     """
     swagger_types = {
         'annotations': 'list[IncasAnnotation]',
-        'author': 'str',
-        'content_text': 'str',
         'data_tags': 'list[str]',
         'embedded_urls': 'list[str]',
         'extra_attributes': 'list[IncasExtraAttribute]',
+        'image_urls': 'list[str]',
+        'segments': 'list[IncasSegment]',
+        'author': 'str',
+        'content_text': 'str',
         'geolocation': 'GeoLocation',
         'id': 'str',
-        'image_urls': 'list[str]',
         'language': 'str',
         'media_type': 'MediaType',
         'media_type_attributes': 'IncasOneOfMediaTypeAttributes',
+        'mentioned_users': 'list[object]',
         'name': 'str',
-        'segments': 'list[IncasSegment]',
         'time_published': 'int',
         'title': 'str',
+        'url': 'str',
         'translated_content_text': 'str',
-        'translated_title': 'str',
-        'is_member_of_filtered_set': 'bool'
+        'translated_title': 'str'
     }
 
     attribute_map = {
         'annotations': 'annotations',
-        'author': 'author',
-        'content_text': 'content_text',
         'data_tags': 'data_tags',
         'embedded_urls': 'embedded_urls',
         'extra_attributes': 'extra_attributes',
+        'image_urls': 'image_urls',
+        'segments': 'segments',
+        'author': 'author',
+        'content_text': 'content_text',
         'geolocation': 'geolocation',
         'id': 'id',
-        'image_urls': 'image_urls',
         'language': 'language',
         'media_type': 'media_type',
         'media_type_attributes': 'media_type_attributes',
+        'mentioned_users': 'mentioned_users',
         'name': 'name',
-        'segments': 'segments',
         'time_published': 'time_published',
         'title': 'title',
+        'url': 'url',
         'translated_content_text': 'translated_content_text',
-        'translated_title': 'translated_title',
-        'is_member_of_filtered_set': 'is_member_of_filtered_set'
+        'translated_title': 'translated_title'
     }
 
-    def __init__(self, annotations=None, author=None, content_text=None, data_tags=None, embedded_urls=None, extra_attributes=None, geolocation=None, id=None, image_urls=None, language=None, media_type=None, media_type_attributes=None, name=None, segments=None, time_published=None, title=None, translated_content_text=None, translated_title=None, is_member_of_filtered_set=False):  # noqa: E501
+    def __init__(self, annotations=None, data_tags=None, embedded_urls=None, extra_attributes=None, image_urls=None, segments=None, author=None, content_text=None, geolocation=None, id=None, language=None, media_type=None, media_type_attributes=None, mentioned_users=None, name=None, time_published=None, title=None, url=None, translated_content_text=None, translated_title=None):  # noqa: E501
         """IncasMessage - a model defined in Swagger"""  # noqa: E501
         self._annotations = None
-        self._author = None
-        self._content_text = None
         self._data_tags = None
         self._embedded_urls = None
         self._extra_attributes = None
+        self._image_urls = None
+        self._segments = None
+        self._author = None
+        self._content_text = None
         self._geolocation = None
         self._id = None
-        self._image_urls = None
         self._language = None
         self._media_type = None
         self._media_type_attributes = None
+        self._mentioned_users = None
         self._name = None
-        self._segments = None
         self._time_published = None
         self._title = None
+        self._url = None
         self._translated_content_text = None
         self._translated_title = None
-        self._is_member_of_filtered_set = None
         self.discriminator = None
         if annotations is not None:
             self.annotations = annotations
-        if author is not None:
-            self.author = author
-        if content_text is not None:
-            self.content_text = content_text
         if data_tags is not None:
             self.data_tags = data_tags
         if embedded_urls is not None:
             self.embedded_urls = embedded_urls
         if extra_attributes is not None:
             self.extra_attributes = extra_attributes
+        if image_urls is not None:
+            self.image_urls = image_urls
+        if segments is not None:
+            self.segments = segments
+        if author is not None:
+            self.author = author
+        if content_text is not None:
+            self.content_text = content_text
         if geolocation is not None:
             self.geolocation = geolocation
         if id is not None:
             self.id = id
-        if image_urls is not None:
-            self.image_urls = image_urls
         if language is not None:
             self.language = language
         if media_type is not None:
             self.media_type = media_type
         if media_type_attributes is not None:
             self.media_type_attributes = media_type_attributes
+        if mentioned_users is not None:
+            self.mentioned_users = mentioned_users
         if name is not None:
             self.name = name
-        if segments is not None:
-            self.segments = segments
         if time_published is not None:
             self.time_published = time_published
         if title is not None:
             self.title = title
+        if url is not None:
+            self.url = url
         if translated_content_text is not None:
             self.translated_content_text = translated_content_text
         if translated_title is not None:
             self.translated_title = translated_title
-        if is_member_of_filtered_set is not None:
-            self.is_member_of_filtered_set = is_member_of_filtered_set
 
     @property
     def annotations(self):
@@ -152,48 +157,6 @@ class IncasMessage(object):
         """
 
         self._annotations = annotations
-
-    @property
-    def author(self):
-        """Gets the author of this IncasMessage.  # noqa: E501
-
-
-        :return: The author of this IncasMessage.  # noqa: E501
-        :rtype: str
-        """
-        return self._author
-
-    @author.setter
-    def author(self, author):
-        """Sets the author of this IncasMessage.
-
-
-        :param author: The author of this IncasMessage.  # noqa: E501
-        :type: str
-        """
-
-        self._author = author
-
-    @property
-    def content_text(self):
-        """Gets the content_text of this IncasMessage.  # noqa: E501
-
-
-        :return: The content_text of this IncasMessage.  # noqa: E501
-        :rtype: str
-        """
-        return self._content_text
-
-    @content_text.setter
-    def content_text(self, content_text):
-        """Sets the content_text of this IncasMessage.
-
-
-        :param content_text: The content_text of this IncasMessage.  # noqa: E501
-        :type: str
-        """
-
-        self._content_text = content_text
 
     @property
     def data_tags(self):
@@ -259,6 +222,90 @@ class IncasMessage(object):
         self._extra_attributes = extra_attributes
 
     @property
+    def image_urls(self):
+        """Gets the image_urls of this IncasMessage.  # noqa: E501
+
+
+        :return: The image_urls of this IncasMessage.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._image_urls
+
+    @image_urls.setter
+    def image_urls(self, image_urls):
+        """Sets the image_urls of this IncasMessage.
+
+
+        :param image_urls: The image_urls of this IncasMessage.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._image_urls = image_urls
+
+    @property
+    def segments(self):
+        """Gets the segments of this IncasMessage.  # noqa: E501
+
+
+        :return: The segments of this IncasMessage.  # noqa: E501
+        :rtype: list[IncasSegment]
+        """
+        return self._segments
+
+    @segments.setter
+    def segments(self, segments):
+        """Sets the segments of this IncasMessage.
+
+
+        :param segments: The segments of this IncasMessage.  # noqa: E501
+        :type: list[IncasSegment]
+        """
+
+        self._segments = segments
+
+    @property
+    def author(self):
+        """Gets the author of this IncasMessage.  # noqa: E501
+
+
+        :return: The author of this IncasMessage.  # noqa: E501
+        :rtype: str
+        """
+        return self._author
+
+    @author.setter
+    def author(self, author):
+        """Sets the author of this IncasMessage.
+
+
+        :param author: The author of this IncasMessage.  # noqa: E501
+        :type: str
+        """
+
+        self._author = author
+
+    @property
+    def content_text(self):
+        """Gets the content_text of this IncasMessage.  # noqa: E501
+
+
+        :return: The content_text of this IncasMessage.  # noqa: E501
+        :rtype: str
+        """
+        return self._content_text
+
+    @content_text.setter
+    def content_text(self, content_text):
+        """Sets the content_text of this IncasMessage.
+
+
+        :param content_text: The content_text of this IncasMessage.  # noqa: E501
+        :type: str
+        """
+
+        self._content_text = content_text
+
+    @property
     def geolocation(self):
         """Gets the geolocation of this IncasMessage.  # noqa: E501
 
@@ -299,27 +346,6 @@ class IncasMessage(object):
         """
 
         self._id = id
-
-    @property
-    def image_urls(self):
-        """Gets the image_urls of this IncasMessage.  # noqa: E501
-
-
-        :return: The image_urls of this IncasMessage.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._image_urls
-
-    @image_urls.setter
-    def image_urls(self, image_urls):
-        """Sets the image_urls of this IncasMessage.
-
-
-        :param image_urls: The image_urls of this IncasMessage.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._image_urls = image_urls
 
     @property
     def language(self):
@@ -385,6 +411,27 @@ class IncasMessage(object):
         self._media_type_attributes = media_type_attributes
 
     @property
+    def mentioned_users(self):
+        """Gets the mentioned_users of this IncasMessage.  # noqa: E501
+
+
+        :return: The mentioned_users of this IncasMessage.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._mentioned_users
+
+    @mentioned_users.setter
+    def mentioned_users(self, mentioned_users):
+        """Sets the mentioned_users of this IncasMessage.
+
+
+        :param mentioned_users: The mentioned_users of this IncasMessage.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._mentioned_users = mentioned_users
+
+    @property
     def name(self):
         """Gets the name of this IncasMessage.  # noqa: E501
 
@@ -404,27 +451,6 @@ class IncasMessage(object):
         """
 
         self._name = name
-
-    @property
-    def segments(self):
-        """Gets the segments of this IncasMessage.  # noqa: E501
-
-
-        :return: The segments of this IncasMessage.  # noqa: E501
-        :rtype: list[IncasSegment]
-        """
-        return self._segments
-
-    @segments.setter
-    def segments(self, segments):
-        """Sets the segments of this IncasMessage.
-
-
-        :param segments: The segments of this IncasMessage.  # noqa: E501
-        :type: list[IncasSegment]
-        """
-
-        self._segments = segments
 
     @property
     def time_published(self):
@@ -469,6 +495,27 @@ class IncasMessage(object):
         self._title = title
 
     @property
+    def url(self):
+        """Gets the url of this IncasMessage.  # noqa: E501
+
+
+        :return: The url of this IncasMessage.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this IncasMessage.
+
+
+        :param url: The url of this IncasMessage.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
+
+    @property
     def translated_content_text(self):
         """Gets the translated_content_text of this IncasMessage.  # noqa: E501
 
@@ -509,27 +556,6 @@ class IncasMessage(object):
         """
 
         self._translated_title = translated_title
-
-    @property
-    def is_member_of_filtered_set(self):
-        """Gets the is_member_of_filtered_set of this IncasMessage.  # noqa: E501
-
-
-        :return: The is_member_of_filtered_set of this IncasMessage.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_member_of_filtered_set
-
-    @is_member_of_filtered_set.setter
-    def is_member_of_filtered_set(self, is_member_of_filtered_set):
-        """Sets the is_member_of_filtered_set of this IncasMessage.
-
-
-        :param is_member_of_filtered_set: The is_member_of_filtered_set of this IncasMessage.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_member_of_filtered_set = is_member_of_filtered_set
 
     def to_dict(self):
         """Returns the model properties as a dict"""

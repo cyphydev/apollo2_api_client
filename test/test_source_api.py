@@ -147,10 +147,10 @@ class TestSourceApi(unittest.TestCase):
         """
         pass
 
-    def test_source_tag_node_id_get(self):
-        """Test case for source_tag_node_id_get
+    def test_source_tag_id_get(self):
+        """Test case for source_tag_id_get
 
-        Source Tag Node Id Get  # noqa: E501
+        Source Tag Id Get  # noqa: E501
         """
         pass
 
