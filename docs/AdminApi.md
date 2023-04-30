@@ -1,4 +1,4 @@
-# mips_api_client.AdminApi
+# apollo2_api_client.AdminApi
 
 All URIs are relative to */*
 
@@ -17,19 +17,19 @@ Admin Data Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.AdminApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.RawDataPostRequest() # RawDataPostRequest | 
+api_instance = apollo2_api_client.AdminApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.RawDataPostRequest() # RawDataPostRequest | 
 
 try:
     # Admin Data Post
@@ -69,18 +69,18 @@ Admin Flush
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.AdminApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.AdminApi(apollo2_api_client.ApiClient(configuration))
 
 try:
     # Admin Flush
@@ -117,18 +117,18 @@ Status Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.AdminApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.AdminApi(apollo2_api_client.ApiClient(configuration))
 
 try:
     # Status Get

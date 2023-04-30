@@ -1,4 +1,4 @@
-# mips_api_client.ClusterApi
+# apollo2_api_client.ClusterApi
 
 All URIs are relative to */*
 
@@ -30,18 +30,18 @@ Cluster Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 name = 'name_example' # str | 
 provider = 'provider_example' # str | 
 tag = 'tag_example' # str | 
@@ -88,19 +88,19 @@ Cluster Enrichments Batch Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
 
 try:
     # Cluster Enrichments Batch Delete
@@ -140,19 +140,19 @@ Cluster Enrichments Batch Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
 
 try:
     # Cluster Enrichments Batch Get
@@ -192,18 +192,18 @@ Cluster Enrichments Batch Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 body = NULL # dict(str, list[Enrichment]) | 
 
 try:
@@ -244,18 +244,18 @@ Cluster Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 name = 'name_example' # str |  (optional)
 provider = 'provider_example' # str |  (optional)
 tag = 'tag_example' # str |  (optional)
@@ -304,18 +304,18 @@ Cluster Id Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -356,18 +356,18 @@ Cluster Id Delete Members Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 body = [56] # list[int] | 
 id = 56 # int | 
 
@@ -410,18 +410,18 @@ Cluster Id Enrichments Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 name = 'name_example' # str |  (optional)
 provider = 'provider_example' # str |  (optional)
@@ -470,18 +470,18 @@ Cluster Id Enrichments Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 name = 'name_example' # str |  (optional)
 provider = 'provider_example' # str |  (optional)
@@ -530,19 +530,19 @@ Cluster Id Enrichments Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
-body = [mips_api_client.Enrichment()] # list[Enrichment] | 
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
+body = [apollo2_api_client.Enrichment()] # list[Enrichment] | 
 id = 56 # int | 
 
 try:
@@ -584,18 +584,18 @@ Cluster Id Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -636,18 +636,18 @@ Cluster Id Identifer Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -688,18 +688,18 @@ Cluster Id Members Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 limit = 56 # int | 
 last = -1 # int |  (optional) (default to -1)
@@ -746,18 +746,18 @@ Cluster Identifer Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 body = [56] # list[int] | 
 identifier = 'identifier_example' # str | 
 
@@ -800,18 +800,18 @@ Cluster Identifer Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
 body = [56] # list[int] | 
 identifier = 'identifier_example' # str | 
 
@@ -854,19 +854,19 @@ Cluster Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ClusterApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.Cluster() # Cluster | 
+api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.Cluster() # Cluster | 
 
 try:
     # Cluster Post

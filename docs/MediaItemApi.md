@@ -1,4 +1,4 @@
-# mips_api_client.MediaItemApi
+# apollo2_api_client.MediaItemApi
 
 All URIs are relative to */*
 
@@ -23,19 +23,19 @@ Media Item Batch Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.MediaItemApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.BatchMediaGetRequest() # BatchMediaGetRequest | 
+api_instance = apollo2_api_client.MediaItemApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.BatchMediaGetRequest() # BatchMediaGetRequest | 
 identifier = 'identifier_example' # str |  (optional)
 
 try:
@@ -77,18 +77,18 @@ Media Item Count Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.MediaItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.MediaItemApi(apollo2_api_client.ApiClient(configuration))
 last = 56 # int |  (optional)
 end = 56 # int |  (optional)
 identifier = 'identifier_example' # str |  (optional)
@@ -133,18 +133,18 @@ Media Item Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.MediaItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.MediaItemApi(apollo2_api_client.ApiClient(configuration))
 limit = 56 # int | 
 last = -1 # int |  (optional) (default to -1)
 end = 56 # int |  (optional)
@@ -191,18 +191,18 @@ Media Item Id Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.MediaItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.MediaItemApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -243,18 +243,18 @@ Media Item Id Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.MediaItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.MediaItemApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -295,18 +295,18 @@ Media Item Id Identifer Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.MediaItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.MediaItemApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -347,18 +347,18 @@ Media Item Identifer Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.MediaItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.MediaItemApi(apollo2_api_client.ApiClient(configuration))
 body = [56] # list[int] | 
 identifier = 'identifier_example' # str | 
 
@@ -401,18 +401,18 @@ Media Item Identifer Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.MediaItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.MediaItemApi(apollo2_api_client.ApiClient(configuration))
 body = [56] # list[int] | 
 identifier = 'identifier_example' # str | 
 
@@ -455,18 +455,18 @@ Media Item Max Id Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.MediaItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.MediaItemApi(apollo2_api_client.ApiClient(configuration))
 identifier = 'identifier_example' # str |  (optional)
 
 try:

@@ -1,4 +1,4 @@
-# mips_api_client.ItemApi
+# apollo2_api_client.ItemApi
 
 All URIs are relative to */*
 
@@ -35,19 +35,19 @@ Item Attach Media Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.ModifyMediaAttachmentRequest() # ModifyMediaAttachmentRequest | 
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.ModifyMediaAttachmentRequest() # ModifyMediaAttachmentRequest | 
 
 try:
     # Item Attach Media Post
@@ -87,19 +87,19 @@ Item Batch Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.BatchGetRequest() # BatchGetRequest | 
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.BatchGetRequest() # BatchGetRequest | 
 identifier = 'identifier_example' # str |  (optional)
 
 try:
@@ -141,21 +141,21 @@ Item Count Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 last = 56 # int |  (optional)
 end = 56 # int |  (optional)
-platform = mips_api_client.MediaType() # MediaType |  (optional)
+platform = apollo2_api_client.MediaType() # MediaType |  (optional)
 identifier = 'identifier_example' # str |  (optional)
 inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
 exclusive_end_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
@@ -203,19 +203,19 @@ Item Detach Media Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.ModifyMediaAttachmentRequest() # ModifyMediaAttachmentRequest | 
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.ModifyMediaAttachmentRequest() # ModifyMediaAttachmentRequest | 
 
 try:
     # Item Detach Media Post
@@ -255,19 +255,19 @@ Item Enrichments Batch Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
 
 try:
     # Item Enrichments Batch Delete
@@ -307,19 +307,19 @@ Item Enrichments Batch Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
 
 try:
     # Item Enrichments Batch Get
@@ -359,18 +359,18 @@ Item Enrichments Batch Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 body = NULL # dict(str, list[Enrichment]) | 
 
 try:
@@ -411,18 +411,18 @@ Item Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 limit = 56 # int | 
 last = -1 # int |  (optional) (default to -1)
 end = 56 # int |  (optional)
@@ -436,7 +436,7 @@ cluster_name = 'cluster_name_example' # str |  (optional)
 cluster_provider = 'cluster_provider_example' # str |  (optional)
 cluster_tag = 'cluster_tag_example' # str |  (optional)
 cluster_version = 'cluster_version_example' # str |  (optional)
-platform = mips_api_client.MediaType() # MediaType |  (optional)
+platform = apollo2_api_client.MediaType() # MediaType |  (optional)
 identifier = 'identifier_example' # str |  (optional)
 inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
 exclusive_end_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
@@ -495,18 +495,18 @@ Item Id Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -547,18 +547,18 @@ Item Id Enrichments Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 name = 'name_example' # str |  (optional)
 provider = 'provider_example' # str |  (optional)
@@ -607,18 +607,18 @@ Item Id Enrichments Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 name = 'name_example' # str |  (optional)
 provider = 'provider_example' # str |  (optional)
@@ -667,19 +667,19 @@ Item Id Enrichments Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
-body = [mips_api_client.Enrichment()] # list[Enrichment] | 
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
+body = [apollo2_api_client.Enrichment()] # list[Enrichment] | 
 id = 56 # int | 
 
 try:
@@ -721,20 +721,20 @@ Item Id Forward Batch Translate
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 body = ['body_example'] # list[str] | 
-platform = mips_api_client.MediaType() # MediaType |  (optional)
+platform = apollo2_api_client.MediaType() # MediaType |  (optional)
 
 try:
     # Item Id Forward Batch Translate
@@ -775,20 +775,20 @@ Item Id Forward Translate
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-platform = mips_api_client.MediaType() # MediaType |  (optional)
+platform = apollo2_api_client.MediaType() # MediaType |  (optional)
 
 try:
     # Item Id Forward Translate
@@ -829,18 +829,18 @@ Item Id Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 with_enrichment = false # bool |  (optional) (default to false)
 with_cluster = false # bool |  (optional) (default to false)
@@ -901,18 +901,18 @@ Item Id Identifer Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -953,18 +953,18 @@ Item Id Reverse Batch Translate
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 body = [56] # list[int] | 
 
 try:
@@ -1005,18 +1005,18 @@ Item Id Reverse Translate
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -1057,18 +1057,18 @@ Item Identifer Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 body = [56] # list[int] | 
 identifier = 'identifier_example' # str | 
 
@@ -1111,18 +1111,18 @@ Item Identifer Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
 body = [56] # list[int] | 
 identifier = 'identifier_example' # str | 
 
@@ -1165,19 +1165,19 @@ Item Max Id Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.ItemApi(mips_api_client.ApiClient(configuration))
-platform = mips_api_client.MediaType() # MediaType |  (optional)
+api_instance = apollo2_api_client.ItemApi(apollo2_api_client.ApiClient(configuration))
+platform = apollo2_api_client.MediaType() # MediaType |  (optional)
 identifier = 'identifier_example' # str |  (optional)
 inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
 exclusive_end_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)

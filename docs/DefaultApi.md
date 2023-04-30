@@ -1,4 +1,4 @@
-# mips_api_client.DefaultApi
+# apollo2_api_client.DefaultApi
 
 All URIs are relative to */*
 
@@ -15,12 +15,12 @@ Ping Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mips_api_client.DefaultApi()
+api_instance = apollo2_api_client.DefaultApi()
 
 try:
     # Ping Get

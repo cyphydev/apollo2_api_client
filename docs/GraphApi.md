@@ -1,4 +1,4 @@
-# mips_api_client.GraphApi
+# apollo2_api_client.GraphApi
 
 All URIs are relative to */*
 
@@ -25,19 +25,19 @@ Edge Identifer Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
-body = [mips_api_client.Edge()] # list[Edge] | 
+api_instance = apollo2_api_client.GraphApi(apollo2_api_client.ApiClient(configuration))
+body = [apollo2_api_client.Edge()] # list[Edge] | 
 identifier = 'identifier_example' # str | 
 
 try:
@@ -79,18 +79,18 @@ Edge Identifer Edge Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.GraphApi(apollo2_api_client.ApiClient(configuration))
 graph_id = 56 # int | 
 src_id = 56 # int | 
 dst_id = 56 # int | 
@@ -137,18 +137,18 @@ Edge Identifer Graph Id Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.GraphApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -189,19 +189,19 @@ Edge Identifer Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
-body = [mips_api_client.Edge()] # list[Edge] | 
+api_instance = apollo2_api_client.GraphApi(apollo2_api_client.ApiClient(configuration))
+body = [apollo2_api_client.Edge()] # list[Edge] | 
 identifier = 'identifier_example' # str | 
 
 try:
@@ -243,18 +243,18 @@ Graph Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.GraphApi(apollo2_api_client.ApiClient(configuration))
 name = 'name_example' # str |  (optional)
 provider = 'provider_example' # str |  (optional)
 tag = 'tag_example' # str |  (optional)
@@ -301,18 +301,18 @@ Graph Id Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.GraphApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -353,19 +353,19 @@ Graph Id Delete Edges Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
-body = [mips_api_client.Edge()] # list[Edge] | 
+api_instance = apollo2_api_client.GraphApi(apollo2_api_client.ApiClient(configuration))
+body = [apollo2_api_client.Edge()] # list[Edge] | 
 id = 56 # int | 
 
 try:
@@ -407,18 +407,18 @@ Graph Id Edges Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.GraphApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 limit = 56 # int | 
 last = -1 # int |  (optional) (default to -1)
@@ -467,19 +467,19 @@ Graph Id Edit Edges Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
-body = [mips_api_client.Edge()] # list[Edge] | 
+api_instance = apollo2_api_client.GraphApi(apollo2_api_client.ApiClient(configuration))
+body = [apollo2_api_client.Edge()] # list[Edge] | 
 id = 56 # int | 
 identifier = 'identifier_example' # str |  (optional)
 
@@ -523,18 +523,18 @@ Graph Id Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.GraphApi(apollo2_api_client.ApiClient(configuration))
 id = 56 # int | 
 
 try:
@@ -575,19 +575,19 @@ Graph Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.GraphApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.Graph() # Graph | 
+api_instance = apollo2_api_client.GraphApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.Graph() # Graph | 
 
 try:
     # Graph Post

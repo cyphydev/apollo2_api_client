@@ -1,4 +1,4 @@
-# mips_api_client.EnrichmentApi
+# apollo2_api_client.EnrichmentApi
 
 All URIs are relative to */*
 
@@ -17,18 +17,18 @@ Enrichments Meta Delete
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.EnrichmentApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.EnrichmentApi(apollo2_api_client.ApiClient(configuration))
 name = 'name_example' # str | 
 provider = 'provider_example' # str | 
 tag = 'tag_example' # str | 
@@ -77,18 +77,18 @@ Enrichments Meta Get
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.EnrichmentApi(mips_api_client.ApiClient(configuration))
+api_instance = apollo2_api_client.EnrichmentApi(apollo2_api_client.ApiClient(configuration))
 name = 'name_example' # str |  (optional)
 provider = 'provider_example' # str |  (optional)
 tag = 'tag_example' # str |  (optional)
@@ -135,19 +135,19 @@ Enrichments Meta Post
 ```python
 from __future__ import print_function
 import time
-import mips_api_client
-from mips_api_client.rest import ApiException
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: APIKeyHeader
-configuration = mips_api_client.Configuration()
+configuration = apollo2_api_client.Configuration()
 configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = mips_api_client.EnrichmentApi(mips_api_client.ApiClient(configuration))
-body = mips_api_client.EnrichmentMeta() # EnrichmentMeta | 
+api_instance = apollo2_api_client.EnrichmentApi(apollo2_api_client.ApiClient(configuration))
+body = apollo2_api_client.EnrichmentMeta() # EnrichmentMeta | 
 
 try:
     # Enrichments Meta Post
