@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**data_type** | **str** |  | [optional] [default to 'TwitterData']
 **attachments** | [**TwitterAttachment**](TwitterAttachment.md) |  | [optional] 
 **context_annotations** | [**list[TwitterContextAnnotation]**](TwitterContextAnnotation.md) |  | [optional] 
 **author_id** | **str** |  | [optional] 

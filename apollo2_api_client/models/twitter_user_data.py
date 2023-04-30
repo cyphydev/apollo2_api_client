@@ -28,6 +28,7 @@ class TwitterUserData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'data_type': 'str',
         'description': 'str',
         'location': 'str',
         'pinned_tweet_id': 'str',
@@ -39,6 +40,7 @@ class TwitterUserData(object):
     }
 
     attribute_map = {
+        'data_type': 'data_type',
         'description': 'description',
         'location': 'location',
         'pinned_tweet_id': 'pinned_tweet_id',
@@ -49,8 +51,9 @@ class TwitterUserData(object):
         'verified': 'verified'
     }
 
-    def __init__(self, description=None, location=None, pinned_tweet_id=None, profile_image_url=None, protected=None, public_metrics=None, username=None, verified=None):  # noqa: E501
+    def __init__(self, data_type='TwitterUserData', description=None, location=None, pinned_tweet_id=None, profile_image_url=None, protected=None, public_metrics=None, username=None, verified=None):  # noqa: E501
         """TwitterUserData - a model defined in Swagger"""  # noqa: E501
+        self._data_type = None
         self._description = None
         self._location = None
         self._pinned_tweet_id = None
@@ -60,6 +63,8 @@ class TwitterUserData(object):
         self._username = None
         self._verified = None
         self.discriminator = None
+        if data_type is not None:
+            self.data_type = data_type
         if description is not None:
             self.description = description
         if location is not None:
@@ -76,6 +81,27 @@ class TwitterUserData(object):
             self.username = username
         if verified is not None:
             self.verified = verified
+
+    @property
+    def data_type(self):
+        """Gets the data_type of this TwitterUserData.  # noqa: E501
+
+
+        :return: The data_type of this TwitterUserData.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_type
+
+    @data_type.setter
+    def data_type(self, data_type):
+        """Sets the data_type of this TwitterUserData.
+
+
+        :param data_type: The data_type of this TwitterUserData.  # noqa: E501
+        :type: str
+        """
+
+        self._data_type = data_type
 
     @property
     def description(self):

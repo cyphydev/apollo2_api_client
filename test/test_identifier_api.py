@@ -35,6 +35,13 @@ class TestIdentifierApi(unittest.TestCase):
         """
         pass
 
+    def test_identifier_list(self):
+        """Test case for identifier_list
+
+        Identifier List  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

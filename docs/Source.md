@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **enrichments** | [**list[Enrichment]**](Enrichment.md) |  | [optional] 
 **clusters** | [**list[ClusterMember]**](ClusterMember.md) |  | [optional] 
 **name** | **str** |  | [optional] 
-**data** | **AnyOfSourceData** |  | [optional] 
+**data** | **AnyOfSourceData** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

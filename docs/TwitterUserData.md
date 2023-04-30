@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**data_type** | **str** |  | [optional] [default to 'TwitterUserData']
 **description** | **str** |  | [optional] 
 **location** | **str** |  | [optional] 
 **pinned_tweet_id** | **str** |  | [optional] 

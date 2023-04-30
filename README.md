@@ -142,6 +142,7 @@ Class | Method | HTTP request | Description
 *GraphApi* | [**graph_id_get**](docs/GraphApi.md#graph_id_get) | **GET** /graph/{id} | Graph Id Get
 *GraphApi* | [**graph_post**](docs/GraphApi.md#graph_post) | **POST** /graph | Graph Post
 *IdentifierApi* | [**identifer_delete**](docs/IdentifierApi.md#identifer_delete) | **GET** /identifer/delete | Identifer Delete
+*IdentifierApi* | [**identifier_list**](docs/IdentifierApi.md#identifier_list) | **GET** /identifier/list | Identifier List
 *ItemApi* | [**item_attach_media_post**](docs/ItemApi.md#item_attach_media_post) | **POST** /item/attach_media | Item Attach Media Post
 *ItemApi* | [**item_batch_get**](docs/ItemApi.md#item_batch_get) | **POST** /item/get | Item Batch Get
 *ItemApi* | [**item_count_get**](docs/ItemApi.md#item_count_get) | **GET** /item/count | Item Count Get

@@ -28,6 +28,7 @@ class IncasActor(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'data_type': 'str',
         'annotations': 'list[IncasAnnotation]',
         'extra_attributes': 'list[IncasExtraAttribute]',
         'media_resources': 'list[IncasMediaResource]',
@@ -43,6 +44,7 @@ class IncasActor(object):
     }
 
     attribute_map = {
+        'data_type': 'data_type',
         'annotations': 'annotations',
         'extra_attributes': 'extra_attributes',
         'media_resources': 'media_resources',
@@ -57,8 +59,9 @@ class IncasActor(object):
         'name': 'name'
     }
 
-    def __init__(self, annotations=None, extra_attributes=None, media_resources=None, segments=None, actor_name=None, description=None, entity_type=None, expose_actor_info=None, id=None, knowledge_base_url=None, links=None, name=None):  # noqa: E501
+    def __init__(self, data_type='IncasActor', annotations=None, extra_attributes=None, media_resources=None, segments=None, actor_name=None, description=None, entity_type=None, expose_actor_info=None, id=None, knowledge_base_url=None, links=None, name=None):  # noqa: E501
         """IncasActor - a model defined in Swagger"""  # noqa: E501
+        self._data_type = None
         self._annotations = None
         self._extra_attributes = None
         self._media_resources = None
@@ -72,6 +75,8 @@ class IncasActor(object):
         self._links = None
         self._name = None
         self.discriminator = None
+        if data_type is not None:
+            self.data_type = data_type
         if annotations is not None:
             self.annotations = annotations
         if extra_attributes is not None:
@@ -96,6 +101,27 @@ class IncasActor(object):
             self.links = links
         if name is not None:
             self.name = name
+
+    @property
+    def data_type(self):
+        """Gets the data_type of this IncasActor.  # noqa: E501
+
+
+        :return: The data_type of this IncasActor.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_type
+
+    @data_type.setter
+    def data_type(self, data_type):
+        """Sets the data_type of this IncasActor.
+
+
+        :param data_type: The data_type of this IncasActor.  # noqa: E501
+        :type: str
+        """
+
+        self._data_type = data_type
 
     @property
     def annotations(self):

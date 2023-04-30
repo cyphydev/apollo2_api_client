@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**data_type** | **str** |  | [optional] [default to 'IncasMessage']
 **annotations** | [**list[IncasAnnotation]**](IncasAnnotation.md) |  | [optional] 
 **data_tags** | **list[str]** |  | [optional] 
 **embedded_urls** | **list[str]** |  | [optional] 

@@ -28,6 +28,7 @@ class TwitterData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'data_type': 'str',
         'attachments': 'TwitterAttachment',
         'context_annotations': 'list[TwitterContextAnnotation]',
         'author_id': 'str',
@@ -48,6 +49,7 @@ class TwitterData(object):
     }
 
     attribute_map = {
+        'data_type': 'data_type',
         'attachments': 'attachments',
         'context_annotations': 'context_annotations',
         'author_id': 'author_id',
@@ -67,8 +69,9 @@ class TwitterData(object):
         'twitter_user_id': 'twitter_user_id'
     }
 
-    def __init__(self, attachments=None, context_annotations=None, author_id=None, conversation_id=None, created_at=None, edit_controls=None, edit_history_tweet_ids=None, entities=None, id=None, lang=None, possibly_sensitive=None, public_metrics=None, reference_tweets=None, reply_settings=None, tweet_id=None, twitter_author_screenname=None, twitter_user_id=None):  # noqa: E501
+    def __init__(self, data_type='TwitterData', attachments=None, context_annotations=None, author_id=None, conversation_id=None, created_at=None, edit_controls=None, edit_history_tweet_ids=None, entities=None, id=None, lang=None, possibly_sensitive=None, public_metrics=None, reference_tweets=None, reply_settings=None, tweet_id=None, twitter_author_screenname=None, twitter_user_id=None):  # noqa: E501
         """TwitterData - a model defined in Swagger"""  # noqa: E501
+        self._data_type = None
         self._attachments = None
         self._context_annotations = None
         self._author_id = None
@@ -87,6 +90,8 @@ class TwitterData(object):
         self._twitter_author_screenname = None
         self._twitter_user_id = None
         self.discriminator = None
+        if data_type is not None:
+            self.data_type = data_type
         if attachments is not None:
             self.attachments = attachments
         if context_annotations is not None:
@@ -121,6 +126,27 @@ class TwitterData(object):
             self.twitter_author_screenname = twitter_author_screenname
         if twitter_user_id is not None:
             self.twitter_user_id = twitter_user_id
+
+    @property
+    def data_type(self):
+        """Gets the data_type of this TwitterData.  # noqa: E501
+
+
+        :return: The data_type of this TwitterData.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_type
+
+    @data_type.setter
+    def data_type(self, data_type):
+        """Sets the data_type of this TwitterData.
+
+
+        :param data_type: The data_type of this TwitterData.  # noqa: E501
+        :type: str
+        """
+
+        self._data_type = data_type
 
     @property
     def attachments(self):

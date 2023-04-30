@@ -28,14 +28,40 @@ class RedditUserData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'data_type': 'str'
     }
 
     attribute_map = {
+        'data_type': 'data_type'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, data_type='RedditUserData'):  # noqa: E501
         """RedditUserData - a model defined in Swagger"""  # noqa: E501
+        self._data_type = None
         self.discriminator = None
+        if data_type is not None:
+            self.data_type = data_type
+
+    @property
+    def data_type(self):
+        """Gets the data_type of this RedditUserData.  # noqa: E501
+
+
+        :return: The data_type of this RedditUserData.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_type
+
+    @data_type.setter
+    def data_type(self, data_type):
+        """Sets the data_type of this RedditUserData.
+
+
+        :param data_type: The data_type of this RedditUserData.  # noqa: E501
+        :type: str
+        """
+
+        self._data_type = data_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

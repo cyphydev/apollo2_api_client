@@ -85,8 +85,7 @@ class Item(object):
             self.media_items = media_items
         if text is not None:
             self.text = text
-        if data is not None:
-            self.data = data
+        self.data = data
 
     @property
     def id(self):
@@ -324,6 +323,8 @@ class Item(object):
         :param data: The data of this Item.  # noqa: E501
         :type: AnyOfItemData
         """
+        if data is None:
+            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
 
         self._data = data
 

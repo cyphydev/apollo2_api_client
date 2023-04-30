@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**data_type** | **str** |  | [optional] [default to 'IncasActor']
 **annotations** | [**list[IncasAnnotation]**](IncasAnnotation.md) |  | [optional] 
 **extra_attributes** | [**list[IncasExtraAttribute]**](IncasExtraAttribute.md) |  | [optional] 
 **media_resources** | [**list[IncasMediaResource]**](IncasMediaResource.md) |  | [optional] 

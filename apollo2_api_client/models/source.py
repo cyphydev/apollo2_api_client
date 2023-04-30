@@ -71,8 +71,7 @@ class Source(object):
             self.clusters = clusters
         if name is not None:
             self.name = name
-        if data is not None:
-            self.data = data
+        self.data = data
 
     @property
     def id(self):
@@ -245,6 +244,8 @@ class Source(object):
         :param data: The data of this Source.  # noqa: E501
         :type: AnyOfSourceData
         """
+        if data is None:
+            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
 
         self._data = data
 

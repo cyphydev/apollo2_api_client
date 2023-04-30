@@ -28,6 +28,7 @@ class IncasMessage(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'data_type': 'str',
         'annotations': 'list[IncasAnnotation]',
         'data_tags': 'list[str]',
         'embedded_urls': 'list[str]',
@@ -51,6 +52,7 @@ class IncasMessage(object):
     }
 
     attribute_map = {
+        'data_type': 'data_type',
         'annotations': 'annotations',
         'data_tags': 'data_tags',
         'embedded_urls': 'embedded_urls',
@@ -73,8 +75,9 @@ class IncasMessage(object):
         'translated_title': 'translated_title'
     }
 
-    def __init__(self, annotations=None, data_tags=None, embedded_urls=None, extra_attributes=None, image_urls=None, segments=None, author=None, content_text=None, geolocation=None, id=None, language=None, media_type=None, media_type_attributes=None, mentioned_users=None, name=None, time_published=None, title=None, url=None, translated_content_text=None, translated_title=None):  # noqa: E501
+    def __init__(self, data_type='IncasMessage', annotations=None, data_tags=None, embedded_urls=None, extra_attributes=None, image_urls=None, segments=None, author=None, content_text=None, geolocation=None, id=None, language=None, media_type=None, media_type_attributes=None, mentioned_users=None, name=None, time_published=None, title=None, url=None, translated_content_text=None, translated_title=None):  # noqa: E501
         """IncasMessage - a model defined in Swagger"""  # noqa: E501
+        self._data_type = None
         self._annotations = None
         self._data_tags = None
         self._embedded_urls = None
@@ -96,6 +99,8 @@ class IncasMessage(object):
         self._translated_content_text = None
         self._translated_title = None
         self.discriminator = None
+        if data_type is not None:
+            self.data_type = data_type
         if annotations is not None:
             self.annotations = annotations
         if data_tags is not None:
@@ -136,6 +141,27 @@ class IncasMessage(object):
             self.translated_content_text = translated_content_text
         if translated_title is not None:
             self.translated_title = translated_title
+
+    @property
+    def data_type(self):
+        """Gets the data_type of this IncasMessage.  # noqa: E501
+
+
+        :return: The data_type of this IncasMessage.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_type
+
+    @data_type.setter
+    def data_type(self, data_type):
+        """Sets the data_type of this IncasMessage.
+
+
+        :param data_type: The data_type of this IncasMessage.  # noqa: E501
+        :type: str
+        """
+
+        self._data_type = data_type
 
     @property
     def annotations(self):
