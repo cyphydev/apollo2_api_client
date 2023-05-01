@@ -16,6 +16,7 @@ import json
 import os
 import io
 import atexit
+from math import ceil
 from multiprocessing.pool import ThreadPool
 import re
 import tempfile
@@ -1094,7 +1095,7 @@ class ApiClient:
         body: typing.Optional[typing.Union[str, bytes]] = None,
         fields: typing.Optional[typing.Tuple[typing.Tuple[str, str], ...]] = None,
         auth_settings: typing.Optional[typing.List[str]] = None,
-        async_req: typing.Optional[bool] = None,
+        async_req: typing.Optional[bool] = False,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         host: typing.Optional[str] = None,
@@ -1256,6 +1257,38 @@ class ApiClient:
                 raise ApiValueError(
                     'Authentication token must be in `query` or `header`'
                 )
+    
+    @staticmethod
+    def split_dict_for_batches(body, batch_size):
+        """
+        Splits the dict into smaller chunks of specified size.
+        :param body: dict to be split
+        :param batch_size: chunk size
+        :return: list of dict
+        """
+        dsize = len(body)
+        dkeys = list(body.keys())
+        batches = [
+            {k: body[k] for k in kbatch} 
+                for kbatch in [dkeys[(i * batch_size):min(dsize, (i + 1) * batch_size)] 
+            for i in range(ceil(dsize / batch_size))]
+        ]
+        return batches
+
+    @staticmethod
+    def split_list_for_batches(body, batch_size):
+        """
+        Splits the list into smaller chunks of specified size.
+        :param body: list to be split
+        :param batch_size: chunk size
+        :return: list of list
+        """
+        lsize = len(body)
+        batches = [
+            body[(i * batch_size):min(lsize, (i + 1) * batch_size)] 
+            for i in range(ceil(lsize / batch_size))
+        ]
+        return batches
 
 
 class Api:
