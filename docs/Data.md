@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **content_text** | **str** |  | [optional] 
 **geolocation** | [**GeoLocation**](GeoLocation.md) |  | [optional] 
 **language** | **str** |  | [optional] 
-**media_type** | [**MediaType**](MediaType.md) |  | [optional] 
+**media_type** | [**PlatformType**](PlatformType.md) |  | [optional] 
 **media_type_attributes** | [**IncasOneOfMediaTypeAttributes**](IncasOneOfMediaTypeAttributes.md) |  | [optional] 
 **mentioned_users** | **List[object]** |  | [optional] 
 **name** | **str** |  | [optional] 

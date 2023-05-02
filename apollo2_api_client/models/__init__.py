@@ -25,8 +25,8 @@ from apollo2_api_client.models.claim import Claim
 from apollo2_api_client.models.cluster import Cluster
 from apollo2_api_client.models.cluster_member import ClusterMember
 from apollo2_api_client.models.cluster_type import ClusterType
-from apollo2_api_client.models.data import Data
-from apollo2_api_client.models.data1 import Data1
+from apollo2_api_client.models.item_data import ItemData
+from apollo2_api_client.models.source_data import SourceData
 from apollo2_api_client.models.edge import Edge
 from apollo2_api_client.models.engagement_type import EngagementType
 from apollo2_api_client.models.enrichment import Enrichment
@@ -54,13 +54,15 @@ from apollo2_api_client.models.list_enrichment_meta import ListEnrichmentMeta
 from apollo2_api_client.models.location_inner import LocationInner
 from apollo2_api_client.models.media_item import MediaItem
 from apollo2_api_client.models.media_item_type import MediaItemType
-from apollo2_api_client.models.media_type import MediaType
 from apollo2_api_client.models.modify_media_attachment_request import ModifyMediaAttachmentRequest
 from apollo2_api_client.models.numerical_enrichment import NumericalEnrichment
 from apollo2_api_client.models.numerical_enrichment_meta import NumericalEnrichmentMeta
+from apollo2_api_client.models.platform_type import PlatformType
 from apollo2_api_client.models.raw_data_post_entry import RawDataPostEntry
 from apollo2_api_client.models.raw_data_post_request import RawDataPostRequest
 from apollo2_api_client.models.raw_data_post_response import RawDataPostResponse
+from apollo2_api_client.models.reddit_data import RedditData
+from apollo2_api_client.models.reddit_user_data import RedditUserData
 from apollo2_api_client.models.segment import Segment
 from apollo2_api_client.models.source import Source
 from apollo2_api_client.models.text_enrichment import TextEnrichment

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | 
 **type** | **str** |  | 
-**platform** | [**MediaType**](MediaType.md) |  | 
+**platform** | [**PlatformType**](PlatformType.md) |  | 
 **sid** | **int** |  | [optional] 
 **enrichments** | [**List[Enrichment]**](Enrichment.md) |  | [optional] [default to []]
 **clusters** | [**List[ClusterMember]**](ClusterMember.md) |  | [optional] [default to []]

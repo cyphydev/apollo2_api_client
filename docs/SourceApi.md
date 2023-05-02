@@ -139,7 +139,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     api_instance = apollo2_api_client.SourceApi(api_client)
     last = 56 # int |  (optional)
     end = 56 # int |  (optional)
-    platform = apollo2_api_client.MediaType() # MediaType |  (optional)
+    platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
     identifier = 'identifier_example' # str |  (optional)
 
     try:
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **last** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
- **platform** | [**MediaType**](.md)|  | [optional] 
+ **platform** | [**PlatformType**](.md)|  | [optional] 
  **identifier** | **str**|  | [optional] 
 
 ### Return type
@@ -459,7 +459,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     cluster_provider = 'cluster_provider_example' # str |  (optional)
     cluster_tag = 'cluster_tag_example' # str |  (optional)
     cluster_version = 'cluster_version_example' # str |  (optional)
-    platform = apollo2_api_client.MediaType() # MediaType |  (optional)
+    platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
     identifier = 'identifier_example' # str |  (optional)
 
     try:
@@ -488,7 +488,7 @@ Name | Type | Description  | Notes
  **cluster_provider** | **str**|  | [optional] 
  **cluster_tag** | **str**|  | [optional] 
  **cluster_version** | **str**|  | [optional] 
- **platform** | [**MediaType**](.md)|  | [optional] 
+ **platform** | [**PlatformType**](.md)|  | [optional] 
  **identifier** | **str**|  | [optional] 
 
 ### Return type
@@ -870,7 +870,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apollo2_api_client.SourceApi(api_client)
     request_body = ['request_body_example'] # List[str] | 
-    platform = apollo2_api_client.MediaType() # MediaType |  (optional)
+    platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
 
     try:
         # Source Id Forward Batch Translate
@@ -886,7 +886,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request_body** | [**List[str]**](str.md)|  | 
- **platform** | [**MediaType**](.md)|  | [optional] 
+ **platform** | [**PlatformType**](.md)|  | [optional] 
 
 ### Return type
 
@@ -946,7 +946,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apollo2_api_client.SourceApi(api_client)
     id = 'id_example' # str | 
-    platform = apollo2_api_client.MediaType() # MediaType |  (optional)
+    platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
 
     try:
         # Source Id Forward Translate
@@ -962,7 +962,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **platform** | [**MediaType**](.md)|  | [optional] 
+ **platform** | [**PlatformType**](.md)|  | [optional] 
 
 ### Return type
 
@@ -1489,7 +1489,7 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 with apollo2_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apollo2_api_client.SourceApi(api_client)
-    platform = apollo2_api_client.MediaType() # MediaType |  (optional)
+    platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
     identifier = 'identifier_example' # str |  (optional)
 
     try:
@@ -1505,7 +1505,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **platform** | [**MediaType**](.md)|  | [optional] 
+ **platform** | [**PlatformType**](.md)|  | [optional] 
  **identifier** | **str**|  | [optional] 
 
 ### Return type

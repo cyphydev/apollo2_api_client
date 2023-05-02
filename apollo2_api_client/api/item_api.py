@@ -27,8 +27,8 @@ from apollo2_api_client.models.batch_get_request import BatchGetRequest
 from apollo2_api_client.models.enrichment import Enrichment
 from apollo2_api_client.models.enrichments_batch_request import EnrichmentsBatchRequest
 from apollo2_api_client.models.item import Item
-from apollo2_api_client.models.media_type import MediaType
 from apollo2_api_client.models.modify_media_attachment_request import ModifyMediaAttachmentRequest
+from apollo2_api_client.models.platform_type import PlatformType
 
 from apollo2_api_client.api_client import ApiClient
 from apollo2_api_client.exceptions import (  # noqa: F401
@@ -357,7 +357,7 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_count_get(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[MediaType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> int:  # noqa: E501
+    def item_count_get(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> int:  # noqa: E501
         """Item Count Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -371,7 +371,7 @@ class ItemApi(object):
         :param end:
         :type end: int
         :param platform:
-        :type platform: MediaType
+        :type platform: PlatformType
         :param identifier:
         :type identifier: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z
@@ -397,7 +397,7 @@ class ItemApi(object):
         return self.item_count_get_with_http_info(last, end, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_count_get_with_http_info(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[MediaType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
+    def item_count_get_with_http_info(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
         """Item Count Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -411,7 +411,7 @@ class ItemApi(object):
         :param end:
         :type end: int
         :param platform:
-        :type platform: MediaType
+        :type platform: PlatformType
         :param identifier:
         :type identifier: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z
@@ -1139,7 +1139,7 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_get(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[MediaType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> List[Item]:  # noqa: E501
+    def item_get(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> List[Item]:  # noqa: E501
         """Item Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1175,7 +1175,7 @@ class ItemApi(object):
         :param cluster_version:
         :type cluster_version: str
         :param platform:
-        :type platform: MediaType
+        :type platform: PlatformType
         :param identifier:
         :type identifier: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z
@@ -1201,7 +1201,7 @@ class ItemApi(object):
         return self.item_get_with_http_info(limit, last, end, with_enrichment, with_cluster, enrichment_name, enrichment_provider, enrichment_tag, enrichment_version, cluster_name, cluster_provider, cluster_tag, cluster_version, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_get_with_http_info(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[MediaType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
+    def item_get_with_http_info(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
         """Item Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1237,7 +1237,7 @@ class ItemApi(object):
         :param cluster_version:
         :type cluster_version: str
         :param platform:
-        :type platform: MediaType
+        :type platform: PlatformType
         :param identifier:
         :type identifier: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z
@@ -2038,7 +2038,7 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_id_forward_batch_translate(self, request_body : List[StrictStr], platform : Optional[MediaType] = None, **kwargs) -> List[int]:  # noqa: E501
+    def item_id_forward_batch_translate(self, request_body : List[StrictStr], platform : Optional[PlatformType] = None, **kwargs) -> List[int]:  # noqa: E501
         """Item Id Forward Batch Translate  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2050,7 +2050,7 @@ class ItemApi(object):
         :param request_body: (required)
         :type request_body: List[str]
         :param platform:
-        :type platform: MediaType
+        :type platform: PlatformType
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2070,7 +2070,7 @@ class ItemApi(object):
         return self.item_id_forward_batch_translate_with_http_info(request_body, platform, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_id_forward_batch_translate_with_http_info(self, request_body : List[StrictStr], platform : Optional[MediaType] = None, **kwargs):  # noqa: E501
+    def item_id_forward_batch_translate_with_http_info(self, request_body : List[StrictStr], platform : Optional[PlatformType] = None, **kwargs):  # noqa: E501
         """Item Id Forward Batch Translate  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2082,7 +2082,7 @@ class ItemApi(object):
         :param request_body: (required)
         :type request_body: List[str]
         :param platform:
-        :type platform: MediaType
+        :type platform: PlatformType
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2194,7 +2194,7 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_id_forward_translate(self, id : StrictStr, platform : Optional[MediaType] = None, **kwargs) -> int:  # noqa: E501
+    def item_id_forward_translate(self, id : StrictStr, platform : Optional[PlatformType] = None, **kwargs) -> int:  # noqa: E501
         """Item Id Forward Translate  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2206,7 +2206,7 @@ class ItemApi(object):
         :param id: (required)
         :type id: str
         :param platform:
-        :type platform: MediaType
+        :type platform: PlatformType
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2226,7 +2226,7 @@ class ItemApi(object):
         return self.item_id_forward_translate_with_http_info(id, platform, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_id_forward_translate_with_http_info(self, id : StrictStr, platform : Optional[MediaType] = None, **kwargs):  # noqa: E501
+    def item_id_forward_translate_with_http_info(self, id : StrictStr, platform : Optional[PlatformType] = None, **kwargs):  # noqa: E501
         """Item Id Forward Translate  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2238,7 +2238,7 @@ class ItemApi(object):
         :param id: (required)
         :type id: str
         :param platform:
-        :type platform: MediaType
+        :type platform: PlatformType
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3300,7 +3300,7 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_max_id_get(self, platform : Optional[MediaType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> int:  # noqa: E501
+    def item_max_id_get(self, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> int:  # noqa: E501
         """Item Max Id Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3310,7 +3310,7 @@ class ItemApi(object):
         >>> result = thread.get()
 
         :param platform:
-        :type platform: MediaType
+        :type platform: PlatformType
         :param identifier:
         :type identifier: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z
@@ -3336,7 +3336,7 @@ class ItemApi(object):
         return self.item_max_id_get_with_http_info(platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_max_id_get_with_http_info(self, platform : Optional[MediaType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
+    def item_max_id_get_with_http_info(self, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
         """Item Max Id Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3346,7 +3346,7 @@ class ItemApi(object):
         >>> result = thread.get()
 
         :param platform:
-        :type platform: MediaType
+        :type platform: PlatformType
         :param identifier:
         :type identifier: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z

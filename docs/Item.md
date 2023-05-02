@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | 
 **author** | **str** |  | 
-**platform** | [**MediaType**](MediaType.md) |  | 
+**platform** | [**PlatformType**](PlatformType.md) |  | 
 **time_published** | **int** |  | 
 **sid** | **int** |  | [optional] 
 **source_id** | **int** |  | [optional] 
