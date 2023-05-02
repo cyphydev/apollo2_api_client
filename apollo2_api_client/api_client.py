@@ -22,6 +22,7 @@ from multiprocessing.pool import ThreadPool
 import os
 import re
 import tempfile
+from aenum import Enum
 
 from urllib.parse import quote
 
@@ -302,6 +303,8 @@ class ApiClient(object):
         if obj is None:
             return None
         elif isinstance(obj, self.PRIMITIVE_TYPES):
+            if isinstance(obj, Enum):
+                return self.sanitize_for_serialization(obj.value)
             return obj
         elif isinstance(obj, list):
             return [self.sanitize_for_serialization(sub_obj)

@@ -44,17 +44,17 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.data import ItemData
+from apollo2_api_client.models.item_data import ItemData
 
 # TODO update the JSON string below
 json = "{}"
 # create an instance of ItemData from a JSON string
-data_instance = ItemData.from_json(json)
+item_data_instance = ItemData.from_json(json)
 # print the JSON string representation of the object
 print ItemData.to_json()
 
 # convert the object into a dict
-data_dict = data_instance.to_dict()
+data_dict = item_data_instance.to_dict()
 # create an instance of ItemData from a dict
 data_form_dict = data.from_dict(data_dict)
 ```
