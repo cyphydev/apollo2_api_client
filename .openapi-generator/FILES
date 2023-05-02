@@ -167,6 +167,7 @@ docs/ValidationError.md
 docs/ValueInner.md
 docs/VisualTopic.md
 git_push.sh
+pyproject.toml
 requirements.txt
 setup.cfg
 setup.py

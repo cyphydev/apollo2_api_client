@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **enrichments** | [**List[Enrichment]**](Enrichment.md) |  | [optional] [default to []]
 **clusters** | [**List[ClusterMember]**](ClusterMember.md) |  | [optional] [default to []]
 **name** | **str** |  | [optional] 
-**data** | [**Data1**](Data1.md) |  | 
+**data** | [**SourceData**](SourceData.md) |  | 
 
 ## Example
 

@@ -1,4 +1,4 @@
-# Data1
+# SourceData
 
 
 ## Properties
@@ -27,18 +27,18 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.data1 import Data1
+from apollo2_api_client.models.data1 import SourceData
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of Data1 from a JSON string
-data1_instance = Data1.from_json(json)
+# create an instance of SourceData from a JSON string
+data1_instance = SourceData.from_json(json)
 # print the JSON string representation of the object
-print Data1.to_json()
+print SourceData.to_json()
 
 # convert the object into a dict
 data1_dict = data1_instance.to_dict()
-# create an instance of Data1 from a dict
+# create an instance of SourceData from a dict
 data1_form_dict = data1.from_dict(data1_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
