@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**data_type** | **str** |  | [optional] [default to 'Incas']
 **annotations** | [**List[IncasAnnotation]**](IncasAnnotation.md) |  | [optional] [default to []]
 **data_tags** | **List[str]** |  | [optional] [default to []]
 **embedded_urls** | **List[str]** |  | [optional] [default to []]

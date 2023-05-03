@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
+**data_type** | **str** |  | [optional] [default to 'Reddit']
 
 ## Example
 

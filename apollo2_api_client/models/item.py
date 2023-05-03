@@ -22,8 +22,8 @@ import json
 from typing import List, Optional
 from pydantic import BaseModel, StrictInt, StrictStr, conlist
 from apollo2_api_client.models.cluster_member import ClusterMember
-from apollo2_api_client.models.item_data import ItemData
 from apollo2_api_client.models.enrichment import Enrichment
+from apollo2_api_client.models.item_data import ItemData
 from apollo2_api_client.models.media_item import MediaItem
 from apollo2_api_client.models.platform_type import PlatformType
 

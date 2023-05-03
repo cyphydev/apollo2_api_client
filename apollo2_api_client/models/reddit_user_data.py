@@ -26,8 +26,8 @@ class RedditUserData(BaseModel):
     """
     RedditUserData
     """
-    username: Optional[StrictStr] = None
-    __properties = ["username"]
+    data_type: Optional[StrictStr] = 'Reddit'
+    __properties = ["data_type"]
 
     class Config:
         allow_population_by_field_name = True
@@ -64,7 +64,7 @@ class RedditUserData(BaseModel):
             return RedditUserData.parse_obj(obj)
 
         _obj = RedditUserData.parse_obj({
-            "username": obj.get("username")
+            "data_type": obj.get("data_type") if obj.get("data_type") is not None else 'Reddit'
         })
         return _obj
 

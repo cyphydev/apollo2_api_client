@@ -22,9 +22,9 @@ import json
 from typing import List, Optional
 from pydantic import BaseModel, StrictInt, StrictStr, conlist
 from apollo2_api_client.models.cluster_member import ClusterMember
-from apollo2_api_client.models.source_data import SourceData
 from apollo2_api_client.models.enrichment import Enrichment
 from apollo2_api_client.models.platform_type import PlatformType
+from apollo2_api_client.models.source_data import SourceData
 
 class Source(BaseModel):
     """

@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**data_type** | **str** |  | [optional] [default to 'Incas']
 **attachments** | [**TwitterAttachment**](TwitterAttachment.md) |  | [optional] 
 **context_annotations** | [**List[TwitterContextAnnotation]**](TwitterContextAnnotation.md) |  | [optional] [default to []]
 **author_id** | **str** |  | [optional] 
@@ -54,9 +55,9 @@ item_data_instance = ItemData.from_json(json)
 print ItemData.to_json()
 
 # convert the object into a dict
-data_dict = item_data_instance.to_dict()
+item_data_dict = item_data_instance.to_dict()
 # create an instance of ItemData from a dict
-data_form_dict = data.from_dict(data_dict)
+item_data_form_dict = item_data.from_dict(item_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

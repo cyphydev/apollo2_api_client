@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**data_type** | **str** |  | [optional] [default to 'Twitter']
 **attachments** | [**TwitterAttachment**](TwitterAttachment.md) |  | [optional] 
 **context_annotations** | [**List[TwitterContextAnnotation]**](TwitterContextAnnotation.md) |  | [optional] [default to []]
 **author_id** | **str** |  | [optional] 

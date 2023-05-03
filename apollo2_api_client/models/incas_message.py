@@ -32,6 +32,7 @@ class IncasMessage(BaseModel):
     """
     IncasMessage
     """
+    data_type: Optional[StrictStr] = 'Incas'
     annotations: Optional[conlist(IncasAnnotation)] = None
     data_tags: Optional[conlist(StrictStr)] = None
     embedded_urls: Optional[conlist(StrictStr)] = None
@@ -52,7 +53,7 @@ class IncasMessage(BaseModel):
     url: Optional[StrictStr] = None
     translated_content_text: Optional[StrictStr] = None
     translated_title: Optional[StrictStr] = None
-    __properties = ["annotations", "data_tags", "embedded_urls", "extra_attributes", "image_urls", "segments", "author", "content_text", "geolocation", "id", "language", "media_type", "media_type_attributes", "mentioned_users", "name", "time_published", "title", "url", "translated_content_text", "translated_title"]
+    __properties = ["data_type", "annotations", "data_tags", "embedded_urls", "extra_attributes", "image_urls", "segments", "author", "content_text", "geolocation", "id", "language", "media_type", "media_type_attributes", "mentioned_users", "name", "time_published", "title", "url", "translated_content_text", "translated_title"]
 
     class Config:
         allow_population_by_field_name = True
@@ -116,6 +117,7 @@ class IncasMessage(BaseModel):
             return IncasMessage.parse_obj(obj)
 
         _obj = IncasMessage.parse_obj({
+            "data_type": obj.get("data_type") if obj.get("data_type") is not None else 'Incas',
             "annotations": [IncasAnnotation.from_dict(_item) for _item in obj.get("annotations")] if obj.get("annotations") is not None else None,
             "data_tags": obj.get("data_tags"),
             "embedded_urls": obj.get("embedded_urls"),

@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**data_type** | **str** |  | [optional] [default to 'Incas']
 **annotations** | [**List[IncasAnnotation]**](IncasAnnotation.md) |  | [optional] [default to []]
 **extra_attributes** | [**List[IncasExtraAttribute]**](IncasExtraAttribute.md) |  | [optional] [default to []]
 **media_resources** | [**List[IncasMediaResource]**](IncasMediaResource.md) |  | [optional] [default to []]

@@ -27,6 +27,7 @@ class TwitterUserData(BaseModel):
     """
     TwitterUserData
     """
+    data_type: Optional[StrictStr] = 'Twitter'
     description: Optional[StrictStr] = None
     location: Optional[StrictStr] = None
     pinned_tweet_id: Optional[StrictStr] = None
@@ -35,7 +36,7 @@ class TwitterUserData(BaseModel):
     public_metrics: Optional[TwitterPublicMetrics] = None
     username: Optional[StrictStr] = None
     verified: Optional[StrictBool] = None
-    __properties = ["description", "location", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "username", "verified"]
+    __properties = ["data_type", "description", "location", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "username", "verified"]
 
     class Config:
         allow_population_by_field_name = True
@@ -75,6 +76,7 @@ class TwitterUserData(BaseModel):
             return TwitterUserData.parse_obj(obj)
 
         _obj = TwitterUserData.parse_obj({
+            "data_type": obj.get("data_type") if obj.get("data_type") is not None else 'Twitter',
             "description": obj.get("description"),
             "location": obj.get("location"),
             "pinned_tweet_id": obj.get("pinned_tweet_id"),

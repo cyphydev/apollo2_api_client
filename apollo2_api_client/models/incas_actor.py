@@ -32,6 +32,7 @@ class IncasActor(BaseModel):
     """
     IncasActor
     """
+    data_type: Optional[StrictStr] = 'Incas'
     annotations: Optional[conlist(IncasAnnotation)] = None
     extra_attributes: Optional[conlist(IncasExtraAttribute)] = None
     media_resources: Optional[conlist(IncasMediaResource)] = None
@@ -44,7 +45,7 @@ class IncasActor(BaseModel):
     knowledge_base_url: Optional[StrictStr] = None
     links: Optional[IncasLinks] = None
     name: Optional[StrictStr] = None
-    __properties = ["annotations", "extra_attributes", "media_resources", "segments", "actor_name", "description", "entity_type", "expose_actor_info", "id", "knowledge_base_url", "links", "name"]
+    __properties = ["data_type", "annotations", "extra_attributes", "media_resources", "segments", "actor_name", "description", "entity_type", "expose_actor_info", "id", "knowledge_base_url", "links", "name"]
 
     class Config:
         allow_population_by_field_name = True
@@ -112,6 +113,7 @@ class IncasActor(BaseModel):
             return IncasActor.parse_obj(obj)
 
         _obj = IncasActor.parse_obj({
+            "data_type": obj.get("data_type") if obj.get("data_type") is not None else 'Incas',
             "annotations": [IncasAnnotation.from_dict(_item) for _item in obj.get("annotations")] if obj.get("annotations") is not None else None,
             "extra_attributes": [IncasExtraAttribute.from_dict(_item) for _item in obj.get("extra_attributes")] if obj.get("extra_attributes") is not None else None,
             "media_resources": [IncasMediaResource.from_dict(_item) for _item in obj.get("media_resources")] if obj.get("media_resources") is not None else None,

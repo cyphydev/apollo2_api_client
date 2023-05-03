@@ -48,8 +48,6 @@ from apollo2_api_client.models.claim import Claim
 from apollo2_api_client.models.cluster import Cluster
 from apollo2_api_client.models.cluster_member import ClusterMember
 from apollo2_api_client.models.cluster_type import ClusterType
-from apollo2_api_client.models.item_data import ItemData
-from apollo2_api_client.models.source_data import SourceData
 from apollo2_api_client.models.edge import Edge
 from apollo2_api_client.models.engagement_type import EngagementType
 from apollo2_api_client.models.enrichment import Enrichment
@@ -72,6 +70,7 @@ from apollo2_api_client.models.incas_one_of_media_type_attributes import IncasOn
 from apollo2_api_client.models.incas_segment import IncasSegment
 from apollo2_api_client.models.incas_twitter_data import IncasTwitterData
 from apollo2_api_client.models.item import Item
+from apollo2_api_client.models.item_data import ItemData
 from apollo2_api_client.models.list_enrichment import ListEnrichment
 from apollo2_api_client.models.list_enrichment_meta import ListEnrichmentMeta
 from apollo2_api_client.models.location_inner import LocationInner
@@ -88,6 +87,7 @@ from apollo2_api_client.models.reddit_data import RedditData
 from apollo2_api_client.models.reddit_user_data import RedditUserData
 from apollo2_api_client.models.segment import Segment
 from apollo2_api_client.models.source import Source
+from apollo2_api_client.models.source_data import SourceData
 from apollo2_api_client.models.text_enrichment import TextEnrichment
 from apollo2_api_client.models.text_enrichment_meta import TextEnrichmentMeta
 from apollo2_api_client.models.twitter_annotation import TwitterAnnotation

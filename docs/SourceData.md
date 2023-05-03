@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**data_type** | **str** |  | [optional] [default to 'Incas']
 **description** | **str** |  | [optional] 
 **location** | **str** |  | [optional] 
 **pinned_tweet_id** | **str** |  | [optional] 
@@ -37,9 +38,9 @@ source_data_instance = SourceData.from_json(json)
 print SourceData.to_json()
 
 # convert the object into a dict
-data1_dict = source_data_instance.to_dict()
+source_data_dict = source_data_instance.to_dict()
 # create an instance of SourceData from a dict
-data1_form_dict = data1.from_dict(data1_dict)
+source_data_form_dict = source_data.from_dict(source_data_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

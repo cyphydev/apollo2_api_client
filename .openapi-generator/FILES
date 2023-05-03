@@ -29,8 +29,6 @@ apollo2_api_client/models/claim.py
 apollo2_api_client/models/cluster.py
 apollo2_api_client/models/cluster_member.py
 apollo2_api_client/models/cluster_type.py
-apollo2_api_client/models/data.py
-apollo2_api_client/models/data1.py
 apollo2_api_client/models/edge.py
 apollo2_api_client/models/engagement_type.py
 apollo2_api_client/models/enrichment.py
@@ -53,6 +51,7 @@ apollo2_api_client/models/incas_one_of_media_type_attributes.py
 apollo2_api_client/models/incas_segment.py
 apollo2_api_client/models/incas_twitter_data.py
 apollo2_api_client/models/item.py
+apollo2_api_client/models/item_data.py
 apollo2_api_client/models/list_enrichment.py
 apollo2_api_client/models/list_enrichment_meta.py
 apollo2_api_client/models/location_inner.py
@@ -69,6 +68,7 @@ apollo2_api_client/models/reddit_data.py
 apollo2_api_client/models/reddit_user_data.py
 apollo2_api_client/models/segment.py
 apollo2_api_client/models/source.py
+apollo2_api_client/models/source_data.py
 apollo2_api_client/models/text_enrichment.py
 apollo2_api_client/models/text_enrichment_meta.py
 apollo2_api_client/models/twitter_annotation.py
@@ -101,8 +101,6 @@ docs/Cluster.md
 docs/ClusterApi.md
 docs/ClusterMember.md
 docs/ClusterType.md
-docs/Data.md
-docs/Data1.md
 docs/DefaultApi.md
 docs/Edge.md
 docs/EngagementType.md
@@ -130,6 +128,7 @@ docs/IncasSegment.md
 docs/IncasTwitterData.md
 docs/Item.md
 docs/ItemApi.md
+docs/ItemData.md
 docs/ListEnrichment.md
 docs/ListEnrichmentMeta.md
 docs/LocationInner.md
@@ -148,6 +147,7 @@ docs/RedditUserData.md
 docs/Segment.md
 docs/Source.md
 docs/SourceApi.md
+docs/SourceData.md
 docs/TextEnrichment.md
 docs/TextEnrichmentMeta.md
 docs/TwitterAnnotation.md
@@ -186,8 +186,6 @@ test/test_cluster.py
 test/test_cluster_api.py
 test/test_cluster_member.py
 test/test_cluster_type.py
-test/test_data.py
-test/test_data1.py
 test/test_default_api.py
 test/test_edge.py
 test/test_engagement_type.py
@@ -215,6 +213,7 @@ test/test_incas_segment.py
 test/test_incas_twitter_data.py
 test/test_item.py
 test/test_item_api.py
+test/test_item_data.py
 test/test_list_enrichment.py
 test/test_list_enrichment_meta.py
 test/test_location_inner.py
@@ -233,6 +232,7 @@ test/test_reddit_user_data.py
 test/test_segment.py
 test/test_source.py
 test/test_source_api.py
+test/test_source_data.py
 test/test_text_enrichment.py
 test/test_text_enrichment_meta.py
 test/test_twitter_annotation.py

@@ -26,7 +26,7 @@ from apollo2_api_client.models.twitter_user_data import TwitterUserData
 from typing import Any, List
 from pydantic import StrictStr, Field
 
-SOURCE_DATA_ANY_OF_SCHEMAS = ["IncasActor", "RedditUserData", "TwitterUserData"]
+SOURCEDATA_ANY_OF_SCHEMAS = ["IncasActor", "RedditUserData", "TwitterUserData"]
 
 class SourceData(BaseModel):
     """
@@ -40,7 +40,7 @@ class SourceData(BaseModel):
     # data type: IncasActor
     anyof_schema_3_validator: Optional[IncasActor] = None
     actual_instance: Any
-    any_of_schemas: List[str] = Field(SOURCE_DATA_ANY_OF_SCHEMAS, const=True)
+    any_of_schemas: List[str] = Field(SOURCEDATA_ANY_OF_SCHEMAS, const=True)
 
     class Config:
         validate_assignment = True

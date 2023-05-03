@@ -32,6 +32,7 @@ class TwitterData(BaseModel):
     """
     TwitterData
     """
+    data_type: Optional[StrictStr] = 'Twitter'
     attachments: Optional[TwitterAttachment] = None
     context_annotations: Optional[conlist(TwitterContextAnnotation)] = None
     author_id: Optional[StrictStr] = None
@@ -49,7 +50,7 @@ class TwitterData(BaseModel):
     tweet_id: Optional[StrictStr] = None
     twitter_author_screenname: Optional[StrictStr] = None
     twitter_user_id: Optional[StrictStr] = None
-    __properties = ["attachments", "context_annotations", "author_id", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "id", "lang", "possibly_sensitive", "public_metrics", "reference_tweets", "reply_settings", "tweet_id", "twitter_author_screenname", "twitter_user_id"]
+    __properties = ["data_type", "attachments", "context_annotations", "author_id", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "id", "lang", "possibly_sensitive", "public_metrics", "reference_tweets", "reply_settings", "tweet_id", "twitter_author_screenname", "twitter_user_id"]
 
     class Config:
         allow_population_by_field_name = True
@@ -112,6 +113,7 @@ class TwitterData(BaseModel):
             return TwitterData.parse_obj(obj)
 
         _obj = TwitterData.parse_obj({
+            "data_type": obj.get("data_type") if obj.get("data_type") is not None else 'Twitter',
             "attachments": TwitterAttachment.from_dict(obj.get("attachments")) if obj.get("attachments") is not None else None,
             "context_annotations": [TwitterContextAnnotation.from_dict(_item) for _item in obj.get("context_annotations")] if obj.get("context_annotations") is not None else None,
             "author_id": obj.get("author_id"),
