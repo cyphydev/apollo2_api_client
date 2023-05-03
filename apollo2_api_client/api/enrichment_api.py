@@ -21,7 +21,7 @@ from pydantic import StrictBool, StrictStr
 
 from typing import List, Optional
 
-from apollo2_api_client.models.enrichment_meta import EnrichmentMeta
+from apollo2_api_client.models import EnrichmentMeta
 
 from apollo2_api_client.api_client import ApiClient
 from apollo2_api_client.exceptions import (  # noqa: F401

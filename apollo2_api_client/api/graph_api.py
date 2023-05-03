@@ -21,8 +21,8 @@ from pydantic import StrictInt, StrictStr, conlist
 
 from typing import List, Optional
 
-from apollo2_api_client.models.edge import Edge
-from apollo2_api_client.models.graph import Graph
+from apollo2_api_client.models import Edge
+from apollo2_api_client.models import Graph
 
 from apollo2_api_client.api_client import ApiClient
 from apollo2_api_client.exceptions import (  # noqa: F401

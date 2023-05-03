@@ -21,11 +21,11 @@ from pydantic import StrictBool, StrictInt, StrictStr, conlist
 
 from typing import Dict, List, Optional
 
-from apollo2_api_client.models.batch_get_request import BatchGetRequest
-from apollo2_api_client.models.enrichment import Enrichment
-from apollo2_api_client.models.enrichments_batch_request import EnrichmentsBatchRequest
-from apollo2_api_client.models.platform_type import PlatformType
-from apollo2_api_client.models.source import Source
+from apollo2_api_client.models import BatchGetRequest
+from apollo2_api_client.models import Enrichment
+from apollo2_api_client.models import EnrichmentsBatchRequest
+from apollo2_api_client.models import PlatformType
+from apollo2_api_client.models import Source
 
 from apollo2_api_client.api_client import ApiClient
 from apollo2_api_client.exceptions import (  # noqa: F401

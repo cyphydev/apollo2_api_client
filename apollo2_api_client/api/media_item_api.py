@@ -21,8 +21,8 @@ from pydantic import StrictInt, StrictStr, conlist
 
 from typing import List, Optional
 
-from apollo2_api_client.models.batch_media_get_request import BatchMediaGetRequest
-from apollo2_api_client.models.media_item import MediaItem
+from apollo2_api_client.models import BatchMediaGetRequest
+from apollo2_api_client.models import MediaItem
 
 from apollo2_api_client.api_client import ApiClient
 from apollo2_api_client.exceptions import (  # noqa: F401

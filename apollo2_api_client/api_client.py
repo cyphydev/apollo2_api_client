@@ -22,7 +22,7 @@ from multiprocessing.pool import ThreadPool
 import os
 import re
 import tempfile
-from aenum import Enum
+from enum import Enum
 
 from urllib.parse import quote
 
@@ -303,9 +303,9 @@ class ApiClient(object):
         if obj is None:
             return None
         elif isinstance(obj, self.PRIMITIVE_TYPES):
-            if isinstance(obj, Enum):
-                return self.sanitize_for_serialization(obj.value)
             return obj
+        elif isinstance(obj, Enum):
+            return self.sanitize_for_serialization(obj.value)
         elif isinstance(obj, list):
             return [self.sanitize_for_serialization(sub_obj)
                     for sub_obj in obj]
@@ -323,7 +323,7 @@ class ApiClient(object):
             # and attributes which value is not None.
             # Convert attribute name to json key in
             # model definition for request.
-            obj_dict = obj.to_dict()
+            obj_dict = obj.dict()
 
         return {key: self.sanitize_for_serialization(val)
                 for key, val in obj_dict.items()}
@@ -347,6 +347,11 @@ class ApiClient(object):
             data = json.loads(response.data)
         except ValueError:
             data = response.data
+        except AttributeError:
+            if isinstance(response, str):
+                data = json.loads(response)
+            else:
+                data = response
 
         return self.__deserialize(data, response_type)
 
@@ -786,4 +791,4 @@ class ApiClient(object):
         :return: model object.
         """
 
-        return klass.from_dict(data)
+        return klass.parse_obj(data)

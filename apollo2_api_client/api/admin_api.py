@@ -19,8 +19,8 @@ from typing_extensions import Annotated
 
 from typing import Any
 
-from apollo2_api_client.models.raw_data_post_request import RawDataPostRequest
-from apollo2_api_client.models.raw_data_post_response import RawDataPostResponse
+from apollo2_api_client.models import RawDataPostRequest
+from apollo2_api_client.models import RawDataPostResponse
 
 from apollo2_api_client.api_client import ApiClient
 from apollo2_api_client.exceptions import (  # noqa: F401

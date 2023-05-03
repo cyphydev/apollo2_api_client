@@ -21,10 +21,10 @@ from pydantic import StrictInt, StrictStr, conlist
 
 from typing import Dict, List, Optional
 
-from apollo2_api_client.models.cluster import Cluster
-from apollo2_api_client.models.cluster_member import ClusterMember
-from apollo2_api_client.models.enrichment import Enrichment
-from apollo2_api_client.models.enrichments_batch_request import EnrichmentsBatchRequest
+from apollo2_api_client.models import Cluster
+from apollo2_api_client.models import ClusterMember
+from apollo2_api_client.models import Enrichment
+from apollo2_api_client.models import EnrichmentsBatchRequest
 
 from apollo2_api_client.api_client import ApiClient
 from apollo2_api_client.exceptions import (  # noqa: F401
