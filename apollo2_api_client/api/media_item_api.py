@@ -163,7 +163,7 @@ class MediaItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -177,6 +177,8 @@ class MediaItemApi(object):
 
         _response_types_map = {
             '200': "List[MediaItem]",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -627,13 +629,15 @@ class MediaItemApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "str",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -766,13 +770,15 @@ class MediaItemApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "MediaItem",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -905,13 +911,15 @@ class MediaItemApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "List[str]",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -1052,7 +1060,7 @@ class MediaItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -1066,6 +1074,9 @@ class MediaItemApi(object):
 
         _response_types_map = {
             '200': "str",
+            '400': None,
+            '404': None,
+            '409': None,
             '422': "HTTPValidationError",
         }
 
@@ -1206,7 +1217,7 @@ class MediaItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -1220,6 +1231,9 @@ class MediaItemApi(object):
 
         _response_types_map = {
             '200': "str",
+            '400': None,
+            '404': None,
+            '409': None,
             '422': "HTTPValidationError",
         }
 

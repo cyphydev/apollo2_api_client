@@ -161,7 +161,7 @@ class ItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -175,8 +175,8 @@ class ItemApi(object):
 
         _response_types_map = {
             '200': "str",
-            '400': "str",
-            '404': "str",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -317,7 +317,7 @@ class ItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -331,6 +331,8 @@ class ItemApi(object):
 
         _response_types_map = {
             '200': "List[Item]",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -648,7 +650,7 @@ class ItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -662,8 +664,8 @@ class ItemApi(object):
 
         _response_types_map = {
             '200': "str",
-            '400': "str",
-            '404': "str",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -796,7 +798,7 @@ class ItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -810,8 +812,9 @@ class ItemApi(object):
 
         _response_types_map = {
             '200': "str",
-            '400': "str",
-            '404': "str",
+            '400': None,
+            '404': None,
+            '409': None,
             '422': "HTTPValidationError",
         }
 
@@ -944,7 +947,7 @@ class ItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -958,8 +961,8 @@ class ItemApi(object):
 
         _response_types_map = {
             '200': "List[List[Enrichment]]",
-            '400': "str",
-            '404': "str",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -1092,7 +1095,7 @@ class ItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -1106,9 +1109,9 @@ class ItemApi(object):
 
         _response_types_map = {
             '200': "str",
-            '201': "str",
-            '400': "str",
-            '409': "str",
+            '400': None,
+            '404': None,
+            '409': None,
             '422': "HTTPValidationError",
         }
 
@@ -1514,13 +1517,15 @@ class ItemApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "str",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -1685,15 +1690,16 @@ class ItemApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "str",
-            '400': "str",
-            '404': "str",
+            '400': None,
+            '404': None,
+            '409': None,
             '422': "HTTPValidationError",
         }
 
@@ -1858,15 +1864,15 @@ class ItemApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "List[Enrichment]",
-            '400': "str",
-            '404': "str",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -2007,7 +2013,7 @@ class ItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -2021,9 +2027,9 @@ class ItemApi(object):
 
         _response_types_map = {
             '200': "str",
-            '201': "str",
-            '400': "str",
-            '409': "str",
+            '400': None,
+            '404': None,
+            '409': None,
             '422': "HTTPValidationError",
         }
 
@@ -2164,7 +2170,7 @@ class ItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -2178,6 +2184,7 @@ class ItemApi(object):
 
         _response_types_map = {
             '200': "List[int]",
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -2318,13 +2325,14 @@ class ItemApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "int",
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -2537,13 +2545,15 @@ class ItemApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "Item",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -2676,13 +2686,15 @@ class ItemApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "List[str]",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -2815,7 +2827,7 @@ class ItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -2829,6 +2841,8 @@ class ItemApi(object):
 
         _response_types_map = {
             '200': "List[str]",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -2961,13 +2975,15 @@ class ItemApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "str",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -3108,7 +3124,7 @@ class ItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -3122,6 +3138,9 @@ class ItemApi(object):
 
         _response_types_map = {
             '200': "str",
+            '400': None,
+            '404': None,
+            '409': None,
             '422': "HTTPValidationError",
         }
 
@@ -3262,7 +3281,7 @@ class ItemApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -3276,6 +3295,9 @@ class ItemApi(object):
 
         _response_types_map = {
             '200': "str",
+            '400': None,
+            '404': None,
+            '409': None,
             '422': "HTTPValidationError",
         }
 

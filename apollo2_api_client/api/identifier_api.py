@@ -153,7 +153,7 @@ class IdentifierApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501

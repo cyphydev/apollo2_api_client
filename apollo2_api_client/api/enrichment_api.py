@@ -186,14 +186,15 @@ class EnrichmentApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "str",
-            '404': "str",
+            '404': None,
+            '409': None,
             '422': "HTTPValidationError",
         }
 
@@ -489,7 +490,7 @@ class EnrichmentApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -502,10 +503,8 @@ class EnrichmentApi(object):
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
-            '200': "str",
             '201': "str",
-            '400': "str",
-            '409': "str",
+            '409': None,
             '422': "HTTPValidationError",
         }
 

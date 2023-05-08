@@ -102,6 +102,7 @@ Class | Method | HTTP request | Description
 *ClusterApi* | [**cluster_get**](docs/ClusterApi.md#cluster_get) | **GET** /cluster | Cluster Get
 *ClusterApi* | [**cluster_id_delete**](docs/ClusterApi.md#cluster_id_delete) | **DELETE** /cluster/{id} | Cluster Id Delete
 *ClusterApi* | [**cluster_id_delete_members_post**](docs/ClusterApi.md#cluster_id_delete_members_post) | **POST** /cluster/{id}/delete_members | Cluster Id Delete Members Post
+*ClusterApi* | [**cluster_id_edit_members_post**](docs/ClusterApi.md#cluster_id_edit_members_post) | **POST** /cluster/{id}/edit_members | Cluster Id Edit Members Post
 *ClusterApi* | [**cluster_id_enrichments_delete**](docs/ClusterApi.md#cluster_id_enrichments_delete) | **DELETE** /cluster/{id}/enrichments | Cluster Id Enrichments Delete
 *ClusterApi* | [**cluster_id_enrichments_get**](docs/ClusterApi.md#cluster_id_enrichments_get) | **GET** /cluster/{id}/enrichments | Cluster Id Enrichments Get
 *ClusterApi* | [**cluster_id_enrichments_post**](docs/ClusterApi.md#cluster_id_enrichments_post) | **POST** /cluster/{id}/enrichments | Cluster Id Enrichments Post
@@ -194,8 +195,6 @@ Class | Method | HTTP request | Description
  - [ClusterType](docs/ClusterType.md)
  - [Edge](docs/Edge.md)
  - [EngagementType](docs/EngagementType.md)
- - [Enrichment](docs/Enrichment.md)
- - [EnrichmentMeta](docs/EnrichmentMeta.md)
  - [EnrichmentType](docs/EnrichmentType.md)
  - [EnrichmentsBatchRequest](docs/EnrichmentsBatchRequest.md)
  - [EntityType](docs/EntityType.md)
@@ -214,10 +213,10 @@ Class | Method | HTTP request | Description
  - [IncasSegment](docs/IncasSegment.md)
  - [IncasTwitterData](docs/IncasTwitterData.md)
  - [Item](docs/Item.md)
- - [ItemData](docs/ItemData.md)
+ - [JsonEnrichment](docs/JsonEnrichment.md)
+ - [JsonEnrichmentMeta](docs/JsonEnrichmentMeta.md)
  - [ListEnrichment](docs/ListEnrichment.md)
  - [ListEnrichmentMeta](docs/ListEnrichmentMeta.md)
- - [LocationInner](docs/LocationInner.md)
  - [MediaItem](docs/MediaItem.md)
  - [MediaItemType](docs/MediaItemType.md)
  - [ModifyMediaAttachmentRequest](docs/ModifyMediaAttachmentRequest.md)
@@ -231,7 +230,6 @@ Class | Method | HTTP request | Description
  - [RedditUserData](docs/RedditUserData.md)
  - [Segment](docs/Segment.md)
  - [Source](docs/Source.md)
- - [SourceData](docs/SourceData.md)
  - [TextEnrichment](docs/TextEnrichment.md)
  - [TextEnrichmentMeta](docs/TextEnrichmentMeta.md)
  - [TwitterAnnotation](docs/TwitterAnnotation.md)
@@ -248,7 +246,6 @@ Class | Method | HTTP request | Description
  - [TwitterReferencedTweet](docs/TwitterReferencedTweet.md)
  - [TwitterUserData](docs/TwitterUserData.md)
  - [ValidationError](docs/ValidationError.md)
- - [ValueInner](docs/ValueInner.md)
  - [VisualTopic](docs/VisualTopic.md)
 
 

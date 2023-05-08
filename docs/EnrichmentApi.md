@@ -81,19 +81,20 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful Response |  -  |
 **404** | Not Found |  -  |
+**409** | Conflict |  -  |
 **422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **enrichments_meta_get**
-> List[EnrichmentMeta] enrichments_meta_get(name=name, provider=provider, tag=tag, version=version)
+> List[ResponseEnrichmentsMetaGetEnrichmentsMetaGetInner] enrichments_meta_get(name=name, provider=provider, tag=tag, version=version)
 
 Enrichments Meta Get
 
@@ -153,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[EnrichmentMeta]**](EnrichmentMeta.md)
+[**List[ResponseEnrichmentsMetaGetEnrichmentsMetaGetInner]**](ResponseEnrichmentsMetaGetEnrichmentsMetaGetInner.md)
 
 ### Authorization
 
@@ -173,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **enrichments_meta_post**
-> str enrichments_meta_post(enrichment_meta)
+> str enrichments_meta_post(body)
 
 Enrichments Meta Post
 
@@ -208,11 +209,11 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 with apollo2_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apollo2_api_client.EnrichmentApi(api_client)
-    enrichment_meta = apollo2_api_client.EnrichmentMeta() # EnrichmentMeta | 
+    body = apollo2_api_client.Body() # Body | 
 
     try:
         # Enrichments Meta Post
-        api_response = api_instance.enrichments_meta_post(enrichment_meta)
+        api_response = api_instance.enrichments_meta_post(body)
         print("The response of EnrichmentApi->enrichments_meta_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -223,7 +224,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **enrichment_meta** | [**EnrichmentMeta**](EnrichmentMeta.md)|  | 
+ **body** | [**Body**](Body.md)|  | 
 
 ### Return type
 
@@ -236,14 +237,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**201** | Created |  -  |
-**400** | Bad Request |  -  |
+**201** | Successful Response |  -  |
 **409** | Conflict |  -  |
 **422** | Validation Error |  -  |
 

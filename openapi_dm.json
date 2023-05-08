@@ -654,7 +654,7 @@
             }
         },
         "/item/id/forward/{id}": {
-            "post": {
+            "get": {
                 "tags": [
                     "item"
                 ],
@@ -2390,7 +2390,7 @@
             }
         },
         "/source/id/forward/{id}": {
-            "post": {
+            "get": {
                 "tags": [
                     "source"
                 ],

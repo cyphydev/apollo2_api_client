@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **clusters** | [**List[ClusterMember]**](ClusterMember.md) |  | [optional] [default to []]
 **media_items** | [**List[MediaItem]**](MediaItem.md) |  | [optional] [default to []]
 **text** | **str** |  | [optional] 
-**data** | [**ItemData**](ItemData.md) |  | 
+**data** | [**Data**](Data.md) |  | 
 
 ## Example
 

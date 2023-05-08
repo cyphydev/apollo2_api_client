@@ -654,7 +654,7 @@
             }
         },
         "/item/id/forward/{id}": {
-            "post": {
+            "get": {
                 "tags": [
                     "item"
                 ],
@@ -685,7 +685,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "title": "Response Item Id Forward Translate Item Id Forward  Id  Post",
+                                    "title": "Response Item Id Forward Translate Item Id Forward  Id  Get",
                                     "type": "integer"
                                 }
                             }
@@ -2390,7 +2390,7 @@
             }
         },
         "/source/id/forward/{id}": {
-            "post": {
+            "get": {
                 "tags": [
                     "source"
                 ],
@@ -2421,7 +2421,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "title": "Response Source Id Forward Translate Source Id Forward  Id  Post",
+                                    "title": "Response Source Id Forward Translate Source Id Forward  Id  Get",
                                     "type": "integer"
                                 }
                             }

@@ -163,7 +163,7 @@ class GraphApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -177,8 +177,7 @@ class GraphApi(object):
 
         _response_types_map = {
             '200': "str",
-            '400': "str",
-            '404': "str",
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -319,7 +318,7 @@ class GraphApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -333,6 +332,8 @@ class GraphApi(object):
 
         _response_types_map = {
             '200': "str",
+            '404': None,
+            '409': None,
             '422': "HTTPValidationError",
         }
 
@@ -496,8 +497,6 @@ class GraphApi(object):
 
         _response_types_map = {
             '200': "List[Graph]",
-            '400': "str",
-            '404': "str",
             '422': "HTTPValidationError",
         }
 
@@ -630,15 +629,15 @@ class GraphApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "str",
-            '400': "str",
-            '404': "str",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -779,7 +778,7 @@ class GraphApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -793,8 +792,8 @@ class GraphApi(object):
 
         _response_types_map = {
             '200': "str",
-            '400': "str",
-            '404': "str",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -927,13 +926,14 @@ class GraphApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "List[str]",
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -1090,13 +1090,14 @@ class GraphApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "List[str]",
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -1261,13 +1262,14 @@ class GraphApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "List[Edge]",
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -1416,7 +1418,7 @@ class GraphApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['text/plain', 'application/json'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -1430,8 +1432,8 @@ class GraphApi(object):
 
         _response_types_map = {
             '200': "str",
-            '400': "str",
-            '404': "str",
+            '400': None,
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -1564,15 +1566,14 @@ class GraphApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
             '200': "Graph",
-            '400': "str",
-            '404': "str",
+            '404': None,
             '422': "HTTPValidationError",
         }
 
@@ -1594,7 +1595,7 @@ class GraphApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def graph_post(self, graph : Graph, **kwargs) -> str:  # noqa: E501
+    def graph_post(self, graph : Graph, **kwargs) -> int:  # noqa: E501
         """Graph Post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1618,7 +1619,7 @@ class GraphApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: str
+        :rtype: int
         """
         kwargs['_return_http_data_only'] = True
         return self.graph_post_with_http_info(graph, **kwargs)  # noqa: E501
@@ -1656,7 +1657,7 @@ class GraphApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(str, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(int, status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
@@ -1705,7 +1706,7 @@ class GraphApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/json', 'text/plain'])  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get('_content_type',
@@ -1718,10 +1719,8 @@ class GraphApi(object):
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
-            '200': "str",
             '201': "int",
-            '400': "str",
-            '409': "str",
+            '409': None,
             '422': "HTTPValidationError",
         }
 
