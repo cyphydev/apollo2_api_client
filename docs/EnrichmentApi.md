@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **enrichments_meta_get**
-> List[ResponseEnrichmentsMetaGetEnrichmentsMetaGetInner] enrichments_meta_get(name=name, provider=provider, tag=tag, version=version)
+> List[EnrichmentMeta] enrichments_meta_get(name=name, provider=provider, tag=tag, version=version)
 
 Enrichments Meta Get
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[ResponseEnrichmentsMetaGetEnrichmentsMetaGetInner]**](ResponseEnrichmentsMetaGetEnrichmentsMetaGetInner.md)
+[**List[EnrichmentMeta]**](EnrichmentMeta.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **enrichments_meta_post**
-> str enrichments_meta_post(body)
+> str enrichments_meta_post(enrichment_meta)
 
 Enrichments Meta Post
 
@@ -209,11 +209,11 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 with apollo2_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apollo2_api_client.EnrichmentApi(api_client)
-    body = apollo2_api_client.Body() # Body | 
+    enrichment_meta = apollo2_api_client.EnrichmentMeta() # EnrichmentMeta | 
 
     try:
         # Enrichments Meta Post
-        api_response = api_instance.enrichments_meta_post(body)
+        api_response = api_instance.enrichments_meta_post(enrichment_meta)
         print("The response of EnrichmentApi->enrichments_meta_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -224,7 +224,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body**](Body.md)|  | 
+ **enrichment_meta** | [**EnrichmentMeta**](EnrichmentMeta.md)|  | 
 
 ### Return type
 

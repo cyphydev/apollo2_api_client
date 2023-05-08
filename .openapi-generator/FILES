@@ -31,6 +31,8 @@ apollo2_api_client/models/cluster_member.py
 apollo2_api_client/models/cluster_type.py
 apollo2_api_client/models/edge.py
 apollo2_api_client/models/engagement_type.py
+apollo2_api_client/models/enrichment.py
+apollo2_api_client/models/enrichment_meta.py
 apollo2_api_client/models/enrichment_type.py
 apollo2_api_client/models/enrichments_batch_request.py
 apollo2_api_client/models/entity_type.py
@@ -49,6 +51,7 @@ apollo2_api_client/models/incas_one_of_media_type_attributes.py
 apollo2_api_client/models/incas_segment.py
 apollo2_api_client/models/incas_twitter_data.py
 apollo2_api_client/models/item.py
+apollo2_api_client/models/item_data.py
 apollo2_api_client/models/json_enrichment.py
 apollo2_api_client/models/json_enrichment_meta.py
 apollo2_api_client/models/list_enrichment.py
@@ -64,10 +67,9 @@ apollo2_api_client/models/raw_data_post_request.py
 apollo2_api_client/models/raw_data_post_response.py
 apollo2_api_client/models/reddit_data.py
 apollo2_api_client/models/reddit_user_data.py
-apollo2_api_client/models/response_enrichments_meta_get_enrichments_meta_get_inner.py
-apollo2_api_client/models/response_item_id_enrichments_get_item_id_enrichments_get_inner.py
 apollo2_api_client/models/segment.py
 apollo2_api_client/models/source.py
+apollo2_api_client/models/source_data.py
 apollo2_api_client/models/text_enrichment.py
 apollo2_api_client/models/text_enrichment_meta.py
 apollo2_api_client/models/twitter_annotation.py
@@ -92,7 +94,6 @@ docs/ArrayEnrichment.md
 docs/ArrayEnrichmentMeta.md
 docs/BatchGetRequest.md
 docs/BatchMediaGetRequest.md
-docs/Body.md
 docs/CategoryEnrichment.md
 docs/CategoryEnrichmentMeta.md
 docs/Claim.md
@@ -100,12 +101,12 @@ docs/Cluster.md
 docs/ClusterApi.md
 docs/ClusterMember.md
 docs/ClusterType.md
-docs/Data.md
-docs/Data1.md
 docs/DefaultApi.md
 docs/Edge.md
 docs/EngagementType.md
+docs/Enrichment.md
 docs/EnrichmentApi.md
+docs/EnrichmentMeta.md
 docs/EnrichmentType.md
 docs/EnrichmentsBatchRequest.md
 docs/EntityType.md
@@ -127,6 +128,7 @@ docs/IncasSegment.md
 docs/IncasTwitterData.md
 docs/Item.md
 docs/ItemApi.md
+docs/ItemData.md
 docs/JsonEnrichment.md
 docs/JsonEnrichmentMeta.md
 docs/ListEnrichment.md
@@ -147,6 +149,7 @@ docs/RedditUserData.md
 docs/Segment.md
 docs/Source.md
 docs/SourceApi.md
+docs/SourceData.md
 docs/TextEnrichment.md
 docs/TextEnrichmentMeta.md
 docs/TwitterAnnotation.md

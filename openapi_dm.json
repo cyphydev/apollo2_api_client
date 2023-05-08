@@ -685,7 +685,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "title": "Response Item Id Forward Translate Item Id Forward  Id  Post",
+                                    "title": "Response Item Id Forward Translate Item Id Forward  Id  Get",
                                     "type": "integer"
                                 }
                             }
@@ -1112,26 +1112,7 @@
                                     "title": "Response Item Id Enrichments Get Item  Id  Enrichments Get",
                                     "type": "array",
                                     "items": {
-                                        "anyOf": [
-                                            {
-                                                "$ref": "#/components/schemas/CategoryEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/NumericalEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ArrayEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/TextEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ListEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/JsonEnrichment"
-                                            }
-                                        ]
+                                        "$ref": "#/components/schemas/Enrichment"
                                     }
                                 }
                             }
@@ -1190,26 +1171,7 @@
                                 "title": "Body",
                                 "type": "array",
                                 "items": {
-                                    "anyOf": [
-                                        {
-                                            "$ref": "#/components/schemas/CategoryEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/NumericalEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/ArrayEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/TextEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/ListEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/JsonEnrichment"
-                                        }
-                                    ]
+                                    "$ref": "#/components/schemas/Enrichment"
                                 }
                             }
                         }
@@ -1390,26 +1352,7 @@
                                     "items": {
                                         "type": "array",
                                         "items": {
-                                            "anyOf": [
-                                                {
-                                                    "$ref": "#/components/schemas/CategoryEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/NumericalEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/ArrayEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/TextEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/ListEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/JsonEnrichment"
-                                                }
-                                            ]
+                                            "$ref": "#/components/schemas/Enrichment"
                                         }
                                     }
                                 }
@@ -1462,26 +1405,7 @@
                                 "additionalProperties": {
                                     "type": "array",
                                     "items": {
-                                        "anyOf": [
-                                            {
-                                                "$ref": "#/components/schemas/CategoryEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/NumericalEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ArrayEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/TextEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ListEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/JsonEnrichment"
-                                            }
-                                        ]
+                                        "$ref": "#/components/schemas/Enrichment"
                                     }
                                 }
                             }
@@ -2421,7 +2345,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "title": "Response Source Id Forward Translate Source Id Forward  Id  Post",
+                                    "title": "Response Source Id Forward Translate Source Id Forward  Id  Get",
                                     "type": "integer"
                                 }
                             }
@@ -2848,26 +2772,7 @@
                                     "title": "Response Source Id Enrichments Get Source  Id  Enrichments Get",
                                     "type": "array",
                                     "items": {
-                                        "anyOf": [
-                                            {
-                                                "$ref": "#/components/schemas/CategoryEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/NumericalEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ArrayEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/TextEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ListEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/JsonEnrichment"
-                                            }
-                                        ]
+                                        "$ref": "#/components/schemas/Enrichment"
                                     }
                                 }
                             }
@@ -2926,26 +2831,7 @@
                                 "title": "Body",
                                 "type": "array",
                                 "items": {
-                                    "anyOf": [
-                                        {
-                                            "$ref": "#/components/schemas/CategoryEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/NumericalEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/ArrayEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/TextEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/ListEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/JsonEnrichment"
-                                        }
-                                    ]
+                                    "$ref": "#/components/schemas/Enrichment"
                                 }
                             }
                         }
@@ -3126,26 +3012,7 @@
                                     "items": {
                                         "type": "array",
                                         "items": {
-                                            "anyOf": [
-                                                {
-                                                    "$ref": "#/components/schemas/CategoryEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/NumericalEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/ArrayEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/TextEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/ListEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/JsonEnrichment"
-                                                }
-                                            ]
+                                            "$ref": "#/components/schemas/Enrichment"
                                         }
                                     }
                                 }
@@ -3198,26 +3065,7 @@
                                 "additionalProperties": {
                                     "type": "array",
                                     "items": {
-                                        "anyOf": [
-                                            {
-                                                "$ref": "#/components/schemas/CategoryEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/NumericalEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ArrayEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/TextEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ListEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/JsonEnrichment"
-                                            }
-                                        ]
+                                        "$ref": "#/components/schemas/Enrichment"
                                     }
                                 }
                             }
@@ -3611,26 +3459,7 @@
                                     "title": "Response Enrichments Meta Get Enrichments Meta Get",
                                     "type": "array",
                                     "items": {
-                                        "anyOf": [
-                                            {
-                                                "$ref": "#/components/schemas/CategoryEnrichmentMeta"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/NumericalEnrichmentMeta"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ArrayEnrichmentMeta"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/TextEnrichmentMeta"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ListEnrichmentMeta"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/JsonEnrichmentMeta"
-                                            }
-                                        ]
+                                        "$ref": "#/components/schemas/EnrichmentMeta"
                                     }
                                 }
                             }
@@ -3663,27 +3492,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "title": "Body",
-                                "anyOf": [
-                                    {
-                                        "$ref": "#/components/schemas/CategoryEnrichmentMeta"
-                                    },
-                                    {
-                                        "$ref": "#/components/schemas/NumericalEnrichmentMeta"
-                                    },
-                                    {
-                                        "$ref": "#/components/schemas/ArrayEnrichmentMeta"
-                                    },
-                                    {
-                                        "$ref": "#/components/schemas/TextEnrichmentMeta"
-                                    },
-                                    {
-                                        "$ref": "#/components/schemas/ListEnrichmentMeta"
-                                    },
-                                    {
-                                        "$ref": "#/components/schemas/JsonEnrichmentMeta"
-                                    }
-                                ]
+                                "$ref": "#/components/schemas/EnrichmentMeta"
                             }
                         }
                     },
@@ -4449,26 +4258,7 @@
                                     "title": "Response Cluster Id Enrichments Get Cluster  Id  Enrichments Get",
                                     "type": "array",
                                     "items": {
-                                        "anyOf": [
-                                            {
-                                                "$ref": "#/components/schemas/CategoryEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/NumericalEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ArrayEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/TextEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ListEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/JsonEnrichment"
-                                            }
-                                        ]
+                                        "$ref": "#/components/schemas/Enrichment"
                                     }
                                 }
                             }
@@ -4527,26 +4317,7 @@
                                 "title": "Body",
                                 "type": "array",
                                 "items": {
-                                    "anyOf": [
-                                        {
-                                            "$ref": "#/components/schemas/CategoryEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/NumericalEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/ArrayEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/TextEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/ListEnrichment"
-                                        },
-                                        {
-                                            "$ref": "#/components/schemas/JsonEnrichment"
-                                        }
-                                    ]
+                                    "$ref": "#/components/schemas/Enrichment"
                                 }
                             }
                         }
@@ -4727,26 +4498,7 @@
                                     "items": {
                                         "type": "array",
                                         "items": {
-                                            "anyOf": [
-                                                {
-                                                    "$ref": "#/components/schemas/CategoryEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/NumericalEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/ArrayEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/TextEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/ListEnrichment"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/JsonEnrichment"
-                                                }
-                                            ]
+                                            "$ref": "#/components/schemas/Enrichment"
                                         }
                                     }
                                 }
@@ -4799,26 +4551,7 @@
                                 "additionalProperties": {
                                     "type": "array",
                                     "items": {
-                                        "anyOf": [
-                                            {
-                                                "$ref": "#/components/schemas/CategoryEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/NumericalEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ArrayEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/TextEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/ListEnrichment"
-                                            },
-                                            {
-                                                "$ref": "#/components/schemas/JsonEnrichment"
-                                            }
-                                        ]
+                                        "$ref": "#/components/schemas/Enrichment"
                                     }
                                 }
                             }
@@ -7105,6 +6838,54 @@
                 "type": "string",
                 "description": "An enumeration."
             },
+            "Enrichment": {
+                "title": "Enrichment",
+                "anyOf": [
+                    {
+                        "$ref": "#/components/schemas/CategoryEnrichment"
+                    },
+                    {
+                        "$ref": "#/components/schemas/NumericalEnrichment"
+                    },
+                    {
+                        "$ref": "#/components/schemas/ArrayEnrichment"
+                    },
+                    {
+                        "$ref": "#/components/schemas/TextEnrichment"
+                    },
+                    {
+                        "$ref": "#/components/schemas/ListEnrichment"
+                    },
+                    {
+                        "$ref": "#/components/schemas/JsonEnrichment"
+                    }
+                ],
+                "description": "This is the unified interface for message enrichment output."
+            },
+            "EnrichmentMeta": {
+                "title": "EnrichmentMeta",
+                "anyOf": [
+                    {
+                        "$ref": "#/components/schemas/CategoryEnrichmentMeta"
+                    },
+                    {
+                        "$ref": "#/components/schemas/NumericalEnrichmentMeta"
+                    },
+                    {
+                        "$ref": "#/components/schemas/ArrayEnrichmentMeta"
+                    },
+                    {
+                        "$ref": "#/components/schemas/TextEnrichmentMeta"
+                    },
+                    {
+                        "$ref": "#/components/schemas/ListEnrichmentMeta"
+                    },
+                    {
+                        "$ref": "#/components/schemas/JsonEnrichmentMeta"
+                    }
+                ],
+                "description": "This is the unified interface for message enrichment algorithm meta information."
+            },
             "EnrichmentType": {
                 "title": "EnrichmentType",
                 "enum": [
@@ -7739,26 +7520,7 @@
                         "title": "Enrichments",
                         "type": "array",
                         "items": {
-                            "anyOf": [
-                                {
-                                    "$ref": "#/components/schemas/CategoryEnrichment"
-                                },
-                                {
-                                    "$ref": "#/components/schemas/NumericalEnrichment"
-                                },
-                                {
-                                    "$ref": "#/components/schemas/ArrayEnrichment"
-                                },
-                                {
-                                    "$ref": "#/components/schemas/TextEnrichment"
-                                },
-                                {
-                                    "$ref": "#/components/schemas/ListEnrichment"
-                                },
-                                {
-                                    "$ref": "#/components/schemas/JsonEnrichment"
-                                }
-                            ]
+                            "$ref": "#/components/schemas/Enrichment"
                         },
                         "default": []
                     },
@@ -7783,20 +7545,23 @@
                         "type": "string"
                     },
                     "data": {
-                        "title": "Data",
-                        "anyOf": [
-                            {
-                                "$ref": "#/components/schemas/TwitterData"
-                            },
-                            {
-                                "$ref": "#/components/schemas/RedditData"
-                            },
-                            {
-                                "$ref": "#/components/schemas/IncasMessage"
-                            }
-                        ]
+                        "$ref": "#/components/schemas/ItemData"
                     }
                 }
+            },
+            "ItemData": {
+                "title": "ItemData",
+                "anyOf": [
+                    {
+                        "$ref": "#/components/schemas/TwitterData"
+                    },
+                    {
+                        "$ref": "#/components/schemas/RedditData"
+                    },
+                    {
+                        "$ref": "#/components/schemas/IncasMessage"
+                    }
+                ]
             },
             "JsonEnrichment": {
                 "title": "JsonEnrichment",
@@ -8388,26 +8153,7 @@
                         "title": "Enrichments",
                         "type": "array",
                         "items": {
-                            "anyOf": [
-                                {
-                                    "$ref": "#/components/schemas/CategoryEnrichment"
-                                },
-                                {
-                                    "$ref": "#/components/schemas/NumericalEnrichment"
-                                },
-                                {
-                                    "$ref": "#/components/schemas/ArrayEnrichment"
-                                },
-                                {
-                                    "$ref": "#/components/schemas/TextEnrichment"
-                                },
-                                {
-                                    "$ref": "#/components/schemas/ListEnrichment"
-                                },
-                                {
-                                    "$ref": "#/components/schemas/JsonEnrichment"
-                                }
-                            ]
+                            "$ref": "#/components/schemas/Enrichment"
                         },
                         "default": []
                     },
@@ -8424,20 +8170,23 @@
                         "type": "string"
                     },
                     "data": {
-                        "title": "Data",
-                        "anyOf": [
-                            {
-                                "$ref": "#/components/schemas/TwitterUserData"
-                            },
-                            {
-                                "$ref": "#/components/schemas/RedditUserData"
-                            },
-                            {
-                                "$ref": "#/components/schemas/IncasActor"
-                            }
-                        ]
+                        "$ref": "#/components/schemas/SourceData"
                     }
                 }
+            },
+            "SourceData": {
+                "title": "SourceData",
+                "anyOf": [
+                    {
+                        "$ref": "#/components/schemas/TwitterUserData"
+                    },
+                    {
+                        "$ref": "#/components/schemas/RedditUserData"
+                    },
+                    {
+                        "$ref": "#/components/schemas/IncasActor"
+                    }
+                ]
             },
             "TextEnrichment": {
                 "title": "TextEnrichment",
