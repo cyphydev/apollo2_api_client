@@ -35,6 +35,7 @@ var/
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+dev-requirements.txt.log
 
 # Unit test / coverage reports
 htmlcov/
@@ -47,7 +48,9 @@ coverage.xml
 *,cover
 .hypothesis/
 venv/
+.venv/
 .python-version
+.pytest_cache
 
 # Translations
 *.mo

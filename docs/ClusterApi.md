@@ -1,6 +1,6 @@
 # apollo2_api_client.ClusterApi
 
-All URIs are relative to */*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**cluster_get**](ClusterApi.md#cluster_get) | **GET** /cluster | Cluster Get
 [**cluster_id_delete**](ClusterApi.md#cluster_id_delete) | **DELETE** /cluster/{id} | Cluster Id Delete
 [**cluster_id_delete_members_post**](ClusterApi.md#cluster_id_delete_members_post) | **POST** /cluster/{id}/delete_members | Cluster Id Delete Members Post
+[**cluster_id_edit_members_post**](ClusterApi.md#cluster_id_edit_members_post) | **POST** /cluster/{id}/edit_members | Cluster Id Edit Members Post
 [**cluster_id_enrichments_delete**](ClusterApi.md#cluster_id_enrichments_delete) | **DELETE** /cluster/{id}/enrichments | Cluster Id Enrichments Delete
 [**cluster_id_enrichments_get**](ClusterApi.md#cluster_id_enrichments_get) | **GET** /cluster/{id}/enrichments | Cluster Id Enrichments Get
 [**cluster_id_enrichments_post**](ClusterApi.md#cluster_id_enrichments_post) | **POST** /cluster/{id}/enrichments | Cluster Id Enrichments Post
@@ -21,38 +22,55 @@ Method | HTTP request | Description
 [**cluster_identifer_post**](ClusterApi.md#cluster_identifer_post) | **POST** /cluster/identifer/post | Cluster Identifer Post
 [**cluster_post**](ClusterApi.md#cluster_post) | **POST** /cluster | Cluster Post
 
+
 # **cluster_delete**
 > str cluster_delete(name, provider, tag, version)
 
 Cluster Delete
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-name = 'name_example' # str | 
-provider = 'provider_example' # str | 
-tag = 'tag_example' # str | 
-version = 'version_example' # str | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    name = 'name_example' # str | 
+    provider = 'provider_example' # str | 
+    tag = 'tag_example' # str | 
+    version = 'version_example' # str | 
 
-try:
-    # Cluster Delete
-    api_response = api_instance.cluster_delete(name, provider, tag, version)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_delete: %s\n" % e)
+    try:
+        # Cluster Delete
+        api_response = api_instance.cluster_delete(name, provider, tag, version)
+        print("The response of ClusterApi->cluster_delete:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -75,46 +93,69 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_enrichments_batch_delete**
-> str cluster_enrichments_batch_delete(body)
+> str cluster_enrichments_batch_delete(enrichments_batch_request)
 
 Cluster Enrichments Batch Delete
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-body = apollo2_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    enrichments_batch_request = apollo2_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
 
-try:
-    # Cluster Enrichments Batch Delete
-    api_response = api_instance.cluster_enrichments_batch_delete(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_enrichments_batch_delete: %s\n" % e)
+    try:
+        # Cluster Enrichments Batch Delete
+        api_response = api_instance.cluster_enrichments_batch_delete(enrichments_batch_request)
+        print("The response of ClusterApi->cluster_enrichments_batch_delete:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_enrichments_batch_delete: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**EnrichmentsBatchRequest**](EnrichmentsBatchRequest.md)|  | 
+ **enrichments_batch_request** | [**EnrichmentsBatchRequest**](EnrichmentsBatchRequest.md)|  | 
 
 ### Return type
 
@@ -127,50 +168,75 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**409** | Conflict |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_enrichments_batch_get**
-> list[list[Enrichment]] cluster_enrichments_batch_get(body)
+> List[List[Enrichment]] cluster_enrichments_batch_get(enrichments_batch_request)
 
 Cluster Enrichments Batch Get
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-body = apollo2_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    enrichments_batch_request = apollo2_api_client.EnrichmentsBatchRequest() # EnrichmentsBatchRequest | 
 
-try:
-    # Cluster Enrichments Batch Get
-    api_response = api_instance.cluster_enrichments_batch_get(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_enrichments_batch_get: %s\n" % e)
+    try:
+        # Cluster Enrichments Batch Get
+        api_response = api_instance.cluster_enrichments_batch_get(enrichments_batch_request)
+        print("The response of ClusterApi->cluster_enrichments_batch_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_enrichments_batch_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**EnrichmentsBatchRequest**](EnrichmentsBatchRequest.md)|  | 
+ **enrichments_batch_request** | [**EnrichmentsBatchRequest**](EnrichmentsBatchRequest.md)|  | 
 
 ### Return type
 
-**list[list[Enrichment]]**
+**List[List[Enrichment]]**
 
 ### Authorization
 
@@ -179,46 +245,70 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_enrichments_batch_post**
-> str cluster_enrichments_batch_post(body)
+> str cluster_enrichments_batch_post(request_body)
 
 Cluster Enrichments Batch Post
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-body = NULL # dict(str, list[Enrichment]) | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    request_body = None # Dict[str, List[Enrichment]] | 
 
-try:
-    # Cluster Enrichments Batch Post
-    api_response = api_instance.cluster_enrichments_batch_post(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_enrichments_batch_post: %s\n" % e)
+    try:
+        # Cluster Enrichments Batch Post
+        api_response = api_instance.cluster_enrichments_batch_post(request_body)
+        print("The response of ClusterApi->cluster_enrichments_batch_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_enrichments_batch_post: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**dict(str, list[Enrichment])**](dict.md)|  | 
+ **request_body** | [**Dict[str, List[Enrichment]]**](List.md)|  | 
 
 ### Return type
 
@@ -231,43 +321,68 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**409** | Conflict |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_get**
-> list[Cluster] cluster_get(name=name, provider=provider, tag=tag, version=version, identifier=identifier)
+> List[Cluster] cluster_get(name=name, provider=provider, tag=tag, version=version, identifier=identifier)
 
 Cluster Get
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-name = 'name_example' # str |  (optional)
-provider = 'provider_example' # str |  (optional)
-tag = 'tag_example' # str |  (optional)
-version = 'version_example' # str |  (optional)
-identifier = 'identifier_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    name = 'name_example' # str |  (optional)
+    provider = 'provider_example' # str |  (optional)
+    tag = 'tag_example' # str |  (optional)
+    version = 'version_example' # str |  (optional)
+    identifier = 'identifier_example' # str |  (optional)
 
-try:
-    # Cluster Get
-    api_response = api_instance.cluster_get(name=name, provider=provider, tag=tag, version=version, identifier=identifier)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_get: %s\n" % e)
+    try:
+        # Cluster Get
+        api_response = api_instance.cluster_get(name=name, provider=provider, tag=tag, version=version, identifier=identifier)
+        print("The response of ClusterApi->cluster_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -282,7 +397,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Cluster]**](Cluster.md)
+[**List[Cluster]**](Cluster.md)
 
 ### Authorization
 
@@ -292,6 +407,12 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -301,29 +422,45 @@ Name | Type | Description  | Notes
 Cluster Id Delete
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-id = 56 # int | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    id = 56 # int | 
 
-try:
-    # Cluster Id Delete
-    api_response = api_instance.cluster_id_delete(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_id_delete: %s\n" % e)
+    try:
+        # Cluster Id Delete
+        api_response = api_instance.cluster_id_delete(id)
+        print("The response of ClusterApi->cluster_id_delete:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_id_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -343,48 +480,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_id_delete_members_post**
-> str cluster_id_delete_members_post(body, id)
+> str cluster_id_delete_members_post(id, request_body)
 
 Cluster Id Delete Members Post
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-body = [56] # list[int] | 
-id = 56 # int | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    id = 56 # int | 
+    request_body = [56] # List[int] | 
 
-try:
-    # Cluster Id Delete Members Post
-    api_response = api_instance.cluster_id_delete_members_post(body, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_id_delete_members_post: %s\n" % e)
+    try:
+        # Cluster Id Delete Members Post
+        api_response = api_instance.cluster_id_delete_members_post(id, request_body)
+        print("The response of ClusterApi->cluster_id_delete_members_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_id_delete_members_post: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**list[int]**](int.md)|  | 
  **id** | **int**|  | 
+ **request_body** | [**List[int]**](int.md)|  | 
 
 ### Return type
 
@@ -397,7 +558,93 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cluster_id_edit_members_post**
+> str cluster_id_edit_members_post(id, request_body)
+
+Cluster Id Edit Members Post
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    id = 56 # int | 
+    request_body = None # Dict[str, object] | 
+
+    try:
+        # Cluster Id Edit Members Post
+        api_response = api_instance.cluster_id_edit_members_post(id, request_body)
+        print("The response of ClusterApi->cluster_id_edit_members_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_id_edit_members_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **request_body** | [**Dict[str, object]**](object.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -407,33 +654,49 @@ Name | Type | Description  | Notes
 Cluster Id Enrichments Delete
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-id = 56 # int | 
-name = 'name_example' # str |  (optional)
-provider = 'provider_example' # str |  (optional)
-tag = 'tag_example' # str |  (optional)
-version = 'version_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    id = 56 # int | 
+    name = 'name_example' # str |  (optional)
+    provider = 'provider_example' # str |  (optional)
+    tag = 'tag_example' # str |  (optional)
+    version = 'version_example' # str |  (optional)
 
-try:
-    # Cluster Id Enrichments Delete
-    api_response = api_instance.cluster_id_enrichments_delete(id, name=name, provider=provider, tag=tag, version=version)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_id_enrichments_delete: %s\n" % e)
+    try:
+        # Cluster Id Enrichments Delete
+        api_response = api_instance.cluster_id_enrichments_delete(id, name=name, provider=provider, tag=tag, version=version)
+        print("The response of ClusterApi->cluster_id_enrichments_delete:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_id_enrichments_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -457,43 +720,68 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**409** | Conflict |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_id_enrichments_get**
-> list[Enrichment] cluster_id_enrichments_get(id, name=name, provider=provider, tag=tag, version=version)
+> List[Enrichment] cluster_id_enrichments_get(id, name=name, provider=provider, tag=tag, version=version)
 
 Cluster Id Enrichments Get
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-id = 56 # int | 
-name = 'name_example' # str |  (optional)
-provider = 'provider_example' # str |  (optional)
-tag = 'tag_example' # str |  (optional)
-version = 'version_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    id = 56 # int | 
+    name = 'name_example' # str |  (optional)
+    provider = 'provider_example' # str |  (optional)
+    tag = 'tag_example' # str |  (optional)
+    version = 'version_example' # str |  (optional)
 
-try:
-    # Cluster Id Enrichments Get
-    api_response = api_instance.cluster_id_enrichments_get(id, name=name, provider=provider, tag=tag, version=version)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_id_enrichments_get: %s\n" % e)
+    try:
+        # Cluster Id Enrichments Get
+        api_response = api_instance.cluster_id_enrichments_get(id, name=name, provider=provider, tag=tag, version=version)
+        print("The response of ClusterApi->cluster_id_enrichments_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_id_enrichments_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -508,7 +796,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Enrichment]**](Enrichment.md)
+[**List[Enrichment]**](Enrichment.md)
 
 ### Authorization
 
@@ -517,48 +805,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_id_enrichments_post**
-> str cluster_id_enrichments_post(body, id)
+> str cluster_id_enrichments_post(id, enrichment)
 
 Cluster Id Enrichments Post
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-body = [apollo2_api_client.Enrichment()] # list[Enrichment] | 
-id = 56 # int | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    id = 56 # int | 
+    enrichment = [apollo2_api_client.Enrichment()] # List[Enrichment] | 
 
-try:
-    # Cluster Id Enrichments Post
-    api_response = api_instance.cluster_id_enrichments_post(body, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_id_enrichments_post: %s\n" % e)
+    try:
+        # Cluster Id Enrichments Post
+        api_response = api_instance.cluster_id_enrichments_post(id, enrichment)
+        print("The response of ClusterApi->cluster_id_enrichments_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_id_enrichments_post: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**list[Enrichment]**](Enrichment.md)|  | 
  **id** | **int**|  | 
+ **enrichment** | [**List[Enrichment]**](Enrichment.md)|  | 
 
 ### Return type
 
@@ -571,7 +883,16 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**409** | Conflict |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -581,29 +902,45 @@ Name | Type | Description  | Notes
 Cluster Id Get
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-id = 56 # int | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    id = 56 # int | 
 
-try:
-    # Cluster Id Get
-    api_response = api_instance.cluster_id_get(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_id_get: %s\n" % e)
+    try:
+        # Cluster Id Get
+        api_response = api_instance.cluster_id_get(id)
+        print("The response of ClusterApi->cluster_id_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_id_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -623,39 +960,63 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_id_identifer_get**
-> list[str] cluster_id_identifer_get(id)
+> List[str] cluster_id_identifer_get(id)
 
 Cluster Id Identifer Get
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-id = 56 # int | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    id = 56 # int | 
 
-try:
-    # Cluster Id Identifer Get
-    api_response = api_instance.cluster_id_identifer_get(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_id_identifer_get: %s\n" % e)
+    try:
+        # Cluster Id Identifer Get
+        api_response = api_instance.cluster_id_identifer_get(id)
+        print("The response of ClusterApi->cluster_id_identifer_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_id_identifer_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -666,7 +1027,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**list[str]**
+**List[str]**
 
 ### Authorization
 
@@ -675,42 +1036,66 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_id_members_get**
-> list[ClusterMember] cluster_id_members_get(id, limit, last=last, end=end)
+> List[ClusterMember] cluster_id_members_get(id, limit, last=last, end=end)
 
 Cluster Id Members Get
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-id = 56 # int | 
-limit = 56 # int | 
-last = -1 # int |  (optional) (default to -1)
-end = 56 # int |  (optional)
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    id = 56 # int | 
+    limit = 56 # int | 
+    last = -1 # int |  (optional) (default to -1)
+    end = 56 # int |  (optional)
 
-try:
-    # Cluster Id Members Get
-    api_response = api_instance.cluster_id_members_get(id, limit, last=last, end=end)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_id_members_get: %s\n" % e)
+    try:
+        # Cluster Id Members Get
+        api_response = api_instance.cluster_id_members_get(id, limit, last=last, end=end)
+        print("The response of ClusterApi->cluster_id_members_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_id_members_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -724,7 +1109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[ClusterMember]**](ClusterMember.md)
+[**List[ClusterMember]**](ClusterMember.md)
 
 ### Authorization
 
@@ -733,48 +1118,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_identifer_delete**
-> str cluster_identifer_delete(body, identifier)
+> str cluster_identifer_delete(identifier, request_body)
 
 Cluster Identifer Delete
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-body = [56] # list[int] | 
-identifier = 'identifier_example' # str | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    identifier = 'identifier_example' # str | 
+    request_body = [56] # List[int] | 
 
-try:
-    # Cluster Identifer Delete
-    api_response = api_instance.cluster_identifer_delete(body, identifier)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_identifer_delete: %s\n" % e)
+    try:
+        # Cluster Identifer Delete
+        api_response = api_instance.cluster_identifer_delete(identifier, request_body)
+        print("The response of ClusterApi->cluster_identifer_delete:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_identifer_delete: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**list[int]**](int.md)|  | 
  **identifier** | **str**|  | 
+ **request_body** | [**List[int]**](int.md)|  | 
 
 ### Return type
 
@@ -787,48 +1196,73 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**409** | Conflict |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_identifer_post**
-> str cluster_identifer_post(body, identifier)
+> str cluster_identifer_post(identifier, request_body)
 
 Cluster Identifer Post
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-body = [56] # list[int] | 
-identifier = 'identifier_example' # str | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    identifier = 'identifier_example' # str | 
+    request_body = [56] # List[int] | 
 
-try:
-    # Cluster Identifer Post
-    api_response = api_instance.cluster_identifer_post(body, identifier)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_identifer_post: %s\n" % e)
+    try:
+        # Cluster Identifer Post
+        api_response = api_instance.cluster_identifer_post(identifier, request_body)
+        print("The response of ClusterApi->cluster_identifer_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_identifer_post: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**list[int]**](int.md)|  | 
  **identifier** | **str**|  | 
+ **request_body** | [**List[int]**](int.md)|  | 
 
 ### Return type
 
@@ -841,50 +1275,75 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**409** | Conflict |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cluster_post**
-> str cluster_post(body)
+> int cluster_post(cluster)
 
 Cluster Post
 
 ### Example
+
+* Api Key Authentication (APIKeyHeader):
 ```python
 from __future__ import print_function
 import time
+import os
 import apollo2_api_client
 from apollo2_api_client.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: APIKeyHeader
-configuration = apollo2_api_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = apollo2_api_client.ClusterApi(apollo2_api_client.ApiClient(configuration))
-body = apollo2_api_client.Cluster() # Cluster | 
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ClusterApi(api_client)
+    cluster = apollo2_api_client.Cluster() # Cluster | 
 
-try:
-    # Cluster Post
-    api_response = api_instance.cluster_post(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ClusterApi->cluster_post: %s\n" % e)
+    try:
+        # Cluster Post
+        api_response = api_instance.cluster_post(cluster)
+        print("The response of ClusterApi->cluster_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ClusterApi->cluster_post: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Cluster**](Cluster.md)|  | 
+ **cluster** | [**Cluster**](Cluster.md)|  | 
 
 ### Return type
 
-**str**
+**int**
 
 ### Authorization
 
@@ -893,7 +1352,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
