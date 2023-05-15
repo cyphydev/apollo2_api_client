@@ -659,34 +659,34 @@ class Cluster(BaseModel):
     )
 
 
-# class Enrichment(BaseModel):
-#     __root__: Union[
-#         CategoryEnrichment,
-#         NumericalEnrichment,
-#         ArrayEnrichment,
-#         TextEnrichment,
-#         ListEnrichment,
-#         JsonEnrichment,
-#     ] = Field(
-#         ...,
-#         description='This is the unified interface for message enrichment output.',
-#         title='Enrichment',
-#     )
+class EnrichmentObj(BaseModel):
+    __root__: Union[
+        CategoryEnrichment,
+        NumericalEnrichment,
+        ArrayEnrichment,
+        TextEnrichment,
+        ListEnrichment,
+        JsonEnrichment,
+    ] = Field(
+        ...,
+        description='This is the unified interface for message enrichment output.',
+        title='Enrichment',
+    )
 
 
-# class EnrichmentMeta(BaseModel):
-#     __root__: Union[
-#         CategoryEnrichmentMeta,
-#         NumericalEnrichmentMeta,
-#         ArrayEnrichmentMeta,
-#         TextEnrichmentMeta,
-#         ListEnrichmentMeta,
-#         JsonEnrichmentMeta,
-#     ] = Field(
-#         ...,
-#         description='This is the unified interface for message enrichment algorithm meta information.',
-#         title='EnrichmentMeta',
-#     )
+class EnrichmentMetaObj(BaseModel):
+    __root__: Union[
+        CategoryEnrichmentMeta,
+        NumericalEnrichmentMeta,
+        ArrayEnrichmentMeta,
+        TextEnrichmentMeta,
+        ListEnrichmentMeta,
+        JsonEnrichmentMeta,
+    ] = Field(
+        ...,
+        description='This is the unified interface for message enrichment algorithm meta information.',
+        title='EnrichmentMeta',
+    )
 
 EnrichmentMeta = Union[
     CategoryEnrichmentMeta,

@@ -357,7 +357,7 @@ class EnrichmentApi(object):
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
-            '200': "List[EnrichmentMeta]",
+            '200': "List[EnrichmentMetaObj]",
             '422': "HTTPValidationError",
         }
 

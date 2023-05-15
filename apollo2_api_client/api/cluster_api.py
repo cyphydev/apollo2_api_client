@@ -483,7 +483,7 @@ class ClusterApi(object):
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
-            '200': "List[List[Enrichment]]",
+            '200': "List[List[EnrichmentObj]]",
             '400': None,
             '404': None,
             '422': "HTTPValidationError",
@@ -1603,7 +1603,7 @@ class ClusterApi(object):
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
-            '200': "List[Enrichment]",
+            '200': "List[EnrichmentObj]",
             '400': None,
             '404': None,
             '422': "HTTPValidationError",
