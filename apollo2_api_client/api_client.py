@@ -790,6 +790,4 @@ class ApiClient(object):
         :param klass: class literal.
         :return: model object.
         """
-        if klass is apollo2_api_client.models.EnrichmentMetaObj or klass is apollo2_api_client.models.EnrichmentObj:
-            return klass.parse_obj(data).__root__
         return klass.parse_obj(data)

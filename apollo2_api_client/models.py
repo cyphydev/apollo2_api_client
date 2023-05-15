@@ -375,7 +375,7 @@ class Segment(BaseModel):
         title='Version',
     )
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: Optional[ClusterType] = 'Segment'
+    type: ClusterType = Field(ClusterType.Segment, const=True)
 
 
 class TextEnrichment(BaseModel):
@@ -523,7 +523,7 @@ class VisualTopic(BaseModel):
         title='Version',
     )
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: Optional[ClusterType] = 'VisualTopic'
+    type: ClusterType = Field(ClusterType.VisualTopic, const=True)
 
 
 class ArrayEnrichment(BaseModel):
@@ -648,7 +648,7 @@ class Claim(BaseModel):
         title='Version',
     )
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: Optional[ClusterType] = 'Claim'
+    type: ClusterType = Field(ClusterType.Claim, const=True)
 
 
 class Cluster(BaseModel):
@@ -657,9 +657,14 @@ class Cluster(BaseModel):
         description='This is the unified interface for cluster output.',
         title='Cluster',
     )
+    
+    @classmethod
+    def parse_obj(cls, *args, **kwargs):
+        obj = super().parse_obj(*args, **kwargs)
+        return obj.__root__
 
 
-class EnrichmentObj(BaseModel):
+class Enrichment(BaseModel):
     __root__: Union[
         CategoryEnrichment,
         NumericalEnrichment,
@@ -672,9 +677,14 @@ class EnrichmentObj(BaseModel):
         description='This is the unified interface for message enrichment output.',
         title='Enrichment',
     )
+    
+    @classmethod
+    def parse_obj(cls, *args, **kwargs):
+        obj = super().parse_obj(*args, **kwargs)
+        return obj.__root__
 
 
-class EnrichmentMetaObj(BaseModel):
+class EnrichmentMeta(BaseModel):
     __root__: Union[
         CategoryEnrichmentMeta,
         NumericalEnrichmentMeta,
@@ -687,24 +697,12 @@ class EnrichmentMetaObj(BaseModel):
         description='This is the unified interface for message enrichment algorithm meta information.',
         title='EnrichmentMeta',
     )
+    
+    @classmethod
+    def parse_obj(cls, *args, **kwargs):
+        obj = super().parse_obj(*args, **kwargs)
+        return obj.__root__
 
-EnrichmentMeta = Union[
-    CategoryEnrichmentMeta,
-    NumericalEnrichmentMeta,
-    ArrayEnrichmentMeta,
-    TextEnrichmentMeta,
-    ListEnrichmentMeta,
-    JsonEnrichmentMeta,
-]
-
-Enrichment = Union[
-    CategoryEnrichment,
-    NumericalEnrichment,
-    ArrayEnrichment,
-    TextEnrichment,
-    ListEnrichment,
-    JsonEnrichment,
-]
 
 class Graph(BaseModel):
     id: Optional[int] = Field(None, title='Id')

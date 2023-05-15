@@ -960,7 +960,7 @@ class ItemApi(object):
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
-            '200': "List[List[EnrichmentObj]]",
+            '200': "List[List[Enrichment]]",
             '400': None,
             '404': None,
             '422': "HTTPValidationError",
@@ -1870,7 +1870,7 @@ class ItemApi(object):
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
-            '200': "List[EnrichmentObj]",
+            '200': "List[Enrichment]",
             '400': None,
             '404': None,
             '422': "HTTPValidationError",
