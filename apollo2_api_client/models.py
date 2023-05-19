@@ -683,6 +683,15 @@ class Enrichment(BaseModel):
         obj = super().parse_obj(*args, **kwargs)
         return obj.__root__
 
+EnrichmentUnion = Union[
+    CategoryEnrichment,
+    NumericalEnrichment,
+    ArrayEnrichment,
+    TextEnrichment,
+    ListEnrichment,
+    JsonEnrichment,
+]
+
 
 class EnrichmentMeta(BaseModel):
     __root__: Union[
@@ -861,7 +870,7 @@ class Source(BaseModel):
     type: str = Field(..., title='Type')
     platform: PlatformType
     sid: Optional[int] = Field(None, title='Sid')
-    enrichments: Optional[List[Enrichment]] = Field([], title='Enrichments')
+    enrichments: Optional[List[EnrichmentUnion]] = Field([], title='Enrichments')
     clusters: Optional[List[ClusterMember]] = Field([], title='Clusters')
     name: Optional[str] = Field(None, title='Name')
     data: SourceData
@@ -874,7 +883,7 @@ class Item(BaseModel):
     time_published: int = Field(..., title='Time Published')
     sid: Optional[int] = Field(None, title='Sid')
     source_id: Optional[int] = Field(None, title='Source Id')
-    enrichments: Optional[List[Enrichment]] = Field([], title='Enrichments')
+    enrichments: Optional[List[EnrichmentUnion]] = Field([], title='Enrichments')
     clusters: Optional[List[ClusterMember]] = Field([], title='Clusters')
     media_items: Optional[List[MediaItem]] = Field([], title='Media Items')
     text: Optional[str] = Field(None, title='Text')
