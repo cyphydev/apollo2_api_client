@@ -22,6 +22,7 @@ Method | HTTP request | Description
 [**source_id_reverse_translate**](SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
 [**source_identifer_delete**](SourceApi.md#source_identifer_delete) | **POST** /source/identifer/delete | Source Identifer Delete
 [**source_identifer_post**](SourceApi.md#source_identifer_post) | **POST** /source/identifer/post | Source Identifer Post
+[**source_list_get**](SourceApi.md#source_list_get) | **GET** /source/list | Source List Get
 [**source_max_id_get**](SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
 
 
@@ -1471,6 +1472,88 @@ Name | Type | Description  | Notes
 **400** | Bad Request |  -  |
 **404** | Not Found |  -  |
 **409** | Conflict |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **source_list_get**
+> List[int] source_list_get(limit, last=last, end=end, platform=platform, identifier=identifier)
+
+Source List Get
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.SourceApi(api_client)
+    limit = 56 # int | 
+    last = -1 # int |  (optional) (default to -1)
+    end = 56 # int |  (optional)
+    platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
+    identifier = 'identifier_example' # str |  (optional)
+
+    try:
+        # Source List Get
+        api_response = api_instance.source_list_get(limit, last=last, end=end, platform=platform, identifier=identifier)
+        print("The response of SourceApi->source_list_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SourceApi->source_list_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int**|  | 
+ **last** | **int**|  | [optional] [default to -1]
+ **end** | **int**|  | [optional] 
+ **platform** | [**PlatformType**](.md)|  | [optional] 
+ **identifier** | **str**|  | [optional] 
+
+### Return type
+
+**List[int]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
 **422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

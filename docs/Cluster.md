@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **provider** | **str** | The team (e.g., UIUC-DMG) who provides the enrichment. | 
 **tag** | **str** | The tag within the same (provider, name). | 
 **version** | **str** | The version within the same (provider, name). | 
+**enrichments** | [**List[Enrichment]**](Enrichment.md) |  | [optional] [default to []]
+**clusters** | [**List[ClusterMember]**](ClusterMember.md) |  | [optional] [default to []]
 **data** | **object** |  | [optional] 
 **type** | [**ClusterType**](ClusterType.md) |  | [optional] 
 

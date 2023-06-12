@@ -108,6 +108,8 @@ Class | Method | HTTP request | Description
 *ClusterApi* | [**cluster_id_enrichments_post**](docs/ClusterApi.md#cluster_id_enrichments_post) | **POST** /cluster/{id}/enrichments | Cluster Id Enrichments Post
 *ClusterApi* | [**cluster_id_get**](docs/ClusterApi.md#cluster_id_get) | **GET** /cluster/{id} | Cluster Id Get
 *ClusterApi* | [**cluster_id_identifer_get**](docs/ClusterApi.md#cluster_id_identifer_get) | **GET** /cluster/{id}/identifer | Cluster Id Identifer Get
+*ClusterApi* | [**cluster_id_max_id_get**](docs/ClusterApi.md#cluster_id_max_id_get) | **GET** /cluster/{id}/max_id | Cluster Id Max Id Get
+*ClusterApi* | [**cluster_id_members_count_get**](docs/ClusterApi.md#cluster_id_members_count_get) | **GET** /cluster/{id}/members/count | Cluster Id Members Count Get
 *ClusterApi* | [**cluster_id_members_get**](docs/ClusterApi.md#cluster_id_members_get) | **GET** /cluster/{id}/members | Cluster Id Members Get
 *ClusterApi* | [**cluster_identifer_delete**](docs/ClusterApi.md#cluster_identifer_delete) | **POST** /cluster/identifer/delete | Cluster Identifer Delete
 *ClusterApi* | [**cluster_identifer_post**](docs/ClusterApi.md#cluster_identifer_post) | **POST** /cluster/identifer/post | Cluster Identifer Post
@@ -149,6 +151,7 @@ Class | Method | HTTP request | Description
 *ItemApi* | [**item_id_reverse_translate**](docs/ItemApi.md#item_id_reverse_translate) | **GET** /item/id/reverse/{id} | Item Id Reverse Translate
 *ItemApi* | [**item_identifer_delete**](docs/ItemApi.md#item_identifer_delete) | **POST** /item/identifer/delete | Item Identifer Delete
 *ItemApi* | [**item_identifer_post**](docs/ItemApi.md#item_identifer_post) | **POST** /item/identifer/post | Item Identifer Post
+*ItemApi* | [**item_list_get**](docs/ItemApi.md#item_list_get) | **GET** /item/list | Item List Get
 *ItemApi* | [**item_max_id_get**](docs/ItemApi.md#item_max_id_get) | **GET** /item/max_id | Item Max Id Get
 *MediaItemApi* | [**media_item_batch_get**](docs/MediaItemApi.md#media_item_batch_get) | **POST** /media_item/get | Media Item Batch Get
 *MediaItemApi* | [**media_item_count_get**](docs/MediaItemApi.md#media_item_count_get) | **GET** /media_item/count | Media Item Count Get
@@ -177,6 +180,7 @@ Class | Method | HTTP request | Description
 *SourceApi* | [**source_id_reverse_translate**](docs/SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
 *SourceApi* | [**source_identifer_delete**](docs/SourceApi.md#source_identifer_delete) | **POST** /source/identifer/delete | Source Identifer Delete
 *SourceApi* | [**source_identifer_post**](docs/SourceApi.md#source_identifer_post) | **POST** /source/identifer/post | Source Identifer Post
+*SourceApi* | [**source_list_get**](docs/SourceApi.md#source_list_get) | **GET** /source/list | Source List Get
 *SourceApi* | [**source_max_id_get**](docs/SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
 
 

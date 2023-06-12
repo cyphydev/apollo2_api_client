@@ -510,6 +510,117 @@
                 ]
             }
         },
+        "/item/list": {
+            "get": {
+                "tags": [
+                    "item"
+                ],
+                "summary": "Item List Get",
+                "operationId": "item_list_get",
+                "parameters": [
+                    {
+                        "required": true,
+                        "schema": {
+                            "title": "Limit",
+                            "type": "integer"
+                        },
+                        "name": "limit",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Last",
+                            "type": "integer",
+                            "default": -1
+                        },
+                        "name": "last",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "End",
+                            "type": "integer"
+                        },
+                        "name": "end",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/components/schemas/PlatformType"
+                        },
+                        "name": "platform",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Identifier",
+                            "type": "string"
+                        },
+                        "name": "identifier",
+                        "in": "query"
+                    },
+                    {
+                        "description": "%Y-%m-%dT%H:%M:%S%z",
+                        "required": false,
+                        "schema": {
+                            "title": "Inclusive Begin Datetime",
+                            "type": "string",
+                            "description": "%Y-%m-%dT%H:%M:%S%z",
+                            "format": "date-time"
+                        },
+                        "name": "inclusive_begin_datetime",
+                        "in": "query"
+                    },
+                    {
+                        "description": "%Y-%m-%dT%H:%M:%S%z",
+                        "required": false,
+                        "schema": {
+                            "title": "Exclusive End Datetime",
+                            "type": "string",
+                            "description": "%Y-%m-%dT%H:%M:%S%z",
+                            "format": "date-time"
+                        },
+                        "name": "exclusive_end_datetime",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "Response Item List Get Item List Get",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "integer"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "APIKeyHeader": []
+                    }
+                ]
+            }
+        },
         "/item/get": {
             "post": {
                 "tags": [
@@ -2170,6 +2281,93 @@
                 ]
             }
         },
+        "/source/list": {
+            "get": {
+                "tags": [
+                    "source"
+                ],
+                "summary": "Source List Get",
+                "operationId": "source_list_get",
+                "parameters": [
+                    {
+                        "required": true,
+                        "schema": {
+                            "title": "Limit",
+                            "type": "integer"
+                        },
+                        "name": "limit",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Last",
+                            "type": "integer",
+                            "default": -1
+                        },
+                        "name": "last",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "End",
+                            "type": "integer"
+                        },
+                        "name": "end",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/components/schemas/PlatformType"
+                        },
+                        "name": "platform",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Identifier",
+                            "type": "string"
+                        },
+                        "name": "identifier",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "Response Source List Get Source List Get",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "integer"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "APIKeyHeader": []
+                    }
+                ]
+            }
+        },
         "/source/get": {
             "post": {
                 "tags": [
@@ -3678,6 +3876,98 @@
                         },
                         "name": "identifier",
                         "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "With Enrichment",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "name": "with_enrichment",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "With Cluster",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "name": "with_cluster",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Enrichment Name",
+                            "type": "string"
+                        },
+                        "name": "enrichment_name",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Enrichment Provider",
+                            "type": "string"
+                        },
+                        "name": "enrichment_provider",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Enrichment Tag",
+                            "type": "string"
+                        },
+                        "name": "enrichment_tag",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Enrichment Version",
+                            "type": "string"
+                        },
+                        "name": "enrichment_version",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Cluster Name",
+                            "type": "string"
+                        },
+                        "name": "cluster_name",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Cluster Provider",
+                            "type": "string"
+                        },
+                        "name": "cluster_provider",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Cluster Tag",
+                            "type": "string"
+                        },
+                        "name": "cluster_tag",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Cluster Version",
+                            "type": "string"
+                        },
+                        "name": "cluster_version",
+                        "in": "query"
                     }
                 ],
                 "responses": {
@@ -3858,6 +4148,98 @@
                         },
                         "name": "id",
                         "in": "path"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "With Enrichment",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "name": "with_enrichment",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "With Cluster",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "name": "with_cluster",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Enrichment Name",
+                            "type": "string"
+                        },
+                        "name": "enrichment_name",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Enrichment Provider",
+                            "type": "string"
+                        },
+                        "name": "enrichment_provider",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Enrichment Tag",
+                            "type": "string"
+                        },
+                        "name": "enrichment_tag",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Enrichment Version",
+                            "type": "string"
+                        },
+                        "name": "enrichment_version",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Cluster Name",
+                            "type": "string"
+                        },
+                        "name": "cluster_name",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Cluster Provider",
+                            "type": "string"
+                        },
+                        "name": "cluster_provider",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Cluster Tag",
+                            "type": "string"
+                        },
+                        "name": "cluster_tag",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Cluster Version",
+                            "type": "string"
+                        },
+                        "name": "cluster_version",
+                        "in": "query"
                     }
                 ],
                 "responses": {
@@ -4015,6 +4397,126 @@
                                     "items": {
                                         "$ref": "#/components/schemas/ClusterMember"
                                     }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "text/plain": {}
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "text/plain": {}
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "APIKeyHeader": []
+                    }
+                ]
+            }
+        },
+        "/cluster/{id}/members/count": {
+            "get": {
+                "tags": [
+                    "cluster"
+                ],
+                "summary": "Cluster Id Members Count Get",
+                "operationId": "cluster_id_members_count_get",
+                "parameters": [
+                    {
+                        "required": true,
+                        "schema": {
+                            "title": "Id",
+                            "type": "integer"
+                        },
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "Response Cluster Id Members Count Get Cluster  Id  Members Count Get",
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "text/plain": {}
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "text/plain": {}
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "APIKeyHeader": []
+                    }
+                ]
+            }
+        },
+        "/cluster/{id}/max_id": {
+            "get": {
+                "tags": [
+                    "cluster"
+                ],
+                "summary": "Cluster Id Max Id Get",
+                "operationId": "cluster_id_max_id_get",
+                "parameters": [
+                    {
+                        "required": true,
+                        "schema": {
+                            "title": "Id",
+                            "type": "integer"
+                        },
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "Response Cluster Id Max Id Get Cluster  Id  Max Id Get",
+                                    "type": "integer"
                                 }
                             }
                         }
@@ -6716,6 +7218,22 @@
                         "type": "string",
                         "description": "The version within the same (provider, name)."
                     },
+                    "enrichments": {
+                        "title": "Enrichments",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Enrichment"
+                        },
+                        "default": []
+                    },
+                    "clusters": {
+                        "title": "Clusters",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ClusterMember"
+                        },
+                        "default": []
+                    },
                     "data": {
                         "title": "Data",
                         "type": "object",
@@ -8109,6 +8627,22 @@
                         "type": "string",
                         "description": "The version within the same (provider, name)."
                     },
+                    "enrichments": {
+                        "title": "Enrichments",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Enrichment"
+                        },
+                        "default": []
+                    },
+                    "clusters": {
+                        "title": "Clusters",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ClusterMember"
+                        },
+                        "default": []
+                    },
                     "data": {
                         "title": "Data",
                         "type": "object",
@@ -8722,6 +9256,22 @@
                         "title": "Version",
                         "type": "string",
                         "description": "The version within the same (provider, name)."
+                    },
+                    "enrichments": {
+                        "title": "Enrichments",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Enrichment"
+                        },
+                        "default": []
+                    },
+                    "clusters": {
+                        "title": "Clusters",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ClusterMember"
+                        },
+                        "default": []
                     },
                     "data": {
                         "title": "Data",
