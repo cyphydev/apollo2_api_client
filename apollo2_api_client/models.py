@@ -5,7 +5,7 @@
 from __future__ import annotations
 
 from enum import Enum
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Literal, Optional, Union
 
 from pydantic import BaseModel, Field, confloat
 
@@ -31,12 +31,12 @@ class AccountType(Enum):
 
 class BatchGetRequest(BaseModel):
     ids: List[int] = Field(..., title='Ids')
-    with_enrichment: Optional[bool] = Field([False], title='With Enrichment')
+    with_enrichment: Optional[bool] = Field(False, title='With Enrichment')
     enrichment_name: Optional[str] = Field(None, title='Enrichment Name')
     enrichment_provider: Optional[str] = Field(None, title='Enrichment Provider')
     enrichment_tag: Optional[str] = Field(None, title='Enrichment Tag')
     enrichment_version: Optional[str] = Field(None, title='Enrichment Version')
-    with_cluster: Optional[bool] = Field([False], title='With Cluster')
+    with_cluster: Optional[bool] = Field(False, title='With Cluster')
     cluster_name: Optional[str] = Field(None, title='Cluster Name')
     cluster_provider: Optional[str] = Field(None, title='Cluster Provider')
     cluster_tag: Optional[str] = Field(None, title='Cluster Tag')
@@ -187,7 +187,7 @@ class JsonEnrichment(BaseModel):
         description='The version within the same (provider, name).',
         title='Version',
     )
-    type: EnrichmentType = Field(EnrichmentType.Json, const=True)
+    type: Literal[EnrichmentType.Json]
     value: Dict[str, Any] = Field(..., title='Value')
 
 
@@ -210,7 +210,7 @@ class JsonEnrichmentMeta(BaseModel):
         title='Version',
     )
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: EnrichmentType = Field(EnrichmentType.Json, const=True)
+    type: Literal[EnrichmentType.Json]
 
 
 class ListEnrichment(BaseModel):
@@ -228,7 +228,7 @@ class ListEnrichment(BaseModel):
         description='The version within the same (provider, name).',
         title='Version',
     )
-    type: EnrichmentType = Field(EnrichmentType.List, const=True)
+    type: Literal[EnrichmentType.List]
     value: List[Union[str, float]] = Field(..., title='Value')
     confidence: Optional[List[confloat(ge=0.0, le=1.0)]] = Field(
         None,
@@ -256,7 +256,7 @@ class ListEnrichmentMeta(BaseModel):
         title='Version',
     )
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: EnrichmentType = Field(EnrichmentType.List, const=True)
+    type: Literal[EnrichmentType.List]
 
 
 class MediaItemType(Enum):
@@ -288,7 +288,7 @@ class NumericalEnrichment(BaseModel):
         description='The version within the same (provider, name).',
         title='Version',
     )
-    type: EnrichmentType = Field(EnrichmentType.Numerical, const=True)
+    type: Literal[EnrichmentType.Numerical]
     value: float = Field(..., title='Value')
     confidence: Optional[confloat(ge=0.0, le=1.0)] = Field(
         None,
@@ -316,7 +316,7 @@ class NumericalEnrichmentMeta(BaseModel):
         title='Version',
     )
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: EnrichmentType = Field(EnrichmentType.Numerical, const=True)
+    type: Literal[EnrichmentType.Numerical]
 
 
 class PlatformType(Enum):
@@ -346,11 +346,11 @@ class RawDataPostResponse(BaseModel):
 
 
 class RedditData(BaseModel):
-    data_type: str = Field('Reddit', const=True, title='Data Type')
+    data_type: Literal["Reddit"]
 
 
 class RedditUserData(BaseModel):
-    data_type: str = Field('Reddit', const=True, title='Data Type')
+    data_type: Literal["Reddit"]
 
 
 class TextEnrichment(BaseModel):
@@ -368,7 +368,7 @@ class TextEnrichment(BaseModel):
         description='The version within the same (provider, name).',
         title='Version',
     )
-    type: EnrichmentType = Field(EnrichmentType.Text, const=True)
+    type: Literal[EnrichmentType.Text]
     value: str = Field(..., title='Value')
     confidence: Optional[confloat(ge=0.0, le=1.0)] = Field(
         None,
@@ -396,7 +396,7 @@ class TextEnrichmentMeta(BaseModel):
         title='Version',
     )
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: EnrichmentType = Field(EnrichmentType.Text, const=True)
+    type: Literal[EnrichmentType.Text]
 
 
 class TwitterAnnotation(BaseModel):
@@ -459,7 +459,7 @@ class TwitterReferencedTweet(BaseModel):
 
 
 class TwitterUserData(BaseModel):
-    data_type: str = Field('Twitter', const=True, title='Data Type')
+    data_type: Literal["Twitter"]
     description: Optional[str] = Field(None, title='Description')
     location: Optional[str] = Field(None, title='Location')
     pinned_tweet_id: Optional[str] = Field(None, title='Pinned Tweet Id')
@@ -491,7 +491,7 @@ class ArrayEnrichment(BaseModel):
         description='The version within the same (provider, name).',
         title='Version',
     )
-    type: EnrichmentType = Field(EnrichmentType.Array, const=True)
+    type: Literal[EnrichmentType.Array]
     value: List[float] = Field(..., title='Value')
     confidence: Optional[List[confloat(ge=0.0, le=1.0)]] = Field(
         None,
@@ -519,7 +519,7 @@ class ArrayEnrichmentMeta(BaseModel):
         title='Version',
     )
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: EnrichmentType = Field(EnrichmentType.Array, const=True)
+    type: Literal[EnrichmentType.Array]
     label_map: Dict[str, int] = Field(
         ..., description='The mapping from label to index.', title='Label Map'
     )
@@ -540,7 +540,7 @@ class CategoryEnrichment(BaseModel):
         description='The version within the same (provider, name).',
         title='Version',
     )
-    type: EnrichmentType = Field(EnrichmentType.Category, const=True)
+    type: Literal[EnrichmentType.Category]
     value: str = Field(..., title='Value')
     confidence: Optional[confloat(ge=0.0, le=1.0)] = Field(
         None,
@@ -568,7 +568,7 @@ class CategoryEnrichmentMeta(BaseModel):
         title='Version',
     )
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: EnrichmentType = Field(EnrichmentType.Category, const=True)
+    type: Literal[EnrichmentType.Category]
     categories: List[str] = Field(
         ...,
         description='The list of categories for the enrichment.',
@@ -697,7 +697,7 @@ class Segment(BaseModel):
     enrichments: Optional[List[EnrichmentUnion]] = Field([], title='Enrichments')
     clusters: Optional[List[ClusterMember]] = Field([], title='Clusters')
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: ClusterType = Field(ClusterType.Segment, const=True)
+    type: Literal[ClusterType.Segment]
 
 
 class TwitterContextAnnotation(BaseModel):
@@ -735,7 +735,7 @@ class VisualTopic(BaseModel):
     enrichments: Optional[List[EnrichmentUnion]] = Field([], title='Enrichments')
     clusters: Optional[List[ClusterMember]] = Field([], title='Clusters')
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: ClusterType = Field(ClusterType.VisualTopic, const=True)
+    type: Literal[ClusterType.VisualTopic]
 
 
 class Claim(BaseModel):
@@ -762,7 +762,7 @@ class Claim(BaseModel):
     enrichments: Optional[List[EnrichmentUnion]] = Field([], title='Enrichments')
     clusters: Optional[List[ClusterMember]] = Field([], title='Clusters')
     data: Optional[Dict[str, Any]] = Field({}, title='Data')
-    type: ClusterType = Field(ClusterType.Claim, const=True)
+    type: Literal[ClusterType.Claim]
 
 
 class Cluster(BaseModel):
@@ -779,7 +779,7 @@ class Cluster(BaseModel):
 
 
 class IncasActor(BaseModel):
-    data_type: str = Field('Incas', const=True, title='Data Type')
+    data_type: Literal["Incas"]
     annotations: Optional[List[IncasAnnotation]] = Field([], title='Annotations')
     extra_attributes: Optional[List[IncasExtraAttribute]] = Field(
         [], title='Extra Attributes'
@@ -799,7 +799,7 @@ class IncasActor(BaseModel):
 
 
 class IncasMessage(BaseModel):
-    data_type: str = Field('Incas', const=True, title='Data Type')
+    data_type: Literal["Incas"]
     annotations: Optional[List[IncasAnnotation]] = Field([], title='Annotations')
     data_tags: Optional[List[str]] = Field([], title='Data Tags')
     embedded_urls: Optional[List[str]] = Field([], title='Embedded Urls')
@@ -835,7 +835,7 @@ SourceData = Union[TwitterUserData, RedditUserData, IncasActor]
 
 
 class TwitterData(BaseModel):
-    data_type: str = Field('Twitter', const=True, title='Data Type')
+    data_type: Literal["Twitter"]
     attachments: Optional[TwitterAttachment] = None
     context_annotations: Optional[List[TwitterContextAnnotation]] = Field(
         [], title='Context Annotations'
