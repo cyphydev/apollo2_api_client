@@ -17,17 +17,17 @@ Method | HTTP request | Description
 [**source_id_forward_batch_translate**](SourceApi.md#source_id_forward_batch_translate) | **POST** /source/id/forward | Source Id Forward Batch Translate
 [**source_id_forward_translate**](SourceApi.md#source_id_forward_translate) | **GET** /source/id/forward/{id} | Source Id Forward Translate
 [**source_id_get**](SourceApi.md#source_id_get) | **GET** /source/{id} | Source Id Get
-[**source_id_identifer_get**](SourceApi.md#source_id_identifer_get) | **GET** /source/{id}/identifer | Source Id Identifer Get
+[**source_id_identifier_get**](SourceApi.md#source_id_identifier_get) | **GET** /source/{id}/identifier | Source Id Identifier Get
 [**source_id_reverse_batch_translate**](SourceApi.md#source_id_reverse_batch_translate) | **POST** /source/id/reverse | Source Id Reverse Batch Translate
 [**source_id_reverse_translate**](SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
-[**source_identifer_delete**](SourceApi.md#source_identifer_delete) | **POST** /source/identifer/delete | Source Identifer Delete
-[**source_identifer_post**](SourceApi.md#source_identifer_post) | **POST** /source/identifer/post | Source Identifer Post
+[**source_identifier_delete**](SourceApi.md#source_identifier_delete) | **POST** /source/identifier/delete | Source Identifier Delete
+[**source_identifier_post**](SourceApi.md#source_identifier_post) | **POST** /source/identifier/post | Source Identifier Post
 [**source_list_get**](SourceApi.md#source_list_get) | **GET** /source/list | Source List Get
 [**source_max_id_get**](SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
 
 
 # **source_batch_get**
-> List[Source] source_batch_get(batch_get_request, identifier=identifier)
+> List[Source] source_batch_get(batch_get_request)
 
 Source Batch Get
 
@@ -63,11 +63,10 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apollo2_api_client.SourceApi(api_client)
     batch_get_request = apollo2_api_client.BatchGetRequest() # BatchGetRequest | 
-    identifier = 'identifier_example' # str |  (optional)
 
     try:
         # Source Batch Get
-        api_response = api_instance.source_batch_get(batch_get_request, identifier=identifier)
+        api_response = api_instance.source_batch_get(batch_get_request)
         print("The response of SourceApi->source_batch_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -79,7 +78,6 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_get_request** | [**BatchGetRequest**](BatchGetRequest.md)|  | 
- **identifier** | **str**|  | [optional] 
 
 ### Return type
 
@@ -1090,10 +1088,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **source_id_identifer_get**
-> List[str] source_id_identifer_get(id)
+# **source_id_identifier_get**
+> List[str] source_id_identifier_get(id)
 
-Source Id Identifer Get
+Source Id Identifier Get
 
 ### Example
 
@@ -1129,12 +1127,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        # Source Id Identifer Get
-        api_response = api_instance.source_id_identifer_get(id)
-        print("The response of SourceApi->source_id_identifer_get:\n")
+        # Source Id Identifier Get
+        api_response = api_instance.source_id_identifier_get(id)
+        print("The response of SourceApi->source_id_identifier_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SourceApi->source_id_identifer_get: %s\n" % e)
+        print("Exception when calling SourceApi->source_id_identifier_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -1318,10 +1316,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **source_identifer_delete**
-> str source_identifer_delete(identifier, request_body)
+# **source_identifier_delete**
+> str source_identifier_delete(identifier, request_body)
 
-Source Identifer Delete
+Source Identifier Delete
 
 ### Example
 
@@ -1358,12 +1356,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     request_body = [56] # List[int] | 
 
     try:
-        # Source Identifer Delete
-        api_response = api_instance.source_identifer_delete(identifier, request_body)
-        print("The response of SourceApi->source_identifer_delete:\n")
+        # Source Identifier Delete
+        api_response = api_instance.source_identifier_delete(identifier, request_body)
+        print("The response of SourceApi->source_identifier_delete:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SourceApi->source_identifer_delete: %s\n" % e)
+        print("Exception when calling SourceApi->source_identifier_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -1397,10 +1395,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **source_identifer_post**
-> str source_identifer_post(identifier, request_body)
+# **source_identifier_post**
+> str source_identifier_post(identifier, request_body)
 
-Source Identifer Post
+Source Identifier Post
 
 ### Example
 
@@ -1437,12 +1435,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     request_body = [56] # List[int] | 
 
     try:
-        # Source Identifer Post
-        api_response = api_instance.source_identifer_post(identifier, request_body)
-        print("The response of SourceApi->source_identifer_post:\n")
+        # Source Identifier Post
+        api_response = api_instance.source_identifier_post(identifier, request_body)
+        print("The response of SourceApi->source_identifier_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SourceApi->source_identifer_post: %s\n" % e)
+        print("Exception when calling SourceApi->source_identifier_post: %s\n" % e)
 ```
 
 ### Parameters

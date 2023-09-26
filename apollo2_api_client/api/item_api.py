@@ -198,19 +198,17 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_batch_get(self, batch_get_request : BatchGetRequest, identifier : Optional[StrictStr] = None, **kwargs) -> List[Item]:  # noqa: E501
+    def item_batch_get(self, batch_get_request : BatchGetRequest, **kwargs) -> List[Item]:  # noqa: E501
         """Item Batch Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_batch_get(batch_get_request, identifier, async_req=True)
+        >>> thread = api.item_batch_get(batch_get_request, async_req=True)
         >>> result = thread.get()
 
         :param batch_get_request: (required)
         :type batch_get_request: BatchGetRequest
-        :param identifier:
-        :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -227,22 +225,20 @@ class ItemApi(object):
         :rtype: List[Item]
         """
         kwargs['_return_http_data_only'] = True
-        return self.item_batch_get_with_http_info(batch_get_request, identifier, **kwargs)  # noqa: E501
+        return self.item_batch_get_with_http_info(batch_get_request, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_batch_get_with_http_info(self, batch_get_request : BatchGetRequest, identifier : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+    def item_batch_get_with_http_info(self, batch_get_request : BatchGetRequest, **kwargs):  # noqa: E501
         """Item Batch Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_batch_get_with_http_info(batch_get_request, identifier, async_req=True)
+        >>> thread = api.item_batch_get_with_http_info(batch_get_request, async_req=True)
         >>> result = thread.get()
 
         :param batch_get_request: (required)
         :type batch_get_request: BatchGetRequest
-        :param identifier:
-        :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -270,8 +266,7 @@ class ItemApi(object):
         _params = locals()
 
         _all_params = [
-            'batch_get_request',
-            'identifier'
+            'batch_get_request'
         ]
         _all_params.extend(
             [
@@ -302,9 +297,6 @@ class ItemApi(object):
 
         # process the query parameters
         _query_params = []
-        if _params.get('identifier') is not None:  # noqa: E501
-            _query_params.append(('identifier', _params['identifier']))
-
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
         # process the form parameters
@@ -354,13 +346,13 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_count_get(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> int:  # noqa: E501
+    def item_count_get(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, actor_ids : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> int:  # noqa: E501
         """Item Count Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_count_get(last, end, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
+        >>> thread = api.item_count_get(last, end, platform, actor_ids, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
         >>> result = thread.get()
 
         :param last:
@@ -369,6 +361,8 @@ class ItemApi(object):
         :type end: int
         :param platform:
         :type platform: PlatformType
+        :param actor_ids:
+        :type actor_ids: str
         :param identifier:
         :type identifier: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z
@@ -391,16 +385,16 @@ class ItemApi(object):
         :rtype: int
         """
         kwargs['_return_http_data_only'] = True
-        return self.item_count_get_with_http_info(last, end, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, **kwargs)  # noqa: E501
+        return self.item_count_get_with_http_info(last, end, platform, actor_ids, identifier, inclusive_begin_datetime, exclusive_end_datetime, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_count_get_with_http_info(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
+    def item_count_get_with_http_info(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, actor_ids : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
         """Item Count Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_count_get_with_http_info(last, end, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
+        >>> thread = api.item_count_get_with_http_info(last, end, platform, actor_ids, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
         >>> result = thread.get()
 
         :param last:
@@ -409,6 +403,8 @@ class ItemApi(object):
         :type end: int
         :param platform:
         :type platform: PlatformType
+        :param actor_ids:
+        :type actor_ids: str
         :param identifier:
         :type identifier: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z
@@ -445,6 +441,7 @@ class ItemApi(object):
             'last',
             'end',
             'platform',
+            'actor_ids',
             'identifier',
             'inclusive_begin_datetime',
             'exclusive_end_datetime'
@@ -486,6 +483,9 @@ class ItemApi(object):
 
         if _params.get('platform') is not None:  # noqa: E501
             _query_params.append(('platform', _params['platform']))
+
+        if _params.get('actor_ids') is not None:  # noqa: E501
+            _query_params.append(('actor_ids', _params['actor_ids']))
 
         if _params.get('identifier') is not None:  # noqa: E501
             _query_params.append(('identifier', _params['identifier']))
@@ -1133,13 +1133,13 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_get(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> List[Item]:  # noqa: E501
+    def item_get(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, actor_ids : Optional[StrictStr] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> List[Item]:  # noqa: E501
         """Item Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_get(limit, last, end, with_enrichment, with_cluster, enrichment_name, enrichment_provider, enrichment_tag, enrichment_version, cluster_name, cluster_provider, cluster_tag, cluster_version, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
+        >>> thread = api.item_get(limit, last, end, actor_ids, with_enrichment, with_cluster, enrichment_name, enrichment_provider, enrichment_tag, enrichment_version, cluster_name, cluster_provider, cluster_tag, cluster_version, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
         >>> result = thread.get()
 
         :param limit: (required)
@@ -1148,6 +1148,8 @@ class ItemApi(object):
         :type last: int
         :param end:
         :type end: int
+        :param actor_ids:
+        :type actor_ids: str
         :param with_enrichment:
         :type with_enrichment: bool
         :param with_cluster:
@@ -1192,16 +1194,16 @@ class ItemApi(object):
         :rtype: List[Item]
         """
         kwargs['_return_http_data_only'] = True
-        return self.item_get_with_http_info(limit, last, end, with_enrichment, with_cluster, enrichment_name, enrichment_provider, enrichment_tag, enrichment_version, cluster_name, cluster_provider, cluster_tag, cluster_version, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, **kwargs)  # noqa: E501
+        return self.item_get_with_http_info(limit, last, end, actor_ids, with_enrichment, with_cluster, enrichment_name, enrichment_provider, enrichment_tag, enrichment_version, cluster_name, cluster_provider, cluster_tag, cluster_version, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_get_with_http_info(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
+    def item_get_with_http_info(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, actor_ids : Optional[StrictStr] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
         """Item Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_get_with_http_info(limit, last, end, with_enrichment, with_cluster, enrichment_name, enrichment_provider, enrichment_tag, enrichment_version, cluster_name, cluster_provider, cluster_tag, cluster_version, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
+        >>> thread = api.item_get_with_http_info(limit, last, end, actor_ids, with_enrichment, with_cluster, enrichment_name, enrichment_provider, enrichment_tag, enrichment_version, cluster_name, cluster_provider, cluster_tag, cluster_version, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
         >>> result = thread.get()
 
         :param limit: (required)
@@ -1210,6 +1212,8 @@ class ItemApi(object):
         :type last: int
         :param end:
         :type end: int
+        :param actor_ids:
+        :type actor_ids: str
         :param with_enrichment:
         :type with_enrichment: bool
         :param with_cluster:
@@ -1268,6 +1272,7 @@ class ItemApi(object):
             'limit',
             'last',
             'end',
+            'actor_ids',
             'with_enrichment',
             'with_cluster',
             'enrichment_name',
@@ -1320,6 +1325,9 @@ class ItemApi(object):
 
         if _params.get('end') is not None:  # noqa: E501
             _query_params.append(('end', _params['end']))
+
+        if _params.get('actor_ids') is not None:  # noqa: E501
+            _query_params.append(('actor_ids', _params['actor_ids']))
 
         if _params.get('with_enrichment') is not None:  # noqa: E501
             _query_params.append(('with_enrichment', _params['with_enrichment']))
@@ -2575,13 +2583,13 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_id_identifer_get(self, id : StrictInt, **kwargs) -> List[str]:  # noqa: E501
-        """Item Id Identifer Get  # noqa: E501
+    def item_id_identifier_get(self, id : StrictInt, **kwargs) -> List[str]:  # noqa: E501
+        """Item Id Identifier Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_id_identifer_get(id, async_req=True)
+        >>> thread = api.item_id_identifier_get(id, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -2602,16 +2610,16 @@ class ItemApi(object):
         :rtype: List[str]
         """
         kwargs['_return_http_data_only'] = True
-        return self.item_id_identifer_get_with_http_info(id, **kwargs)  # noqa: E501
+        return self.item_id_identifier_get_with_http_info(id, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_id_identifer_get_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
-        """Item Id Identifer Get  # noqa: E501
+    def item_id_identifier_get_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
+        """Item Id Identifier Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_id_identifer_get_with_http_info(id, async_req=True)
+        >>> thread = api.item_id_identifier_get_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -2662,7 +2670,7 @@ class ItemApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method item_id_identifer_get" % _key
+                    " to method item_id_identifier_get" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -2699,7 +2707,7 @@ class ItemApi(object):
         }
 
         return self.api_client.call_api(
-            '/item/{id}/identifer', 'GET',
+            '/item/{id}/identifier', 'GET',
             _path_params,
             _query_params,
             _header_params,
@@ -3005,13 +3013,13 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_identifer_delete(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
-        """Item Identifer Delete  # noqa: E501
+    def item_identifier_delete(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
+        """Item Identifier Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_identifer_delete(identifier, request_body, async_req=True)
+        >>> thread = api.item_identifier_delete(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -3034,16 +3042,16 @@ class ItemApi(object):
         :rtype: str
         """
         kwargs['_return_http_data_only'] = True
-        return self.item_identifer_delete_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
+        return self.item_identifier_delete_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_identifer_delete_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
-        """Item Identifer Delete  # noqa: E501
+    def item_identifier_delete_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
+        """Item Identifier Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_identifer_delete_with_http_info(identifier, request_body, async_req=True)
+        >>> thread = api.item_identifier_delete_with_http_info(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -3097,7 +3105,7 @@ class ItemApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method item_identifer_delete" % _key
+                    " to method item_identifier_delete" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -3145,7 +3153,7 @@ class ItemApi(object):
         }
 
         return self.api_client.call_api(
-            '/item/identifer/delete', 'POST',
+            '/item/identifier/delete', 'POST',
             _path_params,
             _query_params,
             _header_params,
@@ -3162,13 +3170,13 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_identifer_post(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
-        """Item Identifer Post  # noqa: E501
+    def item_identifier_post(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
+        """Item Identifier Post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_identifer_post(identifier, request_body, async_req=True)
+        >>> thread = api.item_identifier_post(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -3191,16 +3199,16 @@ class ItemApi(object):
         :rtype: str
         """
         kwargs['_return_http_data_only'] = True
-        return self.item_identifer_post_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
+        return self.item_identifier_post_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_identifer_post_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
-        """Item Identifer Post  # noqa: E501
+    def item_identifier_post_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
+        """Item Identifier Post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_identifer_post_with_http_info(identifier, request_body, async_req=True)
+        >>> thread = api.item_identifier_post_with_http_info(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -3254,7 +3262,7 @@ class ItemApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method item_identifer_post" % _key
+                    " to method item_identifier_post" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -3302,7 +3310,7 @@ class ItemApi(object):
         }
 
         return self.api_client.call_api(
-            '/item/identifer/post', 'POST',
+            '/item/identifier/post', 'POST',
             _path_params,
             _query_params,
             _header_params,
@@ -3319,13 +3327,13 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_list_get(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> List[int]:  # noqa: E501
+    def item_list_get(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, actor_ids : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> List[int]:  # noqa: E501
         """Item List Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_list_get(limit, last, end, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
+        >>> thread = api.item_list_get(limit, last, end, platform, actor_ids, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
         >>> result = thread.get()
 
         :param limit: (required)
@@ -3336,6 +3344,8 @@ class ItemApi(object):
         :type end: int
         :param platform:
         :type platform: PlatformType
+        :param actor_ids:
+        :type actor_ids: str
         :param identifier:
         :type identifier: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z
@@ -3358,16 +3368,16 @@ class ItemApi(object):
         :rtype: List[int]
         """
         kwargs['_return_http_data_only'] = True
-        return self.item_list_get_with_http_info(limit, last, end, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, **kwargs)  # noqa: E501
+        return self.item_list_get_with_http_info(limit, last, end, platform, actor_ids, identifier, inclusive_begin_datetime, exclusive_end_datetime, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_list_get_with_http_info(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
+    def item_list_get_with_http_info(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, actor_ids : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
         """Item List Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_list_get_with_http_info(limit, last, end, platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
+        >>> thread = api.item_list_get_with_http_info(limit, last, end, platform, actor_ids, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
         >>> result = thread.get()
 
         :param limit: (required)
@@ -3378,6 +3388,8 @@ class ItemApi(object):
         :type end: int
         :param platform:
         :type platform: PlatformType
+        :param actor_ids:
+        :type actor_ids: str
         :param identifier:
         :type identifier: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z
@@ -3415,6 +3427,7 @@ class ItemApi(object):
             'last',
             'end',
             'platform',
+            'actor_ids',
             'identifier',
             'inclusive_begin_datetime',
             'exclusive_end_datetime'
@@ -3459,6 +3472,9 @@ class ItemApi(object):
 
         if _params.get('platform') is not None:  # noqa: E501
             _query_params.append(('platform', _params['platform']))
+
+        if _params.get('actor_ids') is not None:  # noqa: E501
+            _query_params.append(('actor_ids', _params['actor_ids']))
 
         if _params.get('identifier') is not None:  # noqa: E501
             _query_params.append(('identifier', _params['identifier']))
@@ -3512,19 +3528,21 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_max_id_get(self, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> int:  # noqa: E501
+    def item_max_id_get(self, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, actor_ids : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs) -> int:  # noqa: E501
         """Item Max Id Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_max_id_get(platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
+        >>> thread = api.item_max_id_get(platform, identifier, actor_ids, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
         >>> result = thread.get()
 
         :param platform:
         :type platform: PlatformType
         :param identifier:
         :type identifier: str
+        :param actor_ids:
+        :type actor_ids: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z
         :type inclusive_begin_datetime: datetime
         :param exclusive_end_datetime: %Y-%m-%dT%H:%M:%S%z
@@ -3545,22 +3563,24 @@ class ItemApi(object):
         :rtype: int
         """
         kwargs['_return_http_data_only'] = True
-        return self.item_max_id_get_with_http_info(platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, **kwargs)  # noqa: E501
+        return self.item_max_id_get_with_http_info(platform, identifier, actor_ids, inclusive_begin_datetime, exclusive_end_datetime, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def item_max_id_get_with_http_info(self, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
+    def item_max_id_get_with_http_info(self, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, actor_ids : Optional[StrictStr] = None, inclusive_begin_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, exclusive_end_datetime : Annotated[Optional[datetime], Field(description="%Y-%m-%dT%H:%M:%S%z")] = None, **kwargs):  # noqa: E501
         """Item Max Id Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.item_max_id_get_with_http_info(platform, identifier, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
+        >>> thread = api.item_max_id_get_with_http_info(platform, identifier, actor_ids, inclusive_begin_datetime, exclusive_end_datetime, async_req=True)
         >>> result = thread.get()
 
         :param platform:
         :type platform: PlatformType
         :param identifier:
         :type identifier: str
+        :param actor_ids:
+        :type actor_ids: str
         :param inclusive_begin_datetime: %Y-%m-%dT%H:%M:%S%z
         :type inclusive_begin_datetime: datetime
         :param exclusive_end_datetime: %Y-%m-%dT%H:%M:%S%z
@@ -3594,6 +3614,7 @@ class ItemApi(object):
         _all_params = [
             'platform',
             'identifier',
+            'actor_ids',
             'inclusive_begin_datetime',
             'exclusive_end_datetime'
         ]
@@ -3631,6 +3652,9 @@ class ItemApi(object):
 
         if _params.get('identifier') is not None:  # noqa: E501
             _query_params.append(('identifier', _params['identifier']))
+
+        if _params.get('actor_ids') is not None:  # noqa: E501
+            _query_params.append(('actor_ids', _params['actor_ids']))
 
         if _params.get('inclusive_begin_datetime') is not None:  # noqa: E501
             if isinstance(_params['inclusive_begin_datetime'], datetime):

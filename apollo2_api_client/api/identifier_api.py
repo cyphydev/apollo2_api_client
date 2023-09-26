@@ -42,13 +42,13 @@ class IdentifierApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def identifer_delete(self, identifier : StrictStr, **kwargs) -> str:  # noqa: E501
-        """Identifer Delete  # noqa: E501
+    def identifier_delete(self, identifier : StrictStr, **kwargs) -> str:  # noqa: E501
+        """Identifier Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.identifer_delete(identifier, async_req=True)
+        >>> thread = api.identifier_delete(identifier, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -69,16 +69,16 @@ class IdentifierApi(object):
         :rtype: str
         """
         kwargs['_return_http_data_only'] = True
-        return self.identifer_delete_with_http_info(identifier, **kwargs)  # noqa: E501
+        return self.identifier_delete_with_http_info(identifier, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def identifer_delete_with_http_info(self, identifier : StrictStr, **kwargs):  # noqa: E501
-        """Identifer Delete  # noqa: E501
+    def identifier_delete_with_http_info(self, identifier : StrictStr, **kwargs):  # noqa: E501
+        """Identifier Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.identifer_delete_with_http_info(identifier, async_req=True)
+        >>> thread = api.identifier_delete_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -129,7 +129,7 @@ class IdentifierApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method identifer_delete" % _key
+                    " to method identifier_delete" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -164,7 +164,7 @@ class IdentifierApi(object):
         }
 
         return self.api_client.call_api(
-            '/identifer/delete', 'GET',
+            '/identifier/delete', 'GET',
             _path_params,
             _query_params,
             _header_params,

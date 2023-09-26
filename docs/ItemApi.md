@@ -19,11 +19,11 @@ Method | HTTP request | Description
 [**item_id_forward_batch_translate**](ItemApi.md#item_id_forward_batch_translate) | **POST** /item/id/forward | Item Id Forward Batch Translate
 [**item_id_forward_translate**](ItemApi.md#item_id_forward_translate) | **GET** /item/id/forward/{id} | Item Id Forward Translate
 [**item_id_get**](ItemApi.md#item_id_get) | **GET** /item/{id} | Item Id Get
-[**item_id_identifer_get**](ItemApi.md#item_id_identifer_get) | **GET** /item/{id}/identifer | Item Id Identifer Get
+[**item_id_identifier_get**](ItemApi.md#item_id_identifier_get) | **GET** /item/{id}/identifier | Item Id Identifier Get
 [**item_id_reverse_batch_translate**](ItemApi.md#item_id_reverse_batch_translate) | **POST** /item/id/reverse | Item Id Reverse Batch Translate
 [**item_id_reverse_translate**](ItemApi.md#item_id_reverse_translate) | **GET** /item/id/reverse/{id} | Item Id Reverse Translate
-[**item_identifer_delete**](ItemApi.md#item_identifer_delete) | **POST** /item/identifer/delete | Item Identifer Delete
-[**item_identifer_post**](ItemApi.md#item_identifer_post) | **POST** /item/identifer/post | Item Identifer Post
+[**item_identifier_delete**](ItemApi.md#item_identifier_delete) | **POST** /item/identifier/delete | Item Identifier Delete
+[**item_identifier_post**](ItemApi.md#item_identifier_post) | **POST** /item/identifier/post | Item Identifier Post
 [**item_list_get**](ItemApi.md#item_list_get) | **GET** /item/list | Item List Get
 [**item_max_id_get**](ItemApi.md#item_max_id_get) | **GET** /item/max_id | Item Max Id Get
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_batch_get**
-> List[Item] item_batch_get(batch_get_request, identifier=identifier)
+> List[Item] item_batch_get(batch_get_request)
 
 Item Batch Get
 
@@ -141,11 +141,10 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apollo2_api_client.ItemApi(api_client)
     batch_get_request = apollo2_api_client.BatchGetRequest() # BatchGetRequest | 
-    identifier = 'identifier_example' # str |  (optional)
 
     try:
         # Item Batch Get
-        api_response = api_instance.item_batch_get(batch_get_request, identifier=identifier)
+        api_response = api_instance.item_batch_get(batch_get_request)
         print("The response of ItemApi->item_batch_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -157,7 +156,6 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_get_request** | [**BatchGetRequest**](BatchGetRequest.md)|  | 
- **identifier** | **str**|  | [optional] 
 
 ### Return type
 
@@ -183,7 +181,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_count_get**
-> int item_count_get(last=last, end=end, platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+> int item_count_get(last=last, end=end, platform=platform, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
 
 Item Count Get
 
@@ -221,13 +219,14 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     last = 56 # int |  (optional)
     end = 56 # int |  (optional)
     platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
+    actor_ids = 'actor_ids_example' # str |  (optional)
     identifier = 'identifier_example' # str |  (optional)
     inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
     exclusive_end_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
 
     try:
         # Item Count Get
-        api_response = api_instance.item_count_get(last=last, end=end, platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+        api_response = api_instance.item_count_get(last=last, end=end, platform=platform, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
         print("The response of ItemApi->item_count_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -241,6 +240,7 @@ Name | Type | Description  | Notes
  **last** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **platform** | [**PlatformType**](.md)|  | [optional] 
+ **actor_ids** | **str**|  | [optional] 
  **identifier** | **str**|  | [optional] 
  **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
  **exclusive_end_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
@@ -573,7 +573,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_get**
-> List[Item] item_get(limit, last=last, end=end, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+> List[Item] item_get(limit, last=last, end=end, actor_ids=actor_ids, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
 
 Item Get
 
@@ -611,6 +611,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     limit = 56 # int | 
     last = -1 # int |  (optional) (default to -1)
     end = 56 # int |  (optional)
+    actor_ids = 'actor_ids_example' # str |  (optional)
     with_enrichment = False # bool |  (optional) (default to False)
     with_cluster = False # bool |  (optional) (default to False)
     enrichment_name = 'enrichment_name_example' # str |  (optional)
@@ -628,7 +629,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 
     try:
         # Item Get
-        api_response = api_instance.item_get(limit, last=last, end=end, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+        api_response = api_instance.item_get(limit, last=last, end=end, actor_ids=actor_ids, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
         print("The response of ItemApi->item_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -642,6 +643,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | 
  **last** | **int**|  | [optional] [default to -1]
  **end** | **int**|  | [optional] 
+ **actor_ids** | **str**|  | [optional] 
  **with_enrichment** | **bool**|  | [optional] [default to False]
  **with_cluster** | **bool**|  | [optional] [default to False]
  **enrichment_name** | **str**|  | [optional] 
@@ -1252,10 +1254,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **item_id_identifer_get**
-> List[str] item_id_identifer_get(id)
+# **item_id_identifier_get**
+> List[str] item_id_identifier_get(id)
 
-Item Id Identifer Get
+Item Id Identifier Get
 
 ### Example
 
@@ -1291,12 +1293,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        # Item Id Identifer Get
-        api_response = api_instance.item_id_identifer_get(id)
-        print("The response of ItemApi->item_id_identifer_get:\n")
+        # Item Id Identifier Get
+        api_response = api_instance.item_id_identifier_get(id)
+        print("The response of ItemApi->item_id_identifier_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ItemApi->item_id_identifer_get: %s\n" % e)
+        print("Exception when calling ItemApi->item_id_identifier_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -1480,10 +1482,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **item_identifer_delete**
-> str item_identifer_delete(identifier, request_body)
+# **item_identifier_delete**
+> str item_identifier_delete(identifier, request_body)
 
-Item Identifer Delete
+Item Identifier Delete
 
 ### Example
 
@@ -1520,12 +1522,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     request_body = [56] # List[int] | 
 
     try:
-        # Item Identifer Delete
-        api_response = api_instance.item_identifer_delete(identifier, request_body)
-        print("The response of ItemApi->item_identifer_delete:\n")
+        # Item Identifier Delete
+        api_response = api_instance.item_identifier_delete(identifier, request_body)
+        print("The response of ItemApi->item_identifier_delete:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ItemApi->item_identifer_delete: %s\n" % e)
+        print("Exception when calling ItemApi->item_identifier_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -1559,10 +1561,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **item_identifer_post**
-> str item_identifer_post(identifier, request_body)
+# **item_identifier_post**
+> str item_identifier_post(identifier, request_body)
 
-Item Identifer Post
+Item Identifier Post
 
 ### Example
 
@@ -1599,12 +1601,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     request_body = [56] # List[int] | 
 
     try:
-        # Item Identifer Post
-        api_response = api_instance.item_identifer_post(identifier, request_body)
-        print("The response of ItemApi->item_identifer_post:\n")
+        # Item Identifier Post
+        api_response = api_instance.item_identifier_post(identifier, request_body)
+        print("The response of ItemApi->item_identifier_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ItemApi->item_identifer_post: %s\n" % e)
+        print("Exception when calling ItemApi->item_identifier_post: %s\n" % e)
 ```
 
 ### Parameters
@@ -1639,7 +1641,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_list_get**
-> List[int] item_list_get(limit, last=last, end=end, platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+> List[int] item_list_get(limit, last=last, end=end, platform=platform, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
 
 Item List Get
 
@@ -1678,13 +1680,14 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     last = -1 # int |  (optional) (default to -1)
     end = 56 # int |  (optional)
     platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
+    actor_ids = 'actor_ids_example' # str |  (optional)
     identifier = 'identifier_example' # str |  (optional)
     inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
     exclusive_end_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
 
     try:
         # Item List Get
-        api_response = api_instance.item_list_get(limit, last=last, end=end, platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+        api_response = api_instance.item_list_get(limit, last=last, end=end, platform=platform, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
         print("The response of ItemApi->item_list_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -1699,6 +1702,7 @@ Name | Type | Description  | Notes
  **last** | **int**|  | [optional] [default to -1]
  **end** | **int**|  | [optional] 
  **platform** | [**PlatformType**](.md)|  | [optional] 
+ **actor_ids** | **str**|  | [optional] 
  **identifier** | **str**|  | [optional] 
  **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
  **exclusive_end_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
@@ -1725,7 +1729,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_max_id_get**
-> int item_max_id_get(platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+> int item_max_id_get(platform=platform, identifier=identifier, actor_ids=actor_ids, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
 
 Item Max Id Get
 
@@ -1762,12 +1766,13 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     api_instance = apollo2_api_client.ItemApi(api_client)
     platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
     identifier = 'identifier_example' # str |  (optional)
+    actor_ids = 'actor_ids_example' # str |  (optional)
     inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
     exclusive_end_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
 
     try:
         # Item Max Id Get
-        api_response = api_instance.item_max_id_get(platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+        api_response = api_instance.item_max_id_get(platform=platform, identifier=identifier, actor_ids=actor_ids, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
         print("The response of ItemApi->item_max_id_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -1780,6 +1785,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **platform** | [**PlatformType**](.md)|  | [optional] 
  **identifier** | **str**|  | [optional] 
+ **actor_ids** | **str**|  | [optional] 
  **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
  **exclusive_end_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
 

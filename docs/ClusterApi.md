@@ -16,12 +16,12 @@ Method | HTTP request | Description
 [**cluster_id_enrichments_get**](ClusterApi.md#cluster_id_enrichments_get) | **GET** /cluster/{id}/enrichments | Cluster Id Enrichments Get
 [**cluster_id_enrichments_post**](ClusterApi.md#cluster_id_enrichments_post) | **POST** /cluster/{id}/enrichments | Cluster Id Enrichments Post
 [**cluster_id_get**](ClusterApi.md#cluster_id_get) | **GET** /cluster/{id} | Cluster Id Get
-[**cluster_id_identifer_get**](ClusterApi.md#cluster_id_identifer_get) | **GET** /cluster/{id}/identifer | Cluster Id Identifer Get
+[**cluster_id_identifier_get**](ClusterApi.md#cluster_id_identifier_get) | **GET** /cluster/{id}/identifier | Cluster Id Identifier Get
 [**cluster_id_max_id_get**](ClusterApi.md#cluster_id_max_id_get) | **GET** /cluster/{id}/max_id | Cluster Id Max Id Get
 [**cluster_id_members_count_get**](ClusterApi.md#cluster_id_members_count_get) | **GET** /cluster/{id}/members/count | Cluster Id Members Count Get
 [**cluster_id_members_get**](ClusterApi.md#cluster_id_members_get) | **GET** /cluster/{id}/members | Cluster Id Members Get
-[**cluster_identifer_delete**](ClusterApi.md#cluster_identifer_delete) | **POST** /cluster/identifer/delete | Cluster Identifer Delete
-[**cluster_identifer_post**](ClusterApi.md#cluster_identifer_post) | **POST** /cluster/identifer/post | Cluster Identifer Post
+[**cluster_identifier_delete**](ClusterApi.md#cluster_identifier_delete) | **POST** /cluster/identifier/delete | Cluster Identifier Delete
+[**cluster_identifier_post**](ClusterApi.md#cluster_identifier_post) | **POST** /cluster/identifier/post | Cluster Identifier Post
 [**cluster_post**](ClusterApi.md#cluster_post) | **POST** /cluster | Cluster Post
 
 
@@ -1014,10 +1014,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cluster_id_identifer_get**
-> List[str] cluster_id_identifer_get(id)
+# **cluster_id_identifier_get**
+> List[str] cluster_id_identifier_get(id)
 
-Cluster Id Identifer Get
+Cluster Id Identifier Get
 
 ### Example
 
@@ -1053,12 +1053,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        # Cluster Id Identifer Get
-        api_response = api_instance.cluster_id_identifer_get(id)
-        print("The response of ClusterApi->cluster_id_identifer_get:\n")
+        # Cluster Id Identifier Get
+        api_response = api_instance.cluster_id_identifier_get(id)
+        print("The response of ClusterApi->cluster_id_identifier_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ClusterApi->cluster_id_identifer_get: %s\n" % e)
+        print("Exception when calling ClusterApi->cluster_id_identifier_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -1324,10 +1324,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cluster_identifer_delete**
-> str cluster_identifer_delete(identifier, request_body)
+# **cluster_identifier_delete**
+> str cluster_identifier_delete(identifier, request_body)
 
-Cluster Identifer Delete
+Cluster Identifier Delete
 
 ### Example
 
@@ -1364,12 +1364,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     request_body = [56] # List[int] | 
 
     try:
-        # Cluster Identifer Delete
-        api_response = api_instance.cluster_identifer_delete(identifier, request_body)
-        print("The response of ClusterApi->cluster_identifer_delete:\n")
+        # Cluster Identifier Delete
+        api_response = api_instance.cluster_identifier_delete(identifier, request_body)
+        print("The response of ClusterApi->cluster_identifier_delete:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ClusterApi->cluster_identifer_delete: %s\n" % e)
+        print("Exception when calling ClusterApi->cluster_identifier_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -1403,10 +1403,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cluster_identifer_post**
-> str cluster_identifer_post(identifier, request_body)
+# **cluster_identifier_post**
+> str cluster_identifier_post(identifier, request_body)
 
-Cluster Identifer Post
+Cluster Identifier Post
 
 ### Example
 
@@ -1443,12 +1443,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     request_body = [56] # List[int] | 
 
     try:
-        # Cluster Identifer Post
-        api_response = api_instance.cluster_identifer_post(identifier, request_body)
-        print("The response of ClusterApi->cluster_identifer_post:\n")
+        # Cluster Identifier Post
+        api_response = api_instance.cluster_identifier_post(identifier, request_body)
+        print("The response of ClusterApi->cluster_identifier_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ClusterApi->cluster_identifer_post: %s\n" % e)
+        print("Exception when calling ClusterApi->cluster_identifier_post: %s\n" % e)
 ```
 
 ### Parameters

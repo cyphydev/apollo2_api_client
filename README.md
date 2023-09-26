@@ -107,29 +107,29 @@ Class | Method | HTTP request | Description
 *ClusterApi* | [**cluster_id_enrichments_get**](docs/ClusterApi.md#cluster_id_enrichments_get) | **GET** /cluster/{id}/enrichments | Cluster Id Enrichments Get
 *ClusterApi* | [**cluster_id_enrichments_post**](docs/ClusterApi.md#cluster_id_enrichments_post) | **POST** /cluster/{id}/enrichments | Cluster Id Enrichments Post
 *ClusterApi* | [**cluster_id_get**](docs/ClusterApi.md#cluster_id_get) | **GET** /cluster/{id} | Cluster Id Get
-*ClusterApi* | [**cluster_id_identifer_get**](docs/ClusterApi.md#cluster_id_identifer_get) | **GET** /cluster/{id}/identifer | Cluster Id Identifer Get
+*ClusterApi* | [**cluster_id_identifier_get**](docs/ClusterApi.md#cluster_id_identifier_get) | **GET** /cluster/{id}/identifier | Cluster Id Identifier Get
 *ClusterApi* | [**cluster_id_max_id_get**](docs/ClusterApi.md#cluster_id_max_id_get) | **GET** /cluster/{id}/max_id | Cluster Id Max Id Get
 *ClusterApi* | [**cluster_id_members_count_get**](docs/ClusterApi.md#cluster_id_members_count_get) | **GET** /cluster/{id}/members/count | Cluster Id Members Count Get
 *ClusterApi* | [**cluster_id_members_get**](docs/ClusterApi.md#cluster_id_members_get) | **GET** /cluster/{id}/members | Cluster Id Members Get
-*ClusterApi* | [**cluster_identifer_delete**](docs/ClusterApi.md#cluster_identifer_delete) | **POST** /cluster/identifer/delete | Cluster Identifer Delete
-*ClusterApi* | [**cluster_identifer_post**](docs/ClusterApi.md#cluster_identifer_post) | **POST** /cluster/identifer/post | Cluster Identifer Post
+*ClusterApi* | [**cluster_identifier_delete**](docs/ClusterApi.md#cluster_identifier_delete) | **POST** /cluster/identifier/delete | Cluster Identifier Delete
+*ClusterApi* | [**cluster_identifier_post**](docs/ClusterApi.md#cluster_identifier_post) | **POST** /cluster/identifier/post | Cluster Identifier Post
 *ClusterApi* | [**cluster_post**](docs/ClusterApi.md#cluster_post) | **POST** /cluster | Cluster Post
 *DefaultApi* | [**ping_get**](docs/DefaultApi.md#ping_get) | **GET** /ping | Ping Get
 *EnrichmentApi* | [**enrichments_meta_delete**](docs/EnrichmentApi.md#enrichments_meta_delete) | **DELETE** /enrichments/meta | Enrichments Meta Delete
 *EnrichmentApi* | [**enrichments_meta_get**](docs/EnrichmentApi.md#enrichments_meta_get) | **GET** /enrichments/meta | Enrichments Meta Get
 *EnrichmentApi* | [**enrichments_meta_post**](docs/EnrichmentApi.md#enrichments_meta_post) | **POST** /enrichments/meta | Enrichments Meta Post
-*GraphApi* | [**edge_identifer_delete**](docs/GraphApi.md#edge_identifer_delete) | **DELETE** /graph/edge/identifer/delete | Edge Identifer Delete
-*GraphApi* | [**edge_identifer_post**](docs/GraphApi.md#edge_identifer_post) | **POST** /graph/edge/identifer/post | Edge Identifer Post
+*GraphApi* | [**edge_identifier_delete**](docs/GraphApi.md#edge_identifier_delete) | **DELETE** /graph/edge/identifier/delete | Edge Identifier Delete
+*GraphApi* | [**edge_identifier_post**](docs/GraphApi.md#edge_identifier_post) | **POST** /graph/edge/identifier/post | Edge Identifier Post
 *GraphApi* | [**graph_get**](docs/GraphApi.md#graph_get) | **GET** /graph | Graph Get
 *GraphApi* | [**graph_id_delete**](docs/GraphApi.md#graph_id_delete) | **DELETE** /graph/{id} | Graph Id Delete
 *GraphApi* | [**graph_id_delete_edges_post**](docs/GraphApi.md#graph_id_delete_edges_post) | **POST** /graph/{id}/delete_edges | Graph Id Delete Edges Post
-*GraphApi* | [**graph_id_edge_identifer_all_get**](docs/GraphApi.md#graph_id_edge_identifer_all_get) | **GET** /graph/{id}/edge/identifer/all | Graph Id Edge Identifer All Get
-*GraphApi* | [**graph_id_edge_identifier_get**](docs/GraphApi.md#graph_id_edge_identifier_get) | **GET** /graph/{id}/edge/identifer | Graph Id Edge Identifier Get
+*GraphApi* | [**graph_id_edge_identifier_all_get**](docs/GraphApi.md#graph_id_edge_identifier_all_get) | **GET** /graph/{id}/edge/identifier/all | Graph Id Edge Identifier All Get
+*GraphApi* | [**graph_id_edge_identifier_get**](docs/GraphApi.md#graph_id_edge_identifier_get) | **GET** /graph/{id}/edge/identifier | Graph Id Edge Identifier Get
 *GraphApi* | [**graph_id_edges_get**](docs/GraphApi.md#graph_id_edges_get) | **GET** /graph/{id}/edges | Graph Id Edges Get
 *GraphApi* | [**graph_id_edit_edges_post**](docs/GraphApi.md#graph_id_edit_edges_post) | **POST** /graph/{id}/edit_edges | Graph Id Edit Edges Post
 *GraphApi* | [**graph_id_get**](docs/GraphApi.md#graph_id_get) | **GET** /graph/{id} | Graph Id Get
 *GraphApi* | [**graph_post**](docs/GraphApi.md#graph_post) | **POST** /graph | Graph Post
-*IdentifierApi* | [**identifer_delete**](docs/IdentifierApi.md#identifer_delete) | **GET** /identifer/delete | Identifer Delete
+*IdentifierApi* | [**identifier_delete**](docs/IdentifierApi.md#identifier_delete) | **GET** /identifier/delete | Identifier Delete
 *IdentifierApi* | [**identifier_list**](docs/IdentifierApi.md#identifier_list) | **GET** /identifier/list | Identifier List
 *ItemApi* | [**item_attach_media_post**](docs/ItemApi.md#item_attach_media_post) | **POST** /item/attach_media | Item Attach Media Post
 *ItemApi* | [**item_batch_get**](docs/ItemApi.md#item_batch_get) | **POST** /item/get | Item Batch Get
@@ -146,11 +146,11 @@ Class | Method | HTTP request | Description
 *ItemApi* | [**item_id_forward_batch_translate**](docs/ItemApi.md#item_id_forward_batch_translate) | **POST** /item/id/forward | Item Id Forward Batch Translate
 *ItemApi* | [**item_id_forward_translate**](docs/ItemApi.md#item_id_forward_translate) | **GET** /item/id/forward/{id} | Item Id Forward Translate
 *ItemApi* | [**item_id_get**](docs/ItemApi.md#item_id_get) | **GET** /item/{id} | Item Id Get
-*ItemApi* | [**item_id_identifer_get**](docs/ItemApi.md#item_id_identifer_get) | **GET** /item/{id}/identifer | Item Id Identifer Get
+*ItemApi* | [**item_id_identifier_get**](docs/ItemApi.md#item_id_identifier_get) | **GET** /item/{id}/identifier | Item Id Identifier Get
 *ItemApi* | [**item_id_reverse_batch_translate**](docs/ItemApi.md#item_id_reverse_batch_translate) | **POST** /item/id/reverse | Item Id Reverse Batch Translate
 *ItemApi* | [**item_id_reverse_translate**](docs/ItemApi.md#item_id_reverse_translate) | **GET** /item/id/reverse/{id} | Item Id Reverse Translate
-*ItemApi* | [**item_identifer_delete**](docs/ItemApi.md#item_identifer_delete) | **POST** /item/identifer/delete | Item Identifer Delete
-*ItemApi* | [**item_identifer_post**](docs/ItemApi.md#item_identifer_post) | **POST** /item/identifer/post | Item Identifer Post
+*ItemApi* | [**item_identifier_delete**](docs/ItemApi.md#item_identifier_delete) | **POST** /item/identifier/delete | Item Identifier Delete
+*ItemApi* | [**item_identifier_post**](docs/ItemApi.md#item_identifier_post) | **POST** /item/identifier/post | Item Identifier Post
 *ItemApi* | [**item_list_get**](docs/ItemApi.md#item_list_get) | **GET** /item/list | Item List Get
 *ItemApi* | [**item_max_id_get**](docs/ItemApi.md#item_max_id_get) | **GET** /item/max_id | Item Max Id Get
 *MediaItemApi* | [**media_item_batch_get**](docs/MediaItemApi.md#media_item_batch_get) | **POST** /media_item/get | Media Item Batch Get
@@ -158,9 +158,9 @@ Class | Method | HTTP request | Description
 *MediaItemApi* | [**media_item_get**](docs/MediaItemApi.md#media_item_get) | **GET** /media_item | Media Item Get
 *MediaItemApi* | [**media_item_id_delete**](docs/MediaItemApi.md#media_item_id_delete) | **DELETE** /media_item/{id} | Media Item Id Delete
 *MediaItemApi* | [**media_item_id_get**](docs/MediaItemApi.md#media_item_id_get) | **GET** /media_item/{id} | Media Item Id Get
-*MediaItemApi* | [**media_item_id_identifer_get**](docs/MediaItemApi.md#media_item_id_identifer_get) | **GET** /media_item/{id}/identifer | Media Item Id Identifer Get
-*MediaItemApi* | [**media_item_identifer_delete**](docs/MediaItemApi.md#media_item_identifer_delete) | **POST** /media_item/identifer/delete | Media Item Identifer Delete
-*MediaItemApi* | [**media_item_identifer_post**](docs/MediaItemApi.md#media_item_identifer_post) | **POST** /media_item/identifer/post | Media Item Identifer Post
+*MediaItemApi* | [**media_item_id_identifier_get**](docs/MediaItemApi.md#media_item_id_identifier_get) | **GET** /media_item/{id}/identifier | Media Item Id Identifier Get
+*MediaItemApi* | [**media_item_identifier_delete**](docs/MediaItemApi.md#media_item_identifier_delete) | **POST** /media_item/identifier/delete | Media Item Identifier Delete
+*MediaItemApi* | [**media_item_identifier_post**](docs/MediaItemApi.md#media_item_identifier_post) | **POST** /media_item/identifier/post | Media Item Identifier Post
 *MediaItemApi* | [**media_item_max_id_get**](docs/MediaItemApi.md#media_item_max_id_get) | **GET** /media_item/max_id | Media Item Max Id Get
 *SourceApi* | [**source_batch_get**](docs/SourceApi.md#source_batch_get) | **POST** /source/get | Source Batch Get
 *SourceApi* | [**source_count_get**](docs/SourceApi.md#source_count_get) | **GET** /source/count | Source Count Get
@@ -175,11 +175,11 @@ Class | Method | HTTP request | Description
 *SourceApi* | [**source_id_forward_batch_translate**](docs/SourceApi.md#source_id_forward_batch_translate) | **POST** /source/id/forward | Source Id Forward Batch Translate
 *SourceApi* | [**source_id_forward_translate**](docs/SourceApi.md#source_id_forward_translate) | **GET** /source/id/forward/{id} | Source Id Forward Translate
 *SourceApi* | [**source_id_get**](docs/SourceApi.md#source_id_get) | **GET** /source/{id} | Source Id Get
-*SourceApi* | [**source_id_identifer_get**](docs/SourceApi.md#source_id_identifer_get) | **GET** /source/{id}/identifer | Source Id Identifer Get
+*SourceApi* | [**source_id_identifier_get**](docs/SourceApi.md#source_id_identifier_get) | **GET** /source/{id}/identifier | Source Id Identifier Get
 *SourceApi* | [**source_id_reverse_batch_translate**](docs/SourceApi.md#source_id_reverse_batch_translate) | **POST** /source/id/reverse | Source Id Reverse Batch Translate
 *SourceApi* | [**source_id_reverse_translate**](docs/SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
-*SourceApi* | [**source_identifer_delete**](docs/SourceApi.md#source_identifer_delete) | **POST** /source/identifer/delete | Source Identifer Delete
-*SourceApi* | [**source_identifer_post**](docs/SourceApi.md#source_identifer_post) | **POST** /source/identifer/post | Source Identifer Post
+*SourceApi* | [**source_identifier_delete**](docs/SourceApi.md#source_identifier_delete) | **POST** /source/identifier/delete | Source Identifier Delete
+*SourceApi* | [**source_identifier_post**](docs/SourceApi.md#source_identifier_post) | **POST** /source/identifier/post | Source Identifier Post
 *SourceApi* | [**source_list_get**](docs/SourceApi.md#source_list_get) | **GET** /source/list | Source List Get
 *SourceApi* | [**source_max_id_get**](docs/SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
 

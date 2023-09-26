@@ -44,13 +44,13 @@ class GraphApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def edge_identifer_delete(self, identifier : StrictStr, edge : conlist(Edge), **kwargs) -> str:  # noqa: E501
-        """Edge Identifer Delete  # noqa: E501
+    def edge_identifier_delete(self, identifier : StrictStr, edge : conlist(Edge), **kwargs) -> str:  # noqa: E501
+        """Edge Identifier Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.edge_identifer_delete(identifier, edge, async_req=True)
+        >>> thread = api.edge_identifier_delete(identifier, edge, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -73,16 +73,16 @@ class GraphApi(object):
         :rtype: str
         """
         kwargs['_return_http_data_only'] = True
-        return self.edge_identifer_delete_with_http_info(identifier, edge, **kwargs)  # noqa: E501
+        return self.edge_identifier_delete_with_http_info(identifier, edge, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def edge_identifer_delete_with_http_info(self, identifier : StrictStr, edge : conlist(Edge), **kwargs):  # noqa: E501
-        """Edge Identifer Delete  # noqa: E501
+    def edge_identifier_delete_with_http_info(self, identifier : StrictStr, edge : conlist(Edge), **kwargs):  # noqa: E501
+        """Edge Identifier Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.edge_identifer_delete_with_http_info(identifier, edge, async_req=True)
+        >>> thread = api.edge_identifier_delete_with_http_info(identifier, edge, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -136,7 +136,7 @@ class GraphApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method edge_identifer_delete" % _key
+                    " to method edge_identifier_delete" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -182,7 +182,7 @@ class GraphApi(object):
         }
 
         return self.api_client.call_api(
-            '/graph/edge/identifer/delete', 'DELETE',
+            '/graph/edge/identifier/delete', 'DELETE',
             _path_params,
             _query_params,
             _header_params,
@@ -199,13 +199,13 @@ class GraphApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def edge_identifer_post(self, identifier : StrictStr, edge : conlist(Edge), **kwargs) -> str:  # noqa: E501
-        """Edge Identifer Post  # noqa: E501
+    def edge_identifier_post(self, identifier : StrictStr, edge : conlist(Edge), **kwargs) -> str:  # noqa: E501
+        """Edge Identifier Post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.edge_identifer_post(identifier, edge, async_req=True)
+        >>> thread = api.edge_identifier_post(identifier, edge, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -228,16 +228,16 @@ class GraphApi(object):
         :rtype: str
         """
         kwargs['_return_http_data_only'] = True
-        return self.edge_identifer_post_with_http_info(identifier, edge, **kwargs)  # noqa: E501
+        return self.edge_identifier_post_with_http_info(identifier, edge, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def edge_identifer_post_with_http_info(self, identifier : StrictStr, edge : conlist(Edge), **kwargs):  # noqa: E501
-        """Edge Identifer Post  # noqa: E501
+    def edge_identifier_post_with_http_info(self, identifier : StrictStr, edge : conlist(Edge), **kwargs):  # noqa: E501
+        """Edge Identifier Post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.edge_identifer_post_with_http_info(identifier, edge, async_req=True)
+        >>> thread = api.edge_identifier_post_with_http_info(identifier, edge, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -291,7 +291,7 @@ class GraphApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method edge_identifer_post" % _key
+                    " to method edge_identifier_post" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -338,7 +338,7 @@ class GraphApi(object):
         }
 
         return self.api_client.call_api(
-            '/graph/edge/identifer/post', 'POST',
+            '/graph/edge/identifier/post', 'POST',
             _path_params,
             _query_params,
             _header_params,
@@ -815,13 +815,13 @@ class GraphApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def graph_id_edge_identifer_all_get(self, id : StrictInt, **kwargs) -> List[str]:  # noqa: E501
-        """Graph Id Edge Identifer All Get  # noqa: E501
+    def graph_id_edge_identifier_all_get(self, id : StrictInt, **kwargs) -> List[str]:  # noqa: E501
+        """Graph Id Edge Identifier All Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.graph_id_edge_identifer_all_get(id, async_req=True)
+        >>> thread = api.graph_id_edge_identifier_all_get(id, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -842,16 +842,16 @@ class GraphApi(object):
         :rtype: List[str]
         """
         kwargs['_return_http_data_only'] = True
-        return self.graph_id_edge_identifer_all_get_with_http_info(id, **kwargs)  # noqa: E501
+        return self.graph_id_edge_identifier_all_get_with_http_info(id, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def graph_id_edge_identifer_all_get_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
-        """Graph Id Edge Identifer All Get  # noqa: E501
+    def graph_id_edge_identifier_all_get_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
+        """Graph Id Edge Identifier All Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.graph_id_edge_identifer_all_get_with_http_info(id, async_req=True)
+        >>> thread = api.graph_id_edge_identifier_all_get_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -902,7 +902,7 @@ class GraphApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method graph_id_edge_identifer_all_get" % _key
+                    " to method graph_id_edge_identifier_all_get" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -938,7 +938,7 @@ class GraphApi(object):
         }
 
         return self.api_client.call_api(
-            '/graph/{id}/edge/identifer/all', 'GET',
+            '/graph/{id}/edge/identifier/all', 'GET',
             _path_params,
             _query_params,
             _header_params,
@@ -1102,7 +1102,7 @@ class GraphApi(object):
         }
 
         return self.api_client.call_api(
-            '/graph/{id}/edge/identifer', 'GET',
+            '/graph/{id}/edge/identifier', 'GET',
             _path_params,
             _query_params,
             _header_params,

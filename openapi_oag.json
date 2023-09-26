@@ -166,6 +166,15 @@
                     {
                         "required": false,
                         "schema": {
+                            "title": "Actor Ids",
+                            "type": "string"
+                        },
+                        "name": "actor_ids",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
                             "title": "Identifier",
                             "type": "string"
                         },
@@ -250,6 +259,15 @@
                             "type": "string"
                         },
                         "name": "identifier",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Actor Ids",
+                            "type": "string"
+                        },
+                        "name": "actor_ids",
                         "in": "query"
                     },
                     {
@@ -341,6 +359,15 @@
                             "type": "integer"
                         },
                         "name": "end",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Actor Ids",
+                            "type": "string"
+                        },
+                        "name": "actor_ids",
                         "in": "query"
                     },
                     {
@@ -557,6 +584,15 @@
                     {
                         "required": false,
                         "schema": {
+                            "title": "Actor Ids",
+                            "type": "string"
+                        },
+                        "name": "actor_ids",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
                             "title": "Identifier",
                             "type": "string"
                         },
@@ -628,17 +664,6 @@
                 ],
                 "summary": "Item Batch Get",
                 "operationId": "item_batch_get",
-                "parameters": [
-                    {
-                        "required": false,
-                        "schema": {
-                            "title": "Identifier",
-                            "type": "string"
-                        },
-                        "name": "identifier",
-                        "in": "query"
-                    }
-                ],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -1751,13 +1776,13 @@
                 ]
             }
         },
-        "/item/identifer/post": {
+        "/item/identifier/post": {
             "post": {
                 "tags": [
                     "item"
                 ],
-                "summary": "Item Identifer Post",
-                "operationId": "item_identifer_post",
+                "summary": "Item Identifier Post",
+                "operationId": "item_identifier_post",
                 "parameters": [
                     {
                         "required": true,
@@ -1830,13 +1855,13 @@
                 ]
             }
         },
-        "/item/identifer/delete": {
+        "/item/identifier/delete": {
             "post": {
                 "tags": [
                     "item"
                 ],
-                "summary": "Item Identifer Delete",
-                "operationId": "item_identifer_delete",
+                "summary": "Item Identifier Delete",
+                "operationId": "item_identifier_delete",
                 "parameters": [
                     {
                         "required": true,
@@ -1909,13 +1934,13 @@
                 ]
             }
         },
-        "/item/{id}/identifer": {
+        "/item/{id}/identifier": {
             "get": {
                 "tags": [
                     "item"
                 ],
-                "summary": "Item Id Identifer Get",
-                "operationId": "item_id_identifer_get",
+                "summary": "Item Id Identifier Get",
+                "operationId": "item_id_identifier_get",
                 "parameters": [
                     {
                         "required": true,
@@ -1933,7 +1958,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "title": "Response Item Id Identifer Get Item  Id  Identifer Get",
+                                    "title": "Response Item Id Identifier Get Item  Id  Identifier Get",
                                     "type": "array",
                                     "items": {
                                         "type": "string"
@@ -2375,17 +2400,6 @@
                 ],
                 "summary": "Source Batch Get",
                 "operationId": "source_batch_get",
-                "parameters": [
-                    {
-                        "required": false,
-                        "schema": {
-                            "title": "Identifier",
-                            "type": "string"
-                        },
-                        "name": "identifier",
-                        "in": "query"
-                    }
-                ],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -3382,13 +3396,13 @@
                 ]
             }
         },
-        "/source/identifer/post": {
+        "/source/identifier/post": {
             "post": {
                 "tags": [
                     "source"
                 ],
-                "summary": "Source Identifer Post",
-                "operationId": "source_identifer_post",
+                "summary": "Source Identifier Post",
+                "operationId": "source_identifier_post",
                 "parameters": [
                     {
                         "required": true,
@@ -3461,13 +3475,13 @@
                 ]
             }
         },
-        "/source/identifer/delete": {
+        "/source/identifier/delete": {
             "post": {
                 "tags": [
                     "source"
                 ],
-                "summary": "Source Identifer Delete",
-                "operationId": "source_identifer_delete",
+                "summary": "Source Identifier Delete",
+                "operationId": "source_identifier_delete",
                 "parameters": [
                     {
                         "required": true,
@@ -3540,13 +3554,13 @@
                 ]
             }
         },
-        "/source/{id}/identifer": {
+        "/source/{id}/identifier": {
             "get": {
                 "tags": [
                     "source"
                 ],
-                "summary": "Source Id Identifer Get",
-                "operationId": "source_id_identifer_get",
+                "summary": "Source Id Identifier Get",
+                "operationId": "source_id_identifier_get",
                 "parameters": [
                     {
                         "required": true,
@@ -3564,7 +3578,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "title": "Response Source Id Identifer Get Source  Id  Identifer Get",
+                                    "title": "Response Source Id Identifier Get Source  Id  Identifier Get",
                                     "type": "array",
                                     "items": {
                                         "type": "string"
@@ -5172,13 +5186,13 @@
                 ]
             }
         },
-        "/cluster/identifer/post": {
+        "/cluster/identifier/post": {
             "post": {
                 "tags": [
                     "cluster"
                 ],
-                "summary": "Cluster Identifer Post",
-                "operationId": "cluster_identifer_post",
+                "summary": "Cluster Identifier Post",
+                "operationId": "cluster_identifier_post",
                 "parameters": [
                     {
                         "required": true,
@@ -5251,13 +5265,13 @@
                 ]
             }
         },
-        "/cluster/identifer/delete": {
+        "/cluster/identifier/delete": {
             "post": {
                 "tags": [
                     "cluster"
                 ],
-                "summary": "Cluster Identifer Delete",
-                "operationId": "cluster_identifer_delete",
+                "summary": "Cluster Identifier Delete",
+                "operationId": "cluster_identifier_delete",
                 "parameters": [
                     {
                         "required": true,
@@ -5330,13 +5344,13 @@
                 ]
             }
         },
-        "/cluster/{id}/identifer": {
+        "/cluster/{id}/identifier": {
             "get": {
                 "tags": [
                     "cluster"
                 ],
-                "summary": "Cluster Id Identifer Get",
-                "operationId": "cluster_id_identifer_get",
+                "summary": "Cluster Id Identifier Get",
+                "operationId": "cluster_id_identifier_get",
                 "parameters": [
                     {
                         "required": true,
@@ -5354,7 +5368,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "title": "Response Cluster Id Identifer Get Cluster  Id  Identifer Get",
+                                    "title": "Response Cluster Id Identifier Get Cluster  Id  Identifier Get",
                                     "type": "array",
                                     "items": {
                                         "type": "string"
@@ -5881,13 +5895,13 @@
                 ]
             }
         },
-        "/graph/edge/identifer/post": {
+        "/graph/edge/identifier/post": {
             "post": {
                 "tags": [
                     "graph"
                 ],
-                "summary": "Edge Identifer Post",
-                "operationId": "edge_identifer_post",
+                "summary": "Edge Identifier Post",
+                "operationId": "edge_identifier_post",
                 "parameters": [
                     {
                         "required": true,
@@ -5954,13 +5968,13 @@
                 ]
             }
         },
-        "/graph/edge/identifer/delete": {
+        "/graph/edge/identifier/delete": {
             "delete": {
                 "tags": [
                     "graph"
                 ],
-                "summary": "Edge Identifer Delete",
-                "operationId": "edge_identifer_delete",
+                "summary": "Edge Identifier Delete",
+                "operationId": "edge_identifier_delete",
                 "parameters": [
                     {
                         "required": true,
@@ -6021,13 +6035,13 @@
                 ]
             }
         },
-        "/graph/{id}/edge/identifer/all": {
+        "/graph/{id}/edge/identifier/all": {
             "get": {
                 "tags": [
                     "graph"
                 ],
-                "summary": "Graph Id Edge Identifer All Get",
-                "operationId": "graph_id_edge_identifer_all_get",
+                "summary": "Graph Id Edge Identifier All Get",
+                "operationId": "graph_id_edge_identifier_all_get",
                 "parameters": [
                     {
                         "required": true,
@@ -6045,7 +6059,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "title": "Response Graph Id Edge Identifer All Get Graph  Id  Edge Identifer All Get",
+                                    "title": "Response Graph Id Edge Identifier All Get Graph  Id  Edge Identifier All Get",
                                     "type": "array",
                                     "items": {
                                         "type": "string"
@@ -6078,7 +6092,7 @@
                 ]
             }
         },
-        "/graph/{id}/edge/identifer": {
+        "/graph/{id}/edge/identifier": {
             "get": {
                 "tags": [
                     "graph"
@@ -6129,7 +6143,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "title": "Response Graph Id Edge Identifier Get Graph  Id  Edge Identifer Get",
+                                    "title": "Response Graph Id Edge Identifier Get Graph  Id  Edge Identifier Get",
                                     "type": "array",
                                     "items": {
                                         "type": "string"
@@ -6544,13 +6558,13 @@
                 ]
             }
         },
-        "/media_item/identifer/post": {
+        "/media_item/identifier/post": {
             "post": {
                 "tags": [
                     "media_item"
                 ],
-                "summary": "Media Item Identifer Post",
-                "operationId": "media_item_identifer_post",
+                "summary": "Media Item Identifier Post",
+                "operationId": "media_item_identifier_post",
                 "parameters": [
                     {
                         "required": true,
@@ -6623,13 +6637,13 @@
                 ]
             }
         },
-        "/media_item/identifer/delete": {
+        "/media_item/identifier/delete": {
             "post": {
                 "tags": [
                     "media_item"
                 ],
-                "summary": "Media Item Identifer Delete",
-                "operationId": "media_item_identifer_delete",
+                "summary": "Media Item Identifier Delete",
+                "operationId": "media_item_identifier_delete",
                 "parameters": [
                     {
                         "required": true,
@@ -6702,13 +6716,13 @@
                 ]
             }
         },
-        "/media_item/{id}/identifer": {
+        "/media_item/{id}/identifier": {
             "get": {
                 "tags": [
                     "media_item"
                 ],
-                "summary": "Media Item Id Identifer Get",
-                "operationId": "media_item_id_identifer_get",
+                "summary": "Media Item Id Identifier Get",
+                "operationId": "media_item_id_identifier_get",
                 "parameters": [
                     {
                         "required": true,
@@ -6726,7 +6740,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "title": "Response Media Item Id Identifer Get Media Item  Id  Identifer Get",
+                                    "title": "Response Media Item Id Identifier Get Media Item  Id  Identifier Get",
                                     "type": "array",
                                     "items": {
                                         "type": "string"
@@ -6795,13 +6809,13 @@
                 ]
             }
         },
-        "/identifer/delete": {
+        "/identifier/delete": {
             "get": {
                 "tags": [
                     "identifier"
                 ],
-                "summary": "Identifer Delete",
-                "operationId": "identifer_delete",
+                "summary": "Identifier Delete",
+                "operationId": "identifier_delete",
                 "parameters": [
                     {
                         "required": true,

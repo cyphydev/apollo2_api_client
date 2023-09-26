@@ -2085,13 +2085,13 @@ class ClusterApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def cluster_id_identifer_get(self, id : StrictInt, **kwargs) -> List[str]:  # noqa: E501
-        """Cluster Id Identifer Get  # noqa: E501
+    def cluster_id_identifier_get(self, id : StrictInt, **kwargs) -> List[str]:  # noqa: E501
+        """Cluster Id Identifier Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.cluster_id_identifer_get(id, async_req=True)
+        >>> thread = api.cluster_id_identifier_get(id, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -2112,16 +2112,16 @@ class ClusterApi(object):
         :rtype: List[str]
         """
         kwargs['_return_http_data_only'] = True
-        return self.cluster_id_identifer_get_with_http_info(id, **kwargs)  # noqa: E501
+        return self.cluster_id_identifier_get_with_http_info(id, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def cluster_id_identifer_get_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
-        """Cluster Id Identifer Get  # noqa: E501
+    def cluster_id_identifier_get_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
+        """Cluster Id Identifier Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.cluster_id_identifer_get_with_http_info(id, async_req=True)
+        >>> thread = api.cluster_id_identifier_get_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -2172,7 +2172,7 @@ class ClusterApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method cluster_id_identifer_get" % _key
+                    " to method cluster_id_identifier_get" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -2209,7 +2209,7 @@ class ClusterApi(object):
         }
 
         return self.api_client.call_api(
-            '/cluster/{id}/identifer', 'GET',
+            '/cluster/{id}/identifier', 'GET',
             _path_params,
             _query_params,
             _header_params,
@@ -2673,13 +2673,13 @@ class ClusterApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def cluster_identifer_delete(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
-        """Cluster Identifer Delete  # noqa: E501
+    def cluster_identifier_delete(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
+        """Cluster Identifier Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.cluster_identifer_delete(identifier, request_body, async_req=True)
+        >>> thread = api.cluster_identifier_delete(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -2702,16 +2702,16 @@ class ClusterApi(object):
         :rtype: str
         """
         kwargs['_return_http_data_only'] = True
-        return self.cluster_identifer_delete_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
+        return self.cluster_identifier_delete_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def cluster_identifer_delete_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
-        """Cluster Identifer Delete  # noqa: E501
+    def cluster_identifier_delete_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
+        """Cluster Identifier Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.cluster_identifer_delete_with_http_info(identifier, request_body, async_req=True)
+        >>> thread = api.cluster_identifier_delete_with_http_info(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -2765,7 +2765,7 @@ class ClusterApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method cluster_identifer_delete" % _key
+                    " to method cluster_identifier_delete" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -2813,7 +2813,7 @@ class ClusterApi(object):
         }
 
         return self.api_client.call_api(
-            '/cluster/identifer/delete', 'POST',
+            '/cluster/identifier/delete', 'POST',
             _path_params,
             _query_params,
             _header_params,
@@ -2830,13 +2830,13 @@ class ClusterApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def cluster_identifer_post(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
-        """Cluster Identifer Post  # noqa: E501
+    def cluster_identifier_post(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
+        """Cluster Identifier Post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.cluster_identifer_post(identifier, request_body, async_req=True)
+        >>> thread = api.cluster_identifier_post(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -2859,16 +2859,16 @@ class ClusterApi(object):
         :rtype: str
         """
         kwargs['_return_http_data_only'] = True
-        return self.cluster_identifer_post_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
+        return self.cluster_identifier_post_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def cluster_identifer_post_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
-        """Cluster Identifer Post  # noqa: E501
+    def cluster_identifier_post_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
+        """Cluster Identifier Post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.cluster_identifer_post_with_http_info(identifier, request_body, async_req=True)
+        >>> thread = api.cluster_identifier_post_with_http_info(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -2922,7 +2922,7 @@ class ClusterApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method cluster_identifer_post" % _key
+                    " to method cluster_identifier_post" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -2970,7 +2970,7 @@ class ClusterApi(object):
         }
 
         return self.api_client.call_api(
-            '/cluster/identifer/post', 'POST',
+            '/cluster/identifier/post', 'POST',
             _path_params,
             _query_params,
             _header_params,

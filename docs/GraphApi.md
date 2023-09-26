@@ -4,23 +4,23 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**edge_identifer_delete**](GraphApi.md#edge_identifer_delete) | **DELETE** /graph/edge/identifer/delete | Edge Identifer Delete
-[**edge_identifer_post**](GraphApi.md#edge_identifer_post) | **POST** /graph/edge/identifer/post | Edge Identifer Post
+[**edge_identifier_delete**](GraphApi.md#edge_identifier_delete) | **DELETE** /graph/edge/identifier/delete | Edge Identifier Delete
+[**edge_identifier_post**](GraphApi.md#edge_identifier_post) | **POST** /graph/edge/identifier/post | Edge Identifier Post
 [**graph_get**](GraphApi.md#graph_get) | **GET** /graph | Graph Get
 [**graph_id_delete**](GraphApi.md#graph_id_delete) | **DELETE** /graph/{id} | Graph Id Delete
 [**graph_id_delete_edges_post**](GraphApi.md#graph_id_delete_edges_post) | **POST** /graph/{id}/delete_edges | Graph Id Delete Edges Post
-[**graph_id_edge_identifer_all_get**](GraphApi.md#graph_id_edge_identifer_all_get) | **GET** /graph/{id}/edge/identifer/all | Graph Id Edge Identifer All Get
-[**graph_id_edge_identifier_get**](GraphApi.md#graph_id_edge_identifier_get) | **GET** /graph/{id}/edge/identifer | Graph Id Edge Identifier Get
+[**graph_id_edge_identifier_all_get**](GraphApi.md#graph_id_edge_identifier_all_get) | **GET** /graph/{id}/edge/identifier/all | Graph Id Edge Identifier All Get
+[**graph_id_edge_identifier_get**](GraphApi.md#graph_id_edge_identifier_get) | **GET** /graph/{id}/edge/identifier | Graph Id Edge Identifier Get
 [**graph_id_edges_get**](GraphApi.md#graph_id_edges_get) | **GET** /graph/{id}/edges | Graph Id Edges Get
 [**graph_id_edit_edges_post**](GraphApi.md#graph_id_edit_edges_post) | **POST** /graph/{id}/edit_edges | Graph Id Edit Edges Post
 [**graph_id_get**](GraphApi.md#graph_id_get) | **GET** /graph/{id} | Graph Id Get
 [**graph_post**](GraphApi.md#graph_post) | **POST** /graph | Graph Post
 
 
-# **edge_identifer_delete**
-> str edge_identifer_delete(identifier, edge)
+# **edge_identifier_delete**
+> str edge_identifier_delete(identifier, edge)
 
-Edge Identifer Delete
+Edge Identifier Delete
 
 ### Example
 
@@ -57,12 +57,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     edge = [apollo2_api_client.Edge()] # List[Edge] | 
 
     try:
-        # Edge Identifer Delete
-        api_response = api_instance.edge_identifer_delete(identifier, edge)
-        print("The response of GraphApi->edge_identifer_delete:\n")
+        # Edge Identifier Delete
+        api_response = api_instance.edge_identifier_delete(identifier, edge)
+        print("The response of GraphApi->edge_identifier_delete:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling GraphApi->edge_identifer_delete: %s\n" % e)
+        print("Exception when calling GraphApi->edge_identifier_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -94,10 +94,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **edge_identifer_post**
-> str edge_identifer_post(identifier, edge)
+# **edge_identifier_post**
+> str edge_identifier_post(identifier, edge)
 
-Edge Identifer Post
+Edge Identifier Post
 
 ### Example
 
@@ -134,12 +134,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     edge = [apollo2_api_client.Edge()] # List[Edge] | 
 
     try:
-        # Edge Identifer Post
-        api_response = api_instance.edge_identifer_post(identifier, edge)
-        print("The response of GraphApi->edge_identifer_post:\n")
+        # Edge Identifier Post
+        api_response = api_instance.edge_identifier_post(identifier, edge)
+        print("The response of GraphApi->edge_identifier_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling GraphApi->edge_identifer_post: %s\n" % e)
+        print("Exception when calling GraphApi->edge_identifier_post: %s\n" % e)
 ```
 
 ### Parameters
@@ -406,10 +406,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **graph_id_edge_identifer_all_get**
-> List[str] graph_id_edge_identifer_all_get(id)
+# **graph_id_edge_identifier_all_get**
+> List[str] graph_id_edge_identifier_all_get(id)
 
-Graph Id Edge Identifer All Get
+Graph Id Edge Identifier All Get
 
 ### Example
 
@@ -445,12 +445,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        # Graph Id Edge Identifer All Get
-        api_response = api_instance.graph_id_edge_identifer_all_get(id)
-        print("The response of GraphApi->graph_id_edge_identifer_all_get:\n")
+        # Graph Id Edge Identifier All Get
+        api_response = api_instance.graph_id_edge_identifier_all_get(id)
+        print("The response of GraphApi->graph_id_edge_identifier_all_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling GraphApi->graph_id_edge_identifer_all_get: %s\n" % e)
+        print("Exception when calling GraphApi->graph_id_edge_identifier_all_get: %s\n" % e)
 ```
 
 ### Parameters

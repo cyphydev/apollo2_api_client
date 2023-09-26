@@ -9,9 +9,9 @@ Method | HTTP request | Description
 [**media_item_get**](MediaItemApi.md#media_item_get) | **GET** /media_item | Media Item Get
 [**media_item_id_delete**](MediaItemApi.md#media_item_id_delete) | **DELETE** /media_item/{id} | Media Item Id Delete
 [**media_item_id_get**](MediaItemApi.md#media_item_id_get) | **GET** /media_item/{id} | Media Item Id Get
-[**media_item_id_identifer_get**](MediaItemApi.md#media_item_id_identifer_get) | **GET** /media_item/{id}/identifer | Media Item Id Identifer Get
-[**media_item_identifer_delete**](MediaItemApi.md#media_item_identifer_delete) | **POST** /media_item/identifer/delete | Media Item Identifer Delete
-[**media_item_identifer_post**](MediaItemApi.md#media_item_identifer_post) | **POST** /media_item/identifer/post | Media Item Identifer Post
+[**media_item_id_identifier_get**](MediaItemApi.md#media_item_id_identifier_get) | **GET** /media_item/{id}/identifier | Media Item Id Identifier Get
+[**media_item_identifier_delete**](MediaItemApi.md#media_item_identifier_delete) | **POST** /media_item/identifier/delete | Media Item Identifier Delete
+[**media_item_identifier_post**](MediaItemApi.md#media_item_identifier_post) | **POST** /media_item/identifier/post | Media Item Identifier Post
 [**media_item_max_id_get**](MediaItemApi.md#media_item_max_id_get) | **GET** /media_item/max_id | Media Item Max Id Get
 
 
@@ -403,10 +403,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **media_item_id_identifer_get**
-> List[str] media_item_id_identifer_get(id)
+# **media_item_id_identifier_get**
+> List[str] media_item_id_identifier_get(id)
 
-Media Item Id Identifer Get
+Media Item Id Identifier Get
 
 ### Example
 
@@ -442,12 +442,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        # Media Item Id Identifer Get
-        api_response = api_instance.media_item_id_identifer_get(id)
-        print("The response of MediaItemApi->media_item_id_identifer_get:\n")
+        # Media Item Id Identifier Get
+        api_response = api_instance.media_item_id_identifier_get(id)
+        print("The response of MediaItemApi->media_item_id_identifier_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling MediaItemApi->media_item_id_identifer_get: %s\n" % e)
+        print("Exception when calling MediaItemApi->media_item_id_identifier_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -479,10 +479,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **media_item_identifer_delete**
-> str media_item_identifer_delete(identifier, request_body)
+# **media_item_identifier_delete**
+> str media_item_identifier_delete(identifier, request_body)
 
-Media Item Identifer Delete
+Media Item Identifier Delete
 
 ### Example
 
@@ -519,12 +519,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     request_body = [56] # List[int] | 
 
     try:
-        # Media Item Identifer Delete
-        api_response = api_instance.media_item_identifer_delete(identifier, request_body)
-        print("The response of MediaItemApi->media_item_identifer_delete:\n")
+        # Media Item Identifier Delete
+        api_response = api_instance.media_item_identifier_delete(identifier, request_body)
+        print("The response of MediaItemApi->media_item_identifier_delete:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling MediaItemApi->media_item_identifer_delete: %s\n" % e)
+        print("Exception when calling MediaItemApi->media_item_identifier_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -558,10 +558,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **media_item_identifer_post**
-> str media_item_identifer_post(identifier, request_body)
+# **media_item_identifier_post**
+> str media_item_identifier_post(identifier, request_body)
 
-Media Item Identifer Post
+Media Item Identifier Post
 
 ### Example
 
@@ -598,12 +598,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     request_body = [56] # List[int] | 
 
     try:
-        # Media Item Identifer Post
-        api_response = api_instance.media_item_identifer_post(identifier, request_body)
-        print("The response of MediaItemApi->media_item_identifer_post:\n")
+        # Media Item Identifier Post
+        api_response = api_instance.media_item_identifier_post(identifier, request_body)
+        print("The response of MediaItemApi->media_item_identifier_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling MediaItemApi->media_item_identifer_post: %s\n" % e)
+        print("Exception when calling MediaItemApi->media_item_identifier_post: %s\n" % e)
 ```
 
 ### Parameters

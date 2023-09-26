@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**identifer_delete**](IdentifierApi.md#identifer_delete) | **GET** /identifer/delete | Identifer Delete
+[**identifier_delete**](IdentifierApi.md#identifier_delete) | **GET** /identifier/delete | Identifier Delete
 [**identifier_list**](IdentifierApi.md#identifier_list) | **GET** /identifier/list | Identifier List
 
 
-# **identifer_delete**
-> str identifer_delete(identifier)
+# **identifier_delete**
+> str identifier_delete(identifier)
 
-Identifer Delete
+Identifier Delete
 
 ### Example
 
@@ -47,12 +47,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     identifier = 'identifier_example' # str | 
 
     try:
-        # Identifer Delete
-        api_response = api_instance.identifer_delete(identifier)
-        print("The response of IdentifierApi->identifer_delete:\n")
+        # Identifier Delete
+        api_response = api_instance.identifier_delete(identifier)
+        print("The response of IdentifierApi->identifier_delete:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling IdentifierApi->identifer_delete: %s\n" % e)
+        print("Exception when calling IdentifierApi->identifier_delete: %s\n" % e)
 ```
 
 ### Parameters

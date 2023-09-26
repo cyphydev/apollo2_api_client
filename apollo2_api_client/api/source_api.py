@@ -47,19 +47,17 @@ class SourceApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def source_batch_get(self, batch_get_request : BatchGetRequest, identifier : Optional[StrictStr] = None, **kwargs) -> List[Source]:  # noqa: E501
+    def source_batch_get(self, batch_get_request : BatchGetRequest, **kwargs) -> List[Source]:  # noqa: E501
         """Source Batch Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.source_batch_get(batch_get_request, identifier, async_req=True)
+        >>> thread = api.source_batch_get(batch_get_request, async_req=True)
         >>> result = thread.get()
 
         :param batch_get_request: (required)
         :type batch_get_request: BatchGetRequest
-        :param identifier:
-        :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -76,22 +74,20 @@ class SourceApi(object):
         :rtype: List[Source]
         """
         kwargs['_return_http_data_only'] = True
-        return self.source_batch_get_with_http_info(batch_get_request, identifier, **kwargs)  # noqa: E501
+        return self.source_batch_get_with_http_info(batch_get_request, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def source_batch_get_with_http_info(self, batch_get_request : BatchGetRequest, identifier : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+    def source_batch_get_with_http_info(self, batch_get_request : BatchGetRequest, **kwargs):  # noqa: E501
         """Source Batch Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.source_batch_get_with_http_info(batch_get_request, identifier, async_req=True)
+        >>> thread = api.source_batch_get_with_http_info(batch_get_request, async_req=True)
         >>> result = thread.get()
 
         :param batch_get_request: (required)
         :type batch_get_request: BatchGetRequest
-        :param identifier:
-        :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -119,8 +115,7 @@ class SourceApi(object):
         _params = locals()
 
         _all_params = [
-            'batch_get_request',
-            'identifier'
+            'batch_get_request'
         ]
         _all_params.extend(
             [
@@ -151,9 +146,6 @@ class SourceApi(object):
 
         # process the query parameters
         _query_params = []
-        if _params.get('identifier') is not None:  # noqa: E501
-            _query_params.append(('identifier', _params['identifier']))
-
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
         # process the form parameters
@@ -2232,13 +2224,13 @@ class SourceApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def source_id_identifer_get(self, id : StrictInt, **kwargs) -> List[str]:  # noqa: E501
-        """Source Id Identifer Get  # noqa: E501
+    def source_id_identifier_get(self, id : StrictInt, **kwargs) -> List[str]:  # noqa: E501
+        """Source Id Identifier Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.source_id_identifer_get(id, async_req=True)
+        >>> thread = api.source_id_identifier_get(id, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -2259,16 +2251,16 @@ class SourceApi(object):
         :rtype: List[str]
         """
         kwargs['_return_http_data_only'] = True
-        return self.source_id_identifer_get_with_http_info(id, **kwargs)  # noqa: E501
+        return self.source_id_identifier_get_with_http_info(id, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def source_id_identifer_get_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
-        """Source Id Identifer Get  # noqa: E501
+    def source_id_identifier_get_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
+        """Source Id Identifier Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.source_id_identifer_get_with_http_info(id, async_req=True)
+        >>> thread = api.source_id_identifier_get_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -2319,7 +2311,7 @@ class SourceApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method source_id_identifer_get" % _key
+                    " to method source_id_identifier_get" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -2356,7 +2348,7 @@ class SourceApi(object):
         }
 
         return self.api_client.call_api(
-            '/source/{id}/identifer', 'GET',
+            '/source/{id}/identifier', 'GET',
             _path_params,
             _query_params,
             _header_params,
@@ -2662,13 +2654,13 @@ class SourceApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def source_identifer_delete(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
-        """Source Identifer Delete  # noqa: E501
+    def source_identifier_delete(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
+        """Source Identifier Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.source_identifer_delete(identifier, request_body, async_req=True)
+        >>> thread = api.source_identifier_delete(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -2691,16 +2683,16 @@ class SourceApi(object):
         :rtype: str
         """
         kwargs['_return_http_data_only'] = True
-        return self.source_identifer_delete_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
+        return self.source_identifier_delete_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def source_identifer_delete_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
-        """Source Identifer Delete  # noqa: E501
+    def source_identifier_delete_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
+        """Source Identifier Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.source_identifer_delete_with_http_info(identifier, request_body, async_req=True)
+        >>> thread = api.source_identifier_delete_with_http_info(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -2754,7 +2746,7 @@ class SourceApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method source_identifer_delete" % _key
+                    " to method source_identifier_delete" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -2802,7 +2794,7 @@ class SourceApi(object):
         }
 
         return self.api_client.call_api(
-            '/source/identifer/delete', 'POST',
+            '/source/identifier/delete', 'POST',
             _path_params,
             _query_params,
             _header_params,
@@ -2819,13 +2811,13 @@ class SourceApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def source_identifer_post(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
-        """Source Identifer Post  # noqa: E501
+    def source_identifier_post(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs) -> str:  # noqa: E501
+        """Source Identifier Post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.source_identifer_post(identifier, request_body, async_req=True)
+        >>> thread = api.source_identifier_post(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -2848,16 +2840,16 @@ class SourceApi(object):
         :rtype: str
         """
         kwargs['_return_http_data_only'] = True
-        return self.source_identifer_post_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
+        return self.source_identifier_post_with_http_info(identifier, request_body, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def source_identifer_post_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
-        """Source Identifer Post  # noqa: E501
+    def source_identifier_post_with_http_info(self, identifier : StrictStr, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
+        """Source Identifier Post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.source_identifer_post_with_http_info(identifier, request_body, async_req=True)
+        >>> thread = api.source_identifier_post_with_http_info(identifier, request_body, async_req=True)
         >>> result = thread.get()
 
         :param identifier: (required)
@@ -2911,7 +2903,7 @@ class SourceApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method source_identifer_post" % _key
+                    " to method source_identifier_post" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -2959,7 +2951,7 @@ class SourceApi(object):
         }
 
         return self.api_client.call_api(
-            '/source/identifer/post', 'POST',
+            '/source/identifier/post', 'POST',
             _path_params,
             _query_params,
             _header_params,
