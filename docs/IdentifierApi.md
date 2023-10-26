@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**identifier_delete**](IdentifierApi.md#identifier_delete) | **GET** /identifier/delete | Identifier Delete
+[**identifier_delete**](IdentifierApi.md#identifier_delete) | **DELETE** /identifier/delete | Identifier Delete
 [**identifier_list**](IdentifierApi.md#identifier_list) | **GET** /identifier/list | Identifier List
 
 

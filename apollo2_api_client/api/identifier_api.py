@@ -164,7 +164,7 @@ class IdentifierApi(object):
         }
 
         return self.api_client.call_api(
-            '/identifier/delete', 'GET',
+            '/identifier/delete', 'DELETE',
             _path_params,
             _query_params,
             _header_params,
