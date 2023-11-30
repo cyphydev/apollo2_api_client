@@ -155,7 +155,17 @@ class IncasOffset(BaseModel):
 
 
 class IncasRedditData(BaseModel):
-    pass
+    author: Optional[str] = None
+    author_awardee_karma: Optional[int] = None
+    author_awarder_karma: Optional[int] = None
+    author_karma: Optional[int] = None
+    comments: Optional[int] = None
+    engagement_type: Optional[str] = None
+    parent_post_id: Optional[str] = None
+    reddit_post_id: Optional[str] = None
+    subreddit: Optional[str] = None
+    subreddit_subscribers: Optional[int] = None
+    upvote_ratio: Optional[float] = None
 
 
 class IncasTwitterData(BaseModel):
@@ -167,9 +177,7 @@ class IncasTwitterData(BaseModel):
     mentioned_users: Optional[List[str]] = Field(None, title='Mentioned Users')
     retweet_count: Optional[int] = Field(None, title='Retweet Count')
     tweet_id: Optional[str] = Field(None, title='Tweet Id')
-    twitter_author_screenname: Optional[str] = Field(
-        None, title='Twitter Author Screenname'
-    )
+    twitter_author_screenname: Optional[str] = Field(None, title='Twitter Author Screenname')
     twitter_user_id: Optional[str] = Field(None, title='Twitter User Id')
 
 
