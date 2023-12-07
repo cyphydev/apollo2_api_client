@@ -115,9 +115,9 @@ Class | Method | HTTP request | Description
 *ClusterApi* | [**cluster_identifier_post**](docs/ClusterApi.md#cluster_identifier_post) | **POST** /cluster/identifier/post | Cluster Identifier Post
 *ClusterApi* | [**cluster_post**](docs/ClusterApi.md#cluster_post) | **POST** /cluster | Cluster Post
 *DefaultApi* | [**ping_get**](docs/DefaultApi.md#ping_get) | **GET** /ping | Ping Get
-*EnrichmentApi* | [**enrichments_meta_delete**](docs/EnrichmentApi.md#enrichments_meta_delete) | **DELETE** /enrichments/meta | Enrichments Meta Delete
-*EnrichmentApi* | [**enrichments_meta_get**](docs/EnrichmentApi.md#enrichments_meta_get) | **GET** /enrichments/meta | Enrichments Meta Get
-*EnrichmentApi* | [**enrichments_meta_post**](docs/EnrichmentApi.md#enrichments_meta_post) | **POST** /enrichments/meta | Enrichments Meta Post
+*EnrichmentApi* | [**enrichment_meta_delete**](docs/EnrichmentApi.md#enrichment_meta_delete) | **DELETE** /enrichment/meta | Enrichment Meta Delete
+*EnrichmentApi* | [**enrichment_meta_get**](docs/EnrichmentApi.md#enrichment_meta_get) | **GET** /enrichment/meta | Enrichment Meta Get
+*EnrichmentApi* | [**enrichment_meta_post**](docs/EnrichmentApi.md#enrichment_meta_post) | **POST** /enrichment/meta | Enrichment Meta Post
 *GraphApi* | [**edge_identifier_delete**](docs/GraphApi.md#edge_identifier_delete) | **DELETE** /graph/edge/identifier/delete | Edge Identifier Delete
 *GraphApi* | [**edge_identifier_post**](docs/GraphApi.md#edge_identifier_post) | **POST** /graph/edge/identifier/post | Edge Identifier Post
 *GraphApi* | [**graph_get**](docs/GraphApi.md#graph_get) | **GET** /graph | Graph Get
@@ -129,7 +129,7 @@ Class | Method | HTTP request | Description
 *GraphApi* | [**graph_id_edit_edges_post**](docs/GraphApi.md#graph_id_edit_edges_post) | **POST** /graph/{id}/edit_edges | Graph Id Edit Edges Post
 *GraphApi* | [**graph_id_get**](docs/GraphApi.md#graph_id_get) | **GET** /graph/{id} | Graph Id Get
 *GraphApi* | [**graph_post**](docs/GraphApi.md#graph_post) | **POST** /graph | Graph Post
-*IdentifierApi* | [**identifier_delete**](docs/IdentifierApi.md#identifier_delete) | **GET** /identifier/delete | Identifier Delete
+*IdentifierApi* | [**identifier_delete**](docs/IdentifierApi.md#identifier_delete) | **DELETE** /identifier/delete | Identifier Delete
 *IdentifierApi* | [**identifier_list**](docs/IdentifierApi.md#identifier_list) | **GET** /identifier/list | Identifier List
 *ItemApi* | [**item_attach_media_post**](docs/ItemApi.md#item_attach_media_post) | **POST** /item/attach_media | Item Attach Media Post
 *ItemApi* | [**item_batch_get**](docs/ItemApi.md#item_batch_get) | **POST** /item/get | Item Batch Get
@@ -144,10 +144,12 @@ Class | Method | HTTP request | Description
 *ItemApi* | [**item_id_enrichments_get**](docs/ItemApi.md#item_id_enrichments_get) | **GET** /item/{id}/enrichments | Item Id Enrichments Get
 *ItemApi* | [**item_id_enrichments_post**](docs/ItemApi.md#item_id_enrichments_post) | **POST** /item/{id}/enrichments | Item Id Enrichments Post
 *ItemApi* | [**item_id_forward_batch_translate**](docs/ItemApi.md#item_id_forward_batch_translate) | **POST** /item/id/forward | Item Id Forward Batch Translate
+*ItemApi* | [**item_id_forward_batch_translate_map**](docs/ItemApi.md#item_id_forward_batch_translate_map) | **POST** /item/id/forward/map | Item Id Forward Batch Translate Map
 *ItemApi* | [**item_id_forward_translate**](docs/ItemApi.md#item_id_forward_translate) | **GET** /item/id/forward/{id} | Item Id Forward Translate
 *ItemApi* | [**item_id_get**](docs/ItemApi.md#item_id_get) | **GET** /item/{id} | Item Id Get
 *ItemApi* | [**item_id_identifier_get**](docs/ItemApi.md#item_id_identifier_get) | **GET** /item/{id}/identifier | Item Id Identifier Get
 *ItemApi* | [**item_id_reverse_batch_translate**](docs/ItemApi.md#item_id_reverse_batch_translate) | **POST** /item/id/reverse | Item Id Reverse Batch Translate
+*ItemApi* | [**item_id_reverse_batch_translate_map**](docs/ItemApi.md#item_id_reverse_batch_translate_map) | **POST** /item/id/reverse/map | Item Id Reverse Batch Translate Map
 *ItemApi* | [**item_id_reverse_translate**](docs/ItemApi.md#item_id_reverse_translate) | **GET** /item/id/reverse/{id} | Item Id Reverse Translate
 *ItemApi* | [**item_identifier_delete**](docs/ItemApi.md#item_identifier_delete) | **POST** /item/identifier/delete | Item Identifier Delete
 *ItemApi* | [**item_identifier_post**](docs/ItemApi.md#item_identifier_post) | **POST** /item/identifier/post | Item Identifier Post
@@ -173,10 +175,12 @@ Class | Method | HTTP request | Description
 *SourceApi* | [**source_id_enrichments_get**](docs/SourceApi.md#source_id_enrichments_get) | **GET** /source/{id}/enrichments | Source Id Enrichments Get
 *SourceApi* | [**source_id_enrichments_post**](docs/SourceApi.md#source_id_enrichments_post) | **POST** /source/{id}/enrichments | Source Id Enrichments Post
 *SourceApi* | [**source_id_forward_batch_translate**](docs/SourceApi.md#source_id_forward_batch_translate) | **POST** /source/id/forward | Source Id Forward Batch Translate
+*SourceApi* | [**source_id_forward_batch_translate_map**](docs/SourceApi.md#source_id_forward_batch_translate_map) | **POST** /source/id/forward/map | Source Id Forward Batch Translate Map
 *SourceApi* | [**source_id_forward_translate**](docs/SourceApi.md#source_id_forward_translate) | **GET** /source/id/forward/{id} | Source Id Forward Translate
 *SourceApi* | [**source_id_get**](docs/SourceApi.md#source_id_get) | **GET** /source/{id} | Source Id Get
 *SourceApi* | [**source_id_identifier_get**](docs/SourceApi.md#source_id_identifier_get) | **GET** /source/{id}/identifier | Source Id Identifier Get
 *SourceApi* | [**source_id_reverse_batch_translate**](docs/SourceApi.md#source_id_reverse_batch_translate) | **POST** /source/id/reverse | Source Id Reverse Batch Translate
+*SourceApi* | [**source_id_reverse_batch_translate_map**](docs/SourceApi.md#source_id_reverse_batch_translate_map) | **POST** /source/id/reverse/map | Source Id Reverse Batch Translate Map
 *SourceApi* | [**source_id_reverse_translate**](docs/SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
 *SourceApi* | [**source_identifier_delete**](docs/SourceApi.md#source_identifier_delete) | **POST** /source/identifier/delete | Source Identifier Delete
 *SourceApi* | [**source_identifier_post**](docs/SourceApi.md#source_identifier_post) | **POST** /source/identifier/post | Source Identifier Post
@@ -216,6 +220,7 @@ Class | Method | HTTP request | Description
  - [IncasMessage](docs/IncasMessage.md)
  - [IncasOffset](docs/IncasOffset.md)
  - [IncasOneOfMediaTypeAttributes](docs/IncasOneOfMediaTypeAttributes.md)
+ - [IncasRedditData](docs/IncasRedditData.md)
  - [IncasSegment](docs/IncasSegment.md)
  - [IncasTwitterData](docs/IncasTwitterData.md)
  - [Item](docs/Item.md)

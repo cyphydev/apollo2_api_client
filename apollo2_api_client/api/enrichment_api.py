@@ -43,13 +43,13 @@ class EnrichmentApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def enrichments_meta_delete(self, name : StrictStr, provider : StrictStr, tag : StrictStr, version : StrictStr, force : StrictBool, **kwargs) -> str:  # noqa: E501
-        """Enrichments Meta Delete  # noqa: E501
+    def enrichment_meta_delete(self, name : StrictStr, provider : StrictStr, tag : StrictStr, version : StrictStr, force : StrictBool, **kwargs) -> str:  # noqa: E501
+        """Enrichment Meta Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.enrichments_meta_delete(name, provider, tag, version, force, async_req=True)
+        >>> thread = api.enrichment_meta_delete(name, provider, tag, version, force, async_req=True)
         >>> result = thread.get()
 
         :param name: (required)
@@ -78,16 +78,16 @@ class EnrichmentApi(object):
         :rtype: str
         """
         kwargs['_return_http_data_only'] = True
-        return self.enrichments_meta_delete_with_http_info(name, provider, tag, version, force, **kwargs)  # noqa: E501
+        return self.enrichment_meta_delete_with_http_info(name, provider, tag, version, force, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def enrichments_meta_delete_with_http_info(self, name : StrictStr, provider : StrictStr, tag : StrictStr, version : StrictStr, force : StrictBool, **kwargs):  # noqa: E501
-        """Enrichments Meta Delete  # noqa: E501
+    def enrichment_meta_delete_with_http_info(self, name : StrictStr, provider : StrictStr, tag : StrictStr, version : StrictStr, force : StrictBool, **kwargs):  # noqa: E501
+        """Enrichment Meta Delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.enrichments_meta_delete_with_http_info(name, provider, tag, version, force, async_req=True)
+        >>> thread = api.enrichment_meta_delete_with_http_info(name, provider, tag, version, force, async_req=True)
         >>> result = thread.get()
 
         :param name: (required)
@@ -150,7 +150,7 @@ class EnrichmentApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method enrichments_meta_delete" % _key
+                    " to method enrichment_meta_delete" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -199,7 +199,7 @@ class EnrichmentApi(object):
         }
 
         return self.api_client.call_api(
-            '/enrichments/meta', 'DELETE',
+            '/enrichment/meta', 'DELETE',
             _path_params,
             _query_params,
             _header_params,
@@ -216,13 +216,13 @@ class EnrichmentApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def enrichments_meta_get(self, name : Optional[StrictStr] = None, provider : Optional[StrictStr] = None, tag : Optional[StrictStr] = None, version : Optional[StrictStr] = None, **kwargs) -> List[EnrichmentMeta]:  # noqa: E501
-        """Enrichments Meta Get  # noqa: E501
+    def enrichment_meta_get(self, name : Optional[StrictStr] = None, provider : Optional[StrictStr] = None, tag : Optional[StrictStr] = None, version : Optional[StrictStr] = None, **kwargs) -> List[EnrichmentMeta]:  # noqa: E501
+        """Enrichment Meta Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.enrichments_meta_get(name, provider, tag, version, async_req=True)
+        >>> thread = api.enrichment_meta_get(name, provider, tag, version, async_req=True)
         >>> result = thread.get()
 
         :param name:
@@ -249,16 +249,16 @@ class EnrichmentApi(object):
         :rtype: List[EnrichmentMeta]
         """
         kwargs['_return_http_data_only'] = True
-        return self.enrichments_meta_get_with_http_info(name, provider, tag, version, **kwargs)  # noqa: E501
+        return self.enrichment_meta_get_with_http_info(name, provider, tag, version, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def enrichments_meta_get_with_http_info(self, name : Optional[StrictStr] = None, provider : Optional[StrictStr] = None, tag : Optional[StrictStr] = None, version : Optional[StrictStr] = None, **kwargs):  # noqa: E501
-        """Enrichments Meta Get  # noqa: E501
+    def enrichment_meta_get_with_http_info(self, name : Optional[StrictStr] = None, provider : Optional[StrictStr] = None, tag : Optional[StrictStr] = None, version : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+        """Enrichment Meta Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.enrichments_meta_get_with_http_info(name, provider, tag, version, async_req=True)
+        >>> thread = api.enrichment_meta_get_with_http_info(name, provider, tag, version, async_req=True)
         >>> result = thread.get()
 
         :param name:
@@ -318,7 +318,7 @@ class EnrichmentApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method enrichments_meta_get" % _key
+                    " to method enrichment_meta_get" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -362,7 +362,7 @@ class EnrichmentApi(object):
         }
 
         return self.api_client.call_api(
-            '/enrichments/meta', 'GET',
+            '/enrichment/meta', 'GET',
             _path_params,
             _query_params,
             _header_params,
@@ -379,13 +379,13 @@ class EnrichmentApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def enrichments_meta_post(self, enrichment_meta : EnrichmentMeta, **kwargs) -> str:  # noqa: E501
-        """Enrichments Meta Post  # noqa: E501
+    def enrichment_meta_post(self, enrichment_meta : EnrichmentMeta, **kwargs) -> str:  # noqa: E501
+        """Enrichment Meta Post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.enrichments_meta_post(enrichment_meta, async_req=True)
+        >>> thread = api.enrichment_meta_post(enrichment_meta, async_req=True)
         >>> result = thread.get()
 
         :param enrichment_meta: (required)
@@ -406,16 +406,16 @@ class EnrichmentApi(object):
         :rtype: str
         """
         kwargs['_return_http_data_only'] = True
-        return self.enrichments_meta_post_with_http_info(enrichment_meta, **kwargs)  # noqa: E501
+        return self.enrichment_meta_post_with_http_info(enrichment_meta, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def enrichments_meta_post_with_http_info(self, enrichment_meta : EnrichmentMeta, **kwargs):  # noqa: E501
-        """Enrichments Meta Post  # noqa: E501
+    def enrichment_meta_post_with_http_info(self, enrichment_meta : EnrichmentMeta, **kwargs):  # noqa: E501
+        """Enrichment Meta Post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.enrichments_meta_post_with_http_info(enrichment_meta, async_req=True)
+        >>> thread = api.enrichment_meta_post_with_http_info(enrichment_meta, async_req=True)
         >>> result = thread.get()
 
         :param enrichment_meta: (required)
@@ -466,7 +466,7 @@ class EnrichmentApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method enrichments_meta_post" % _key
+                    " to method enrichment_meta_post" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']
@@ -509,7 +509,7 @@ class EnrichmentApi(object):
         }
 
         return self.api_client.call_api(
-            '/enrichments/meta', 'POST',
+            '/enrichment/meta', 'POST',
             _path_params,
             _query_params,
             _header_params,

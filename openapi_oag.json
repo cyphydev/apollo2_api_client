@@ -158,9 +158,10 @@
                     {
                         "required": false,
                         "schema": {
-                            "$ref": "#/components/schemas/PlatformType"
+                            "title": "Platforms",
+                            "type": "string"
                         },
-                        "name": "platform",
+                        "name": "platforms",
                         "in": "query"
                     },
                     {
@@ -247,9 +248,10 @@
                     {
                         "required": false,
                         "schema": {
-                            "$ref": "#/components/schemas/PlatformType"
+                            "title": "Platforms",
+                            "type": "string"
                         },
-                        "name": "platform",
+                        "name": "platforms",
                         "in": "query"
                     },
                     {
@@ -465,9 +467,10 @@
                     {
                         "required": false,
                         "schema": {
-                            "$ref": "#/components/schemas/PlatformType"
+                            "title": "Platforms",
+                            "type": "string"
                         },
-                        "name": "platform",
+                        "name": "platforms",
                         "in": "query"
                     },
                     {
@@ -576,9 +579,10 @@
                     {
                         "required": false,
                         "schema": {
-                            "$ref": "#/components/schemas/PlatformType"
+                            "title": "Platforms",
+                            "type": "string"
                         },
-                        "name": "platform",
+                        "name": "platforms",
                         "in": "query"
                     },
                     {
@@ -789,6 +793,76 @@
                 ]
             }
         },
+        "/item/id/forward/map": {
+            "post": {
+                "tags": [
+                    "item"
+                ],
+                "summary": "Item Id Forward Batch Translate Map",
+                "operationId": "item_id_forward_batch_translate_map",
+                "parameters": [
+                    {
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/components/schemas/PlatformType"
+                        },
+                        "name": "platform",
+                        "in": "query"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "title": "Ids",
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "Response Item Id Forward Batch Translate Map Item Id Forward Map Post",
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "type": "integer"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "text/plain": {}
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "APIKeyHeader": []
+                    }
+                ]
+            }
+        },
         "/item/id/forward/{id}": {
             "get": {
                 "tags": [
@@ -881,6 +955,72 @@
                                     "title": "Response Item Id Reverse Batch Translate Item Id Reverse Post",
                                     "type": "array",
                                     "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "text/plain": {}
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "text/plain": {}
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "APIKeyHeader": []
+                    }
+                ]
+            }
+        },
+        "/item/id/reverse/map": {
+            "post": {
+                "tags": [
+                    "item"
+                ],
+                "summary": "Item Id Reverse Batch Translate Map",
+                "operationId": "item_id_reverse_batch_translate_map",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "title": "Ids",
+                                "type": "array",
+                                "items": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "Response Item Id Reverse Batch Translate Map Item Id Reverse Map Post",
+                                    "type": "object",
+                                    "additionalProperties": {
                                         "type": "string"
                                     }
                                 }
@@ -2026,9 +2166,10 @@
                     {
                         "required": false,
                         "schema": {
-                            "$ref": "#/components/schemas/PlatformType"
+                            "title": "Platforms",
+                            "type": "string"
                         },
-                        "name": "platform",
+                        "name": "platforms",
                         "in": "query"
                     },
                     {
@@ -2082,9 +2223,10 @@
                     {
                         "required": false,
                         "schema": {
-                            "$ref": "#/components/schemas/PlatformType"
+                            "title": "Platforms",
+                            "type": "string"
                         },
-                        "name": "platform",
+                        "name": "platforms",
                         "in": "query"
                     },
                     {
@@ -2258,9 +2400,10 @@
                     {
                         "required": false,
                         "schema": {
-                            "$ref": "#/components/schemas/PlatformType"
+                            "title": "Platforms",
+                            "type": "string"
                         },
-                        "name": "platform",
+                        "name": "platforms",
                         "in": "query"
                     },
                     {
@@ -2345,9 +2488,10 @@
                     {
                         "required": false,
                         "schema": {
-                            "$ref": "#/components/schemas/PlatformType"
+                            "title": "Platforms",
+                            "type": "string"
                         },
-                        "name": "platform",
+                        "name": "platforms",
                         "in": "query"
                     },
                     {
@@ -2525,6 +2669,76 @@
                 ]
             }
         },
+        "/source/id/forward/map": {
+            "post": {
+                "tags": [
+                    "source"
+                ],
+                "summary": "Source Id Forward Batch Translate Map",
+                "operationId": "source_id_forward_batch_translate_map",
+                "parameters": [
+                    {
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/components/schemas/PlatformType"
+                        },
+                        "name": "platform",
+                        "in": "query"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "title": "Ids",
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "Response Source Id Forward Batch Translate Map Source Id Forward Map Post",
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "type": "integer"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "text/plain": {}
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "APIKeyHeader": []
+                    }
+                ]
+            }
+        },
         "/source/id/forward/{id}": {
             "get": {
                 "tags": [
@@ -2617,6 +2831,72 @@
                                     "title": "Response Source Id Reverse Batch Translate Source Id Reverse Post",
                                     "type": "array",
                                     "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "text/plain": {}
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "text/plain": {}
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "APIKeyHeader": []
+                    }
+                ]
+            }
+        },
+        "/source/id/reverse/map": {
+            "post": {
+                "tags": [
+                    "source"
+                ],
+                "summary": "Source Id Reverse Batch Translate Map",
+                "operationId": "source_id_reverse_batch_translate_map",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "title": "Ids",
+                                "type": "array",
+                                "items": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "Response Source Id Reverse Batch Translate Map Source Id Reverse Map Post",
+                                    "type": "object",
+                                    "additionalProperties": {
                                         "type": "string"
                                     }
                                 }
@@ -3617,13 +3897,13 @@
                 ]
             }
         },
-        "/enrichments/meta": {
+        "/enrichment/meta": {
             "get": {
                 "tags": [
                     "enrichment"
                 ],
-                "summary": "Enrichments Meta Get",
-                "operationId": "enrichments_meta_get",
+                "summary": "Enrichment Meta Get",
+                "operationId": "enrichment_meta_get",
                 "parameters": [
                     {
                         "required": false,
@@ -3668,7 +3948,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "title": "Response Enrichments Meta Get Enrichments Meta Get",
+                                    "title": "Response Enrichment Meta Get Enrichment Meta Get",
                                     "type": "array",
                                     "items": {
                                         "$ref": "#/components/schemas/EnrichmentMeta"
@@ -3698,8 +3978,8 @@
                 "tags": [
                     "enrichment"
                 ],
-                "summary": "Enrichments Meta Post",
-                "operationId": "enrichments_meta_post",
+                "summary": "Enrichment Meta Post",
+                "operationId": "enrichment_meta_post",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -3748,8 +4028,8 @@
                 "tags": [
                     "enrichment"
                 ],
-                "summary": "Enrichments Meta Delete",
-                "operationId": "enrichments_meta_delete",
+                "summary": "Enrichment Meta Delete",
+                "operationId": "enrichment_meta_delete",
                 "parameters": [
                     {
                         "required": true,
@@ -6810,7 +7090,7 @@
             }
         },
         "/identifier/delete": {
-            "get": {
+            "delete": {
                 "tags": [
                     "identifier"
                 ],
@@ -7018,9 +7298,7 @@
                     "with_enrichment": {
                         "title": "With Enrichment",
                         "type": "boolean",
-                        "default": [
-                            false
-                        ]
+                        "default": false
                     },
                     "enrichment_name": {
                         "title": "Enrichment Name",
@@ -7041,9 +7319,7 @@
                     "with_cluster": {
                         "title": "With Cluster",
                         "type": "boolean",
-                        "default": [
-                            false
-                        ]
+                        "default": false
                     },
                     "cluster_name": {
                         "title": "Cluster Name",
@@ -7923,7 +8199,52 @@
             "IncasRedditData": {
                 "title": "IncasRedditData",
                 "type": "object",
-                "properties": {}
+                "properties": {
+                    "author": {
+                        "title": "Author",
+                        "type": "string"
+                    },
+                    "author_awardee_karma": {
+                        "title": "Author Awardee Karma",
+                        "type": "integer"
+                    },
+                    "author_awarder_karma": {
+                        "title": "Author Awarder Karma",
+                        "type": "integer"
+                    },
+                    "author_karma": {
+                        "title": "Author Karma",
+                        "type": "integer"
+                    },
+                    "comments": {
+                        "title": "Comments",
+                        "type": "integer"
+                    },
+                    "engagement_type": {
+                        "title": "Engagement Type",
+                        "type": "string"
+                    },
+                    "parent_post_id": {
+                        "title": "Parent Post Id",
+                        "type": "string"
+                    },
+                    "reddit_post_id": {
+                        "title": "Reddit Post Id",
+                        "type": "string"
+                    },
+                    "subreddit": {
+                        "title": "Subreddit",
+                        "type": "string"
+                    },
+                    "subreddit_subscribers": {
+                        "title": "Subreddit Subscribers",
+                        "type": "integer"
+                    },
+                    "upvote_ratio": {
+                        "title": "Upvote Ratio",
+                        "type": "number"
+                    }
+                }
             },
             "IncasSegment": {
                 "title": "IncasSegment",
@@ -8474,12 +8795,13 @@
             "PlatformType": {
                 "title": "PlatformType",
                 "enum": [
+                    "MEDIA_UNSPECIFIED",
                     "News",
                     "Reddit",
                     "Twitter",
                     "Youtube",
                     "Tumblr",
-                    "MEDIA_UNSPECIFIED",
+                    "Mastodon",
                     "Webpage",
                     "Blog",
                     "Comment",
@@ -8491,6 +8813,7 @@
                     "VK",
                     "Bing",
                     "Wikipedia",
+                    "GDELT",
                     "Other"
                 ],
                 "type": "string",

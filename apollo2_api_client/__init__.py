@@ -67,6 +67,7 @@ from apollo2_api_client.models import IncasMediaResource
 from apollo2_api_client.models import IncasMessage
 from apollo2_api_client.models import IncasOffset
 from apollo2_api_client.models import IncasOneOfMediaTypeAttributes
+from apollo2_api_client.models import IncasRedditData
 from apollo2_api_client.models import IncasSegment
 from apollo2_api_client.models import IncasTwitterData
 from apollo2_api_client.models import Item

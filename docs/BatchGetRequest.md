@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ids** | **List[int]** |  | 
-**with_enrichment** | **bool** |  | [optional] 
+**with_enrichment** | **bool** |  | [optional] [default to False]
 **enrichment_name** | **str** |  | [optional] 
 **enrichment_provider** | **str** |  | [optional] 
 **enrichment_tag** | **str** |  | [optional] 
 **enrichment_version** | **str** |  | [optional] 
-**with_cluster** | **bool** |  | [optional] 
+**with_cluster** | **bool** |  | [optional] [default to False]
 **cluster_name** | **str** |  | [optional] 
 **cluster_provider** | **str** |  | [optional] 
 **cluster_tag** | **str** |  | [optional] 

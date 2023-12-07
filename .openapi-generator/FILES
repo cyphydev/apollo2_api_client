@@ -48,6 +48,7 @@ apollo2_api_client/models/incas_media_resource.py
 apollo2_api_client/models/incas_message.py
 apollo2_api_client/models/incas_offset.py
 apollo2_api_client/models/incas_one_of_media_type_attributes.py
+apollo2_api_client/models/incas_reddit_data.py
 apollo2_api_client/models/incas_segment.py
 apollo2_api_client/models/incas_twitter_data.py
 apollo2_api_client/models/item.py
@@ -124,6 +125,7 @@ docs/IncasMediaResource.md
 docs/IncasMessage.md
 docs/IncasOffset.md
 docs/IncasOneOfMediaTypeAttributes.md
+docs/IncasRedditData.md
 docs/IncasSegment.md
 docs/IncasTwitterData.md
 docs/Item.md
