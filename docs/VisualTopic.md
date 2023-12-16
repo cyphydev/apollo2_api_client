@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.visual_topic import VisualTopic
+from apollo2_api_client.models import VisualTopic
 
 # TODO update the JSON string below
 json = "{}"

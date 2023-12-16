@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.reddit_data import RedditData
+from apollo2_api_client.models import RedditData
 
 # TODO update the JSON string below
 json = "{}"

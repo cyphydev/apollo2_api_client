@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.batch_get_request import BatchGetRequest
+from apollo2_api_client.models import BatchGetRequest
 
 # TODO update the JSON string below
 json = "{}"

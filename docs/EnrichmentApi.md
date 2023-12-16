@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**enrichment_meta_delete**](EnrichmentApi.md#enrichment_meta_delete) | **DELETE** /enrichment/meta | Enrichment Meta Delete
-[**enrichment_meta_get**](EnrichmentApi.md#enrichment_meta_get) | **GET** /enrichment/meta | Enrichment Meta Get
-[**enrichment_meta_post**](EnrichmentApi.md#enrichment_meta_post) | **POST** /enrichment/meta | Enrichment Meta Post
+[**enrichments_meta_delete**](EnrichmentApi.md#enrichments_meta_delete) | **DELETE** /enrichments/meta | Enrichments Meta Delete
+[**enrichments_meta_get**](EnrichmentApi.md#enrichments_meta_get) | **GET** /enrichments/meta | Enrichments Meta Get
+[**enrichments_meta_post**](EnrichmentApi.md#enrichments_meta_post) | **POST** /enrichments/meta | Enrichments Meta Post
 
 
-# **enrichment_meta_delete**
-> str enrichment_meta_delete(name, provider, tag, version, force)
+# **enrichments_meta_delete**
+> str enrichments_meta_delete(name, provider, tag, version, force)
 
-Enrichment Meta Delete
+Enrichments Meta Delete
 
 ### Example
 
@@ -52,12 +52,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     force = True # bool | 
 
     try:
-        # Enrichment Meta Delete
-        api_response = api_instance.enrichment_meta_delete(name, provider, tag, version, force)
-        print("The response of EnrichmentApi->enrichment_meta_delete:\n")
+        # Enrichments Meta Delete
+        api_response = api_instance.enrichments_meta_delete(name, provider, tag, version, force)
+        print("The response of EnrichmentApi->enrichments_meta_delete:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling EnrichmentApi->enrichment_meta_delete: %s\n" % e)
+        print("Exception when calling EnrichmentApi->enrichments_meta_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -93,10 +93,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **enrichment_meta_get**
-> List[EnrichmentMeta] enrichment_meta_get(name=name, provider=provider, tag=tag, version=version)
+# **enrichments_meta_get**
+> List[EnrichmentMeta] enrichments_meta_get(name=name, provider=provider, tag=tag, version=version)
 
-Enrichment Meta Get
+Enrichments Meta Get
 
 ### Example
 
@@ -135,12 +135,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     version = 'version_example' # str |  (optional)
 
     try:
-        # Enrichment Meta Get
-        api_response = api_instance.enrichment_meta_get(name=name, provider=provider, tag=tag, version=version)
-        print("The response of EnrichmentApi->enrichment_meta_get:\n")
+        # Enrichments Meta Get
+        api_response = api_instance.enrichments_meta_get(name=name, provider=provider, tag=tag, version=version)
+        print("The response of EnrichmentApi->enrichments_meta_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling EnrichmentApi->enrichment_meta_get: %s\n" % e)
+        print("Exception when calling EnrichmentApi->enrichments_meta_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -173,10 +173,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **enrichment_meta_post**
-> str enrichment_meta_post(enrichment_meta)
+# **enrichments_meta_post**
+> str enrichments_meta_post(enrichment_meta)
 
-Enrichment Meta Post
+Enrichments Meta Post
 
 ### Example
 
@@ -212,12 +212,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     enrichment_meta = apollo2_api_client.EnrichmentMeta() # EnrichmentMeta | 
 
     try:
-        # Enrichment Meta Post
-        api_response = api_instance.enrichment_meta_post(enrichment_meta)
-        print("The response of EnrichmentApi->enrichment_meta_post:\n")
+        # Enrichments Meta Post
+        api_response = api_instance.enrichments_meta_post(enrichment_meta)
+        print("The response of EnrichmentApi->enrichments_meta_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling EnrichmentApi->enrichment_meta_post: %s\n" % e)
+        print("Exception when calling EnrichmentApi->enrichments_meta_post: %s\n" % e)
 ```
 
 ### Parameters

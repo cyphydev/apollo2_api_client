@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.geo_location import GeoLocation
+from apollo2_api_client.models import GeoLocation
 
 # TODO update the JSON string below
 json = "{}"

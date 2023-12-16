@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.twitter_referenced_tweet import TwitterReferencedTweet
+from apollo2_api_client.models import TwitterReferencedTweet
 
 # TODO update the JSON string below
 json = "{}"

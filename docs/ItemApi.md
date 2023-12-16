@@ -28,6 +28,12 @@ Method | HTTP request | Description
 [**item_identifier_post**](ItemApi.md#item_identifier_post) | **POST** /item/identifier/post | Item Identifier Post
 [**item_list_get**](ItemApi.md#item_list_get) | **GET** /item/list | Item List Get
 [**item_max_id_get**](ItemApi.md#item_max_id_get) | **GET** /item/max_id | Item Max Id Get
+[**item_univ_id_forward_batch_translate**](ItemApi.md#item_univ_id_forward_batch_translate) | **POST** /item/univ_id/forward | Item Univ Id Forward Batch Translate
+[**item_univ_id_forward_batch_translate_map**](ItemApi.md#item_univ_id_forward_batch_translate_map) | **POST** /item/univ_id/forward/map | Item Univ Id Forward Batch Translate Map
+[**item_univ_id_forward_translate**](ItemApi.md#item_univ_id_forward_translate) | **GET** /item/univ_id/forward/{univ_id} | Item Univ Id Forward Translate
+[**item_univ_id_reverse_batch_translate**](ItemApi.md#item_univ_id_reverse_batch_translate) | **POST** /item/univ_id/reverse | Item Univ Id Reverse Batch Translate
+[**item_univ_id_reverse_batch_translate_map**](ItemApi.md#item_univ_id_reverse_batch_translate_map) | **POST** /item/univ_id/reverse/map | Item Univ Id Reverse Batch Translate Map
+[**item_univ_id_reverse_translate**](ItemApi.md#item_univ_id_reverse_translate) | **GET** /item/univ_id/reverse/{id} | Item Univ Id Reverse Translate
 
 
 # **item_attach_media_post**
@@ -183,7 +189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_count_get**
-> int item_count_get(last=last, end=end, platforms=platforms, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+> int item_count_get(last=last, end=end, platform=platform, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
 
 Item Count Get
 
@@ -220,7 +226,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     api_instance = apollo2_api_client.ItemApi(api_client)
     last = 56 # int |  (optional)
     end = 56 # int |  (optional)
-    platforms = 'platforms_example' # str |  (optional)
+    platform = 'platform_example' # str |  (optional)
     actor_ids = 'actor_ids_example' # str |  (optional)
     identifier = 'identifier_example' # str |  (optional)
     inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
@@ -228,7 +234,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 
     try:
         # Item Count Get
-        api_response = api_instance.item_count_get(last=last, end=end, platforms=platforms, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+        api_response = api_instance.item_count_get(last=last, end=end, platform=platform, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
         print("The response of ItemApi->item_count_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -241,7 +247,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **last** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
- **platforms** | **str**|  | [optional] 
+ **platform** | **str**|  | [optional] 
  **actor_ids** | **str**|  | [optional] 
  **identifier** | **str**|  | [optional] 
  **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
@@ -575,7 +581,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_get**
-> List[Item] item_get(limit, last=last, end=end, actor_ids=actor_ids, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platforms=platforms, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+> List[Item] item_get(limit, last=last, end=end, actor_ids=actor_ids, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
 
 Item Get
 
@@ -624,14 +630,14 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     cluster_provider = 'cluster_provider_example' # str |  (optional)
     cluster_tag = 'cluster_tag_example' # str |  (optional)
     cluster_version = 'cluster_version_example' # str |  (optional)
-    platforms = 'platforms_example' # str |  (optional)
+    platform = 'platform_example' # str |  (optional)
     identifier = 'identifier_example' # str |  (optional)
     inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
     exclusive_end_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
 
     try:
         # Item Get
-        api_response = api_instance.item_get(limit, last=last, end=end, actor_ids=actor_ids, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platforms=platforms, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+        api_response = api_instance.item_get(limit, last=last, end=end, actor_ids=actor_ids, with_enrichment=with_enrichment, with_cluster=with_cluster, enrichment_name=enrichment_name, enrichment_provider=enrichment_provider, enrichment_tag=enrichment_tag, enrichment_version=enrichment_version, cluster_name=cluster_name, cluster_provider=cluster_provider, cluster_tag=cluster_tag, cluster_version=cluster_version, platform=platform, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
         print("The response of ItemApi->item_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -656,7 +662,7 @@ Name | Type | Description  | Notes
  **cluster_provider** | **str**|  | [optional] 
  **cluster_tag** | **str**|  | [optional] 
  **cluster_version** | **str**|  | [optional] 
- **platforms** | **str**|  | [optional] 
+ **platform** | **str**|  | [optional] 
  **identifier** | **str**|  | [optional] 
  **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
  **exclusive_end_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
@@ -1084,7 +1090,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_id_forward_batch_translate_map**
-> Dict[str, int] item_id_forward_batch_translate_map(request_body, platform=platform)
+> Dict[str, int] item_id_forward_batch_translate_map(request_body, strict=strict, platform=platform)
 
 Item Id Forward Batch Translate Map
 
@@ -1120,11 +1126,12 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apollo2_api_client.ItemApi(api_client)
     request_body = ['request_body_example'] # List[str] | 
+    strict = False # bool |  (optional) (default to False)
     platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
 
     try:
         # Item Id Forward Batch Translate Map
-        api_response = api_instance.item_id_forward_batch_translate_map(request_body, platform=platform)
+        api_response = api_instance.item_id_forward_batch_translate_map(request_body, strict=strict, platform=platform)
         print("The response of ItemApi->item_id_forward_batch_translate_map:\n")
         pprint(api_response)
     except Exception as e:
@@ -1136,6 +1143,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request_body** | [**List[str]**](str.md)|  | 
+ **strict** | **bool**|  | [optional] [default to False]
  **platform** | [**PlatformType**](.md)|  | [optional] 
 
 ### Return type
@@ -1796,7 +1804,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_list_get**
-> List[int] item_list_get(limit, last=last, end=end, platforms=platforms, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+> List[int] item_list_get(limit, last=last, end=end, platform=platform, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
 
 Item List Get
 
@@ -1834,7 +1842,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     limit = 56 # int | 
     last = -1 # int |  (optional) (default to -1)
     end = 56 # int |  (optional)
-    platforms = 'platforms_example' # str |  (optional)
+    platform = 'platform_example' # str |  (optional)
     actor_ids = 'actor_ids_example' # str |  (optional)
     identifier = 'identifier_example' # str |  (optional)
     inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
@@ -1842,7 +1850,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 
     try:
         # Item List Get
-        api_response = api_instance.item_list_get(limit, last=last, end=end, platforms=platforms, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+        api_response = api_instance.item_list_get(limit, last=last, end=end, platform=platform, actor_ids=actor_ids, identifier=identifier, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
         print("The response of ItemApi->item_list_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -1856,7 +1864,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | 
  **last** | **int**|  | [optional] [default to -1]
  **end** | **int**|  | [optional] 
- **platforms** | **str**|  | [optional] 
+ **platform** | **str**|  | [optional] 
  **actor_ids** | **str**|  | [optional] 
  **identifier** | **str**|  | [optional] 
  **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
@@ -1884,7 +1892,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_max_id_get**
-> int item_max_id_get(platforms=platforms, identifier=identifier, actor_ids=actor_ids, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+> int item_max_id_get(platform=platform, identifier=identifier, actor_ids=actor_ids, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
 
 Item Max Id Get
 
@@ -1919,7 +1927,7 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 with apollo2_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apollo2_api_client.ItemApi(api_client)
-    platforms = 'platforms_example' # str |  (optional)
+    platform = 'platform_example' # str |  (optional)
     identifier = 'identifier_example' # str |  (optional)
     actor_ids = 'actor_ids_example' # str |  (optional)
     inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
@@ -1927,7 +1935,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 
     try:
         # Item Max Id Get
-        api_response = api_instance.item_max_id_get(platforms=platforms, identifier=identifier, actor_ids=actor_ids, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
+        api_response = api_instance.item_max_id_get(platform=platform, identifier=identifier, actor_ids=actor_ids, inclusive_begin_datetime=inclusive_begin_datetime, exclusive_end_datetime=exclusive_end_datetime)
         print("The response of ItemApi->item_max_id_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -1938,7 +1946,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **platforms** | **str**|  | [optional] 
+ **platform** | **str**|  | [optional] 
  **identifier** | **str**|  | [optional] 
  **actor_ids** | **str**|  | [optional] 
  **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
@@ -1961,6 +1969,463 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_forward_batch_translate**
+> List[int] item_univ_id_forward_batch_translate(request_body)
+
+Item Univ Id Forward Batch Translate
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    request_body = ['request_body_example'] # List[str] | 
+
+    try:
+        # Item Univ Id Forward Batch Translate
+        api_response = api_instance.item_univ_id_forward_batch_translate(request_body)
+        print("The response of ItemApi->item_univ_id_forward_batch_translate:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_forward_batch_translate: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_body** | [**List[str]**](str.md)|  | 
+
+### Return type
+
+**List[int]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_forward_batch_translate_map**
+> Dict[str, int] item_univ_id_forward_batch_translate_map(request_body, strict=strict)
+
+Item Univ Id Forward Batch Translate Map
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    request_body = ['request_body_example'] # List[str] | 
+    strict = False # bool |  (optional) (default to False)
+
+    try:
+        # Item Univ Id Forward Batch Translate Map
+        api_response = api_instance.item_univ_id_forward_batch_translate_map(request_body, strict=strict)
+        print("The response of ItemApi->item_univ_id_forward_batch_translate_map:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_forward_batch_translate_map: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_body** | [**List[str]**](str.md)|  | 
+ **strict** | **bool**|  | [optional] [default to False]
+
+### Return type
+
+**Dict[str, int]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_forward_translate**
+> int item_univ_id_forward_translate(univ_id)
+
+Item Univ Id Forward Translate
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    univ_id = 'univ_id_example' # str | 
+
+    try:
+        # Item Univ Id Forward Translate
+        api_response = api_instance.item_univ_id_forward_translate(univ_id)
+        print("The response of ItemApi->item_univ_id_forward_translate:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_forward_translate: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **univ_id** | **str**|  | 
+
+### Return type
+
+**int**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_reverse_batch_translate**
+> List[str] item_univ_id_reverse_batch_translate(request_body)
+
+Item Univ Id Reverse Batch Translate
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    request_body = [56] # List[int] | 
+
+    try:
+        # Item Univ Id Reverse Batch Translate
+        api_response = api_instance.item_univ_id_reverse_batch_translate(request_body)
+        print("The response of ItemApi->item_univ_id_reverse_batch_translate:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_reverse_batch_translate: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_body** | [**List[int]**](int.md)|  | 
+
+### Return type
+
+**List[str]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_reverse_batch_translate_map**
+> Dict[str, str] item_univ_id_reverse_batch_translate_map(request_body, strict=strict)
+
+Item Univ Id Reverse Batch Translate Map
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    request_body = [56] # List[int] | 
+    strict = False # bool |  (optional) (default to False)
+
+    try:
+        # Item Univ Id Reverse Batch Translate Map
+        api_response = api_instance.item_univ_id_reverse_batch_translate_map(request_body, strict=strict)
+        print("The response of ItemApi->item_univ_id_reverse_batch_translate_map:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_reverse_batch_translate_map: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_body** | [**List[int]**](int.md)|  | 
+ **strict** | **bool**|  | [optional] [default to False]
+
+### Return type
+
+**Dict[str, str]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_reverse_translate**
+> str item_univ_id_reverse_translate(id)
+
+Item Univ Id Reverse Translate
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    id = 56 # int | 
+
+    try:
+        # Item Univ Id Reverse Translate
+        api_response = api_instance.item_univ_id_reverse_translate(id)
+        print("The response of ItemApi->item_univ_id_reverse_translate:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_reverse_translate: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
 **422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

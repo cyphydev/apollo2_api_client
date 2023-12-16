@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.claim import Claim
+from apollo2_api_client.models import Claim
 
 # TODO update the JSON string below
 json = "{}"

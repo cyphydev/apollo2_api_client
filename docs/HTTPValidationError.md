@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.http_validation_error import HTTPValidationError
+from apollo2_api_client.models import HTTPValidationError
 
 # TODO update the JSON string below
 json = "{}"

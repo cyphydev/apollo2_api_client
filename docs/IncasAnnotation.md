@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.incas_annotation import IncasAnnotation
+from apollo2_api_client.models import IncasAnnotation
 
 # TODO update the JSON string below
 json = "{}"

@@ -115,9 +115,9 @@ Class | Method | HTTP request | Description
 *ClusterApi* | [**cluster_identifier_post**](docs/ClusterApi.md#cluster_identifier_post) | **POST** /cluster/identifier/post | Cluster Identifier Post
 *ClusterApi* | [**cluster_post**](docs/ClusterApi.md#cluster_post) | **POST** /cluster | Cluster Post
 *DefaultApi* | [**ping_get**](docs/DefaultApi.md#ping_get) | **GET** /ping | Ping Get
-*EnrichmentApi* | [**enrichment_meta_delete**](docs/EnrichmentApi.md#enrichment_meta_delete) | **DELETE** /enrichment/meta | Enrichment Meta Delete
-*EnrichmentApi* | [**enrichment_meta_get**](docs/EnrichmentApi.md#enrichment_meta_get) | **GET** /enrichment/meta | Enrichment Meta Get
-*EnrichmentApi* | [**enrichment_meta_post**](docs/EnrichmentApi.md#enrichment_meta_post) | **POST** /enrichment/meta | Enrichment Meta Post
+*EnrichmentApi* | [**enrichments_meta_delete**](docs/EnrichmentApi.md#enrichments_meta_delete) | **DELETE** /enrichments/meta | Enrichments Meta Delete
+*EnrichmentApi* | [**enrichments_meta_get**](docs/EnrichmentApi.md#enrichments_meta_get) | **GET** /enrichments/meta | Enrichments Meta Get
+*EnrichmentApi* | [**enrichments_meta_post**](docs/EnrichmentApi.md#enrichments_meta_post) | **POST** /enrichments/meta | Enrichments Meta Post
 *GraphApi* | [**edge_identifier_delete**](docs/GraphApi.md#edge_identifier_delete) | **DELETE** /graph/edge/identifier/delete | Edge Identifier Delete
 *GraphApi* | [**edge_identifier_post**](docs/GraphApi.md#edge_identifier_post) | **POST** /graph/edge/identifier/post | Edge Identifier Post
 *GraphApi* | [**graph_get**](docs/GraphApi.md#graph_get) | **GET** /graph | Graph Get
@@ -155,6 +155,12 @@ Class | Method | HTTP request | Description
 *ItemApi* | [**item_identifier_post**](docs/ItemApi.md#item_identifier_post) | **POST** /item/identifier/post | Item Identifier Post
 *ItemApi* | [**item_list_get**](docs/ItemApi.md#item_list_get) | **GET** /item/list | Item List Get
 *ItemApi* | [**item_max_id_get**](docs/ItemApi.md#item_max_id_get) | **GET** /item/max_id | Item Max Id Get
+*ItemApi* | [**item_univ_id_forward_batch_translate**](docs/ItemApi.md#item_univ_id_forward_batch_translate) | **POST** /item/univ_id/forward | Item Univ Id Forward Batch Translate
+*ItemApi* | [**item_univ_id_forward_batch_translate_map**](docs/ItemApi.md#item_univ_id_forward_batch_translate_map) | **POST** /item/univ_id/forward/map | Item Univ Id Forward Batch Translate Map
+*ItemApi* | [**item_univ_id_forward_translate**](docs/ItemApi.md#item_univ_id_forward_translate) | **GET** /item/univ_id/forward/{univ_id} | Item Univ Id Forward Translate
+*ItemApi* | [**item_univ_id_reverse_batch_translate**](docs/ItemApi.md#item_univ_id_reverse_batch_translate) | **POST** /item/univ_id/reverse | Item Univ Id Reverse Batch Translate
+*ItemApi* | [**item_univ_id_reverse_batch_translate_map**](docs/ItemApi.md#item_univ_id_reverse_batch_translate_map) | **POST** /item/univ_id/reverse/map | Item Univ Id Reverse Batch Translate Map
+*ItemApi* | [**item_univ_id_reverse_translate**](docs/ItemApi.md#item_univ_id_reverse_translate) | **GET** /item/univ_id/reverse/{id} | Item Univ Id Reverse Translate
 *MediaItemApi* | [**media_item_batch_get**](docs/MediaItemApi.md#media_item_batch_get) | **POST** /media_item/get | Media Item Batch Get
 *MediaItemApi* | [**media_item_count_get**](docs/MediaItemApi.md#media_item_count_get) | **GET** /media_item/count | Media Item Count Get
 *MediaItemApi* | [**media_item_get**](docs/MediaItemApi.md#media_item_get) | **GET** /media_item | Media Item Get
@@ -186,6 +192,12 @@ Class | Method | HTTP request | Description
 *SourceApi* | [**source_identifier_post**](docs/SourceApi.md#source_identifier_post) | **POST** /source/identifier/post | Source Identifier Post
 *SourceApi* | [**source_list_get**](docs/SourceApi.md#source_list_get) | **GET** /source/list | Source List Get
 *SourceApi* | [**source_max_id_get**](docs/SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
+*SourceApi* | [**source_univ_id_forward_batch_translate**](docs/SourceApi.md#source_univ_id_forward_batch_translate) | **POST** /source/univ_id/forward | Source Univ Id Forward Batch Translate
+*SourceApi* | [**source_univ_id_forward_batch_translate_map**](docs/SourceApi.md#source_univ_id_forward_batch_translate_map) | **POST** /source/univ_id/forward/map | Source Univ Id Forward Batch Translate Map
+*SourceApi* | [**source_univ_id_forward_translate**](docs/SourceApi.md#source_univ_id_forward_translate) | **GET** /source/univ_id/forward/{univ_id} | Source Univ Id Forward Translate
+*SourceApi* | [**source_univ_id_reverse_batch_translate**](docs/SourceApi.md#source_univ_id_reverse_batch_translate) | **POST** /source/univ_id/reverse | Source Univ Id Reverse Batch Translate
+*SourceApi* | [**source_univ_id_reverse_batch_translate_map**](docs/SourceApi.md#source_univ_id_reverse_batch_translate_map) | **POST** /source/univ_id/reverse/map | Source Univ Id Reverse Batch Translate Map
+*SourceApi* | [**source_univ_id_reverse_translate**](docs/SourceApi.md#source_univ_id_reverse_translate) | **GET** /source/univ_id/reverse/{id} | Source Univ Id Reverse Translate
 
 
 ## Documentation For Models

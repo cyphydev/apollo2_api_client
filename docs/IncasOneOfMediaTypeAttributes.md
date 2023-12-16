@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.incas_one_of_media_type_attributes import IncasOneOfMediaTypeAttributes
+from apollo2_api_client.models import IncasOneOfMediaTypeAttributes
 
 # TODO update the JSON string below
 json = "{}"

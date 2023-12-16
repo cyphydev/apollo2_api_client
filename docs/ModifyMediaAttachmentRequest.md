@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.modify_media_attachment_request import ModifyMediaAttachmentRequest
+from apollo2_api_client.models import ModifyMediaAttachmentRequest
 
 # TODO update the JSON string below
 json = "{}"
