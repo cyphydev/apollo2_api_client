@@ -17,15 +17,23 @@ Method | HTTP request | Description
 [**item_id_enrichments_get**](ItemApi.md#item_id_enrichments_get) | **GET** /item/{id}/enrichments | Item Id Enrichments Get
 [**item_id_enrichments_post**](ItemApi.md#item_id_enrichments_post) | **POST** /item/{id}/enrichments | Item Id Enrichments Post
 [**item_id_forward_batch_translate**](ItemApi.md#item_id_forward_batch_translate) | **POST** /item/id/forward | Item Id Forward Batch Translate
+[**item_id_forward_batch_translate_map**](ItemApi.md#item_id_forward_batch_translate_map) | **POST** /item/id/forward/map | Item Id Forward Batch Translate Map
 [**item_id_forward_translate**](ItemApi.md#item_id_forward_translate) | **GET** /item/id/forward/{id} | Item Id Forward Translate
 [**item_id_get**](ItemApi.md#item_id_get) | **GET** /item/{id} | Item Id Get
 [**item_id_identifier_get**](ItemApi.md#item_id_identifier_get) | **GET** /item/{id}/identifier | Item Id Identifier Get
 [**item_id_reverse_batch_translate**](ItemApi.md#item_id_reverse_batch_translate) | **POST** /item/id/reverse | Item Id Reverse Batch Translate
+[**item_id_reverse_batch_translate_map**](ItemApi.md#item_id_reverse_batch_translate_map) | **POST** /item/id/reverse/map | Item Id Reverse Batch Translate Map
 [**item_id_reverse_translate**](ItemApi.md#item_id_reverse_translate) | **GET** /item/id/reverse/{id} | Item Id Reverse Translate
 [**item_identifier_delete**](ItemApi.md#item_identifier_delete) | **POST** /item/identifier/delete | Item Identifier Delete
 [**item_identifier_post**](ItemApi.md#item_identifier_post) | **POST** /item/identifier/post | Item Identifier Post
 [**item_list_get**](ItemApi.md#item_list_get) | **GET** /item/list | Item List Get
 [**item_max_id_get**](ItemApi.md#item_max_id_get) | **GET** /item/max_id | Item Max Id Get
+[**item_univ_id_forward_batch_translate**](ItemApi.md#item_univ_id_forward_batch_translate) | **POST** /item/univ_id/forward | Item Univ Id Forward Batch Translate
+[**item_univ_id_forward_batch_translate_map**](ItemApi.md#item_univ_id_forward_batch_translate_map) | **POST** /item/univ_id/forward/map | Item Univ Id Forward Batch Translate Map
+[**item_univ_id_forward_translate**](ItemApi.md#item_univ_id_forward_translate) | **GET** /item/univ_id/forward/{univ_id} | Item Univ Id Forward Translate
+[**item_univ_id_reverse_batch_translate**](ItemApi.md#item_univ_id_reverse_batch_translate) | **POST** /item/univ_id/reverse | Item Univ Id Reverse Batch Translate
+[**item_univ_id_reverse_batch_translate_map**](ItemApi.md#item_univ_id_reverse_batch_translate_map) | **POST** /item/univ_id/reverse/map | Item Univ Id Reverse Batch Translate Map
+[**item_univ_id_reverse_translate**](ItemApi.md#item_univ_id_reverse_translate) | **GET** /item/univ_id/reverse/{id} | Item Univ Id Reverse Translate
 
 
 # **item_attach_media_post**
@@ -218,7 +226,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     api_instance = apollo2_api_client.ItemApi(api_client)
     last = 56 # int |  (optional)
     end = 56 # int |  (optional)
-    platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
+    platform = 'platform_example' # str |  (optional)
     actor_ids = 'actor_ids_example' # str |  (optional)
     identifier = 'identifier_example' # str |  (optional)
     inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
@@ -239,7 +247,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **last** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
- **platform** | [**PlatformType**](.md)|  | [optional] 
+ **platform** | **str**|  | [optional] 
  **actor_ids** | **str**|  | [optional] 
  **identifier** | **str**|  | [optional] 
  **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
@@ -622,7 +630,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     cluster_provider = 'cluster_provider_example' # str |  (optional)
     cluster_tag = 'cluster_tag_example' # str |  (optional)
     cluster_version = 'cluster_version_example' # str |  (optional)
-    platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
+    platform = 'platform_example' # str |  (optional)
     identifier = 'identifier_example' # str |  (optional)
     inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
     exclusive_end_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
@@ -654,7 +662,7 @@ Name | Type | Description  | Notes
  **cluster_provider** | **str**|  | [optional] 
  **cluster_tag** | **str**|  | [optional] 
  **cluster_version** | **str**|  | [optional] 
- **platform** | [**PlatformType**](.md)|  | [optional] 
+ **platform** | **str**|  | [optional] 
  **identifier** | **str**|  | [optional] 
  **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
  **exclusive_end_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
@@ -1081,6 +1089,85 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **item_id_forward_batch_translate_map**
+> Dict[str, int] item_id_forward_batch_translate_map(request_body, strict=strict, platform=platform)
+
+Item Id Forward Batch Translate Map
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    request_body = ['request_body_example'] # List[str] | 
+    strict = False # bool |  (optional) (default to False)
+    platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
+
+    try:
+        # Item Id Forward Batch Translate Map
+        api_response = api_instance.item_id_forward_batch_translate_map(request_body, strict=strict, platform=platform)
+        print("The response of ItemApi->item_id_forward_batch_translate_map:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_id_forward_batch_translate_map: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_body** | [**List[str]**](str.md)|  | 
+ **strict** | **bool**|  | [optional] [default to False]
+ **platform** | [**PlatformType**](.md)|  | [optional] 
+
+### Return type
+
+**Dict[str, int]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **item_id_forward_translate**
 > int item_id_forward_translate(id, platform=platform)
 
@@ -1406,6 +1493,82 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **item_id_reverse_batch_translate_map**
+> Dict[str, str] item_id_reverse_batch_translate_map(request_body)
+
+Item Id Reverse Batch Translate Map
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    request_body = [56] # List[int] | 
+
+    try:
+        # Item Id Reverse Batch Translate Map
+        api_response = api_instance.item_id_reverse_batch_translate_map(request_body)
+        print("The response of ItemApi->item_id_reverse_batch_translate_map:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_id_reverse_batch_translate_map: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_body** | [**List[int]**](int.md)|  | 
+
+### Return type
+
+**Dict[str, str]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **item_id_reverse_translate**
 > str item_id_reverse_translate(id)
 
@@ -1679,7 +1842,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     limit = 56 # int | 
     last = -1 # int |  (optional) (default to -1)
     end = 56 # int |  (optional)
-    platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
+    platform = 'platform_example' # str |  (optional)
     actor_ids = 'actor_ids_example' # str |  (optional)
     identifier = 'identifier_example' # str |  (optional)
     inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
@@ -1701,7 +1864,7 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | 
  **last** | **int**|  | [optional] [default to -1]
  **end** | **int**|  | [optional] 
- **platform** | [**PlatformType**](.md)|  | [optional] 
+ **platform** | **str**|  | [optional] 
  **actor_ids** | **str**|  | [optional] 
  **identifier** | **str**|  | [optional] 
  **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
@@ -1764,7 +1927,7 @@ configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
 with apollo2_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apollo2_api_client.ItemApi(api_client)
-    platform = apollo2_api_client.PlatformType() # PlatformType |  (optional)
+    platform = 'platform_example' # str |  (optional)
     identifier = 'identifier_example' # str |  (optional)
     actor_ids = 'actor_ids_example' # str |  (optional)
     inclusive_begin_datetime = '2013-10-20T19:20:30+01:00' # datetime | %Y-%m-%dT%H:%M:%S%z (optional)
@@ -1783,7 +1946,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **platform** | [**PlatformType**](.md)|  | [optional] 
+ **platform** | **str**|  | [optional] 
  **identifier** | **str**|  | [optional] 
  **actor_ids** | **str**|  | [optional] 
  **inclusive_begin_datetime** | **datetime**| %Y-%m-%dT%H:%M:%S%z | [optional] 
@@ -1806,6 +1969,463 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_forward_batch_translate**
+> List[int] item_univ_id_forward_batch_translate(request_body)
+
+Item Univ Id Forward Batch Translate
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    request_body = ['request_body_example'] # List[str] | 
+
+    try:
+        # Item Univ Id Forward Batch Translate
+        api_response = api_instance.item_univ_id_forward_batch_translate(request_body)
+        print("The response of ItemApi->item_univ_id_forward_batch_translate:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_forward_batch_translate: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_body** | [**List[str]**](str.md)|  | 
+
+### Return type
+
+**List[int]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_forward_batch_translate_map**
+> Dict[str, int] item_univ_id_forward_batch_translate_map(request_body, strict=strict)
+
+Item Univ Id Forward Batch Translate Map
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    request_body = ['request_body_example'] # List[str] | 
+    strict = False # bool |  (optional) (default to False)
+
+    try:
+        # Item Univ Id Forward Batch Translate Map
+        api_response = api_instance.item_univ_id_forward_batch_translate_map(request_body, strict=strict)
+        print("The response of ItemApi->item_univ_id_forward_batch_translate_map:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_forward_batch_translate_map: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_body** | [**List[str]**](str.md)|  | 
+ **strict** | **bool**|  | [optional] [default to False]
+
+### Return type
+
+**Dict[str, int]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_forward_translate**
+> int item_univ_id_forward_translate(univ_id)
+
+Item Univ Id Forward Translate
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    univ_id = 'univ_id_example' # str | 
+
+    try:
+        # Item Univ Id Forward Translate
+        api_response = api_instance.item_univ_id_forward_translate(univ_id)
+        print("The response of ItemApi->item_univ_id_forward_translate:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_forward_translate: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **univ_id** | **str**|  | 
+
+### Return type
+
+**int**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_reverse_batch_translate**
+> List[str] item_univ_id_reverse_batch_translate(request_body)
+
+Item Univ Id Reverse Batch Translate
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    request_body = [56] # List[int] | 
+
+    try:
+        # Item Univ Id Reverse Batch Translate
+        api_response = api_instance.item_univ_id_reverse_batch_translate(request_body)
+        print("The response of ItemApi->item_univ_id_reverse_batch_translate:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_reverse_batch_translate: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_body** | [**List[int]**](int.md)|  | 
+
+### Return type
+
+**List[str]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_reverse_batch_translate_map**
+> Dict[str, str] item_univ_id_reverse_batch_translate_map(request_body, strict=strict)
+
+Item Univ Id Reverse Batch Translate Map
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    request_body = [56] # List[int] | 
+    strict = False # bool |  (optional) (default to False)
+
+    try:
+        # Item Univ Id Reverse Batch Translate Map
+        api_response = api_instance.item_univ_id_reverse_batch_translate_map(request_body, strict=strict)
+        print("The response of ItemApi->item_univ_id_reverse_batch_translate_map:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_reverse_batch_translate_map: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_body** | [**List[int]**](int.md)|  | 
+ **strict** | **bool**|  | [optional] [default to False]
+
+### Return type
+
+**Dict[str, str]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **item_univ_id_reverse_translate**
+> str item_univ_id_reverse_translate(id)
+
+Item Univ Id Reverse Translate
+
+### Example
+
+* Api Key Authentication (APIKeyHeader):
+```python
+from __future__ import print_function
+import time
+import os
+import apollo2_api_client
+from apollo2_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = apollo2_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with apollo2_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = apollo2_api_client.ItemApi(api_client)
+    id = 56 # int | 
+
+    try:
+        # Item Univ Id Reverse Translate
+        api_response = api_instance.item_univ_id_reverse_translate(id)
+        print("The response of ItemApi->item_univ_id_reverse_translate:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ItemApi->item_univ_id_reverse_translate: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
 **422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

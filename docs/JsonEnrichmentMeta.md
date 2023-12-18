@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.json_enrichment_meta import JsonEnrichmentMeta
+from apollo2_api_client.models import JsonEnrichmentMeta
 
 # TODO update the JSON string below
 json = "{}"

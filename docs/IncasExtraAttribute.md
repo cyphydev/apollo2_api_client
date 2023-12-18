@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.incas_extra_attribute import IncasExtraAttribute
+from apollo2_api_client.models import IncasExtraAttribute
 
 # TODO update the JSON string below
 json = "{}"

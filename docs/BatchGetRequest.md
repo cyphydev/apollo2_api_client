@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ids** | **List[int]** |  | 
-**with_enrichment** | **bool** |  | [optional] 
+**with_enrichment** | **bool** |  | [optional] [default to False]
 **enrichment_name** | **str** |  | [optional] 
 **enrichment_provider** | **str** |  | [optional] 
 **enrichment_tag** | **str** |  | [optional] 
 **enrichment_version** | **str** |  | [optional] 
-**with_cluster** | **bool** |  | [optional] 
+**with_cluster** | **bool** |  | [optional] [default to False]
 **cluster_name** | **str** |  | [optional] 
 **cluster_provider** | **str** |  | [optional] 
 **cluster_tag** | **str** |  | [optional] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.batch_get_request import BatchGetRequest
+from apollo2_api_client.models import BatchGetRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.enrichments_batch_request import EnrichmentsBatchRequest
+from apollo2_api_client.models import EnrichmentsBatchRequest
 
 # TODO update the JSON string below
 json = "{}"

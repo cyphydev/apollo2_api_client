@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from typing import Any
+from typing import Any, Dict
 
 from apollo2_api_client.models import RawDataPostRequest
 from apollo2_api_client.models import RawDataPostResponse

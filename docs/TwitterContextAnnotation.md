@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.twitter_context_annotation import TwitterContextAnnotation
+from apollo2_api_client.models import TwitterContextAnnotation
 
 # TODO update the JSON string below
 json = "{}"

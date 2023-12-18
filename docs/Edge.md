@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.edge import Edge
+from apollo2_api_client.models import Edge
 
 # TODO update the JSON string below
 json = "{}"

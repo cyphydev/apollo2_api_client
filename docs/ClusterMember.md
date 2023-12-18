@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.cluster_member import ClusterMember
+from apollo2_api_client.models import ClusterMember
 
 # TODO update the JSON string below
 json = "{}"

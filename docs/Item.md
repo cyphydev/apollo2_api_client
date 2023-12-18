@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | 
+**univ_id** | **str** |  | [optional] 
 **author** | **str** |  | 
 **platform** | [**PlatformType**](PlatformType.md) |  | 
 **time_published** | **int** |  | 
@@ -19,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.item import Item
+from apollo2_api_client.models import Item
 
 # TODO update the JSON string below
 json = "{}"

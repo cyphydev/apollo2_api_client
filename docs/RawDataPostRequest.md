@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.raw_data_post_request import RawDataPostRequest
+from apollo2_api_client.models import RawDataPostRequest
 
 # TODO update the JSON string below
 json = "{}"

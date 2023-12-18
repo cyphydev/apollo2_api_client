@@ -4,13 +4,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reddit_data** | **object** |  | [optional] 
+**reddit_data** | [**IncasRedditData**](IncasRedditData.md) |  | [optional] 
 **twitter_data** | [**IncasTwitterData**](IncasTwitterData.md) |  | [optional] 
 
 ## Example
 
 ```python
-from apollo2_api_client.models.incas_one_of_media_type_attributes import IncasOneOfMediaTypeAttributes
+from apollo2_api_client.models import IncasOneOfMediaTypeAttributes
 
 # TODO update the JSON string below
 json = "{}"

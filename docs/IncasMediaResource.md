@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.incas_media_resource import IncasMediaResource
+from apollo2_api_client.models import IncasMediaResource
 
 # TODO update the JSON string below
 json = "{}"

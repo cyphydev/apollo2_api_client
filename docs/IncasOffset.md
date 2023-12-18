@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.incas_offset import IncasOffset
+from apollo2_api_client.models import IncasOffset
 
 # TODO update the JSON string below
 json = "{}"

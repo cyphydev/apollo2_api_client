@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.twitter_public_metrics import TwitterPublicMetrics
+from apollo2_api_client.models import TwitterPublicMetrics
 
 # TODO update the JSON string below
 json = "{}"

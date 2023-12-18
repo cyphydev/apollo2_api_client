@@ -195,7 +195,7 @@ class SourceApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def source_count_get(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, **kwargs) -> int:  # noqa: E501
+    def source_count_get(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, **kwargs) -> int:  # noqa: E501
         """Source Count Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -209,7 +209,7 @@ class SourceApi(object):
         :param end:
         :type end: int
         :param platform:
-        :type platform: PlatformType
+        :type platform: str
         :param identifier:
         :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
@@ -231,7 +231,7 @@ class SourceApi(object):
         return self.source_count_get_with_http_info(last, end, platform, identifier, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def source_count_get_with_http_info(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+    def source_count_get_with_http_info(self, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """Source Count Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -245,7 +245,7 @@ class SourceApi(object):
         :param end:
         :type end: int
         :param platform:
-        :type platform: PlatformType
+        :type platform: str
         :param identifier:
         :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
@@ -804,7 +804,7 @@ class SourceApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def source_get(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, **kwargs) -> List[Source]:  # noqa: E501
+    def source_get(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, **kwargs) -> List[Source]:  # noqa: E501
         """Source Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -840,7 +840,7 @@ class SourceApi(object):
         :param cluster_version:
         :type cluster_version: str
         :param platform:
-        :type platform: PlatformType
+        :type platform: str
         :param identifier:
         :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
@@ -862,7 +862,7 @@ class SourceApi(object):
         return self.source_get_with_http_info(limit, last, end, with_enrichment, with_cluster, enrichment_name, enrichment_provider, enrichment_tag, enrichment_version, cluster_name, cluster_provider, cluster_tag, cluster_version, platform, identifier, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def source_get_with_http_info(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+    def source_get_with_http_info(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, with_enrichment : Optional[StrictBool] = None, with_cluster : Optional[StrictBool] = None, enrichment_name : Optional[StrictStr] = None, enrichment_provider : Optional[StrictStr] = None, enrichment_tag : Optional[StrictStr] = None, enrichment_version : Optional[StrictStr] = None, cluster_name : Optional[StrictStr] = None, cluster_provider : Optional[StrictStr] = None, cluster_tag : Optional[StrictStr] = None, cluster_version : Optional[StrictStr] = None, platform : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """Source Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -898,7 +898,7 @@ class SourceApi(object):
         :param cluster_version:
         :type cluster_version: str
         :param platform:
-        :type platform: PlatformType
+        :type platform: str
         :param identifier:
         :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
@@ -1855,6 +1855,169 @@ class SourceApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
+    def source_id_forward_batch_translate_map(self, request_body : conlist(StrictStr), strict : Optional[StrictBool] = None, platform : Optional[PlatformType] = None, **kwargs) -> Dict[str, int]:  # noqa: E501
+        """Source Id Forward Batch Translate Map  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_id_forward_batch_translate_map(request_body, strict, platform, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[str]
+        :param strict:
+        :type strict: bool
+        :param platform:
+        :type platform: PlatformType
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: Dict[str, int]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.source_id_forward_batch_translate_map_with_http_info(request_body, strict, platform, **kwargs)  # noqa: E501
+
+    @validate_arguments
+    def source_id_forward_batch_translate_map_with_http_info(self, request_body : conlist(StrictStr), strict : Optional[StrictBool] = None, platform : Optional[PlatformType] = None, **kwargs):  # noqa: E501
+        """Source Id Forward Batch Translate Map  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_id_forward_batch_translate_map_with_http_info(request_body, strict, platform, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[str]
+        :param strict:
+        :type strict: bool
+        :param platform:
+        :type platform: PlatformType
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(Dict[str, int], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        _params = locals()
+
+        _all_params = [
+            'request_body',
+            'strict',
+            'platform'
+        ]
+        _all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        # validate the arguments
+        for _key, _val in _params['kwargs'].items():
+            if _key not in _all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_id_forward_batch_translate_map" % _key
+                )
+            _params[_key] = _val
+        del _params['kwargs']
+
+        _collection_formats = {}
+
+        # process the path parameters
+        _path_params = {}
+
+        # process the query parameters
+        _query_params = []
+        if _params.get('strict') is not None:  # noqa: E501
+            _query_params.append(('strict', _params['strict']))
+
+        if _params.get('platform') is not None:  # noqa: E501
+            _query_params.append(('platform', _params['platform']))
+
+        # process the header parameters
+        _header_params = dict(_params.get('_headers', {}))
+        # process the form parameters
+        _form_params = []
+        _files = {}
+        # process the body parameter
+        _body_params = None
+        if _params['request_body']:
+            _body_params = _params['request_body']
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'text/plain'])  # noqa: E501
+
+        # set the HTTP header `Content-Type`
+        _content_types_list = _params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json']))
+        if _content_types_list:
+                _header_params['Content-Type'] = _content_types_list
+
+        # authentication setting
+        _auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        _response_types_map = {
+            '200': "Dict[str, int]",
+            '404': None,
+            '422': "HTTPValidationError",
+        }
+
+        return self.api_client.call_api(
+            '/source/id/forward/map', 'POST',
+            _path_params,
+            _query_params,
+            _header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            response_types_map=_response_types_map,
+            auth_settings=_auth_settings,
+            async_req=_params.get('async_req'),
+            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=_params.get('_preload_content', True),
+            _request_timeout=_params.get('_request_timeout'),
+            collection_formats=_collection_formats,
+            _request_auth=_params.get('_request_auth'))
+
+    @validate_arguments
     def source_id_forward_translate(self, id : StrictStr, platform : Optional[PlatformType] = None, **kwargs) -> int:  # noqa: E501
         """Source Id Forward Translate  # noqa: E501
 
@@ -2513,6 +2676,154 @@ class SourceApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
+    def source_id_reverse_batch_translate_map(self, request_body : conlist(StrictInt), **kwargs) -> Dict[str, str]:  # noqa: E501
+        """Source Id Reverse Batch Translate Map  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_id_reverse_batch_translate_map(request_body, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[int]
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: Dict[str, str]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.source_id_reverse_batch_translate_map_with_http_info(request_body, **kwargs)  # noqa: E501
+
+    @validate_arguments
+    def source_id_reverse_batch_translate_map_with_http_info(self, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
+        """Source Id Reverse Batch Translate Map  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_id_reverse_batch_translate_map_with_http_info(request_body, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[int]
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(Dict[str, str], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        _params = locals()
+
+        _all_params = [
+            'request_body'
+        ]
+        _all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        # validate the arguments
+        for _key, _val in _params['kwargs'].items():
+            if _key not in _all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_id_reverse_batch_translate_map" % _key
+                )
+            _params[_key] = _val
+        del _params['kwargs']
+
+        _collection_formats = {}
+
+        # process the path parameters
+        _path_params = {}
+
+        # process the query parameters
+        _query_params = []
+        # process the header parameters
+        _header_params = dict(_params.get('_headers', {}))
+        # process the form parameters
+        _form_params = []
+        _files = {}
+        # process the body parameter
+        _body_params = None
+        if _params['request_body']:
+            _body_params = _params['request_body']
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'text/plain'])  # noqa: E501
+
+        # set the HTTP header `Content-Type`
+        _content_types_list = _params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json']))
+        if _content_types_list:
+                _header_params['Content-Type'] = _content_types_list
+
+        # authentication setting
+        _auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        _response_types_map = {
+            '200': "Dict[str, str]",
+            '400': None,
+            '404': None,
+            '422': "HTTPValidationError",
+        }
+
+        return self.api_client.call_api(
+            '/source/id/reverse/map', 'POST',
+            _path_params,
+            _query_params,
+            _header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            response_types_map=_response_types_map,
+            auth_settings=_auth_settings,
+            async_req=_params.get('async_req'),
+            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=_params.get('_preload_content', True),
+            _request_timeout=_params.get('_request_timeout'),
+            collection_formats=_collection_formats,
+            _request_auth=_params.get('_request_auth'))
+
+    @validate_arguments
     def source_id_reverse_translate(self, id : StrictInt, **kwargs) -> str:  # noqa: E501
         """Source Id Reverse Translate  # noqa: E501
 
@@ -2968,7 +3279,7 @@ class SourceApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def source_list_get(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, **kwargs) -> List[int]:  # noqa: E501
+    def source_list_get(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, **kwargs) -> List[int]:  # noqa: E501
         """Source List Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2984,7 +3295,7 @@ class SourceApi(object):
         :param end:
         :type end: int
         :param platform:
-        :type platform: PlatformType
+        :type platform: str
         :param identifier:
         :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
@@ -3006,7 +3317,7 @@ class SourceApi(object):
         return self.source_list_get_with_http_info(limit, last, end, platform, identifier, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def source_list_get_with_http_info(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+    def source_list_get_with_http_info(self, limit : StrictInt, last : Optional[StrictInt] = None, end : Optional[StrictInt] = None, platform : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """Source List Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3022,7 +3333,7 @@ class SourceApi(object):
         :param end:
         :type end: int
         :param platform:
-        :type platform: PlatformType
+        :type platform: str
         :param identifier:
         :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
@@ -3139,7 +3450,7 @@ class SourceApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def source_max_id_get(self, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, **kwargs) -> int:  # noqa: E501
+    def source_max_id_get(self, platform : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, **kwargs) -> int:  # noqa: E501
         """Source Max Id Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3149,7 +3460,7 @@ class SourceApi(object):
         >>> result = thread.get()
 
         :param platform:
-        :type platform: PlatformType
+        :type platform: str
         :param identifier:
         :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
@@ -3171,7 +3482,7 @@ class SourceApi(object):
         return self.source_max_id_get_with_http_info(platform, identifier, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def source_max_id_get_with_http_info(self, platform : Optional[PlatformType] = None, identifier : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+    def source_max_id_get_with_http_info(self, platform : Optional[StrictStr] = None, identifier : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """Source Max Id Get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3181,7 +3492,7 @@ class SourceApi(object):
         >>> result = thread.get()
 
         :param platform:
-        :type platform: PlatformType
+        :type platform: str
         :param identifier:
         :type identifier: str
         :param async_req: Whether to execute the request asynchronously.
@@ -3270,6 +3581,893 @@ class SourceApi(object):
 
         return self.api_client.call_api(
             '/source/max_id', 'GET',
+            _path_params,
+            _query_params,
+            _header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            response_types_map=_response_types_map,
+            auth_settings=_auth_settings,
+            async_req=_params.get('async_req'),
+            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=_params.get('_preload_content', True),
+            _request_timeout=_params.get('_request_timeout'),
+            collection_formats=_collection_formats,
+            _request_auth=_params.get('_request_auth'))
+
+    @validate_arguments
+    def source_univ_id_forward_batch_translate(self, request_body : conlist(StrictStr), **kwargs) -> List[int]:  # noqa: E501
+        """Source Univ Id Forward Batch Translate  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_forward_batch_translate(request_body, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[str]
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: List[int]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.source_univ_id_forward_batch_translate_with_http_info(request_body, **kwargs)  # noqa: E501
+
+    @validate_arguments
+    def source_univ_id_forward_batch_translate_with_http_info(self, request_body : conlist(StrictStr), **kwargs):  # noqa: E501
+        """Source Univ Id Forward Batch Translate  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_forward_batch_translate_with_http_info(request_body, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[str]
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(List[int], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        _params = locals()
+
+        _all_params = [
+            'request_body'
+        ]
+        _all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        # validate the arguments
+        for _key, _val in _params['kwargs'].items():
+            if _key not in _all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_univ_id_forward_batch_translate" % _key
+                )
+            _params[_key] = _val
+        del _params['kwargs']
+
+        _collection_formats = {}
+
+        # process the path parameters
+        _path_params = {}
+
+        # process the query parameters
+        _query_params = []
+        # process the header parameters
+        _header_params = dict(_params.get('_headers', {}))
+        # process the form parameters
+        _form_params = []
+        _files = {}
+        # process the body parameter
+        _body_params = None
+        if _params['request_body']:
+            _body_params = _params['request_body']
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'text/plain'])  # noqa: E501
+
+        # set the HTTP header `Content-Type`
+        _content_types_list = _params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json']))
+        if _content_types_list:
+                _header_params['Content-Type'] = _content_types_list
+
+        # authentication setting
+        _auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        _response_types_map = {
+            '200': "List[int]",
+            '404': None,
+            '422': "HTTPValidationError",
+        }
+
+        return self.api_client.call_api(
+            '/source/univ_id/forward', 'POST',
+            _path_params,
+            _query_params,
+            _header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            response_types_map=_response_types_map,
+            auth_settings=_auth_settings,
+            async_req=_params.get('async_req'),
+            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=_params.get('_preload_content', True),
+            _request_timeout=_params.get('_request_timeout'),
+            collection_formats=_collection_formats,
+            _request_auth=_params.get('_request_auth'))
+
+    @validate_arguments
+    def source_univ_id_forward_batch_translate_map(self, request_body : conlist(StrictStr), strict : Optional[StrictBool] = None, **kwargs) -> Dict[str, int]:  # noqa: E501
+        """Source Univ Id Forward Batch Translate Map  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_forward_batch_translate_map(request_body, strict, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[str]
+        :param strict:
+        :type strict: bool
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: Dict[str, int]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.source_univ_id_forward_batch_translate_map_with_http_info(request_body, strict, **kwargs)  # noqa: E501
+
+    @validate_arguments
+    def source_univ_id_forward_batch_translate_map_with_http_info(self, request_body : conlist(StrictStr), strict : Optional[StrictBool] = None, **kwargs):  # noqa: E501
+        """Source Univ Id Forward Batch Translate Map  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_forward_batch_translate_map_with_http_info(request_body, strict, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[str]
+        :param strict:
+        :type strict: bool
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(Dict[str, int], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        _params = locals()
+
+        _all_params = [
+            'request_body',
+            'strict'
+        ]
+        _all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        # validate the arguments
+        for _key, _val in _params['kwargs'].items():
+            if _key not in _all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_univ_id_forward_batch_translate_map" % _key
+                )
+            _params[_key] = _val
+        del _params['kwargs']
+
+        _collection_formats = {}
+
+        # process the path parameters
+        _path_params = {}
+
+        # process the query parameters
+        _query_params = []
+        if _params.get('strict') is not None:  # noqa: E501
+            _query_params.append(('strict', _params['strict']))
+
+        # process the header parameters
+        _header_params = dict(_params.get('_headers', {}))
+        # process the form parameters
+        _form_params = []
+        _files = {}
+        # process the body parameter
+        _body_params = None
+        if _params['request_body']:
+            _body_params = _params['request_body']
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'text/plain'])  # noqa: E501
+
+        # set the HTTP header `Content-Type`
+        _content_types_list = _params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json']))
+        if _content_types_list:
+                _header_params['Content-Type'] = _content_types_list
+
+        # authentication setting
+        _auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        _response_types_map = {
+            '200': "Dict[str, int]",
+            '404': None,
+            '422': "HTTPValidationError",
+        }
+
+        return self.api_client.call_api(
+            '/source/univ_id/forward/map', 'POST',
+            _path_params,
+            _query_params,
+            _header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            response_types_map=_response_types_map,
+            auth_settings=_auth_settings,
+            async_req=_params.get('async_req'),
+            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=_params.get('_preload_content', True),
+            _request_timeout=_params.get('_request_timeout'),
+            collection_formats=_collection_formats,
+            _request_auth=_params.get('_request_auth'))
+
+    @validate_arguments
+    def source_univ_id_forward_translate(self, univ_id : StrictStr, **kwargs) -> int:  # noqa: E501
+        """Source Univ Id Forward Translate  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_forward_translate(univ_id, async_req=True)
+        >>> result = thread.get()
+
+        :param univ_id: (required)
+        :type univ_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: int
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.source_univ_id_forward_translate_with_http_info(univ_id, **kwargs)  # noqa: E501
+
+    @validate_arguments
+    def source_univ_id_forward_translate_with_http_info(self, univ_id : StrictStr, **kwargs):  # noqa: E501
+        """Source Univ Id Forward Translate  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_forward_translate_with_http_info(univ_id, async_req=True)
+        >>> result = thread.get()
+
+        :param univ_id: (required)
+        :type univ_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(int, status_code(int), headers(HTTPHeaderDict))
+        """
+
+        _params = locals()
+
+        _all_params = [
+            'univ_id'
+        ]
+        _all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        # validate the arguments
+        for _key, _val in _params['kwargs'].items():
+            if _key not in _all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_univ_id_forward_translate" % _key
+                )
+            _params[_key] = _val
+        del _params['kwargs']
+
+        _collection_formats = {}
+
+        # process the path parameters
+        _path_params = {}
+        if _params['univ_id']:
+            _path_params['univ_id'] = _params['univ_id']
+
+
+        # process the query parameters
+        _query_params = []
+        # process the header parameters
+        _header_params = dict(_params.get('_headers', {}))
+        # process the form parameters
+        _form_params = []
+        _files = {}
+        # process the body parameter
+        _body_params = None
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'text/plain'])  # noqa: E501
+
+        # authentication setting
+        _auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        _response_types_map = {
+            '200': "int",
+            '404': None,
+            '422': "HTTPValidationError",
+        }
+
+        return self.api_client.call_api(
+            '/source/univ_id/forward/{univ_id}', 'GET',
+            _path_params,
+            _query_params,
+            _header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            response_types_map=_response_types_map,
+            auth_settings=_auth_settings,
+            async_req=_params.get('async_req'),
+            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=_params.get('_preload_content', True),
+            _request_timeout=_params.get('_request_timeout'),
+            collection_formats=_collection_formats,
+            _request_auth=_params.get('_request_auth'))
+
+    @validate_arguments
+    def source_univ_id_reverse_batch_translate(self, request_body : conlist(StrictInt), **kwargs) -> List[str]:  # noqa: E501
+        """Source Univ Id Reverse Batch Translate  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_reverse_batch_translate(request_body, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[int]
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: List[str]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.source_univ_id_reverse_batch_translate_with_http_info(request_body, **kwargs)  # noqa: E501
+
+    @validate_arguments
+    def source_univ_id_reverse_batch_translate_with_http_info(self, request_body : conlist(StrictInt), **kwargs):  # noqa: E501
+        """Source Univ Id Reverse Batch Translate  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_reverse_batch_translate_with_http_info(request_body, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[int]
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(List[str], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        _params = locals()
+
+        _all_params = [
+            'request_body'
+        ]
+        _all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        # validate the arguments
+        for _key, _val in _params['kwargs'].items():
+            if _key not in _all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_univ_id_reverse_batch_translate" % _key
+                )
+            _params[_key] = _val
+        del _params['kwargs']
+
+        _collection_formats = {}
+
+        # process the path parameters
+        _path_params = {}
+
+        # process the query parameters
+        _query_params = []
+        # process the header parameters
+        _header_params = dict(_params.get('_headers', {}))
+        # process the form parameters
+        _form_params = []
+        _files = {}
+        # process the body parameter
+        _body_params = None
+        if _params['request_body']:
+            _body_params = _params['request_body']
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'text/plain'])  # noqa: E501
+
+        # set the HTTP header `Content-Type`
+        _content_types_list = _params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json']))
+        if _content_types_list:
+                _header_params['Content-Type'] = _content_types_list
+
+        # authentication setting
+        _auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        _response_types_map = {
+            '200': "List[str]",
+            '400': None,
+            '404': None,
+            '422': "HTTPValidationError",
+        }
+
+        return self.api_client.call_api(
+            '/source/univ_id/reverse', 'POST',
+            _path_params,
+            _query_params,
+            _header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            response_types_map=_response_types_map,
+            auth_settings=_auth_settings,
+            async_req=_params.get('async_req'),
+            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=_params.get('_preload_content', True),
+            _request_timeout=_params.get('_request_timeout'),
+            collection_formats=_collection_formats,
+            _request_auth=_params.get('_request_auth'))
+
+    @validate_arguments
+    def source_univ_id_reverse_batch_translate_map(self, request_body : conlist(StrictInt), strict : Optional[StrictBool] = None, **kwargs) -> Dict[str, str]:  # noqa: E501
+        """Source Univ Id Reverse Batch Translate Map  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_reverse_batch_translate_map(request_body, strict, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[int]
+        :param strict:
+        :type strict: bool
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: Dict[str, str]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.source_univ_id_reverse_batch_translate_map_with_http_info(request_body, strict, **kwargs)  # noqa: E501
+
+    @validate_arguments
+    def source_univ_id_reverse_batch_translate_map_with_http_info(self, request_body : conlist(StrictInt), strict : Optional[StrictBool] = None, **kwargs):  # noqa: E501
+        """Source Univ Id Reverse Batch Translate Map  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_reverse_batch_translate_map_with_http_info(request_body, strict, async_req=True)
+        >>> result = thread.get()
+
+        :param request_body: (required)
+        :type request_body: List[int]
+        :param strict:
+        :type strict: bool
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(Dict[str, str], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        _params = locals()
+
+        _all_params = [
+            'request_body',
+            'strict'
+        ]
+        _all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        # validate the arguments
+        for _key, _val in _params['kwargs'].items():
+            if _key not in _all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_univ_id_reverse_batch_translate_map" % _key
+                )
+            _params[_key] = _val
+        del _params['kwargs']
+
+        _collection_formats = {}
+
+        # process the path parameters
+        _path_params = {}
+
+        # process the query parameters
+        _query_params = []
+        if _params.get('strict') is not None:  # noqa: E501
+            _query_params.append(('strict', _params['strict']))
+
+        # process the header parameters
+        _header_params = dict(_params.get('_headers', {}))
+        # process the form parameters
+        _form_params = []
+        _files = {}
+        # process the body parameter
+        _body_params = None
+        if _params['request_body']:
+            _body_params = _params['request_body']
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'text/plain'])  # noqa: E501
+
+        # set the HTTP header `Content-Type`
+        _content_types_list = _params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json']))
+        if _content_types_list:
+                _header_params['Content-Type'] = _content_types_list
+
+        # authentication setting
+        _auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        _response_types_map = {
+            '200': "Dict[str, str]",
+            '400': None,
+            '404': None,
+            '422': "HTTPValidationError",
+        }
+
+        return self.api_client.call_api(
+            '/source/univ_id/reverse/map', 'POST',
+            _path_params,
+            _query_params,
+            _header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            response_types_map=_response_types_map,
+            auth_settings=_auth_settings,
+            async_req=_params.get('async_req'),
+            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=_params.get('_preload_content', True),
+            _request_timeout=_params.get('_request_timeout'),
+            collection_formats=_collection_formats,
+            _request_auth=_params.get('_request_auth'))
+
+    @validate_arguments
+    def source_univ_id_reverse_translate(self, id : StrictInt, **kwargs) -> str:  # noqa: E501
+        """Source Univ Id Reverse Translate  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_reverse_translate(id, async_req=True)
+        >>> result = thread.get()
+
+        :param id: (required)
+        :type id: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: str
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.source_univ_id_reverse_translate_with_http_info(id, **kwargs)  # noqa: E501
+
+    @validate_arguments
+    def source_univ_id_reverse_translate_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
+        """Source Univ Id Reverse Translate  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.source_univ_id_reverse_translate_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param id: (required)
+        :type id: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(str, status_code(int), headers(HTTPHeaderDict))
+        """
+
+        _params = locals()
+
+        _all_params = [
+            'id'
+        ]
+        _all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        # validate the arguments
+        for _key, _val in _params['kwargs'].items():
+            if _key not in _all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method source_univ_id_reverse_translate" % _key
+                )
+            _params[_key] = _val
+        del _params['kwargs']
+
+        _collection_formats = {}
+
+        # process the path parameters
+        _path_params = {}
+        if _params['id']:
+            _path_params['id'] = _params['id']
+
+
+        # process the query parameters
+        _query_params = []
+        # process the header parameters
+        _header_params = dict(_params.get('_headers', {}))
+        # process the form parameters
+        _form_params = []
+        _files = {}
+        # process the body parameter
+        _body_params = None
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'text/plain'])  # noqa: E501
+
+        # authentication setting
+        _auth_settings = ['APIKeyHeader']  # noqa: E501
+
+        _response_types_map = {
+            '200': "str",
+            '400': None,
+            '404': None,
+            '422': "HTTPValidationError",
+        }
+
+        return self.api_client.call_api(
+            '/source/univ_id/reverse/{id}', 'GET',
             _path_params,
             _query_params,
             _header_params,

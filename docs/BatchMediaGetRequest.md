@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from apollo2_api_client.models.batch_media_get_request import BatchMediaGetRequest
+from apollo2_api_client.models import BatchMediaGetRequest
 
 # TODO update the JSON string below
 json = "{}"

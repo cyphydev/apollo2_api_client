@@ -129,7 +129,7 @@ Class | Method | HTTP request | Description
 *GraphApi* | [**graph_id_edit_edges_post**](docs/GraphApi.md#graph_id_edit_edges_post) | **POST** /graph/{id}/edit_edges | Graph Id Edit Edges Post
 *GraphApi* | [**graph_id_get**](docs/GraphApi.md#graph_id_get) | **GET** /graph/{id} | Graph Id Get
 *GraphApi* | [**graph_post**](docs/GraphApi.md#graph_post) | **POST** /graph | Graph Post
-*IdentifierApi* | [**identifier_delete**](docs/IdentifierApi.md#identifier_delete) | **GET** /identifier/delete | Identifier Delete
+*IdentifierApi* | [**identifier_delete**](docs/IdentifierApi.md#identifier_delete) | **DELETE** /identifier/delete | Identifier Delete
 *IdentifierApi* | [**identifier_list**](docs/IdentifierApi.md#identifier_list) | **GET** /identifier/list | Identifier List
 *ItemApi* | [**item_attach_media_post**](docs/ItemApi.md#item_attach_media_post) | **POST** /item/attach_media | Item Attach Media Post
 *ItemApi* | [**item_batch_get**](docs/ItemApi.md#item_batch_get) | **POST** /item/get | Item Batch Get
@@ -144,15 +144,23 @@ Class | Method | HTTP request | Description
 *ItemApi* | [**item_id_enrichments_get**](docs/ItemApi.md#item_id_enrichments_get) | **GET** /item/{id}/enrichments | Item Id Enrichments Get
 *ItemApi* | [**item_id_enrichments_post**](docs/ItemApi.md#item_id_enrichments_post) | **POST** /item/{id}/enrichments | Item Id Enrichments Post
 *ItemApi* | [**item_id_forward_batch_translate**](docs/ItemApi.md#item_id_forward_batch_translate) | **POST** /item/id/forward | Item Id Forward Batch Translate
+*ItemApi* | [**item_id_forward_batch_translate_map**](docs/ItemApi.md#item_id_forward_batch_translate_map) | **POST** /item/id/forward/map | Item Id Forward Batch Translate Map
 *ItemApi* | [**item_id_forward_translate**](docs/ItemApi.md#item_id_forward_translate) | **GET** /item/id/forward/{id} | Item Id Forward Translate
 *ItemApi* | [**item_id_get**](docs/ItemApi.md#item_id_get) | **GET** /item/{id} | Item Id Get
 *ItemApi* | [**item_id_identifier_get**](docs/ItemApi.md#item_id_identifier_get) | **GET** /item/{id}/identifier | Item Id Identifier Get
 *ItemApi* | [**item_id_reverse_batch_translate**](docs/ItemApi.md#item_id_reverse_batch_translate) | **POST** /item/id/reverse | Item Id Reverse Batch Translate
+*ItemApi* | [**item_id_reverse_batch_translate_map**](docs/ItemApi.md#item_id_reverse_batch_translate_map) | **POST** /item/id/reverse/map | Item Id Reverse Batch Translate Map
 *ItemApi* | [**item_id_reverse_translate**](docs/ItemApi.md#item_id_reverse_translate) | **GET** /item/id/reverse/{id} | Item Id Reverse Translate
 *ItemApi* | [**item_identifier_delete**](docs/ItemApi.md#item_identifier_delete) | **POST** /item/identifier/delete | Item Identifier Delete
 *ItemApi* | [**item_identifier_post**](docs/ItemApi.md#item_identifier_post) | **POST** /item/identifier/post | Item Identifier Post
 *ItemApi* | [**item_list_get**](docs/ItemApi.md#item_list_get) | **GET** /item/list | Item List Get
 *ItemApi* | [**item_max_id_get**](docs/ItemApi.md#item_max_id_get) | **GET** /item/max_id | Item Max Id Get
+*ItemApi* | [**item_univ_id_forward_batch_translate**](docs/ItemApi.md#item_univ_id_forward_batch_translate) | **POST** /item/univ_id/forward | Item Univ Id Forward Batch Translate
+*ItemApi* | [**item_univ_id_forward_batch_translate_map**](docs/ItemApi.md#item_univ_id_forward_batch_translate_map) | **POST** /item/univ_id/forward/map | Item Univ Id Forward Batch Translate Map
+*ItemApi* | [**item_univ_id_forward_translate**](docs/ItemApi.md#item_univ_id_forward_translate) | **GET** /item/univ_id/forward/{univ_id} | Item Univ Id Forward Translate
+*ItemApi* | [**item_univ_id_reverse_batch_translate**](docs/ItemApi.md#item_univ_id_reverse_batch_translate) | **POST** /item/univ_id/reverse | Item Univ Id Reverse Batch Translate
+*ItemApi* | [**item_univ_id_reverse_batch_translate_map**](docs/ItemApi.md#item_univ_id_reverse_batch_translate_map) | **POST** /item/univ_id/reverse/map | Item Univ Id Reverse Batch Translate Map
+*ItemApi* | [**item_univ_id_reverse_translate**](docs/ItemApi.md#item_univ_id_reverse_translate) | **GET** /item/univ_id/reverse/{id} | Item Univ Id Reverse Translate
 *MediaItemApi* | [**media_item_batch_get**](docs/MediaItemApi.md#media_item_batch_get) | **POST** /media_item/get | Media Item Batch Get
 *MediaItemApi* | [**media_item_count_get**](docs/MediaItemApi.md#media_item_count_get) | **GET** /media_item/count | Media Item Count Get
 *MediaItemApi* | [**media_item_get**](docs/MediaItemApi.md#media_item_get) | **GET** /media_item | Media Item Get
@@ -173,15 +181,23 @@ Class | Method | HTTP request | Description
 *SourceApi* | [**source_id_enrichments_get**](docs/SourceApi.md#source_id_enrichments_get) | **GET** /source/{id}/enrichments | Source Id Enrichments Get
 *SourceApi* | [**source_id_enrichments_post**](docs/SourceApi.md#source_id_enrichments_post) | **POST** /source/{id}/enrichments | Source Id Enrichments Post
 *SourceApi* | [**source_id_forward_batch_translate**](docs/SourceApi.md#source_id_forward_batch_translate) | **POST** /source/id/forward | Source Id Forward Batch Translate
+*SourceApi* | [**source_id_forward_batch_translate_map**](docs/SourceApi.md#source_id_forward_batch_translate_map) | **POST** /source/id/forward/map | Source Id Forward Batch Translate Map
 *SourceApi* | [**source_id_forward_translate**](docs/SourceApi.md#source_id_forward_translate) | **GET** /source/id/forward/{id} | Source Id Forward Translate
 *SourceApi* | [**source_id_get**](docs/SourceApi.md#source_id_get) | **GET** /source/{id} | Source Id Get
 *SourceApi* | [**source_id_identifier_get**](docs/SourceApi.md#source_id_identifier_get) | **GET** /source/{id}/identifier | Source Id Identifier Get
 *SourceApi* | [**source_id_reverse_batch_translate**](docs/SourceApi.md#source_id_reverse_batch_translate) | **POST** /source/id/reverse | Source Id Reverse Batch Translate
+*SourceApi* | [**source_id_reverse_batch_translate_map**](docs/SourceApi.md#source_id_reverse_batch_translate_map) | **POST** /source/id/reverse/map | Source Id Reverse Batch Translate Map
 *SourceApi* | [**source_id_reverse_translate**](docs/SourceApi.md#source_id_reverse_translate) | **GET** /source/id/reverse/{id} | Source Id Reverse Translate
 *SourceApi* | [**source_identifier_delete**](docs/SourceApi.md#source_identifier_delete) | **POST** /source/identifier/delete | Source Identifier Delete
 *SourceApi* | [**source_identifier_post**](docs/SourceApi.md#source_identifier_post) | **POST** /source/identifier/post | Source Identifier Post
 *SourceApi* | [**source_list_get**](docs/SourceApi.md#source_list_get) | **GET** /source/list | Source List Get
 *SourceApi* | [**source_max_id_get**](docs/SourceApi.md#source_max_id_get) | **GET** /source/max_id | Source Max Id Get
+*SourceApi* | [**source_univ_id_forward_batch_translate**](docs/SourceApi.md#source_univ_id_forward_batch_translate) | **POST** /source/univ_id/forward | Source Univ Id Forward Batch Translate
+*SourceApi* | [**source_univ_id_forward_batch_translate_map**](docs/SourceApi.md#source_univ_id_forward_batch_translate_map) | **POST** /source/univ_id/forward/map | Source Univ Id Forward Batch Translate Map
+*SourceApi* | [**source_univ_id_forward_translate**](docs/SourceApi.md#source_univ_id_forward_translate) | **GET** /source/univ_id/forward/{univ_id} | Source Univ Id Forward Translate
+*SourceApi* | [**source_univ_id_reverse_batch_translate**](docs/SourceApi.md#source_univ_id_reverse_batch_translate) | **POST** /source/univ_id/reverse | Source Univ Id Reverse Batch Translate
+*SourceApi* | [**source_univ_id_reverse_batch_translate_map**](docs/SourceApi.md#source_univ_id_reverse_batch_translate_map) | **POST** /source/univ_id/reverse/map | Source Univ Id Reverse Batch Translate Map
+*SourceApi* | [**source_univ_id_reverse_translate**](docs/SourceApi.md#source_univ_id_reverse_translate) | **GET** /source/univ_id/reverse/{id} | Source Univ Id Reverse Translate
 
 
 ## Documentation For Models
@@ -216,6 +232,7 @@ Class | Method | HTTP request | Description
  - [IncasMessage](docs/IncasMessage.md)
  - [IncasOffset](docs/IncasOffset.md)
  - [IncasOneOfMediaTypeAttributes](docs/IncasOneOfMediaTypeAttributes.md)
+ - [IncasRedditData](docs/IncasRedditData.md)
  - [IncasSegment](docs/IncasSegment.md)
  - [IncasTwitterData](docs/IncasTwitterData.md)
  - [Item](docs/Item.md)
