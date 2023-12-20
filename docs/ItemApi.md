@@ -1974,7 +1974,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_univ_id_forward_batch_translate**
-> List[int] item_univ_id_forward_batch_translate(request_body)
+> List[List[int]] item_univ_id_forward_batch_translate(request_body)
 
 Item Univ Id Forward Batch Translate
 
@@ -2028,7 +2028,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**List[int]**
+**List[List[int]]**
 
 ### Authorization
 
@@ -2049,7 +2049,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_univ_id_forward_batch_translate_map**
-> Dict[str, int] item_univ_id_forward_batch_translate_map(request_body, strict=strict)
+> Dict[str, List[int]] item_univ_id_forward_batch_translate_map(request_body, strict=strict)
 
 Item Univ Id Forward Batch Translate Map
 
@@ -2105,7 +2105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Dict[str, int]**
+**Dict[str, List[int]]**
 
 ### Authorization
 
@@ -2126,7 +2126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_univ_id_forward_translate**
-> int item_univ_id_forward_translate(univ_id)
+> List[int] item_univ_id_forward_translate(univ_id)
 
 Item Univ Id Forward Translate
 
@@ -2180,7 +2180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**int**
+**List[int]**
 
 ### Authorization
 

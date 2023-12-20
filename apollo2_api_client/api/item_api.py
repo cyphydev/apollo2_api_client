@@ -4016,7 +4016,7 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_univ_id_forward_batch_translate(self, request_body : conlist(StrictStr), **kwargs) -> List[int]:  # noqa: E501
+    def item_univ_id_forward_batch_translate(self, request_body : conlist(StrictStr), **kwargs) -> List[List[int]]:  # noqa: E501
         """Item Univ Id Forward Batch Translate  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -4040,7 +4040,7 @@ class ItemApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: List[int]
+        :rtype: List[List[int]]
         """
         kwargs['_return_http_data_only'] = True
         return self.item_univ_id_forward_batch_translate_with_http_info(request_body, **kwargs)  # noqa: E501
@@ -4078,7 +4078,7 @@ class ItemApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(List[int], status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(List[List[int]], status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
@@ -4140,7 +4140,7 @@ class ItemApi(object):
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
-            '200': "List[int]",
+            '200': "List[List[int]]",
             '404': None,
             '422': "HTTPValidationError",
         }
@@ -4163,7 +4163,7 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_univ_id_forward_batch_translate_map(self, request_body : conlist(StrictStr), strict : Optional[StrictBool] = None, **kwargs) -> Dict[str, int]:  # noqa: E501
+    def item_univ_id_forward_batch_translate_map(self, request_body : conlist(StrictStr), strict : Optional[StrictBool] = None, **kwargs) -> Dict[str, List[int]]:  # noqa: E501
         """Item Univ Id Forward Batch Translate Map  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -4189,7 +4189,7 @@ class ItemApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: Dict[str, int]
+        :rtype: Dict[str, List[int]]
         """
         kwargs['_return_http_data_only'] = True
         return self.item_univ_id_forward_batch_translate_map_with_http_info(request_body, strict, **kwargs)  # noqa: E501
@@ -4229,7 +4229,7 @@ class ItemApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(Dict[str, int], status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(Dict[str, List[int]], status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
@@ -4295,7 +4295,7 @@ class ItemApi(object):
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
-            '200': "Dict[str, int]",
+            '200': "Dict[str, List[int]]",
             '404': None,
             '422': "HTTPValidationError",
         }
@@ -4318,7 +4318,7 @@ class ItemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def item_univ_id_forward_translate(self, univ_id : StrictStr, **kwargs) -> int:  # noqa: E501
+    def item_univ_id_forward_translate(self, univ_id : StrictStr, **kwargs) -> List[int]:  # noqa: E501
         """Item Univ Id Forward Translate  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -4342,7 +4342,7 @@ class ItemApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: int
+        :rtype: List[int]
         """
         kwargs['_return_http_data_only'] = True
         return self.item_univ_id_forward_translate_with_http_info(univ_id, **kwargs)  # noqa: E501
@@ -4380,7 +4380,7 @@ class ItemApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(int, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(List[int], status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
@@ -4435,7 +4435,7 @@ class ItemApi(object):
         _auth_settings = ['APIKeyHeader']  # noqa: E501
 
         _response_types_map = {
-            '200': "int",
+            '200': "List[int]",
             '404': None,
             '422': "HTTPValidationError",
         }

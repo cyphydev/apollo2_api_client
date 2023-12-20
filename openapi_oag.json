@@ -968,7 +968,10 @@
                                     "title": "Response Item Univ Id Forward Batch Translate Item Univ Id Forward Post",
                                     "type": "array",
                                     "items": {
-                                        "type": "integer"
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
                                     }
                                 }
                             }
@@ -1040,7 +1043,10 @@
                                     "title": "Response Item Univ Id Forward Batch Translate Map Item Univ Id Forward Map Post",
                                     "type": "object",
                                     "additionalProperties": {
-                                        "type": "integer"
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
                                     }
                                 }
                             }
@@ -1095,7 +1101,10 @@
                             "application/json": {
                                 "schema": {
                                     "title": "Response Item Univ Id Forward Translate Item Univ Id Forward  Univ Id  Get",
-                                    "type": "integer"
+                                    "type": "array",
+                                    "items": {
+                                        "type": "integer"
+                                    }
                                 }
                             }
                         }
@@ -3244,7 +3253,10 @@
                                     "title": "Response Source Univ Id Forward Batch Translate Source Univ Id Forward Post",
                                     "type": "array",
                                     "items": {
-                                        "type": "integer"
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
                                     }
                                 }
                             }
@@ -3316,7 +3328,10 @@
                                     "title": "Response Source Univ Id Forward Batch Translate Map Source Univ Id Forward Map Post",
                                     "type": "object",
                                     "additionalProperties": {
-                                        "type": "integer"
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
                                     }
                                 }
                             }
@@ -3371,7 +3386,10 @@
                             "application/json": {
                                 "schema": {
                                     "title": "Response Source Univ Id Forward Translate Source Univ Id Forward  Univ Id  Get",
-                                    "type": "integer"
+                                    "type": "array",
+                                    "items": {
+                                        "type": "integer"
+                                    }
                                 }
                             }
                         }
