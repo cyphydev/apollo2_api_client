@@ -3,7 +3,8 @@
     "info": {
         "title": "Apollo2 API Server",
         "contact": {
-            "name": "Shengzhong Liu (sl29@illinois.edu)"
+            "name": "Dachun Sun",
+            "email": "dsun18@illinois.edu"
         },
         "version": "1.0.0"
     },
@@ -1206,6 +1207,18 @@
                 ],
                 "summary": "Item Id Reverse Batch Translate Map",
                 "operationId": "item_id_reverse_batch_translate_map",
+                "parameters": [
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Strict",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "name": "strict",
+                        "in": "query"
+                    }
+                ],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -3491,6 +3504,18 @@
                 ],
                 "summary": "Source Id Reverse Batch Translate Map",
                 "operationId": "source_id_reverse_batch_translate_map",
+                "parameters": [
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Strict",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "name": "strict",
+                        "in": "query"
+                    }
+                ],
                 "requestBody": {
                     "content": {
                         "application/json": {

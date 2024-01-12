@@ -1494,7 +1494,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **item_id_reverse_batch_translate_map**
-> Dict[str, str] item_id_reverse_batch_translate_map(request_body)
+> Dict[str, str] item_id_reverse_batch_translate_map(request_body, strict=strict)
 
 Item Id Reverse Batch Translate Map
 
@@ -1530,10 +1530,11 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apollo2_api_client.ItemApi(api_client)
     request_body = [56] # List[int] | 
+    strict = False # bool |  (optional) (default to False)
 
     try:
         # Item Id Reverse Batch Translate Map
-        api_response = api_instance.item_id_reverse_batch_translate_map(request_body)
+        api_response = api_instance.item_id_reverse_batch_translate_map(request_body, strict=strict)
         print("The response of ItemApi->item_id_reverse_batch_translate_map:\n")
         pprint(api_response)
     except Exception as e:
@@ -1545,6 +1546,7 @@ with apollo2_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request_body** | [**List[int]**](int.md)|  | 
+ **strict** | **bool**|  | [optional] [default to False]
 
 ### Return type
 

@@ -286,6 +286,6 @@ Class | Method | HTTP request | Description
 
 ## Author
 
-
+Dachun Sun (dsun18@illinois.edu)
 
 
